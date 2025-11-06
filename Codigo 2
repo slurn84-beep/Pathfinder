@@ -1,772 +1,1171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Ficha Pathfinder — Clases / Dotes</title>
-<style>
-  :root{
-    --bg: #071022;
-    --glass: rgba(255,255,255,0.035);
-    --card: rgba(18,23,32,0.6);
-    --accent: rgba(255,215,0,0.06);
-    --gold:#ffd24d;
-    --muted:#9aa6b2;
-    --glass-blur: 6px;
-    --blue:#2f9be0;
-    --green:#27c28b;
-    --orange:#ff9f43;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#041023,#06142a);color:#e8eef6;padding:18px;}
-  .app{max-width:1250px;margin:0 auto;display:grid;grid-template-columns:300px 1fr;gap:18px}
-  /* SIDEBAR */
-  aside{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.03)}
-  .avatar{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#12212b,#0c1a27);display:flex;align-items:center;justify-content:center;font-size:34px;border:3px solid rgba(255,215,0,0.08)}
-  .sidebar-title{font-weight:700;color:var(--gold);margin-left:10px}
-  .side-row{display:flex;gap:12px;align-items:center}
-  .small{font-size:0.85rem;color:var(--muted)}
-  select,input{background:var(--glass);border:1px solid rgba(255,255,255,0.04);color:#eaf2ff;padding:8px 10px;border-radius:8px;width:100%}
-  .btn{padding:8px 10px;border-radius:8px;border:none;cursor:pointer;background:linear-gradient(90deg,var(--gold),#ffd97a);color:#081223;font-weight:700}
-  .btn.secondary{background:linear-gradient(90deg,#48b0ff,#6ef0ff);color:#052033}
-  .label{font-weight:700;color:var(--gold);margin-bottom:6px;display:block}
-
-  /* MAIN */
-  .main{background:transparent}
-  .tabs{display:flex;gap:8px;margin-bottom:12px}
-  .tab{padding:8px 12px;border-radius:8px;background:transparent;color:var(--muted);cursor:pointer;border:1px solid rgba(255,255,255,0.03)}
-  .tab.active{background:linear-gradient(90deg,rgba(255,215,0,0.06),rgba(255,215,0,0.02));color:var(--gold);font-weight:700}
-  .card{background:var(--card);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(var(--glass-blur));}
-  .grid-2{display:grid;grid-template-columns:1fr 420px;gap:14px}
-  .grid-3{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .form-row{display:flex;gap:12px}
-  .subhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-  h3{margin:0;font-size:1rem;color:var(--gold)}
-  .muted{color:var(--muted);font-size:0.9rem}
-
-  /* CLASES UI */
-  .class-tabs{display:flex;gap:8px;margin-bottom:10px}
-  .class-tab{padding:6px 10px;border-radius:6px;background:rgba(255,255,255,0.02);cursor:pointer;color:var(--muted)}
-  .class-tab.active{background:linear-gradient(90deg,rgba(47,155,224,0.08),rgba(47,155,224,0.02));color:var(--blue);font-weight:700}
-
-  .class-box{padding:10px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
-  .stat-pill{display:inline-block;padding:6px 10px;border-radius:8px;background:rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.03);margin-right:8px;font-weight:700;color:var(--muted)}
-
-  table{width:100%;border-collapse:collapse}
-  th,td{padding:6px;text-align:left;border-bottom:1px dashed rgba(255,255,255,0.02);font-size:0.95rem}
-  .smallcell{font-size:0.85rem;color:var(--muted)}
-
-  /* DOTES y HABILIDADES */
-  .two-col{display:grid;grid-template-columns:1fr 420px;gap:14px}
-  .skill-row{display:grid;grid-template-columns: 1fr 70px 70px 50px 90px 80px 80px 70px;gap:8px;align-items:center;padding:6px 0}
-  .skill-row header{grid-column: 1 / -1; font-weight:700;color:var(--muted);margin-top:6px}
-  .skill-input{padding:6px 8px;border-radius:6px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:#eaf2ff}
-  .feat{padding:10px;border-radius:8px;margin-bottom:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02)}
-  .feat.disabled{opacity:0.45;filter:grayscale(0.3)}
-  .ok{color:var(--green);font-weight:700}
-  .warn{color:var(--orange);font-weight:700}
-  .tooltip{font-size:0.85rem;color:var(--muted)}
-
-  /* responsive */
-  @media (max-width:1100px){
-    .app{grid-template-columns:1fr}
-    .grid-2{grid-template-columns:1fr}
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Personaje - Pathfinder</title>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --accent-color: #CD853F;
+            --light-color: #FAEBD7;
+            --dark-color: #5D4037;
+            --text-color: #3E2723;
+            --border-radius: 8px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: var(--text-color);
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            gap: 0;
+        }
+        
+        .character-panel {
+            flex: 0 0 300px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            background-color: var(--light-color);
+        }
+        
+        .main-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--secondary-color);
+            color: var(--primary-color);
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .form-group-row label {
+            min-width: 80px;
+            margin-bottom: 0;
+        }
+        
+        .form-group-row select {
+            flex: 1;
+        }
+        
+        .form-group-row .level-input {
+            width: 50px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid var(--accent-color);
+            border-radius: 4px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            font-size: 14px;
+            background-color: white;
+        }
+        
+        select:focus, input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 2px rgba(210, 105, 30, 0.3);
+        }
+        
+        .character-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .image-wrapper {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin-bottom: 15px;
+        }
+        
+        .character-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .experience-ring {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(var(--accent-color) 60%, #ddd 0);
+            z-index: -1;
+        }
+        
+        .level-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .nep-display, .next-level-display {
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+            background-color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        .ability-point-notification {
+            background-color: #ffeb3b;
+            color: #333;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+            border: 2px solid #ffc107;
+        }
+        
+        .basic-data {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .data-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .attributes-saving-throws {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .attributes-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .attributes-table th, .attributes-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .attributes-table th {
+            background-color: var(--light-color);
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .attributes-table input {
+            width: 50px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .attribute-name {
+            font-weight: bold;
+            text-align: left;
+            padding-left: 10px;
+            background-color: var(--light-color);
+        }
+        
+        .saving-throws-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .saving-throws-table th, .saving-throws-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .saving-throws-table th {
+            background-color: var(--light-color);
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .saving-throws-table input {
+            width: 40px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .saving-throw-name {
+            font-weight: bold;
+            text-align: left;
+            padding-left: 10px;
+            background-color: var(--light-color);
+        }
+        
+        .magic-resistance {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+        }
+        
+        .magic-resistance input {
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .experience-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .experience-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .experience-table th, .experience-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .experience-table th {
+            background-color: var(--light-color);
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .experience-table input {
+            width: 80px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .experience-totals {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .total-box {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .total-box label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .total-box input {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .add-experience {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .add-experience input {
+            flex: 1;
+        }
+        
+        .add-experience button {
+            padding: 10px 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .add-experience button:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .attribute-display {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .background-info {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            font-size: 14px;
+            display: none;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .background-info.active {
+            display: block;
+        }
+        
+        .info-row {
+            margin-bottom: 5px;
+            display: flex;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            min-width: 120px;
+        }
+        
+        .size-modifiers {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            font-size: 12px;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .size-modifiers table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+        
+        .size-modifiers th, .size-modifiers td {
+            padding: 4px;
+            text-align: center;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .size-modifiers th {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .character-panel {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                flex: 0 0 auto;
+            }
+            
+            .attributes-saving-throws, .experience-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .data-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .experience-totals {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="app">
-    <!-- SIDEBAR -->
-    <aside>
-      <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
-        <div class="avatar">🧙‍♀️</div>
-        <div>
-          <div class="sidebar-title">Nuevo Personaje</div>
-          <div class="small">Clase principal: <span id="side-main-class">—</span></div>
-          <div class="small">Nivel total: <span id="side-level-total">0</span></div>
-        </div>
-      </div>
-
-      <div style="margin-top:8px">
-        <label class="label">Clases (elige hasta 3)</label>
-        <select id="class1"></select>
-        <select id="class2"></select>
-        <select id="class3"></select>
-
-        <div style="display:flex;gap:8px;margin-top:8px">
-          <input id="class1-level" type="number" min="0" value="1" style="width:33%;">
-          <input id="class2-level" type="number" min="0" value="0" style="width:33%;">
-          <input id="class3-level" type="number" min="0" value="0" style="width:33%;">
-        </div>
-      </div>
-
-      <hr style="margin:12px 0;border-color:rgba(255,255,255,0.02)">
-
-      <div>
-        <label class="label">Prestigios (hasta 3)</label>
-        <select id="prestige1"></select>
-        <select id="prestige2"></select>
-        <select id="prestige3"></select>
-        <div style="display:flex;gap:8px;margin-top:8px">
-          <input id="prestige1-level" type="number" min="0" value="0" style="width:33%;">
-          <input id="prestige2-level" type="number" min="0" value="0" style="width:33%;">
-          <input id="prestige3-level" type="number" min="0" value="0" style="width:33%;">
-        </div>
-      </div>
-
-      <hr style="margin:12px 0;border-color:rgba(255,255,255,0.02)">
-
-      <div>
-        <label class="label">Trasfondo</label>
-        <select id="backgroundSelect"></select>
-      </div>
-
-      <div style="display:flex;gap:8px;margin-top:12px">
-        <button class="btn" id="saveBtn">Guardar</button>
-        <button class="btn secondary" id="exportBtn">Exportar</button>
-      </div>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-      <div class="tabs">
-        <div class="tab active" data-tab="classesTab">Clases</div>
-        <div class="tab" data-tab="prestigeTab">Prestigios</div>
-        <div class="tab" data-tab="dotesTab">Dotes y Habilidades</div>
-      </div>
-
-      <!-- TAB: CLASES -->
-      <div id="classesTab" class="tab-content active">
-        <div class="card">
-          <div class="subhead">
-            <h3>Clases — Visor y avance</h3>
-            <div class="muted">Selecciona una clase en el panel lateral para ver detalles y progreso por nivel</div>
-          </div>
-
-          <div class="class-tabs" id="classSubTabs">
-            <!-- dinámicos: Clase 1 / 2 / 3 -->
-          </div>
-
-          <div id="classContent">
-            <div class="card class-box" id="classSummary" style="display:none">
-              <div style="display:flex;gap:12px;align-items:center;justify-content:space-between">
-                <div>
-                  <div style="font-weight:700;font-size:1.05rem" id="className">—</div>
-                  <div class="small" id="classDesc">Descripción breve de la clase (editable).</div>
+    <div class="container">
+        <!-- Panel de Personaje (Izquierda) -->
+        <div class="character-panel">
+            <h2 class="section-title">Personaje</h2>
+            
+            <div class="character-image-container">
+                <div class="image-wrapper">
+                    <div class="experience-ring"></div>
+                    <div class="character-image" id="character-image">
+                        <span>Cargar imagen</span>
+                    </div>
                 </div>
-                <div style="text-align:right">
-                  <div class="stat-pill">HD: <span id="classHD">d8</span></div>
-                  <div class="stat-pill">Progr. BAB: <span id="classBAB">medio</span></div>
-                  <div class="stat-pill">Salv: <span id="classSaves">F/D/D</span></div>
+                
+                <div class="level-info">
+                    <div class="nep-display">NEP: <span id="nep-value">0</span></div>
+                    <div class="next-level-display">Próx. Nvl <span id="next-nep-value">1</span></div>
                 </div>
-              </div>
-
-              <hr style="margin:10px 0;border-color:rgba(255,255,255,0.03)">
-
-              <div style="display:flex;gap:12px">
-                <div style="flex:1">
-                  <label class="small">Nivel actual (esta clase)</label>
-                  <input id="classCurrentLevel" type="number" min="0" value="1" style="width:110px">
+                
+                <div id="ability-point-notification" class="ability-point-notification">
+                    ¡Has ganado 1 punto de característica! Nivel <span id="ability-level">4</span>
                 </div>
-                <div style="flex:1">
-                  <label class="small">Modo HP</label>
-                  <select id="hpMode" style="width:140px">
-                    <option value="avg">Promedio</option>
-                    <option value="max">Máximo (HD)</option>
-                  </select>
-                </div>
-                <div style="flex:1">
-                  <label class="small">Mod CON (actual)</label>
-                  <input id="conMod" type="number" value="0" style="width:110px">
-                </div>
-                <div style="flex:1">
-                  <label class="small">Acciones</label>
-                  <div style="display:flex;gap:8px">
-                    <button id="applyClassLevel" class="btn">Aplicar</button>
-                    <button id="resetClass" class="btn" style="background:rgba(255,255,255,0.03);color:var(--muted)">Reset</button>
-                  </div>
-                </div>
-              </div>
-
-              <div style="margin-top:12px">
-                <h4 style="margin:0;color:var(--muted)">Avance por niveles (parcial para esta clase)</h4>
-                <table id="classProgressTable">
-                  <thead>
-                    <tr><th>Nivel</th><th>BAB</th><th>HP acumulado</th><th>Fort</th><th>Ref</th><th>Vol</th></tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
-              </div>
-
             </div>
-          </div>
-
+            
+            <div class="form-group-row">
+                <label for="class1">Clase 1</label>
+                <select id="class1">
+                    <option value="">Seleccionar</option>
+                    <option value="guerrero">Guerrero</option>
+                    <option value="mago">Mago</option>
+                    <option value="clerigo">Clérigo</option>
+                </select>
+                <input type="number" id="class1-level" class="level-input" value="0" min="0" max="20">
+            </div>
+            
+            <div class="form-group-row">
+                <label for="class2">Clase 2</label>
+                <select id="class2">
+                    <option value="">Seleccionar</option>
+                    <option value="picaro">Pícaro</option>
+                    <option value="barbaro">Bárbaro</option>
+                    <option value="bardo">Bardo</option>
+                </select>
+                <input type="number" id="class2-level" class="level-input" value="0" min="0" max="20">
+            </div>
+            
+            <div class="form-group-row">
+                <label for="class3">Clase 3</label>
+                <select id="class3">
+                    <option value="">Seleccionar</option>
+                    <option value="druida">Druida</option>
+                    <option value="monje">Monje</option>
+                    <option value="paladin">Paladín</option>
+                </select>
+                <input type="number" id="class3-level" class="level-input" value="0" min="0" max="20">
+            </div>
+            
+            <div class="form-group-row">
+                <label for="prestige1">Prestigio 1</label>
+                <select id="prestige1">
+                    <option value="">Seleccionar</option>
+                    <option value="archimago">Archimago</option>
+                    <option value="asesino">Asesino</option>
+                    <option value="campeon">Campeón</option>
+                </select>
+                <input type="number" id="prestige1-level" class="level-input" value="0" min="0" max="10">
+            </div>
+            
+            <div class="form-group-row">
+                <label for="prestige2">Prestigio 2</label>
+                <select id="prestige2">
+                    <option value="">Seleccionar</option>
+                    <option value="dragon">Caballero Dragón</option>
+                    <option value="titan">Guerrero Titán</option>
+                    <option value="sombras">Maestro Sombras</option>
+                </select>
+                <input type="number" id="prestige2-level" class="level-input" value="0" min="0" max="10">
+            </div>
+            
+            <div class="form-group-row">
+                <label for="prestige3">Prestigio 3</label>
+                <select id="prestige3">
+                    <option value="">Seleccionar</option>
+                    <option value="archimago">Archimago</option>
+                    <option value="asesino">Asesino</option>
+                    <option value="campeon">Campeón</option>
+                </select>
+                <input type="number" id="prestige3-level" class="level-input" value="0" min="0" max="10">
+            </div>
+            
+            <div class="form-group">
+                <label for="background">Trasfondo</label>
+                <select id="background">
+                    <option value="">Seleccionar trasfondo</option>
+                </select>
+                <div id="background-info" class="background-info"></div>
+            </div>
         </div>
-      </div>
-
-      <!-- TAB: PRESTIGIO -->
-      <div id="prestigeTab" class="tab-content" style="display:none">
-        <div class="card">
-          <div class="subhead">
-            <h3>Prestigios — Resumen</h3>
-            <div class="muted">Tres ranuras de prestigio. Selecciona uno en la barra lateral y ajusta niveles.</div>
-          </div>
-
-          <div id="prestigeContent">
-            <div class="card class-box">
-              <div style="display:flex;justify-content:space-between;align-items:center">
-                <div>
-                  <div style="font-weight:700" id="prestName">—</div>
-                  <div class="small" id="prestDesc">Descripción de prestigio</div>
+        
+        <!-- Panel Principal (Derecha) -->
+        <div class="main-panel">
+            <!-- Sección de Datos Básicos -->
+            <div class="section">
+                <h2 class="section-title">Datos Básicos</h2>
+                <div class="basic-data">
+                    <div class="data-row">
+                        <div class="form-group">
+                            <label for="character-name">Nombre del Personaje</label>
+                            <input type="text" id="character-name" placeholder="Nombre del personaje">
+                        </div>
+                        <div class="form-group">
+                            <label for="race">Raza</label>
+                            <select id="race">
+                                <option value="">Seleccionar raza</option>
+                                <option value="humano">Humano</option>
+                                <option value="elfo">Elfo</option>
+                                <option value="enano">Enano</option>
+                                <option value="mediano">Mediano</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="alignment">Alineamiento</label>
+                            <select id="alignment">
+                                <option value="">Seleccionar</option>
+                                <option value="lg">Legal Bueno</option>
+                                <option value="ng">Neutral Bueno</option>
+                                <option value="cg">Caótico Bueno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="form-group">
+                            <label for="deity">Deidad</label>
+                            <select id="deity">
+                                <option value="">Seleccionar deidad</option>
+                                <option value="sarenrae">Sarenrae</option>
+                                <option value="iomedae">Iomedae</option>
+                                <option value="abadar">Abadar</option>
+                                <option value="nethys">Nethys</option>
+                                <option value="gorum">Gorum</option>
+                                <option value="calistria">Calistria</option>
+                                <option value="desna">Desna</option>
+                                <option value="pharasma">Pharasma</option>
+                                <option value="asmodeus">Asmodeus</option>
+                                <option value="zom">Zon-Kuthon</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="height">Altura (cm)</label>
+                            <input type="number" id="height" placeholder="Ej: 180" value="180">
+                        </div>
+                        <div class="form-group">
+                            <label for="size">Tamaño</label>
+                            <input type="text" id="size" value="Mediano" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Sexo</label>
+                            <select id="gender">
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Edad</label>
+                            <input type="number" id="age" placeholder="Edad">
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <div class="stat-pill">BAB prog: <span id="prestBAB">medio</span></div>
-                  <div class="stat-pill">HD: <span id="prestHD">d8</span></div>
+                
+                <div class="size-modifiers">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoría de tamaño</th>
+                                <th>Modificador de CA</th>
+                                <th>Modificador de Gaco</th>
+                                <th>Modificador de Fuerza</th>
+                            </tr>
+                        </thead>
+                        <tbody id="size-modifiers-body">
+                            <!-- Se llenará con JavaScript -->
+                        </tbody>
+                    </table>
                 </div>
-              </div>
-
-              <div style="margin-top:12px">
-                <label class="small">Nivel en prestigio</label>
-                <input id="prestigeCurrentLevel" type="number" min="0" value="0" style="width:100px">
-                <button id="applyPrestige" class="btn" style="margin-left:8px">Aplicar</button>
-              </div>
-
-              <div style="margin-top:12px">
-                <h4 style="margin:0;color:var(--muted)">Progresión (preview)</h4>
-                <table id="prestProgressTable">
-                  <thead><tr><th>Nivel</th><th>BAB</th><th>HP</th><th>Fort</th><th>Ref</th><th>Vol</th></tr></thead>
-                  <tbody></tbody>
-                </table>
-              </div>
             </div>
-          </div>
-
+            
+            <!-- Sección de Atributos y Salvamentos -->
+            <div class="section">
+                <div class="attributes-saving-throws">
+                    <!-- Atributos -->
+                    <div>
+                        <h2 class="section-title">Atributos</h2>
+                        <table class="attributes-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Puntaje</th>
+                                    <th>Total</th>
+                                    <th>Bonif</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="attribute-name">FUE</td>
+                                    <td><input type="number" id="str-base" value="10" min="1" max="20"></td>
+                                    <td id="str-total" class="attribute-display">10</td>
+                                    <td id="str-mod" class="attribute-display">+0</td>
+                                </tr>
+                                <tr>
+                                    <td class="attribute-name">DES</td>
+                                    <td><input type="number" id="dex-base" value="10" min="1" max="20"></td>
+                                    <td id="dex-total" class="attribute-display">10</td>
+                                    <td id="dex-mod" class="attribute-display">+0</td>
+                                </tr>
+                                <tr>
+                                    <td class="attribute-name">CON</td>
+                                    <td><input type="number" id="con-base" value="10" min="1" max="20"></td>
+                                    <td id="con-total" class="attribute-display">10</td>
+                                    <td id="con-mod" class="attribute-display">+0</td>
+                                </tr>
+                                <tr>
+                                    <td class="attribute-name">INT</td>
+                                    <td><input type="number" id="int-base" value="10" min="1" max="20"></td>
+                                    <td id="int-total" class="attribute-display">10</td>
+                                    <td id="int-mod" class="attribute-display">+0</td>
+                                </tr>
+                                <tr>
+                                    <td class="attribute-name">SAB</td>
+                                    <td><input type="number" id="wis-base" value="10" min="1" max="20"></td>
+                                    <td id="wis-total" class="attribute-display">10</td>
+                                    <td id="wis-mod" class="attribute-display">+0</td>
+                                </tr>
+                                <tr>
+                                    <td class="attribute-name">CAR</td>
+                                    <td><input type="number" id="cha-base" value="10" min="1" max="20"></td>
+                                    <td id="cha-total" class="attribute-display">10</td>
+                                    <td id="cha-mod" class="attribute-display">+0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Salvamentos -->
+                    <div>
+                        <h2 class="section-title">Salvamentos</h2>
+                        <table class="saving-throws-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Clases</th>
+                                    <th>Prestigios</th>
+                                    <th>Mod. Car.</th>
+                                    <th>Varios</th>
+                                    <th>Manual</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="saving-throw-name">Fortaleza</td>
+                                    <td><input type="number" id="fort-class" value="0"></td>
+                                    <td><input type="number" id="fort-prestige" value="0"></td>
+                                    <td id="fort-attr">+0</td>
+                                    <td><input type="number" id="fort-misc" value="0"></td>
+                                    <td><input type="number" id="fort-manual" value="0"></td>
+                                    <td id="fort-total" class="attribute-display">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="saving-throw-name">Reflejos</td>
+                                    <td><input type="number" id="reflex-class" value="0"></td>
+                                    <td><input type="number" id="reflex-prestige" value="0"></td>
+                                    <td id="reflex-attr">+0</td>
+                                    <td><input type="number" id="reflex-misc" value="0"></td>
+                                    <td><input type="number" id="reflex-manual" value="0"></td>
+                                    <td id="reflex-total" class="attribute-display">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="saving-throw-name">Voluntad</td>
+                                    <td><input type="number" id="will-class" value="0"></td>
+                                    <td><input type="number" id="will-prestige" value="0"></td>
+                                    <td id="will-attr">+0</td>
+                                    <td><input type="number" id="will-misc" value="0"></td>
+                                    <td><input type="number" id="will-manual" value="0"></td>
+                                    <td id="will-total" class="attribute-display">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="magic-resistance">
+                            <label for="magic-resistance">Resistencia Mágica</label>
+                            <input type="number" id="magic-resistance" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección de Experiencia -->
+            <div class="section">
+                <h2 class="section-title">Experiencia</h2>
+                <div class="experience-section">
+                    <!-- Clases -->
+                    <div>
+                        <h3>Clases</h3>
+                        <table class="experience-table">
+                            <thead>
+                                <tr>
+                                    <th>Clase 1</th>
+                                    <th>Clase 2</th>
+                                    <th>Clase 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="number" id="class1-exp" value="0"></td>
+                                    <td><input type="number" id="class2-exp" value="0"></td>
+                                    <td><input type="number" id="class3-exp" value="0"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Prestigios -->
+                    <div>
+                        <h3>Prestigios</h3>
+                        <table class="experience-table">
+                            <thead>
+                                <tr>
+                                    <th>Prestigio 1</th>
+                                    <th>Prestigio 2</th>
+                                    <th>Prestigio 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="number" id="prestige1-exp" value="0"></td>
+                                    <td><input type="number" id="prestige2-exp" value="0"></td>
+                                    <td><input type="number" id="prestige3-exp" value="0"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="experience-totals">
+                    <div class="total-box">
+                        <label>Total Experiencia</label>
+                        <input type="number" id="total-exp" value="0" readonly>
+                    </div>
+                    <div class="total-box">
+                        <label>Siguiente Nivel</label>
+                        <input type="number" id="next-level" value="1000" readonly>
+                    </div>
+                    <div class="total-box">
+                        <label>Experiencia Acumulada</label>
+                        <input type="number" id="accumulated-exp" value="0" readonly>
+                    </div>
+                </div>
+                
+                <div class="add-experience">
+                    <input type="number" id="add-exp-input" placeholder="Cantidad de experiencia a añadir">
+                    <button id="add-exp-btn">Añadir Experiencia</button>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <!-- TAB: DOTES Y HABILIDADES -->
-      <div id="dotesTab" class="tab-content" style="display:none">
-        <div class="card">
-          <div class="subhead">
-            <h3>Dotes y Habilidades</h3>
-            <div class="muted">Izquierda: habilidades — Derecha: dotes. Las dotes se habilitan según nivel efectivo y prerrequisitos.</div>
-          </div>
+    <script>
+        // JSON con los datos de trasfondos del PDF
+        const backgrounds = [
+            {
+                "nombre": "Acolito",
+                "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
+                "dote": "Magic Initiate (Cleric)",
+                "competenciaHabilidad": "Insight (Empatía), Religion (Teología)",
+                "herramientas": "Calligrapher's Supplies (Caligrafía)"
+            },
+            {
+                "nombre": "Artesano",
+                "puntuacionCaracteristica": "+1 Fue - +1 Des - +1 Int",
+                "dote": "Crafter",
+                "competenciaHabilidad": "Investigation (Búsqueda), Persuasion (Etiqueta/Comercio)",
+                "herramientas": "Artisan's Tools (Herramientas de artesano específicas)"
+            },
+            // ... (resto de trasfondos)
+        ];
 
-          <div class="two-col">
-            <!-- HABILIDADES -->
-            <div class="card class-box">
-              <div style="display:flex;justify-content:space-between;align-items:center">
-                <div style="font-weight:700;color:var(--muted)">Habilidades</div>
-                <div class="small">Puntos disponibles: <span id="skillPoints">0</span></div>
-              </div>
+        // JSON con modificadores de tamaño
+        const sizeModifiers = {
+            "diminuto": { ca: "+4", gaco: "+4", fuerza: "-12" },
+            "menudo": { ca: "+2", gaco: "+2", fuerza: "-8" },
+            "pequeño": { ca: "+1", gaco: "+1", fuerza: "-4" },
+            "mediano": { ca: "+0", gaco: "+0", fuerza: "+0" },
+            "grande": { ca: "-1", gaco: "-1", fuerza: "+4" },
+            "enorme": { ca: "-2", gaco: "-2", fuerza: "+8" },
+            "gargantuesco": { ca: "-4", gaco: "-4", fuerza: "+12" },
+            "colosal": { ca: "-8", gaco: "-8", fuerza: "+16" }
+        };
 
-              <div style="margin-top:10px;max-height:420px;overflow:auto" id="skillsList">
-                <!-- dinámico: filas de habilidad -->
-              </div>
-            </div>
+        // Variables para almacenar los bonificadores
+        let racialBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+        let backgroundBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+        let levelBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+        let sizeBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
 
-            <!-- DOTES -->
-            <div class="card class-box">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-                <div style="font-weight:700;color:var(--muted)">Dotes</div>
-                <div class="small">Slots disponibles: <span id="featSlots">0</span></div>
-              </div>
+        // Función para determinar el tamaño según la altura
+        function calculateSizeFromHeight(height) {
+            if (height <= 30) return "diminuto";
+            if (height <= 60) return "menudo";
+            if (height <= 120) return "pequeño";
+            if (height <= 240) return "mediano";
+            if (height <= 480) return "grande";
+            if (height <= 960) return "enorme";
+            if (height <= 1920) return "gargantuesco";
+            return "colosal";
+        }
 
-              <div style="max-height:520px;overflow:auto" id="featsList">
-                <!-- dinámico: lista de dotes -->
-              </div>
-            </div>
-          </div>
+        // Función para aplicar modificadores de tamaño
+        function applySizeBonuses(size) {
+            // Reiniciar bonificadores de tamaño
+            sizeBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+            
+            const modifiers = sizeModifiers[size];
+            if (modifiers) {
+                // Convertir el modificador de fuerza de string a número
+                const fuerzaMod = parseInt(modifiers.fuerza);
+                sizeBonus.str = fuerzaMod;
+            }
+            
+            updateAttributes();
+        }
 
-        </div>
-      </div>
+        // Función para verificar y mostrar puntos de característica por nivel
+        function checkAbilityPoints() {
+            const nep = calculateNEP();
+            const abilityLevels = [4, 8, 12, 16, 20, 24, 28, 32, 36, 40];
+            const notification = document.getElementById('ability-point-notification');
+            
+            for (const level of abilityLevels) {
+                if (nep >= level) {
+                    document.getElementById('ability-level').textContent = level;
+                    notification.style.display = 'block';
+                    return;
+                }
+            }
+            notification.style.display = 'none';
+        }
 
-    </main>
-  </div>
+        // Función para calcular el NEP (Nivel Efectivo de Personaje)
+        function calculateNEP() {
+            const class1Level = parseInt(document.getElementById('class1-level').value) || 0;
+            const class2Level = parseInt(document.getElementById('class2-level').value) || 0;
+            const class3Level = parseInt(document.getElementById('class3-level').value) || 0;
+            const prestige1Level = parseInt(document.getElementById('prestige1-level').value) || 0;
+            const prestige2Level = parseInt(document.getElementById('prestige2-level').value) || 0;
+            const prestige3Level = parseInt(document.getElementById('prestige3-level').value) || 0;
+            
+            const totalLevels = class1Level + class2Level + class3Level + prestige1Level + prestige2Level + prestige3Level;
+            document.getElementById('nep-value').textContent = totalLevels;
+            document.getElementById('next-nep-value').textContent = totalLevels + 1;
+            
+            // Verificar puntos de característica
+            checkAbilityPoints();
+            
+            return totalLevels;
+        }
 
-<script>
-/* -----------------------------------------------------------
-   Datos base (ejemplos): clases, prestigios, dotes y habilidades
-   -> Reemplaza/compléta con tus listas reales cuando quieras.
-   ----------------------------------------------------------- */
-const CLASSES = [
-  { id:'guerrero', name:'Guerrero', hd:10, bab:'alto', saves:{fort:'fuerte',ref:'debil',vol:'debil'}, skills: ['Artesanía','Intimidar'], desc:'Luchador versátil.' },
-  { id:'mago', name:'Mago', hd:6, bab:'bajo', saves:{fort:'debil',ref:'debil',vol:'fuerte'}, skills:['Conocimiento (arcano)','Lingüística'], desc:'Usuario de conjuros arcanos.' },
-  { id:'picaro', name:'Pícaro', hd:8, bab:'medio', saves:{fort:'debil',ref:'fuerte',vol:'debil'}, skills:['Sigilo','Juego de manos'], desc:'Astuto y sigiloso.' },
-  { id:'clerigo', name:'Clérigo', hd:8, bab:'medio', saves:{fort:'fuerte',ref:'debil',vol:'fuerte'}, skills:['Curar','Saber (religión)'], desc:'Servidor de una deidad.' },
-  { id:'bardo', name:'Bardo', hd:8, bab:'medio', saves:{fort:'debil',ref:'fuerte',vol:'fuerte'}, skills:['Interpretar','Diplomacia'], desc:'Artista con magia.' },
-  // añade el resto...
-];
+        // Función para calcular el modificador de un atributo
+        function calculateModifier(value) {
+            return Math.floor((value - 10) / 2);
+        }
 
-const PRESTIGES = [
-  { id:'arquero_arcano', name:'Arquero Arcano', hd:8, bab:'medio', desc:'Prestigio mezcla de arquería y conjuro.' },
-  { id:'asesino', name:'Asesino', hd:8, bab:'medio', desc:'Especialista en muerte súbita.' },
-  // añade más según tu lista...
-];
+        // Función para formatear el modificador
+        function formatModifier(modifier) {
+            return modifier >= 0 ? `+${modifier}` : `${modifier}`;
+        }
 
-const FEATS = [
-  { id:'preciso', name:'Disparo Preciso', prereq:{dex:13}, desc:'Reduce penalización por disparo a distancia.' },
-  { id:'ataque_furtivo_bm', name:'Ataque Furtivo Mejorado', prereq:{feat:'Ataque Furtivo'}, desc:'Mejora daño de ataque furtivo.' },
-  { id:'tirador', name:'Tirador', prereq:{dex:15}, desc:'Mayor alcance y daño con arcos.' },
-  // añade las dotes reales...
-];
+        // Función para actualizar los atributos
+        function updateAttributes() {
+            const attributes = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
+            
+            attributes.forEach(attr => {
+                const baseValue = parseInt(document.getElementById(`${attr}-base`).value) || 0;
+                const total = baseValue + racialBonus[attr] + backgroundBonus[attr] + levelBonus[attr] + sizeBonus[attr];
+                const modifier = calculateModifier(total);
+                
+                document.getElementById(`${attr}-total`).textContent = total;
+                document.getElementById(`${attr}-mod`).textContent = formatModifier(modifier);
+                
+                // Actualizar modificadores en salvamentos
+                if (attr === 'con') {
+                    document.getElementById('fort-attr').textContent = formatModifier(modifier);
+                } else if (attr === 'dex') {
+                    document.getElementById('reflex-attr').textContent = formatModifier(modifier);
+                } else if (attr === 'wis') {
+                    document.getElementById('will-attr').textContent = formatModifier(modifier);
+                }
+            });
+            
+            // Actualizar salvamentos
+            updateSavingThrows();
+        }
 
-const SKILLS = [
-  { id:'acro', name:'Acrobacias', attr:'DES', armorPen:-1 },
-  { id:'artesania', name:'Artesanía', attr:'INT', armorPen:0 },
-  { id:'sigilo', name:'Sigilo', attr:'DES', armorPen:1 },
-  { id:'percepcion', name:'Percepción', attr:'SAB', armorPen:0 },
-  { id:'diplomacia', name:'Diplomacia', attr:'CAR', armorPen:0 },
-  { id:'conocimiento', name:'Conocimiento (arcano)', attr:'INT', armorPen:0 },
-  // añade la lista completa más tarde...
-];
+        // Función para actualizar los salvamentos
+        function updateSavingThrows() {
+            const savingThrows = ['fort', 'reflex', 'will'];
+            
+            savingThrows.forEach(save => {
+                const classBonus = parseInt(document.getElementById(`${save}-class`).value) || 0;
+                const prestigeBonus = parseInt(document.getElementById(`${save}-prestige`).value) || 0;
+                const miscBonus = parseInt(document.getElementById(`${save}-misc`).value) || 0;
+                const manualBonus = parseInt(document.getElementById(`${save}-manual`).value) || 0;
+                
+                // Obtener el modificador de atributo
+                let attrBonus = 0;
+                if (save === 'fort') {
+                    attrBonus = calculateModifier(parseInt(document.getElementById('con-total').textContent));
+                } else if (save === 'reflex') {
+                    attrBonus = calculateModifier(parseInt(document.getElementById('dex-total').textContent));
+                } else if (save === 'will') {
+                    attrBonus = calculateModifier(parseInt(document.getElementById('wis-total').textContent));
+                }
+                
+                const total = classBonus + prestigeBonus + attrBonus + miscBonus + manualBonus;
+                document.getElementById(`${save}-total`).textContent = total;
+            });
+        }
 
-/* -----------------------------------------------------------
-   XP por nivel (tabla que me diste)
-   ----------------------------------------------------------- */
-const XP_TABLE = { 1:0, 2:3000, 3:7500, 4:14000, 5:23000, 6:35000, 7:53000, 8:77000, 9:115000, 10:160000,
- 11:235000,12:330000,13:475000,14:665000,15:955000,16:1350000,17:1675000,18:2700000,19:3850000,20:5350000 };
+        // Función para actualizar la experiencia total
+        function updateExperience() {
+            const class1Exp = parseInt(document.getElementById('class1-exp').value) || 0;
+            const class2Exp = parseInt(document.getElementById('class2-exp').value) || 0;
+            const class3Exp = parseInt(document.getElementById('class3-exp').value) || 0;
+            const prestige1Exp = parseInt(document.getElementById('prestige1-exp').value) || 0;
+            const prestige2Exp = parseInt(document.getElementById('prestige2-exp').value) || 0;
+            const prestige3Exp = parseInt(document.getElementById('prestige3-exp').value) || 0;
+            
+            const totalExp = class1Exp + class2Exp + class3Exp + prestige1Exp + prestige2Exp + prestige3Exp;
+            document.getElementById('total-exp').value = totalExp;
+            
+            // Calcular experiencia acumulada (simplificado)
+            const accumulatedExp = totalExp % 1000;
+            document.getElementById('accumulated-exp').value = accumulatedExp;
+            
+            // Calcular siguiente nivel (simplificado)
+            const nextLevel = 1000 - accumulatedExp;
+            document.getElementById('next-level').value = nextLevel;
+        }
 
-/* -----------------------------------------------------------
-   Utilidades de progresión (BAB / saves / HP promedio)
-   - BAB: 'alto', 'medio', 'bajo'
-   - Saves: 'fuerte' / 'debil' (fuerte empieza en 2 en nivel 1)
-   ----------------------------------------------------------- */
-function babForProgression(prog, level){
-  if(level<=0) return 0;
-  if(prog==='alto') return level;                    // aproximación: alto = +1 por nivel
-  if(prog==='medio') return Math.floor(level * 0.75); // aproximación
-  return Math.floor(level * 0.5);                    // bajo
-}
-function saveForProgression(progression, level){
-  // aproximación simple:
-  if(level<=0) return 0;
-  if(progression==='fuerte'){
-    // starts at +2 at lvl1, then +1 every 2 levels
-    return 2 + Math.floor((level-1)/2);
-  } else {
-    // starts at 0 at lvl1, +1 every 3 levels
-    return Math.floor(level/3);
-  }
-}
-function avgHPForHD(hd, level, mode){
-  // hd: 6,8,10,12 (d6,d8,d10,d12)
-  if(level<=0) return 0;
-  if(mode==='max') return level * hd;
-  // promedio: (hd/2)+1 como promedio por nivel (standard)
-  return Math.floor(level * (Math.floor(hd/2)+1));
-}
+        // Función para aplicar bonificadores raciales
+        function applyRacialBonuses(race) {
+            // Reiniciar bonificadores raciales
+            racialBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+            
+            // Aplicar bonificadores según la raza
+            switch(race) {
+                case 'humano':
+                    // Humano: +2 a un atributo a elección (por defecto Fuerza)
+                    racialBonus.str = 2;
+                    break;
+                case 'elfo':
+                    racialBonus.dex = 2;
+                    racialBonus.int = 2;
+                    racialBonus.con = -2;
+                    break;
+                case 'enano':
+                    racialBonus.con = 2;
+                    racialBonus.cha = -2;
+                    break;
+                case 'mediano':
+                    racialBonus.dex = 2;
+                    racialBonus.cha = 2;
+                    racialBonus.str = -2;
+                    break;
+            }
+            
+            updateAttributes();
+        }
 
-/* -----------------------------------------------------------
-   Estado del personaje (básico)
-   ----------------------------------------------------------- */
-const state = {
-  classes: [null,null,null],            // {id, level}
-  prestiges: [null,null,null],          // {id, level}
-  background: null,
-  conMod: 0,
-  totalLevels: 0,
-  totalBAB: 0,
-  totalHP: 0,
-  totalSaves: {fort:0,ref:0,vol:0},
-  featSlots: 0,
-  skillPoints: 0,
-  assignedFeats: [],
-  assignedSkills: {} // skillId -> ranks etc
-};
+        // Función para aplicar bonificadores de trasfondo
+        function applyBackgroundBonuses(backgroundName) {
+            // Reiniciar bonificadores de trasfondo
+            backgroundBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+            
+            const background = backgrounds.find(bg => bg.nombre === backgroundName);
+            if (background) {
+                const scores = background.puntuacionCaracteristica.split(' - ');
+                
+                scores.forEach(score => {
+                    if (score.includes('+1 Fue')) backgroundBonus.str += 1;
+                    if (score.includes('+1 Des')) backgroundBonus.dex += 1;
+                    if (score.includes('+1 Con')) backgroundBonus.con += 1;
+                    if (score.includes('+1 Int')) backgroundBonus.int += 1;
+                    if (score.includes('+1 Sab')) backgroundBonus.wis += 1;
+                    if (score.includes('+1 Car')) backgroundBonus.cha += 1;
+                });
+            }
+            
+            updateAttributes();
+        }
 
-/* -----------------------------------------------------------
-   Inicialización DOM: llena selects con datos
-   ----------------------------------------------------------- */
-function populateSelects(){
-  const c1 = document.getElementById('class1');
-  const c2 = document.getElementById('class2');
-  const c3 = document.getElementById('class3');
-  const p1 = document.getElementById('prestige1');
-  const p2 = document.getElementById('prestige2');
-  const p3 = document.getElementById('prestige3');
-  const bg = document.getElementById('backgroundSelect');
+        // Función para actualizar el tamaño según la altura
+        function updateSizeFromHeight() {
+            const height = parseInt(document.getElementById('height').value) || 0;
+            const size = calculateSizeFromHeight(height);
+            document.getElementById('size').value = size.charAt(0).toUpperCase() + size.slice(1);
+            applySizeBonuses(size);
+            updateSizeModifiers();
+        }
 
-  // helper
-  function addOptions(sel, items){
-    sel.innerHTML = '<option value="">—</option>';
-    items.forEach(it => {
-      const opt = document.createElement('option');
-      opt.value = it.id;
-      opt.text = it.name;
-      sel.appendChild(opt);
-    });
-  }
+        // Función para actualizar la tabla de modificadores de tamaño
+        function updateSizeModifiers() {
+            const sizeModifiersBody = document.getElementById('size-modifiers-body');
+            sizeModifiersBody.innerHTML = '';
+            
+            for (const [size, modifiers] of Object.entries(sizeModifiers)) {
+                const row = document.createElement('tr');
+                
+                // Resaltar la fila del tamaño actual
+                const currentSize = document.getElementById('size').value.toLowerCase();
+                if (size === currentSize) {
+                    row.style.backgroundColor = 'var(--accent-color)';
+                    row.style.fontWeight = 'bold';
+                }
+                
+                row.innerHTML = `
+                    <td>${size.charAt(0).toUpperCase() + size.slice(1)}</td>
+                    <td>${modifiers.ca}</td>
+                    <td>${modifiers.gaco}</td>
+                    <td>${modifiers.fuerza}</td>
+                `;
+                sizeModifiersBody.appendChild(row);
+            }
+        }
 
-  addOptions(c1, CLASSES); addOptions(c2, CLASSES); addOptions(c3, CLASSES);
-  addOptions(p1, PRESTIGES); addOptions(p2, PRESTIGES); addOptions(p3, PRESTIGES);
-  // backgrounds: use a short example list (reemplaza con la tuya)
-  const backgrounds = ['Ninguno','Acólito','Artesano','Charlatán','Campesino','Criminal','Erudito','Soldado'];
-  bg.innerHTML = '';
-  backgrounds.forEach(b => {
-    const opt = document.createElement('option'); opt.value=b; opt.text=b; bg.appendChild(opt);
-  });
-}
-populateSelects();
+        // Llenar el selector de trasfondos
+        const backgroundSelect = document.getElementById('background');
+        backgrounds.forEach(bg => {
+            const option = document.createElement('option');
+            option.value = bg.nombre;
+            option.textContent = bg.nombre;
+            backgroundSelect.appendChild(option);
+        });
 
-/* -----------------------------------------------------------
-   Eventos: cuando el usuario selecciona clases/prestigios
-   ----------------------------------------------------------- */
-function attachSidebarEvents(){
-  ['class1','class2','class3','class1-level','class2-level','class3-level',
-   'prestige1','prestige2','prestige3','prestige1-level','prestige2-level','prestige3-level',
-   'backgroundSelect','conMod'].forEach(id => {
-    const el = document.getElementById(id);
-    if(el) el.addEventListener('change', onSidebarChange);
-  });
+        // Mostrar información del trasfondo seleccionado
+        backgroundSelect.addEventListener('change', function() {
+            const selectedBackground = backgrounds.find(bg => bg.nombre === this.value);
+            const backgroundInfo = document.getElementById('background-info');
+            
+            if (selectedBackground) {
+                backgroundInfo.innerHTML = `
+                    <div class="info-row">
+                        <span class="info-label">Puntuación:</span>
+                        <span>${selectedBackground.puntuacionCaracteristica}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Dote:</span>
+                        <span>${selectedBackground.dote}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Competencias:</span>
+                        <span>${selectedBackground.competenciaHabilidad}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Herramientas:</span>
+                        <span>${selectedBackground.herramientas}</span>
+                    </div>
+                `;
+                backgroundInfo.classList.add('active');
+                
+                // Aplicar bonificadores del trasfondo
+                applyBackgroundBonuses(this.value);
+            } else {
+                backgroundInfo.classList.remove('active');
+                applyBackgroundBonuses('');
+            }
+        });
 
-  document.getElementById('applyClassLevel').addEventListener('click', ()=> {
-    // aplicar valores actuales de classCurrentLevel a la clase seleccionada activa
-    const active = document.querySelector('.class-tab.active');
-    if(!active) return;
-    const idx = parseInt(active.dataset.idx,10); // 0|1|2
-    const level = parseInt(document.getElementById('classCurrentLevel').value)||0;
-    const selId = document.querySelectorAll('#class1,#class2,#class3')[idx].value;
-    if(!selId) { alert('Elige una clase en la ranura correspondiente.'); return; }
-    state.classes[idx] = { id: selId, level };
-    recalcAll();
-  });
+        // Event listeners para atributos base
+        document.querySelectorAll('#str-base, #dex-base, #con-base, #int-base, #wis-base, #cha-base').forEach(input => {
+            input.addEventListener('input', updateAttributes);
+        });
 
-  document.getElementById('applyPrestige').addEventListener('click', ()=>{
-    const lvl = parseInt(document.getElementById('prestigeCurrentLevel').value)||0;
-    const sel = document.querySelector('#prestige1,#prestige2,#prestige3');
-    // simple: put into first prestige slot that matches currently selected prestige
-    const currentPrestige = document.querySelector('#prestige1,#prestige2,#prestige3'); // just refresh later
-    // we update based on the prestige select fields state (user sets the select in sidebar)
-    readSidebarClassesPrestiges();
-    recalcAll();
-    alert('Prestigio aplicado (vista previa).');
-  });
+        // Event listeners para salvamentos
+        document.querySelectorAll('#fort-class, #fort-prestige, #fort-misc, #fort-manual, #reflex-class, #reflex-prestige, #reflex-misc, #reflex-manual, #will-class, #will-prestige, #will-misc, #will-manual').forEach(input => {
+            input.addEventListener('input', updateSavingThrows);
+        });
 
-  // tabs
-  document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', (e)=>{
-    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-    e.currentTarget.classList.add('active');
-    const tab = e.currentTarget.dataset.tab;
-    document.querySelectorAll('.tab-content').forEach(c=>c.style.display='none');
-    document.getElementById(tab).style.display='block';
-  }));
-}
-attachSidebarEvents();
+        // Event listeners para experiencia
+        document.querySelectorAll('#class1-exp, #class2-exp, #class3-exp, #prestige1-exp, #prestige2-exp, #prestige3-exp').forEach(input => {
+            input.addEventListener('input', updateExperience);
+        });
 
-/* -----------------------------------------------------------
-   Leer selects de sidebar a state
-   ----------------------------------------------------------- */
-function readSidebarClassesPrestiges(){
-  const classesSel = [document.getElementById('class1').value, document.getElementById('class2').value, document.getElementById('class3').value];
-  const classesLv = [parseInt(document.getElementById('class1-level').value)||0, parseInt(document.getElementById('class2-level').value)||0, parseInt(document.getElementById('class3-level').value)||0];
+        // Event listeners para niveles de clases y prestigios
+        document.querySelectorAll('#class1-level, #class2-level, #class3-level, #prestige1-level, #prestige2-level, #prestige3-level').forEach(input => {
+            input.addEventListener('input', calculateNEP);
+        });
 
-  state.classes = classesSel.map((id,i)=> id ? { id, level: classesLv[i] } : null );
+        // Event listener para raza
+        document.getElementById('race').addEventListener('change', function() {
+            applyRacialBonuses(this.value);
+        });
 
-  const prestSel = [document.getElementById('prestige1').value, document.getElementById('prestige2').value, document.getElementById('prestige3').value];
-  const prestLv = [parseInt(document.getElementById('prestige1-level').value)||0, parseInt(document.getElementById('prestige2-level').value)||0, parseInt(document.getElementById('prestige3-level').value)||0];
-  state.prestiges = prestSel.map((id,i)=> id ? { id, level: prestLv[i] } : null);
+        // Event listener para altura - actualiza tamaño automáticamente
+        document.getElementById('height').addEventListener('input', updateSizeFromHeight);
 
-  state.background = document.getElementById('backgroundSelect').value;
-  state.conMod = parseInt(document.getElementById('conMod').value)||0;
-}
+        // Event listener para añadir experiencia
+        document.getElementById('add-exp-btn').addEventListener('click', function() {
+            const expToAdd = parseInt(document.getElementById('add-exp-input').value) || 0;
+            if (expToAdd > 0) {
+                // Por simplicidad, añadimos la experiencia a la primera clase
+                const currentExp = parseInt(document.getElementById('class1-exp').value) || 0;
+                document.getElementById('class1-exp').value = currentExp + expToAdd;
+                updateExperience();
+                document.getElementById('add-exp-input').value = '';
+            }
+        });
 
-/* -----------------------------------------------------------
-   Recalcular todo: niveles, BAB, HP, salvaciones, dotes slots, skills points
-   ----------------------------------------------------------- */
-function recalcAll(){
-  readSidebarClassesPrestiges();
-  // totals:
-  let lvlSum = 0;
-  let totalBAB = 0;
-  let totalHP = 0;
-  let totFort=0, totRef=0, totVol=0;
+        // Event listener para cargar imagen
+        document.getElementById('character-image').addEventListener('click', function() {
+            alert('Función para cargar imagen del personaje. En una implementación real, esto abriría un selector de archivos.');
+        });
 
-  // classes
-  state.classes.forEach(slot=>{
-    if(!slot) return;
-    const cls = CLASSES.find(c=>c.id===slot.id);
-    if(!cls) return;
-    const level = slot.level;
-    lvlSum += level;
-    totalBAB += babForProgression(cls.bab==='alto' ? 'alto' : (cls.bab==='medio'? 'medio' : 'bajo'), level);
-    totalHP += avgHPForHD(cls.hd, level, 'avg') + (state.conMod * level);
-    totFort += saveForProgression(cls.saves.fort==='fuerte'?'fuerte':'debil', level);
-    totRef  += saveForProgression(cls.saves.ref==='fuerte'?'fuerte':'debil', level);
-    totVol  += saveForProgression(cls.saves.vol==='fuerte'?'fuerte':'debil', level);
-  });
-
-  // prestiges
-  state.prestiges.forEach(p=>{
-    if(!p) return;
-    const pr = PRESTIGES.find(x=>x.id===p.id);
-    if(!pr) return;
-    const lvl = p.level;
-    lvlSum += lvl;
-    // assume prestige has 'medio' bab unless specified
-    totalBAB += babForProgression(pr.bab || 'medio', lvl);
-    totalHP += avgHPForHD(pr.hd || 8, lvl, 'avg') + (state.conMod * lvl);
-    // rudimentary saves: treat prestige as medium for all
-    totFort += saveForProgression('fuerte', Math.floor(lvl/2)); // simplified
-    totRef  += saveForProgression('debil', Math.floor(lvl/2));
-    totVol  += saveForProgression('debil', Math.floor(lvl/2));
-  });
-
-  state.totalLevels = lvlSum;
-  state.totalBAB = totalBAB;
-  state.totalHP = totalHP;
-  state.totalSaves = { fort: totFort, ref: totRef, vol: totVol };
-
-  // feat slots: simple rule — 1 feat per odd level starting at 1 (1,3,5...). Count = floor((level+1)/2)
-  state.featSlots = Math.floor((state.totalLevels + 1) / 2);
-  // skill points: simple placeholder: 4 per level total (DM can edit)
-  state.skillPoints = state.totalLevels * 4;
-
-  // update UI
-  document.getElementById('side-level-total').innerText = state.totalLevels;
-  document.getElementById('side-main-class').innerText = (state.classes[0] ? CLASSES.find(c=>c.id===state.classes[0].id).name + ' ' + state.classes[0].level : '—');
-  updateClassTabs();
-  updatePrestigeView();
-  updateDotesHabilidadesUI();
-}
-
-/* -----------------------------------------------------------
-   DIBUJAR tabs de clase según las ranuras (1..3)
-   ----------------------------------------------------------- */
-function updateClassTabs(){
-  const container = document.getElementById('classSubTabs');
-  container.innerHTML='';
-  const classSlots = [document.getElementById('class1').value, document.getElementById('class2').value, document.getElementById('class3').value];
-  classSlots.forEach((clsId, idx)=>{
-    const tab = document.createElement('div');
-    tab.className='class-tab';
-    tab.dataset.idx = idx;
-    tab.innerText = clsId ? (CLASSES.find(c=>c.id===clsId).name + ' (' + (document.getElementById(['class1-level','class2-level','class3-level'][idx]).value||0) + ')') : `Ranura ${idx+1}`;
-    tab.addEventListener('click', ()=>{
-      document.querySelectorAll('.class-tab').forEach(x=>x.classList.remove('active'));
-      tab.classList.add('active');
-      renderClassContent(idx);
-    });
-    container.appendChild(tab);
-  });
-  // auto-click first tab
-  const first = container.querySelector('.class-tab');
-  if(first) first.click();
-}
-
-/* -----------------------------------------------------------
-   Render del panel de la clase seleccionada (detalle)
-   ----------------------------------------------------------- */
-function renderClassContent(idx){
-  const clsId = document.querySelectorAll('#class1,#class2,#class3')[idx].value;
-  const content = document.getElementById('classSummary');
-  if(!clsId){ content.style.display='none'; return; }
-  const cls = CLASSES.find(c=>c.id===clsId);
-  content.style.display='block';
-  document.getElementById('className').innerText = cls.name;
-  document.getElementById('classDesc').innerText = cls.desc;
-  document.getElementById('classHD').innerText = 'd' + cls.hd;
-  document.getElementById('classBAB').innerText = cls.bab;
-  document.getElementById('classSaves').innerText = `${cls.saves.fort[0].toUpperCase()}/${cls.saves.ref[0].toUpperCase()}/${cls.saves.vol[0].toUpperCase()}`;
-  // fill current level
-  const lvlField = document.getElementById('classCurrentLevel');
-  const slotLevel = parseInt(document.getElementById(['class1-level','class2-level','class3-level'][idx]).value) || 0;
-  lvlField.value = slotLevel;
-  // populate table
-  const tbody = document.querySelector('#classProgressTable tbody');
-  tbody.innerHTML='';
-  const mode = document.getElementById('hpMode').value;
-  const conMod = parseInt(document.getElementById('conMod').value)||0;
-  for(let i=1;i<=Math.max(1,slotLevel);i++){
-    const tr = document.createElement('tr');
-    const bab = babForProgression(cls.bab, i);
-    const hp = avgHPForHD(cls.hd, i, mode) + (conMod * i);
-    const fort = saveForProgression(cls.saves.fort, i);
-    const ref = saveForProgression(cls.saves.ref, i);
-    const vol = saveForProgression(cls.saves.vol, i);
-    tr.innerHTML = `<td>${i}</td><td>${bab}</td><td>${hp}</td><td>${fort}</td><td>${ref}</td><td>${vol}</td>`;
-    tbody.appendChild(tr);
-  }
-}
-
-/* -----------------------------------------------------------
-   PRESTIGE: preview de progresión
-   ----------------------------------------------------------- */
-function updatePrestigeView(){
-  const sel = document.getElementById('prestige1').value || document.getElementById('prestige2').value || document.getElementById('prestige3').value;
-  const element = document.getElementById('prestName');
-  if(!sel){ element.innerText='—'; document.getElementById('prestDesc').innerText='Elige un prestigio en la barra lateral.'; return; }
-  const prest = PRESTIGES.find(p=>p.id===sel);
-  element.innerText = prest.name;
-  document.getElementById('prestDesc').innerText = prest.desc || 'Prestigio.';
-  document.getElementById('prestBAB').innerText = prest.bab || 'medio';
-  document.getElementById('prestHD').innerText = 'd' + (prest.hd || 8);
-  // populate table
-  const tbody = document.querySelector('#prestProgressTable tbody'); tbody.innerHTML='';
-  const lvl = parseInt(document.getElementById('prestige1-level').value) || 0;
-  for(let i=1;i<=lvl;i++){
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${i}</td><td>${babForProgression(prest.bab||'medio', i)}</td><td>${avgHPForHD(prest.hd||8,i,'avg')}</td><td>--</td><td>--</td><td>--</td>`;
-    tbody.appendChild(tr);
-  }
-}
-
-/* -----------------------------------------------------------
-   DOTES y HABILIDADES: UI
-   ----------------------------------------------------------- */
-function updateDotesHabilidadesUI(){
-  // update counts
-  document.getElementById('featSlots').innerText = state.featSlots;
-  document.getElementById('skillPoints').innerText = state.skillPoints;
-
-  // populate skills list
-  const skillsDiv = document.getElementById('skillsList');
-  skillsDiv.innerHTML='';
-  SKILLS.forEach(s=>{
-    const row = document.createElement('div');
-    row.className='skill-row';
-    row.innerHTML = `
-      <div style="font-weight:700">${s.name}</div>
-      <div><input class="skill-input" data-skill="${s.id}" data-col="base" type="number" value="0"></div>
-      <div><input class="skill-input" data-skill="${s.id}" data-col="ranks" type="number" value="0"></div>
-      <div style="text-align:center"><input class="skill-input" data-skill="${s.id}" data-col="classcheck" type="checkbox"></div>
-      <div><input class="skill-input" data-skill="${s.id}" data-col="racial" type="number" value="0"></div>
-      <div><input class="skill-input" data-skill="${s.id}" data-col="misc" type="number" value="0"></div>
-      <div><input class="skill-input" data-skill="${s.id}" data-col="armor" type="number" value="${s.armorPen||0}"></div>
-      <div style="text-align:right"><span class="smallcell" id="skill_total_${s.id}">0</span></div>
-    `;
-    skillsDiv.appendChild(row);
-  });
-
-  // wire up change events on skill inputs
-  skillsDiv.querySelectorAll('.skill-input').forEach(inp=>{
-    inp.addEventListener('input', ()=> recalcSkills());
-  });
-
-  // populate feats
-  const featsDiv = document.getElementById('featsList'); featsDiv.innerHTML='';
-  FEATS.forEach(f=>{
-    const el = document.createElement('div');
-    el.className = 'feat';
-    el.id = 'feat_'+f.id;
-    el.innerHTML = `
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <div style="font-weight:700">${f.name}</div>
-        <div class="small">${f.prereq ? 'Requisitos presentados' : ''}</div>
-      </div>
-      <div class="tooltip small" style="margin-top:6px">${f.desc}</div>
-      <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
-        <label class="small">Seleccionar</label>
-        <input type="checkbox" data-feat="${f.id}" />
-      </div>
-    `;
-    featsDiv.appendChild(el);
-  });
-
-  // wire up feats checkboxes and run initial validation
-  featsDiv.querySelectorAll('input[type=checkbox]').forEach(cb=> cb.addEventListener('change', handleFeatToggle));
-  validateFeats();
-  recalcSkills();
-}
-
-/* -----------------------------------------------------------
-   recalcula skills totals
-   ----------------------------------------------------------- */
-function recalcSkills(){
-  SKILLS.forEach(s=>{
-    const base = parseInt(document.querySelector(`[data-skill="${s.id}"][data-col="base"]`).value)||0;
-    const ranks = parseInt(document.querySelector(`[data-skill="${s.id}"][data-col="ranks"]`).value)||0;
-    const racial = parseInt(document.querySelector(`[data-skill="${s.id}"][data-col="racial"]`).value)||0;
-    const misc = parseInt(document.querySelector(`[data-skill="${s.id}"][data-col="misc"]`).value)||0;
-    const armor = parseInt(document.querySelector(`[data-skill="${s.id}"][data-col="armor"]`).value)||0;
-    // attribute mod placeholder: 0 (en el futuro vincular a atributos reales)
-    const attrMod = 0;
-    const total = base + ranks + racial + misc + attrMod - armor;
-    document.getElementById('skill_total_'+s.id).innerText = total;
-  });
-}
-
-/* -----------------------------------------------------------
-   Validación/activación de feats (dotes)
-   - chequea requisitos simples: atributo mínimo, feats previas, nivel mínimo, BAB mínimo
-   ----------------------------------------------------------- */
-function validateFeats(){
-  // Determina nivel efectivo
-  const level = state.totalLevels;
-
-  FEATS.forEach(f=>{
-    const el = document.getElementById('feat_'+f.id);
-    let ok = true;
-    const reasons = [];
-    if(f.prereq){
-      if(f.prereq.str && (0 < f.prereq.str) ) { /* placeholder */ }
-      if(f.prereq.dex && (0 < f.prereq.dex) ) { /* placeholder */ }
-      if(f.prereq.feat){
-        // check if selected
-        const already = state.assignedFeats.includes(f.prereq.feat);
-        if(!already){ ok=false; reasons.push('Requiere dote previa: '+f.prereq.feat); }
-      }
-      // nivel
-      if(f.prereq.level && level < f.prereq.level){ ok=false; reasons.push('Requiere nivel '+f.prereq.level); }
-    }
-    if(!ok) el.classList.add('disabled'); else el.classList.remove('disabled');
-    // tooltip add reasons
-    const tip = el.querySelector('.tooltip');
-    tip.innerText = f.desc + (reasons.length? ' — ' + reasons.join('; ') : '');
-  });
-}
-
-/* -----------------------------------------------------------
-   Handler al marcar/unmarcar dote
-   ----------------------------------------------------------- */
-function handleFeatToggle(e){
-  const id = e.currentTarget.dataset.feat;
-  if(e.currentTarget.checked){
-    // check if allowed
-    if(document.getElementById('feat_'+id).classList.contains('disabled')){
-      alert('No cumple requisitos para seleccionar esta dote.');
-      e.currentTarget.checked=false;
-      return;
-    }
-    state.assignedFeats.push(id);
-  } else {
-    state.assignedFeats = state.assignedFeats.filter(x=>x!==id);
-  }
-  validateFeats();
-}
-
-/* -----------------------------------------------------------
-   onSidebarChange: recalcula todo y actualiza UI
-   ----------------------------------------------------------- */
-function onSidebarChange(){
-  // read values into state
-  readSidebarClassesPrestiges();
-  recalcAll();
-}
-
-/* -----------------------------------------------------------
-   Inicializa el UI por primera vez
-   ----------------------------------------------------------- */
-(function init(){
-  // set default con mod field
-  document.getElementById('conMod').value = 0;
-  // set default background
-  document.getElementById('backgroundSelect').value = 'Ninguno';
-  // initial recalc
-  recalcAll();
-  // wire hpMode changes to update class content
-  document.getElementById('hpMode').addEventListener('change', ()=> {
-    const active = document.querySelector('.class-tab.active');
-    if(active) renderClassContent(parseInt(active.dataset.idx,10));
-  });
-  // when class selection changes, refresh tabs
-  document.querySelectorAll('#class1,#class2,#class3').forEach(s=>s.addEventListener('change', ()=>{ updateClassTabs(); recalcAll(); }));
-  document.querySelectorAll('#class1-level,#class2-level,#class3-level').forEach(s=>s.addEventListener('input', ()=>{ updateClassTabs(); recalcAll(); }));
-  document.querySelectorAll('#prestige1,#prestige2,#prestige3,#prestige1-level,#prestige2-level,#prestige3-level').forEach(x=>x.addEventListener('change', ()=>{ updatePrestigeView(); recalcAll(); }));
-  // wire save/export (placeholders)
-  document.getElementById('saveBtn').addEventListener('click', ()=> alert('Guardar: funcionalidad no implementada en demo.'));
-  document.getElementById('exportBtn').addEventListener('click', ()=> alert('Exportar: funcionalidad no implementada en demo.'));
-})();
-</script>
+        // Inicializar
+        updateAttributes();
+        updateSavingThrows();
+        updateExperience();
+        calculateNEP();
+        updateSizeFromHeight(); // Inicializar tamaño según altura por defecto
+    </script>
 </body>
 </html>
