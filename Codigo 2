@@ -51,6 +51,49 @@
             display: flex;
             flex-direction: column;
         }
+
+        /* ESTILOS PARA PESTAÑAS */
+        .tabs-container {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--light-color);
+            padding: 0 20px;
+        }
+        
+        .tab {
+            padding: 12px 20px;
+            background-color: var(--light-color);
+            border: 1px solid transparent;
+            border-bottom: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            margin-right: 5px;
+        }
+        
+        .tab.active {
+            background-color: white;
+            border-color: #ddd;
+            color: var(--secondary-color);
+            position: relative;
+            top: 1px;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
         
         .section {
             padding: 20px;
@@ -411,6 +454,75 @@
             background-color: var(--light-color);
             color: var(--primary-color);
         }
+
+        /* ESTILOS PARA NUEVAS SECCIONES */
+        .combat-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .combat-stat {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+            text-align: center;
+        }
+        
+        .combat-stat label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .combat-stat input {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .skill-name {
+            flex: 1;
+        }
+        
+        .skill-bonus {
+            width: 60px;
+            text-align: center;
+        }
+        
+        .feats-list, .spells-list, .equipment-list {
+            min-height: 200px;
+            padding: 15px;
+            border: 1px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            background-color: var(--light-color);
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 10px;
+            border: 1px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            resize: vertical;
+        }
         
         @media (max-width: 1024px) {
             .container {
@@ -433,6 +545,17 @@
             
             .experience-totals {
                 grid-template-columns: 1fr;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab {
+                margin-right: 0;
+                margin-bottom: 5px;
+                border-radius: 5px;
+                border: 1px solid #ddd;
             }
         }
     </style>
@@ -461,71 +584,206 @@
                 </div>
             </div>
             
-            <div class="form-group-row">
-                <label for="class1">Clase 1</label>
-                <select id="class1">
-                    <option value="">Seleccionar</option>
-                    <option value="guerrero">Guerrero</option>
-                    <option value="mago">Mago</option>
-                    <option value="clerigo">Clérigo</option>
-                </select>
-                <input type="number" id="class1-level" class="level-input" value="0" min="0" max="20">
-            </div>
+<div class="form-group-row">
+    <label for="class1">Clase 1</label>
+    <select id="class1">
+        <option value="">Seleccionar</option>
+        <option value="adalid">Adalid</option>
+        <option value="alquimista">Alquimista</option>
+        <option value="antipaladin">Antipaladín</option>
+        <option value="arcanista">Arcanista</option>
+        <option value="barbaro">Bárbaro</option>
+        <option value="bardo">Bardo</option>
+        <option value="bruja">Bruja</option>
+        <option value="cazador">Cazador</option>
+        <option value="chaman">Chamán</option>
+        <option value="clerigo">Clérigo</option>
+        <option value="convocador">Convocador</option>
+        <option value="druida">Druida</option>
+        <option value="escaldo">Escaldo</option>
+        <option value="espadachin">Espadachín</option>
+        <option value="explorador">Explorador</option>
+        <option value="exterminador">Exterminador</option>
+        <option value="guerrero">Guerrero</option>
+        <option value="hechicero">Hechicero</option>
+        <option value="inquisidor">Inquisidor</option>
+        <option value="investigador">Investigador</option>
+        <option value="mago">Mago</option>
+        <option value="magus">Magus</option>
+        <option value="monje">Monje</option>
+        <option value="ninja">Ninja</option>
+        <option value="oraculo">Oráculo</option>
+        <option value="paladin">Paladín</option>
+        <option value="picaro">Pícaro</option>
+        <option value="pistolero">Pistolero</option>
+        <option value="psionico">Psiónico</option>
+        <option value="pugilista">Pugilista</option>
+        <option value="rabioso_sangre">Rabioso de sangre</option>
+        <option value="sacerdote_guerra">Sacerdote de guerra</option>
+        <option value="samurai">Samurai</option>
+    </select>
+    <input type="number" id="class1-level" class="level-input" value="0" min="0" max="20">
+</div>
+
+<div class="form-group-row">
+    <label for="class2">Clase 2</label>
+    <select id="class2">
+        <option value="">Seleccionar</option>
+        <option value="adalid">Adalid</option>
+        <option value="alquimista">Alquimista</option>
+        <option value="antipaladin">Antipaladín</option>
+        <option value="arcanista">Arcanista</option>
+        <option value="barbaro">Bárbaro</option>
+        <option value="bardo">Bardo</option>
+        <option value="bruja">Bruja</option>
+        <option value="cazador">Cazador</option>
+        <option value="chaman">Chamán</option>
+        <option value="clerigo">Clérigo</option>
+        <option value="convocador">Convocador</option>
+        <option value="druida">Druida</option>
+        <option value="escaldo">Escaldo</option>
+        <option value="espadachin">Espadachín</option>
+        <option value="explorador">Explorador</option>
+        <option value="exterminador">Exterminador</option>
+        <option value="guerrero">Guerrero</option>
+        <option value="hechicero">Hechicero</option>
+        <option value="inquisidor">Inquisidor</option>
+        <option value="investigador">Investigador</option>
+        <option value="mago">Mago</option>
+        <option value="magus">Magus</option>
+        <option value="monje">Monje</option>
+        <option value="ninja">Ninja</option>
+        <option value="oraculo">Oráculo</option>
+        <option value="paladin">Paladín</option>
+        <option value="picaro">Pícaro</option>
+        <option value="pistolero">Pistolero</option>
+        <option value="psionico">Psiónico</option>
+        <option value="pugilista">Pugilista</option>
+        <option value="rabioso_sangre">Rabioso de sangre</option>
+        <option value="sacerdote_guerra">Sacerdote de guerra</option>
+        <option value="samurai">Samurai</option>
+    </select>
+    <input type="number" id="class2-level" class="level-input" value="0" min="0" max="20">
+</div>
+
+<div class="form-group-row">
+    <label for="class3">Clase 3</label>
+    <select id="class3">
+        <option value="">Seleccionar</option>
+        <option value="adalid">Adalid</option>
+        <option value="alquimista">Alquimista</option>
+        <option value="antipaladin">Antipaladín</option>
+        <option value="arcanista">Arcanista</option>
+        <option value="barbaro">Bárbaro</option>
+        <option value="bardo">Bardo</option>
+        <option value="bruja">Bruja</option>
+        <option value="cazador">Cazador</option>
+        <option value="chaman">Chamán</option>
+        <option value="clerigo">Clérigo</option>
+        <option value="convocador">Convocador</option>
+        <option value="druida">Druida</option>
+        <option value="escaldo">Escaldo</option>
+        <option value="espadachin">Espadachín</option>
+        <option value="explorador">Explorador</option>
+        <option value="exterminador">Exterminador</option>
+        <option value="guerrero">Guerrero</option>
+        <option value="hechicero">Hechicero</option>
+        <option value="inquisidor">Inquisidor</option>
+        <option value="investigador">Investigador</option>
+        <option value="mago">Mago</option>
+        <option value="magus">Magus</option>
+        <option value="monje">Monje</option>
+        <option value="ninja">Ninja</option>
+        <option value="oraculo">Oráculo</option>
+        <option value="paladin">Paladín</option>
+        <option value="picaro">Pícaro</option>
+        <option value="pistolero">Pistolero</option>
+        <option value="psionico">Psiónico</option>
+        <option value="pugilista">Pugilista</option>
+        <option value="rabioso_sangre">Rabioso de sangre</option>
+        <option value="sacerdote_guerra">Sacerdote de guerra</option>
+        <option value="samurai">Samurai</option>
+    </select>
+    <input type="number" id="class3-level" class="level-input" value="0" min="0" max="20">
+</div>
             
-            <div class="form-group-row">
-                <label for="class2">Clase 2</label>
-                <select id="class2">
-                    <option value="">Seleccionar</option>
-                    <option value="picaro">Pícaro</option>
-                    <option value="barbaro">Bárbaro</option>
-                    <option value="bardo">Bardo</option>
-                </select>
-                <input type="number" id="class2-level" class="level-input" value="0" min="0" max="20">
-            </div>
-            
-            <div class="form-group-row">
-                <label for="class3">Clase 3</label>
-                <select id="class3">
-                    <option value="">Seleccionar</option>
-                    <option value="druida">Druida</option>
-                    <option value="monje">Monje</option>
-                    <option value="paladin">Paladín</option>
-                </select>
-                <input type="number" id="class3-level" class="level-input" value="0" min="0" max="20">
-            </div>
-            
-            <div class="form-group-row">
-                <label for="prestige1">Prestigio 1</label>
-                <select id="prestige1">
-                    <option value="">Seleccionar</option>
-                    <option value="archimago">Archimago</option>
-                    <option value="asesino">Asesino</option>
-                    <option value="campeon">Campeón</option>
-                </select>
-                <input type="number" id="prestige1-level" class="level-input" value="0" min="0" max="10">
-            </div>
-            
-            <div class="form-group-row">
-                <label for="prestige2">Prestigio 2</label>
-                <select id="prestige2">
-                    <option value="">Seleccionar</option>
-                    <option value="dragon">Caballero Dragón</option>
-                    <option value="titan">Guerrero Titán</option>
-                    <option value="sombras">Maestro Sombras</option>
-                </select>
-                <input type="number" id="prestige2-level" class="level-input" value="0" min="0" max="10">
-            </div>
-            
-            <div class="form-group-row">
-                <label for="prestige3">Prestigio 3</label>
-                <select id="prestige3">
-                    <option value="">Seleccionar</option>
-                    <option value="archimago">Archimago</option>
-                    <option value="asesino">Asesino</option>
-                    <option value="campeon">Campeón</option>
-                </select>
-                <input type="number" id="prestige3-level" class="level-input" value="0" min="0" max="10">
-            </div>
+<div class="form-group-row">
+    <label for="prestige1">Prestigio 1</label>
+    <select id="prestige1">
+        <option value="">Seleccionar</option>
+        <option value="arquero_arcano">Arquero Arcano</option>
+        <option value="asesino">Asesino</option>
+        <option value="bribon_arcano">Bribón Arcano</option>
+        <option value="caminante_horizonte">Caminante del horizonte</option>
+        <option value="caballero_arcano">Caballero Arcano</option>
+        <option value="cronista_pathfinder">Cronista Pathfinder</option>
+        <option value="danzarín_sombrio">Danzarín Sombrío</option>
+        <option value="defensor_firme">Defensor firme</option>
+        <option value="discipulo_dragon">Discípulo del Dragón</option>
+        <option value="duelista">Duelista</option>
+        <option value="espia_maestro">Espía maestro</option>
+        <option value="guardian_naturaleza">Guardián de la naturaleza</option>
+        <option value="heraldo_batalla">Heraldo de batalla</option>
+        <option value="maestro_saber">Maestro del Saber</option>
+        <option value="profeta_furia">Profeta de la furia</option>
+        <option value="quimico_maestro">Químico maestro</option>
+        <option value="teurgo_mistico">Teúrgo Místico</option>
+        <option value="vindicador_sagrado">Vindicador Sagrado</option>
+    </select>
+    <input type="number" id="prestige1-level" class="level-input" value="0" min="0" max="10">
+</div>
+
+<div class="form-group-row">
+    <label for="prestige2">Prestigio 2</label>
+    <select id="prestige2">
+        <option value="">Seleccionar</option>
+        <option value="arquero_arcano">Arquero Arcano</option>
+        <option value="asesino">Asesino</option>
+        <option value="bribon_arcano">Bribón Arcano</option>
+        <option value="caminante_horizonte">Caminante del horizonte</option>
+        <option value="caballero_arcano">Caballero Arcano</option>
+        <option value="cronista_pathfinder">Cronista Pathfinder</option>
+        <option value="danzarín_sombrio">Danzarín Sombrío</option>
+        <option value="defensor_firme">Defensor firme</option>
+        <option value="discipulo_dragon">Discípulo del Dragón</option>
+        <option value="duelista">Duelista</option>
+        <option value="espia_maestro">Espía maestro</option>
+        <option value="guardian_naturaleza">Guardián de la naturaleza</option>
+        <option value="heraldo_batalla">Heraldo de batalla</option>
+        <option value="maestro_saber">Maestro del Saber</option>
+        <option value="profeta_furia">Profeta de la furia</option>
+        <option value="quimico_maestro">Químico maestro</option>
+        <option value="teurgo_mistico">Teúrgo Místico</option>
+        <option value="vindicador_sagrado">Vindicador Sagrado</option>
+    </select>
+    <input type="number" id="prestige2-level" class="level-input" value="0" min="0" max="10">
+</div>
+
+<div class="form-group-row">
+    <label for="prestige3">Prestigio 3</label>
+    <select id="prestige3">
+        <option value="">Seleccionar</option>
+        <option value="arquero_arcano">Arquero Arcano</option>
+        <option value="asesino">Asesino</option>
+        <option value="bribon_arcano">Bribón Arcano</option>
+        <option value="caminante_horizonte">Caminante del horizonte</option>
+        <option value="caballero_arcano">Caballero Arcano</option>
+        <option value="cronista_pathfinder">Cronista Pathfinder</option>
+        <option value="danzarín_sombrio">Danzarín Sombrío</option>
+        <option value="defensor_firme">Defensor firme</option>
+        <option value="discipulo_dragon">Discípulo del Dragón</option>
+        <option value="duelista">Duelista</option>
+        <option value="espia_maestro">Espía maestro</option>
+        <option value="guardian_naturaleza">Guardián de la naturaleza</option>
+        <option value="heraldo_batalla">Heraldo de batalla</option>
+        <option value="maestro_saber">Maestro del Saber</option>
+        <option value="profeta_furia">Profeta de la furia</option>
+        <option value="quimico_maestro">Químico maestro</option>
+        <option value="teurgo_mistico">Teúrgo Místico</option>
+        <option value="vindicador_sagrado">Vindicador Sagrado</option>
+    </select>
+    <input type="number" id="prestige3-level" class="level-input" value="0" min="0" max="10">
+</div>
             
             <div class="form-group">
                 <label for="background">Trasfondo</label>
@@ -538,291 +796,703 @@
         
         <!-- Panel Principal (Derecha) -->
         <div class="main-panel">
-            <!-- Sección de Datos Básicos -->
-            <div class="section">
-                <h2 class="section-title">Datos Básicos</h2>
-                <div class="basic-data">
-                    <div class="data-row">
-                        <div class="form-group">
-                            <label for="character-name">Nombre del Personaje</label>
-                            <input type="text" id="character-name" placeholder="Nombre del personaje">
-                        </div>
-                        <div class="form-group">
-                            <label for="race">Raza</label>
-                            <select id="race">
-                                <option value="">Seleccionar raza</option>
-                                <option value="humano">Humano</option>
-                                <option value="elfo">Elfo</option>
-                                <option value="enano">Enano</option>
-                                <option value="mediano">Mediano</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="alignment">Alineamiento</label>
-                            <select id="alignment">
-                                <option value="">Seleccionar</option>
-                                <option value="lg">Legal Bueno</option>
-                                <option value="ng">Neutral Bueno</option>
-                                <option value="cg">Caótico Bueno</option>
-                            </select>
+            <!-- Sistema de Pestañas -->
+            <div class="tabs-container">
+                <div class="tabs">
+                    <div class="tab active" data-tab="basic">Datos Básicos</div>
+                    <div class="tab" data-tab="classes">Clases y Prestigios</div>
+                    <div class="tab" data-tab="combat">Combate</div>
+                    <div class="tab" data-tab="skills">Competencias</div>
+                    <div class="tab" data-tab="feats">Dotes y Talentos</div>
+                    <div class="tab" data-tab="equipment">Equipo</div>
+                    <div class="tab" data-tab="spells">Hechizos</div>
+                    <div class="tab" data-tab="background">Historia</div>
+                </div>
+            </div>
+
+            <!-- Contenido de Pestañas -->
+            
+            <!-- Pestaña de Datos Básicos -->
+            <div id="basic" class="tab-content active">
+                <!-- Sección de Datos Básicos (tu contenido original) -->
+                <div class="section">
+                    <h2 class="section-title">Datos Básicos</h2>
+                    <div class="basic-data">
+                        <div class="data-row">
+                            <div class="form-group">
+                                <label for="character-name">Nombre del Personaje</label>
+                                <input type="text" id="character-name" placeholder="Nombre del personaje">
+                            </div>
+<select id="race">
+    <option value="">Seleccionar raza</option>
+    <option value="aasimar">Aasimar</option>
+    <option value="branquial">Branquial</option>
+    <option value="dhampir">Dhampir</option>
+    <option value="drow_plebeyo">Drow Plebeyo</option>
+    <option value="drow_noble">Drow Noble</option>
+    <option value="efrit">Efrit</option>
+    <option value="elfo">Elfo</option>
+    <option value="enano">Enano</option>
+    <option value="duergar">Enano, Duergar</option>
+    <option value="estricido">Estrícido</option>
+    <option value="felido">Félido</option>
+    <option value="gnomo">Gnomo</option>
+    <option value="svirfneblin">Gnomo, Svirfneblin</option>
+    <option value="humano">Humano</option>
+    <option value="kitsune">Kitsune</option>
+    <option value="mediano">Mediano</option>
+    <option value="orco">Orco</option>
+    <option value="ratido">Rátido</option>
+    <option value="replicante">Replicante</option>
+    <option value="semielfo">Semielfo</option>
+    <option value="semiorco">Semiorco</option>
+    <option value="suli">Suli</option>
+    <option value="tiflin">Tiflin</option>
+    <option value="vanara">Vanara simiesco</option>
+    <option value="vishkanya">Vishkanya</option>
+</select>
+<div class="form-group">
+    <label for="alignment">Alineamiento</label>
+    <select id="alignment">
+        <option value="">Seleccionar</option>
+        <option value="lg">Legal Bueno</option>
+        <option value="ng">Neutral Bueno</option>
+        <option value="cg">Caótico Bueno</option>
+        <option value="ln">Legal Neutral</option>
+        <option value="n">Neutral</option>
+        <option value="cn">Caótico Neutral</option>
+        <option value="le">Legal Malvado</option>
+        <option value="ne">Neutral Malvado</option>
+        <option value="ce">Caótico Malvado</option>
+    </select>
+</div>
+<div class="data-row">
+    <div class="form-group">
+        <label for="deity">Deidad</label>
+        <select id="deity">
+            <option value="">Seleccionar deidad</option>
+            <option value="abadar">Abadar</option>
+            <option value="asmodeus">Asmodeus</option>
+            <option value="calistria">Calistria</option>
+            <option value="cayden_cailean">Cayden Cailean</option>
+            <option value="desna">Desna</option>
+            <option value="erastil">Erastil</option>
+            <option value="gorum">Gorum</option>
+            <option value="gozreh">Gozreh</option>
+            <option value="iomedae">Iomedae</option>
+            <option value="irori">Irori</option>
+            <option value="lamashtu">Lamashtu</option>
+            <option value="nethys">Nethys</option>
+            <option value="norgorber">Norgorber</option>
+            <option value="pharasma">Pharasma</option>
+            <option value="rorg">Rovagug</option>
+            <option value="sarenrae">Sarenrae</option>
+            <option value="shelyn">Shelyn</option>
+            <option value="torag">Torag</option>
+            <option value="urgathoa">Urgathoa</option>
+            <option value="zom">Zon-Kuthon</option>
+        </select>
+    </div>
+                            <div class="form-group">
+                                <label for="height">Altura (cm)</label>
+                                <input type="number" id="height" placeholder="Ej: 180" value="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="size">Tamaño</label>
+                                <input type="text" id="size" value="Mediano" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Sexo</label>
+                                <select id="gender">
+                                    <option value="masculino">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Edad</label>
+                                <input type="number" id="age" placeholder="Edad">
+                            </div>
                         </div>
                     </div>
-                    <div class="data-row">
-                        <div class="form-group">
-                            <label for="deity">Deidad</label>
-                            <select id="deity">
-                                <option value="">Seleccionar deidad</option>
-                                <option value="sarenrae">Sarenrae</option>
-                                <option value="iomedae">Iomedae</option>
-                                <option value="abadar">Abadar</option>
-                                <option value="nethys">Nethys</option>
-                                <option value="gorum">Gorum</option>
-                                <option value="calistria">Calistria</option>
-                                <option value="desna">Desna</option>
-                                <option value="pharasma">Pharasma</option>
-                                <option value="asmodeus">Asmodeus</option>
-                                <option value="zom">Zon-Kuthon</option>
-                            </select>
+                    
+                    <div class="size-modifiers">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Categoría de tamaño</th>
+                                    <th>Modificador de CA</th>
+                                    <th>Modificador de Gaco</th>
+                                    <th>Modificador de Fuerza</th>
+                                </tr>
+                            </thead>
+                            <tbody id="size-modifiers-body">
+                                <!-- Se llenará con JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Sección de Atributos y Salvamentos -->
+                <div class="section">
+                    <div class="attributes-saving-throws">
+                        <!-- Atributos -->
+                        <div>
+                            <h2 class="section-title">Atributos</h2>
+                            <table class="attributes-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Puntaje</th>
+                                        <th>Total</th>
+                                        <th>Bonif</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="attribute-name">FUE</td>
+                                        <td><input type="number" id="str-base" value="10" min="1" max="20"></td>
+                                        <td id="str-total" class="attribute-display">10</td>
+                                        <td id="str-mod" class="attribute-display">+0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="attribute-name">DES</td>
+                                        <td><input type="number" id="dex-base" value="10" min="1" max="20"></td>
+                                        <td id="dex-total" class="attribute-display">10</td>
+                                        <td id="dex-mod" class="attribute-display">+0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="attribute-name">CON</td>
+                                        <td><input type="number" id="con-base" value="10" min="1" max="20"></td>
+                                        <td id="con-total" class="attribute-display">10</td>
+                                        <td id="con-mod" class="attribute-display">+0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="attribute-name">INT</td>
+                                        <td><input type="number" id="int-base" value="10" min="1" max="20"></td>
+                                        <td id="int-total" class="attribute-display">10</td>
+                                        <td id="int-mod" class="attribute-display">+0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="attribute-name">SAB</td>
+                                        <td><input type="number" id="wis-base" value="10" min="1" max="20"></td>
+                                        <td id="wis-total" class="attribute-display">10</td>
+                                        <td id="wis-mod" class="attribute-display">+0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="attribute-name">CAR</td>
+                                        <td><input type="number" id="cha-base" value="10" min="1" max="20"></td>
+                                        <td id="cha-total" class="attribute-display">10</td>
+                                        <td id="cha-mod" class="attribute-display">+0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="form-group">
-                            <label for="height">Altura (cm)</label>
-                            <input type="number" id="height" placeholder="Ej: 180" value="180">
-                        </div>
-                        <div class="form-group">
-                            <label for="size">Tamaño</label>
-                            <input type="text" id="size" value="Mediano" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="gender">Sexo</label>
-                            <select id="gender">
-                                <option value="masculino">Masculino</option>
-                                <option value="femenino">Femenino</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="age">Edad</label>
-                            <input type="number" id="age" placeholder="Edad">
+                        
+                        <!-- Salvamentos -->
+                        <div>
+                            <h2 class="section-title">Salvamentos</h2>
+                            <table class="saving-throws-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Clases</th>
+                                        <th>Prestigios</th>
+                                        <th>Mod. Car.</th>
+                                        <th>Varios</th>
+                                        <th>Manual</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="saving-throw-name">Fortaleza</td>
+                                        <td><input type="number" id="fort-class" value="0"></td>
+                                        <td><input type="number" id="fort-prestige" value="0"></td>
+                                        <td id="fort-attr">+0</td>
+                                        <td><input type="number" id="fort-misc" value="0"></td>
+                                        <td><input type="number" id="fort-manual" value="0"></td>
+                                        <td id="fort-total" class="attribute-display">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="saving-throw-name">Reflejos</td>
+                                        <td><input type="number" id="reflex-class" value="0"></td>
+                                        <td><input type="number" id="reflex-prestige" value="0"></td>
+                                        <td id="reflex-attr">+0</td>
+                                        <td><input type="number" id="reflex-misc" value="0"></td>
+                                        <td><input type="number" id="reflex-manual" value="0"></td>
+                                        <td id="reflex-total" class="attribute-display">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="saving-throw-name">Voluntad</td>
+                                        <td><input type="number" id="will-class" value="0"></td>
+                                        <td><input type="number" id="will-prestige" value="0"></td>
+                                        <td id="will-attr">+0</td>
+                                        <td><input type="number" id="will-misc" value="0"></td>
+                                        <td><input type="number" id="will-manual" value="0"></td>
+                                        <td id="will-total" class="attribute-display">0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="magic-resistance">
+                                <label for="magic-resistance">Resistencia Mágica</label>
+                                <input type="number" id="magic-resistance" value="0">
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="size-modifiers">
-                    <table>
+                <!-- Sección de Experiencia -->
+                <div class="section">
+                    <h2 class="section-title">Experiencia</h2>
+                    <div class="experience-section">
+                        <!-- Clases -->
+                        <div>
+                            <h3>Clases</h3>
+                            <table class="experience-table">
+                                <thead>
+                                    <tr>
+                                        <th>Clase 1</th>
+                                        <th>Clase 2</th>
+                                        <th>Clase 3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="number" id="class1-exp" value="0"></td>
+                                        <td><input type="number" id="class2-exp" value="0"></td>
+                                        <td><input type="number" id="class3-exp" value="0"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Prestigios -->
+                        <div>
+                            <h3>Prestigios</h3>
+                            <table class="experience-table">
+                                <thead>
+                                    <tr>
+                                        <th>Prestigio 1</th>
+                                        <th>Prestigio 2</th>
+                                        <th>Prestigio 3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="number" id="prestige1-exp" value="0"></td>
+                                        <td><input type="number" id="prestige2-exp" value="0"></td>
+                                        <td><input type="number" id="prestige3-exp" value="0"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-totals">
+                        <div class="total-box">
+                            <label>Total Experiencia</label>
+                            <input type="number" id="total-exp" value="0" readonly>
+                        </div>
+                        <div class="total-box">
+                            <label>Siguiente Nivel</label>
+                            <input type="number" id="next-level" value="1000" readonly>
+                        </div>
+                        <div class="total-box">
+                            <label>Experiencia Acumulada</label>
+                            <input type="number" id="accumulated-exp" value="0" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="add-experience">
+                        <input type="number" id="add-exp-input" placeholder="Cantidad de experiencia a añadir">
+                        <button id="add-exp-btn">Añadir Experiencia</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestaña de Clases y Prestigios -->
+            <div id="classes" class="tab-content">
+                <div class="section">
+                    <h2 class="section-title">Detalles de Clases</h2>
+                    <div class="basic-data">
+                        <div class="data-row">
+                            <div class="form-group">
+                                <label for="class1-details">Clase 1 - Detalles</label>
+                                <textarea id="class1-details" placeholder="Especializaciones, habilidades de clase, etc."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="class2-details">Clase 2 - Detalles</label>
+                                <textarea id="class2-details" placeholder="Especializaciones, habilidades de clase, etc."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="class3-details">Clase 3 - Detalles</label>
+                                <textarea id="class3-details" placeholder="Especializaciones, habilidades de clase, etc."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Detalles de Prestigios</h2>
+                    <div class="basic-data">
+                        <div class="data-row">
+                            <div class="form-group">
+                                <label for="prestige1-details">Prestigio 1 - Detalles</label>
+                                <textarea id="prestige1-details" placeholder="Requisitos, habilidades especiales, etc."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="prestige2-details">Prestigio 2 - Detalles</label>
+                                <textarea id="prestige2-details" placeholder="Requisitos, habilidades especiales, etc."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="prestige3-details">Prestigio 3 - Detalles</label>
+                                <textarea id="prestige3-details" placeholder="Requisitos, habilidades especiales, etc."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestaña de Combate -->
+            <div id="combat" class="tab-content">
+                <div class="section">
+                    <h2 class="section-title">Estadísticas de Combate</h2>
+                    <div class="combat-stats">
+                        <div class="combat-stat">
+                            <label>Puntos de Golpe (PG)</label>
+                            <input type="number" value="10">
+                        </div>
+                        <div class="combat-stat">
+                            <label>Clase de Armadura (CA)</label>
+                            <input type="number" value="10">
+                        </div>
+                        <div class="combat-stat">
+                            <label>Iniciativa</label>
+                            <input type="number" value="0">
+                        </div>
+                        <div class="combat-stat">
+                            <label>Velocidad</label>
+                            <input type="number" value="30">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Ataques</h2>
+                    <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Categoría de tamaño</th>
-                                <th>Modificador de CA</th>
-                                <th>Modificador de Gaco</th>
-                                <th>Modificador de Fuerza</th>
+                                <th>Arma</th>
+                                <th>Bonif. Ataque</th>
+                                <th>Daño</th>
+                                <th>Crítico</th>
+                                <th>Tipo</th>
                             </tr>
                         </thead>
-                        <tbody id="size-modifiers-body">
-                            <!-- Se llenará con JavaScript -->
+                        <tbody>
+                            <tr>
+                                <td><input type="text" placeholder="Arma principal"></td>
+                                <td><input type="text" value="+0"></td>
+                                <td><input type="text" placeholder="1d8"></td>
+                                <td><input type="text" placeholder="19-20/x2"></td>
+                                <td><input type="text" placeholder="Cortante"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="Arma secundaria"></td>
+                                <td><input type="text" value="-2"></td>
+                                <td><input type="text" placeholder="1d6"></td>
+                                <td><input type="text" placeholder="x3"></td>
+                                <td><input type="text" placeholder="Perforante"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
-            <!-- Sección de Atributos y Salvamentos -->
-            <div class="section">
-                <div class="attributes-saving-throws">
-                    <!-- Atributos -->
-                    <div>
-                        <h2 class="section-title">Atributos</h2>
-                        <table class="attributes-table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Puntaje</th>
-                                    <th>Total</th>
-                                    <th>Bonif</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="attribute-name">FUE</td>
-                                    <td><input type="number" id="str-base" value="10" min="1" max="20"></td>
-                                    <td id="str-total" class="attribute-display">10</td>
-                                    <td id="str-mod" class="attribute-display">+0</td>
-                                </tr>
-                                <tr>
-                                    <td class="attribute-name">DES</td>
-                                    <td><input type="number" id="dex-base" value="10" min="1" max="20"></td>
-                                    <td id="dex-total" class="attribute-display">10</td>
-                                    <td id="dex-mod" class="attribute-display">+0</td>
-                                </tr>
-                                <tr>
-                                    <td class="attribute-name">CON</td>
-                                    <td><input type="number" id="con-base" value="10" min="1" max="20"></td>
-                                    <td id="con-total" class="attribute-display">10</td>
-                                    <td id="con-mod" class="attribute-display">+0</td>
-                                </tr>
-                                <tr>
-                                    <td class="attribute-name">INT</td>
-                                    <td><input type="number" id="int-base" value="10" min="1" max="20"></td>
-                                    <td id="int-total" class="attribute-display">10</td>
-                                    <td id="int-mod" class="attribute-display">+0</td>
-                                </tr>
-                                <tr>
-                                    <td class="attribute-name">SAB</td>
-                                    <td><input type="number" id="wis-base" value="10" min="1" max="20"></td>
-                                    <td id="wis-total" class="attribute-display">10</td>
-                                    <td id="wis-mod" class="attribute-display">+0</td>
-                                </tr>
-                                <tr>
-                                    <td class="attribute-name">CAR</td>
-                                    <td><input type="number" id="cha-base" value="10" min="1" max="20"></td>
-                                    <td id="cha-total" class="attribute-display">10</td>
-                                    <td id="cha-mod" class="attribute-display">+0</td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+            <!-- Pestaña de Competencias -->
+            <div id="skills" class="tab-content">
+                <div class="section">
+                    <h2 class="section-title">Competencias</h2>
+                    <div class="skills-grid" id="skills-container">
+                        <!-- Las competencias se generarán con JavaScript -->
                     </div>
-                    
-                    <!-- Salvamentos -->
-                    <div>
-                        <h2 class="section-title">Salvamentos</h2>
-                        <table class="saving-throws-table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Clases</th>
-                                    <th>Prestigios</th>
-                                    <th>Mod. Car.</th>
-                                    <th>Varios</th>
-                                    <th>Manual</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="saving-throw-name">Fortaleza</td>
-                                    <td><input type="number" id="fort-class" value="0"></td>
-                                    <td><input type="number" id="fort-prestige" value="0"></td>
-                                    <td id="fort-attr">+0</td>
-                                    <td><input type="number" id="fort-misc" value="0"></td>
-                                    <td><input type="number" id="fort-manual" value="0"></td>
-                                    <td id="fort-total" class="attribute-display">0</td>
-                                </tr>
-                                <tr>
-                                    <td class="saving-throw-name">Reflejos</td>
-                                    <td><input type="number" id="reflex-class" value="0"></td>
-                                    <td><input type="number" id="reflex-prestige" value="0"></td>
-                                    <td id="reflex-attr">+0</td>
-                                    <td><input type="number" id="reflex-misc" value="0"></td>
-                                    <td><input type="number" id="reflex-manual" value="0"></td>
-                                    <td id="reflex-total" class="attribute-display">0</td>
-                                </tr>
-                                <tr>
-                                    <td class="saving-throw-name">Voluntad</td>
-                                    <td><input type="number" id="will-class" value="0"></td>
-                                    <td><input type="number" id="will-prestige" value="0"></td>
-                                    <td id="will-attr">+0</td>
-                                    <td><input type="number" id="will-misc" value="0"></td>
-                                    <td><input type="number" id="will-manual" value="0"></td>
-                                    <td id="will-total" class="attribute-display">0</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <div class="magic-resistance">
-                            <label for="magic-resistance">Resistencia Mágica</label>
-                            <input type="number" id="magic-resistance" value="0">
+                </div>
+            </div>
+
+            <!-- Pestaña de Dotes y Talentos -->
+            <div id="feats" class="tab-content">
+                <div class="section">
+                    <h2 class="section-title">Dotes</h2>
+                    <div class="feats-list">
+                        <textarea placeholder="Lista de dotes del personaje..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Talentos Especiales</h2>
+                    <div class="feats-list">
+                        <textarea placeholder="Talentos raciales, de clase, prestigio u otros especiales..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestaña de Equipo -->
+            <div id="equipment" class="tab-content">
+                <div class="section">
+                    <h2 class="section-title">Equipo y Posesiones</h2>
+                    <div class="feats-list">
+                        <textarea placeholder="Armadura, armas, objetos mágicos, equipo de aventurero..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">Riqueza</h2>
+                    <div class="combat-stats">
+                        <div class="combat-stat">
+                            <label>Platino (PP)</label>
+                            <input type="number" value="0">
+                        </div>
+                        <div class="combat-stat">
+                            <label>Oro (PO)</label>
+                            <input type="number" value="0">
+                        </div>
+                        <div class="combat-stat">
+                            <label>Plata (PC)</label>
+                            <input type="number" value="0">
+                        </div>
+                        <div class="combat-stat">
+                            <label>Cobre (PB)</label>
+                            <input type="number" value="0">
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Sección de Experiencia -->
-            <div class="section">
-                <h2 class="section-title">Experiencia</h2>
-                <div class="experience-section">
-                    <!-- Clases -->
-                    <div>
-                        <h3>Clases</h3>
-                        <table class="experience-table">
-                            <thead>
-                                <tr>
-                                    <th>Clase 1</th>
-                                    <th>Clase 2</th>
-                                    <th>Clase 3</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="number" id="class1-exp" value="0"></td>
-                                    <td><input type="number" id="class2-exp" value="0"></td>
-                                    <td><input type="number" id="class3-exp" value="0"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <!-- Prestigios -->
-                    <div>
-                        <h3>Prestigios</h3>
-                        <table class="experience-table">
-                            <thead>
-                                <tr>
-                                    <th>Prestigio 1</th>
-                                    <th>Prestigio 2</th>
-                                    <th>Prestigio 3</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="number" id="prestige1-exp" value="0"></td>
-                                    <td><input type="number" id="prestige2-exp" value="0"></td>
-                                    <td><input type="number" id="prestige3-exp" value="0"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+            <!-- Pestaña de Hechizos -->
+            <div id="spells" class="tab-content">
+                <div class="section">
+                    <h2 class="section-title">Hechizos Conocidos/Preparados</h2>
+                    <div class="feats-list">
+                        <textarea placeholder="Lista de hechizos del personaje por nivel..."></textarea>
                     </div>
                 </div>
                 
-                <div class="experience-totals">
-                    <div class="total-box">
-                        <label>Total Experiencia</label>
-                        <input type="number" id="total-exp" value="0" readonly>
+                <div class="section">
+                    <h2 class="section-title">Puntos de Conjuración</h2>
+                    <div class="combat-stats">
+                        <div class="combat-stat">
+                            <label>Nivel 0</label>
+                            <input type="number" value="0">
+                        </div>
+                        <div class="combat-stat">
+                            <label>Nivel 1</label>
+                            <input type="number" value="0">
+                        </div>
+                        <div class="combat-stat">
+                            <label>Nivel 2</label>
+                            <input type="number" value="0">
+                        </div>
+                        <div class="combat-stat">
+                            <label>Nivel 3</label>
+                            <input type="number" value="0">
+                        </div>
                     </div>
-                    <div class="total-box">
-                        <label>Siguiente Nivel</label>
-                        <input type="number" id="next-level" value="1000" readonly>
-                    </div>
-                    <div class="total-box">
-                        <label>Experiencia Acumulada</label>
-                        <input type="number" id="accumulated-exp" value="0" readonly>
+                </div>
+            </div>
+
+            <!-- Pestaña de Historia -->
+            <div id="background" class="tab-content">
+                <div class="section">
+                    <h2 class="section-title">Historia del Personaje</h2>
+                    <div class="feats-list">
+                        <textarea placeholder="Escribe la historia de tu personaje aquí..."></textarea>
                     </div>
                 </div>
                 
-                <div class="add-experience">
-                    <input type="number" id="add-exp-input" placeholder="Cantidad de experiencia a añadir">
-                    <button id="add-exp-btn">Añadir Experiencia</button>
+                <div class="section">
+                    <h2 class="section-title">Rasgos de Personalidad</h2>
+                    <div class="feats-list">
+                        <textarea placeholder="Describe la personalidad, motivaciones, miedos, etc..."></textarea>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
+        // Sistema de pestañas
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remover clase activa de todos los tabs y contenidos
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Activar la pestaña clickeada
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Generar lista de competencias
+        function generateSkillsList() {
+            const skills = [
+                "Acrobacias (DES)", "Abrir cerraduras (DES)", "Artesanía (INT)", "Artista (CAR)", "Averiguar intenciones (SAB)",
+                "Caballerosidad (SAB)", "Concentración (CON)", "Conocimiento (arcano) (INT)", "Conocimiento (naturaleza) (INT)",
+                "Conocimiento (religión) (INT)", "Conocimiento (planos) (INT)", "Conocimiento (nobleza) (INT)", "Conocimiento (historia) (INT)",
+                "Curar (SAB)", "Descifrar escrituras (INT)", "Diplomacia (CAR)", "Disfrazarse (CAR)", "Equitación (DES)",
+                "Escamotear (DES)", "Escuchar (SAB)", "Esconderse (DES)", "Falsificar (INT)", "Idiomas (INT)", "Intimidar (CAR)",
+                "Interpretar (CAR)", "Juego de manos (DES)", "Montar (DES)", "Moverse sigilosamente (DES)", "Nadar (FUE)",
+                "Oficio (INT)", "Percepción (SAB)", "Perspicacia (SAB)", "Pilotar (DES)", "Profesión (SAB)", "Rastrear (SAB)",
+                "Saber local (INT)", "Saltar (FUE)", "Sanar (SAB)", "Seducción (CAR)", "Supervivencia (SAB)", "Trepar (FUE)",
+                "Usar objetos mágicos (CAR)", "Voluntad (SAB)"
+            ];
+            
+            const skillsContainer = document.getElementById('skills-container');
+            skills.forEach(skill => {
+                const skillItem = document.createElement('div');
+                skillItem.className = 'skill-item';
+                
+                const skillName = document.createElement('span');
+                skillName.className = 'skill-name';
+                skillName.textContent = skill;
+                
+                const skillInput = document.createElement('input');
+                skillInput.type = 'number';
+                skillInput.className = 'skill-bonus';
+                skillInput.placeholder = '0';
+                skillInput.value = '0';
+                
+                skillItem.appendChild(skillName);
+                skillItem.appendChild(skillInput);
+                skillsContainer.appendChild(skillItem);
+            });
+        }
+
+        // Inicializar la lista de competencias cuando se carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            generateSkillsList();
+        });
+
+        // El resto de tu código JavaScript original permanece igual...
+        // (Todas las funciones de calculateNEP, updateAttributes, etc.)
+        
         // JSON con los datos de trasfondos del PDF
-        const backgrounds = [
-            {
-                "nombre": "Acolito",
-                "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
-                "dote": "Magic Initiate (Cleric)",
-                "competenciaHabilidad": "Insight (Empatía), Religion (Teología)",
-                "herramientas": "Calligrapher's Supplies (Caligrafía)"
-            },
-            {
-                "nombre": "Artesano",
-                "puntuacionCaracteristica": "+1 Fue - +1 Des - +1 Int",
-                "dote": "Crafter",
-                "competenciaHabilidad": "Investigation (Búsqueda), Persuasion (Etiqueta/Comercio)",
-                "herramientas": "Artisan's Tools (Herramientas de artesano específicas)"
-            },
-            // ... (resto de trasfondos)
-        ];
+       const backgrounds = [
+    {
+        "nombre": "Acolito",
+        "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
+        "dote": "Magic Initiate (Cleric)",
+        "competenciaHabilidad": "Insight (Empatía), Religion (Teología)",
+        "herramientas": "Calligrapher's Supplies (Caligrafía)"
+    },
+    {
+        "nombre": "Artesano",
+        "puntuacionCaracteristica": "+1 Fue - +1 Des - +1 Int",
+        "dote": "Crafter",
+        "competenciaHabilidad": "Investigation (Búsqueda), Persuasion (Etiqueta/Comercio)",
+        "herramientas": "Artisan's Tools (Herramientas de artesano específicas)"
+    },
+    {
+        "nombre": "Artista",
+        "puntuacionCaracteristica": "+1 Des - +1 Int - +1 Car",
+        "dote": "Musical",
+        "competenciaHabilidad": "Performance (Interpretación), Persuasion (Etiqueta)",
+        "herramientas": "Musical Instrument (Instrumento musical)"
+    },
+    {
+        "nombre": "Charlatán",
+        "puntuacionCaracteristica": "+1 Des - +1 Int - +1 Car",
+        "dote": "Deceptive",
+        "competenciaHabilidad": "Deception (Engaño), Sleight of Hand (Juego de Manos)",
+        "herramientas": "Disguise Kit (Disfraces), Forgery Kit (Falsificación)"
+    },
+    {
+        "nombre": "Criminal",
+        "puntuacionCaracteristica": "+1 Des - +1 Int - +1 Car",
+        "dote": "Criminal",
+        "competenciaHabilidad": "Deception (Engaño), Stealth (Sigilo)",
+        "herramientas": "Thieves' Tools (Herramientas de ladrón), Gaming Set (Juego de azar)"
+    },
+    {
+        "nombre": "Erudito",
+        "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
+        "dote": "Scholar",
+        "competenciaHabilidad": "Investigation (Búsqueda), Lore (Erudición)",
+        "herramientas": "Calligrapher's Supplies (Caligrafía)"
+    },
+    {
+        "nombre": "Explorador",
+        "puntuacionCaracteristica": "+1 Fue - +1 Des - +1 Sab",
+        "dote": "Alert",
+        "competenciaHabilidad": "Nature (Naturaleza), Survival (Supervivencia)",
+        "herramientas": "Cartographer's Tools (Cartografía)"
+    },
+    {
+        "nombre": "Granjero",
+        "puntuacionCaracteristica": "+1 Fue - +1 Con - +1 Sab",
+        "dote": "Tough",
+        "competenciaHabilidad": "Animal Handling (Trato con Animales), Nature (Naturaleza)",
+        "herramientas": "Herbalism Kit (Herboristería), Land Vehicles (Vehículos terrestres)"
+    },
+    {
+        "nombre": "Guardián",
+        "puntuacionCaracteristica": "+1 Fue - +1 Con - +1 Sab",
+        "dote": "Guardian",
+        "competenciaHabilidad": "Insight (Empatía), Perception (Percepción)",
+        "herramientas": "Heavy Armor (Armadura pesada)"
+    },
+    {
+        "nombre": "Hermitaño",
+        "puntuacionCaracteristica": "+1 Con - +1 Sab - +1 Car",
+        "dote": "Healer",
+        "competenciaHabilidad": "Medicine (Medicina), Religion (Teología)",
+        "herramientas": "Herbalism Kit (Herboristería)"
+    },
+    {
+        "nombre": "Marinero",
+        "puntuacionCaracteristica": "+1 Fue - +1 Des - +1 Con",
+        "dote": "Sailor",
+        "competenciaHabilidad": "Acrobatics (Acrobacias), Perception (Percepción)",
+        "herramientas": "Water Vehicles (Vehículos acuáticos), Navigator's Tools (Navegación)"
+    },
+    {
+        "nombre": "Mercader",
+        "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
+        "dote": "Trader",
+        "competenciaHabilidad": "Persuasion (Etiqueta), Insight (Empatía)",
+        "herramientas": "Merchant's Scales (Básculas comerciales)"
+    },
+    {
+        "nombre": "Noble",
+        "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
+        "dote": "Leadership",
+        "competenciaHabilidad": "History (Historia), Persuasion (Etiqueta)",
+        "herramientas": "Calligrapher's Supplies (Caligrafía), Gaming Set (Juego de azar)"
+    },
+    {
+        "nombre": "Salvaje",
+        "puntuacionCaracteristica": "+1 Fue - +1 Con - +1 Sab",
+        "dote": "Savage",
+        "competenciaHabilidad": "Athletics (Atletismo), Survival (Supervivencia)",
+        "herramientas": "Primitive Tools (Herramientas primitivas)"
+    },
+    {
+        "nombre": "Soldado",
+        "puntuacionCaracteristica": "+1 Fue - +1 Con - +1 Car",
+        "dote": "Soldier",
+        "competenciaHabilidad": "Athletics (Atletismo), Intimidation (Intimidación)",
+        "herramientas": "Heavy Armor (Armadura pesada), Land Vehicles (Vehículos terrestres)"
+    },
+    {
+        "nombre": "Vagabundo",
+        "puntuacionCaracteristica": "+1 Des - +1 Con - +1 Sab",
+        "dote": "Survivor",
+        "competenciaHabilidad": "Stealth (Sigilo), Survival (Supervivencia)",
+        "herramientas": "Thieves' Tools (Herramientas de ladrón), Herbalism Kit (Herboristería)"
+    }
+];
 
         // JSON con modificadores de tamaño
         const sizeModifiers = {
