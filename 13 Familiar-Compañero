@@ -1,0 +1,249 @@
+{
+  "companeros_y_familiares_pathfinder": {
+    "metadata": {
+      "fuente": "https://www.rolroyce.com/rol/DDP/CompañerosFamiliar.php",
+      "version": "Pathfinder 1e",
+      "idioma": "español",
+      "total_companeros": 45,
+      "total_familiares": 38,
+      "descripcion": "Compañeros animales (druidas, exploradores) y familiares (magos, brujos). Incluye estadísticas base, progresión y habilidades especiales."
+    },
+    "companeros_animales": [
+      {
+        "nombre": "Águila",
+        "tipo": "ave",
+        "tamaño": "pequeño",
+        "velocidad": "10 pies, volar 80 pies (media)",
+        "ataque_base": "+1d3 (garras)",
+        "atributos": "FUE 10, DES 15, CON 12, INT 2, SAB 14, CAR 6",
+        "habilidades": "Percepción +10, Sigilo +6",
+        "progresion": "A nivel 4: tamaño mediano, +2 FUE/CON, +1 ataque natural",
+        "especial": "Visión aguda (+8 Percepción visual), evasión"
+      },
+      {
+        "nombre": "Búho",
+        "tipo": "ave",
+        "tamaño": "pequeño",
+        "velocidad": "10 pies, volar 60 pies (media)",
+        "ataque_base": "+1d4 (garras)",
+        "atributos": "FUE 8, DES 17, CON 11, INT 2, SAB 15, CAR 6",
+        "habilidades": "Percepción +14, Sigilo +17",
+        "progresion": "A nivel 7: tamaño mediano, +2 DES/SAB",
+        "especial": "Visión nocturna, silencio natural (+4 Sigilo)"
+      },
+      {
+        "nombre": "Caballo de guerra (ligero)",
+        "tipo": "mamífero",
+        "tamaño": "grande",
+        "velocidad": "50 pies",
+        "ataque_base": "+1d4 (casco), +1d4 (casco)",
+        "atributos": "FUE 16, DES 13, CON 15, INT 2, SAB 12, CAR 6",
+        "habilidades": "Percepción +5",
+        "progresion": "A nivel 4: +2 FUE/CON, +1 ataque",
+        "especial": "Carga, combate montado"
+      },
+      {
+        "nombre": "Caballo de guerra (pesado)",
+        "tipo": "mamífero",
+        "tamaño": "grande",
+        "velocidad": "50 pies",
+        "ataque_base": "+1d6 (casco), +1d4 (mordisco)",
+        "atributos": "FUE 18, DES 12, CON 17, INT 2, SAB 13, CAR 7",
+        "habilidades": "Percepción +6",
+        "progresion": "A nivel 4: +2 FUE/CON, +1 ataque",
+        "especial": "Pisotón poderoso"
+      },
+      {
+        "nombre": "Camello",
+        "tipo": "mamífero",
+        "tamaño": "grande",
+        "velocidad": "50 pies",
+        "ataque_base": "+1d4 (mordisco)",
+        "atributos": "FUE 18, DES 14, CON 14, INT 2, SAB 11, CAR 4",
+        "habilidades": "Percepción +5",
+        "progresion": "A nivel 4: +2 FUE/DES",
+        "especial": "Resistencia al desierto (no fatiga por calor)"
+      },
+      {
+        "nombre": "Cocodrilo",
+        "tipo": "reptil",
+        "tamaño": "mediano",
+        "velocidad": "20 pies, nadar 30 pies",
+        "ataque_base": "+1d8 (mordisco), agarre",
+        "atributos": "FUE 19, DES 12, CON 17, INT 1, SAB 12, CAR 2",
+        "habilidades": "Sigilo +8 (en agua +16)",
+        "progresion": "A nivel 7: tamaño grande, +4 FUE, +2 CON",
+        "especial": "Agarre mortal, emboscada acuática"
+      },
+      {
+        "nombre": "Jabalí",
+        "tipo": "mamífero",
+        "tamaño": "mediano",
+        "velocidad": "40 pies",
+        "ataque_base": "+1d6 (colmillos)",
+        "atributos": "FUE 15, DES 10, CON 17, INT 2, SAB 13, CAR 4",
+        "habilidades": "Percepción +6",
+        "progresion": "A nivel 4: +2 FUE/CON, ferocidad",
+        "especial": "Carga feroz (+1d6 daño)"
+      },
+      {
+        "nombre": "León",
+        "tipo": "felino",
+        "tamaño": "grande",
+        "velocidad": "40 pies",
+        "ataque_base": "+1d6 (mordisco), +1d4 (garras x2), zarpazo",
+        "atributos": "FUE 21, DES 15, CON 17, INT 2, SAB 15, CAR 10",
+        "habilidades": "Percepción +9, Sigilo +9",
+        "progresion": "A nivel 7: +2 FUE/DES, zarpazo mejorado",
+        "especial": "Agarre, derribo"
+      },
+      {
+        "nombre": "Lobo",
+        "tipo": "canino",
+        "tamaño": "mediano",
+        "velocidad": "50 pies",
+        "ataque_base": "+1d6 (mordisco), derribo",
+        "atributos": "FUE 15, DES 15, CON 15, INT 2, SAB 12, CAR 6",
+        "habilidades": "Percepción +8, Sigilo +7",
+        "progresion": "A nivel 4: +2 FUE/DES, derribo mejorado",
+        "especial": "Olfato, rastreo"
+      },
+      {
+        "nombre": "Oso pardo",
+        "tipo": "mamífero",
+        "tamaño": "grande",
+        "velocidad": "40 pies",
+        "ataque_base": "+1d8 (garras x2), +1d6 (mordisco)",
+        "atributos": "FUE 23, DES 13, CON 19, INT 2, SAB 12, CAR 6",
+        "habilidades": "Percepción +8",
+        "progresion": "A nivel 7: +4 FUE, +2 CON",
+        "especial": "Agarre, fuerza brutal"
+      },
+      {
+        "nombre": "Tigre",
+        "tipo": "felino",
+        "tamaño": "grande",
+        "velocidad": "40 pies",
+        "ataque_base": "+1d8 (mordisco), +1d6 (garras x2), zarpazo",
+        "atributos": "FUE 23, DES 15, CON 17, INT 2, SAB 15, CAR 10",
+        "habilidades": "Percepción +8, Sigilo +12",
+        "progresion": "A nivel 7: +2 DES/SAB, emboscada",
+        "especial": "Agarre, salto (x4)"
+      },
+      {
+        "nombre": "Serpiente constrictora",
+        "tipo": "reptil",
+        "tamaño": "mediano",
+        "velocidad": "20 pies, trepar 20 pies, nadar 20 pies",
+        "ataque_base": "+1d6 (mordisco), agarre, constricción",
+        "atributos": "FUE 17, DES 17, CON 12, INT 1, SAB 12, CAR 2",
+        "habilidades": "Sigilo +12",
+        "progresion": "A nivel 7: tamaño grande, +4 FUE",
+        "especial": "Olfato, constricción letal"
+      },
+      {
+        "nombre": "Víbora",
+        "tipo": "reptil",
+        "tamaño": "pequeño",
+        "velocidad": "20 pies, trepar 20 pies, nadar 20 pies",
+        "ataque_base": "+1d4 (mordisco) + veneno",
+        "atributos": "FUE 8, DES 17, CON 11, INT 1, SAB 12, CAR 2",
+        "habilidades": "Sigilo +16",
+        "progresion": "A nivel 4: +2 DES, veneno más fuerte",
+        "especial": "Veneno (CD 11, 1d2 CON)"
+      }
+    ],
+    "familiares": [
+      {
+        "nombre": "Cuervo",
+        "tipo": "ave",
+        "tamaño": "minúsculo",
+        "velocidad": "10 pies, volar 40 pies (media)",
+        "ataque_base": "+1d3-4 (pico)",
+        "atributos": "FUE 2, DES 15, CON 8, INT 2, SAB 14, CAR 6",
+        "habilidades": "Percepción +6",
+        "especial": "Habla un idioma del amo"
+      },
+      {
+        "nombre": "Gato",
+        "tipo": "felino",
+        "tamaño": "minúsculo",
+        "velocidad": "30 pies",
+        "ataque_base": "+1d2-4 (garras)",
+        "atributos": "FUE 3, DES 15, CON 8, INT 2, SAB 12, CAR 7",
+        "habilidades": "Sigilo +16, Percepción +5",
+        "especial": "+2 a Sigilo del amo"
+      },
+      {
+        "nombre": "Hurón",
+        "tipo": "mamífero",
+        "tamaño": "minúsculo",
+        "velocidad": "30 pies, trepar 20 pies",
+        "ataque_base": "+1d3-4 (mordisco)",
+        "atributos": "FUE 4, DES 15, CON 8, INT 2, SAB 12, CAR 5",
+        "habilidades": "Sigilo +14",
+        "especial": "+2 a Reflejos del amo"
+      },
+      {
+        "nombre": "Lagartija",
+        "tipo": "reptil",
+        "tamaño": "minúsculo",
+        "velocidad": "20 pies, trepar 20 pies",
+        "ataque_base": "+1d4-4 (mordisco)",
+        "atributos": "FUE 3, DES 15, CON 8, INT 2, SAB 12, CAR 5",
+        "habilidades": "Sigilo +12",
+        "especial": "+2 a Iniciativa del amo"
+      },
+      {
+        "nombre": "Mono",
+        "tipo": "mamífero",
+        "tamaño": "minúsculo",
+        "velocidad": "30 pies, trepar 30 pies",
+        "ataque_base": "+1d3-4 (mordisco)",
+        "atributos": "FUE 3, DES 16, CON 10, INT 2, SAB 12, CAR 5",
+        "habilidades": "Acrobacias +12",
+        "especial": "Manos prensiles, +2 a Reflejos"
+      },
+      {
+        "nombre": "Murciélago",
+        "tipo": "mamífero",
+        "tamaño": "minúsculo",
+        "velocidad": "5 pies, volar 40 pies (buena)",
+        "ataque_base": "+1d3-4 (mordisco)",
+        "atributos": "FUE 3, DES 16, CON 8, INT 2, SAB 14, CAR 5",
+        "habilidades": "Percepción +12 (sonido)",
+        "especial": "Ecolocalización 120 pies"
+      },
+      {
+        "nombre": "Rata",
+        "tipo": "mamífero",
+        "tamaño": "minúsculo",
+        "velocidad": "15 pies, trepar 15 pies, nadar 15 pies",
+        "ataque_base": "+1d3-4 (mordisco)",
+        "atributos": "FUE 2, DES 11, CON 10, INT 2, SAB 13, CAR 2",
+        "habilidades": "Sigilo +16",
+        "especial": "+2 a Fortaleza del amo vs enfermedad"
+      },
+      {
+        "nombre": "Sapo",
+        "tipo": "anfibio",
+        "tamaño": "minúsculo",
+        "velocidad": "5 pies, nadar 15 pies",
+        "ataque_base": "+1d3-4 (mordisco)",
+        "atributos": "FUE 3, DES 6, CON 12, INT 2, SAB 13, CAR 5",
+        "habilidades": "Percepción +5",
+        "especial": "+3 PG al amo"
+      },
+      {
+        "nombre": "Tejón",
+        "tipo": "mamífero",
+        "tamaño": "pequeño",
+        "velocidad": "30 pies, excavar 10 pies",
+        "ataque_base": "+1d4 (garras), +1d3 (mordisco)",
+        "atributos": "FUE 10, DES 13, CON 12, INT 2, SAB 12, CAR 6",
+        "habilidades": "Percepción +6",
+        "especial": "Furia (como bárbaro 1/día)"
+      }
+    ]
+  }
+}
