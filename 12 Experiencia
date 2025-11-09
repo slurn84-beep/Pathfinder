@@ -1,0 +1,85 @@
+{
+  "experiencia_pathfinder": {
+    "metadata": {
+      "fuente": "d20PFSRD - Character Advancement and Level-Dependent Bonuses",
+      "version": "Pathfinder 1e",
+      "idioma": "español",
+      "descripcion": "Tabla completa de XP para progresión (lenta, media, rápida) hasta nivel 20"
+    },
+    "progresion": {
+      "lenta": [
+        {"nivel": 1, "xp_necesaria": 0, "xp_total": 0},
+        {"nivel": 2, "xp_necesaria": 3000, "xp_total": 3000},
+        {"nivel": 3, "xp_necesaria": 7500, "xp_total": 10500},
+        {"nivel": 4, "xp_necesaria": 14000, "xp_total": 24500},
+        {"nivel": 5, "xp_necesaria": 23000, "xp_total": 47500},
+        {"nivel": 6, "xp_necesaria": 35000, "xp_total": 82500},
+        {"nivel": 7, "xp_necesaria": 53000, "xp_total": 135500},
+        {"nivel": 8, "xp_necesaria": 77000, "xp_total": 212500},
+        {"nivel": 9, "xp_necesaria": 115000, "xp_total": 327500},
+        {"nivel": 10, "xp_necesaria": 160000, "xp_total": 487500},
+        {"nivel": 11, "xp_necesaria": 235000, "xp_total": 722500},
+        {"nivel": 12, "xp_necesaria": 330000, "xp_total": 1052500},
+        {"nivel": 13, "xp_necesaria": 475000, "xp_total": 1527500},
+        {"nivel": 14, "xp_necesaria": 665000, "xp_total": 2192500},
+        {"nivel": 15, "xp_necesaria": 955000, "xp_total": 3147500},
+        {"nivel": 16, "xp_necesaria": 1350000, "xp_total": 4497500},
+        {"nivel": 17, "xp_necesaria": 1900000, "xp_total": 6397500},
+        {"nivel": 18, "xp_necesaria": 2700000, "xp_total": 9097500},
+        {"nivel": 19, "xp_necesaria": 3850000, "xp_total": 12947500},
+        {"nivel": 20, "xp_necesaria": 5350000, "xp_total": 18297500}
+      ],
+      "media": [
+        {"nivel": 1, "xp_necesaria": 0, "xp_total": 0},
+        {"nivel": 2, "xp_necesaria": 2000, "xp_total": 2000},
+        {"nivel": 3, "xp_necesaria": 5000, "xp_total": 7000},
+        {"nivel": 4, "xp_necesaria": 9000, "xp_total": 16000},
+        {"nivel": 5, "xp_necesaria": 15000, "xp_total": 31000},
+        {"nivel": 6, "xp_necesaria": 23000, "xp_total": 54000},
+        {"nivel": 7, "xp_necesaria": 35000, "xp_total": 89000},
+        {"nivel": 8, "xp_necesaria": 51000, "xp_total": 140000},
+        {"nivel": 9, "xp_necesaria": 75000, "xp_total": 215000},
+        {"nivel": 10, "xp_necesaria": 105000, "xp_total": 320000},
+        {"nivel": 11, "xp_necesaria": 155000, "xp_total": 475000},
+        {"nivel": 12, "xp_necesaria": 220000, "xp_total": 695000},
+        {"nivel": 13, "xp_necesaria": 315000, "xp_total": 1010000},
+        {"nivel": 14, "xp_necesaria": 445000, "xp_total": 1455000},
+        {"nivel": 15, "xp_necesaria": 635000, "xp_total": 2090000},
+        {"nivel": 16, "xp_necesaria": 890000, "xp_total": 2980000},
+        {"nivel": 17, "xp_necesaria": 1300000, "xp_total": 4280000},
+        {"nivel": 18, "xp_necesaria": 1800000, "xp_total": 6080000},
+        {"nivel": 19, "xp_necesaria": 2550000, "xp_total": 8630000},
+        {"nivel": 20, "xp_necesaria": 3600000, "xp_total": 12230000}
+      ],
+      "rapida": [
+        {"nivel": 1, "xp_necesaria": 0, "xp_total": 0},
+        {"nivel": 2, "xp_necesaria": 1300, "xp_total": 1300},
+        {"nivel": 3, "xp_necesaria": 3300, "xp_total": 4600},
+        {"nivel": 4, "xp_necesaria": 6000, "xp_total": 10600},
+        {"nivel": 5, "xp_necesaria": 10000, "xp_total": 20600},
+        {"nivel": 6, "xp_necesaria": 15000, "xp_total": 35600},
+        {"nivel": 7, "xp_necesaria": 23000, "xp_total": 58600},
+        {"nivel": 8, "xp_necesaria": 34000, "xp_total": 92600},
+        {"nivel": 9, "xp_necesaria": 50000, "xp_total": 142600},
+        {"nivel": 10, "xp_necesaria": 71000, "xp_total": 213600},
+        {"nivel": 11, "xp_necesaria": 105000, "xp_total": 318600},
+        {"nivel": 12, "xp_necesaria": 145000, "xp_total": 463600},
+        {"nivel": 13, "xp_necesaria": 210000, "xp_total": 673600},
+        {"nivel": 14, "xp_necesaria": 295000, "xp_total": 968600},
+        {"nivel": 15, "xp_necesaria": 425000, "xp_total": 1393600},
+        {"nivel": 16, "xp_necesaria": 600000, "xp_total": 1993600},
+        {"nivel": 17, "xp_necesaria": 850000, "xp_total": 2843600},
+        {"nivel": 18, "xp_necesaria": 1200000, "xp_total": 4043600},
+        {"nivel": 19, "xp_necesaria": 1700000, "xp_total": 5743600},
+        {"nivel": 20, "xp_necesaria": 2400000, "xp_total": 8143600}
+      ]
+    },
+    "ejemplo": {
+      "nivel_actual": 3,
+      "xp_acumulada": 8000,
+      "xp_proximo_nivel": 9000,
+      "progresion": "media",
+      "nivel_siguiente": 4
+    }
+  }
+}
