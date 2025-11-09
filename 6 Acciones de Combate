@@ -1,0 +1,347 @@
+{
+  "habilidades_especiales_combate": {
+    "metadata": {
+      "fuente": "https://www.rolroyce.com/rol/DDP/CombatePF.php",
+      "version": "Pathfinder 1e",
+      "idioma": "español",
+      "ultima_actualizacion": "2025-11-04",
+      "total_habilidades": 25,
+      "descripcion_general": "Todas las maniobras, acciones especiales y reglas de combate de Pathfinder 1e, extraídas y estructuradas para uso en aplicaciones, bases de datos o manuales digitales."
+    },
+    "habilidades": [
+      {
+        "nombre": "Prestar ayuda",
+        "tipo": "Acción estándar",
+        "descripcion": "Durante un combate cuerpo a cuerpo puedes intentar ayudar a un aliado a atacar o a defenderse de un enemigo, actuando como distracción o interfiriendo de alguna manera con ese enemigo. Si estás a distancia de cuerpo a cuerpo de ese enemigo puedes intentar ayudar a tu compañero como acción estándar realizando una tirada de ataque a dificultad 10. Si superas la tirada el personaje al que has ayudado obtiene un bonificador de +3 a su siguiente tirada de combate contra ese enemigo o bien un bonificador de +3 a la CA en el siguiente ataque que recibe del enemigo objetivo, tú eliges, siempre y cuando esos ataques se realicen antes de finalizar el turno. Más de un jugador puede ayudar a un solo personaje, de esta manera los bonificadores se sumarían. También se puede usar esta acción estándar para prestar ayuda a otro personaje de otras maneras, como cuando es afectado por un conjuro o para ayudar en una tirada de habilidad.",
+        "requisitos": "Estar a distancia de cuerpo a cuerpo del enemigo.",
+        "beneficio": "Bonificador de +3 a ataque o CA del aliado (acumulable).",
+        "accion": "estándar",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "CD 10 en tirada de ataque",
+          "+3 acumulable por múltiples aliados"
+        ],
+        "enlaces_relacionados": [
+          {
+            "nombre": "Estados alterados",
+            "url": "https://www.rolroyce.com/rol/DDP/EstadosPF.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Cargar",
+        "tipo": "Acción de asalto completo",
+        "descripcion": "La carga es una acción especial de asalto completo que te permite avanzar al doble de tu velocidad y atacar en la misma acción. Movimiento: debes moverte antes de atacar, al menos 10 pies y máximo doble velocidad, en línea recta. Puedes desenvainar arma si BAB ≥ +1. Atacar: un solo ataque con +2 al ataque y -2 a CA hasta tu próximo turno. Lanzas hacen doble daño montadas. Armas preparadas contra carga hacen doble daño.",
+        "requisitos": "Camino despejado, línea de visión, espacio libre más cercano al enemigo.",
+        "beneficio": "+2 ataque, -2 CA; doble daño con lanza montada.",
+        "accion": "asalto completo",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "+2 ataque",
+          "-2 CA",
+          "BAB +1 para desenvainar",
+          "Doble velocidad máxima"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Maniobras de Combate (BMC/DMC)",
+        "tipo": "Mecánica base",
+        "descripcion": "Sistema unificado para maniobras: BMC = BAB + FUE + tamaño; DMC = 10 + BAB + FUE + DES + tamaño. Éxito si BMC ≥ DMC. Provoca AoO salvo dote mejorada. +4 vs aturdido. 20 natural = éxito automático (excepto ligaduras).",
+        "requisitos": "Acción apropiada para la maniobra.",
+        "beneficio": "Resolución estándar para todas las maniobras.",
+        "accion": "variable",
+        "provoca_ataque_oportunidad": true,
+        "modificadores": [
+          "Tamaño: Min -8, Dim -4, Men -2, Peq -1, Med 0, Gra +1, Eno +2, Gar +4, Col +8",
+          "+4 vs aturdido",
+          "20 natural = éxito"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Arrastrar",
+        "tipo": "Maniobra de combate",
+        "descripcion": "Arrastra a un enemigo en línea recta detrás de ti. Mueve 5 pies +5 por cada 5 puntos de exceso sobre DMC. No causa daño. Estabilidad racial aplica.",
+        "requisitos": "Oponente ≤ 1 categoría de tamaño mayor; espacio libre detrás.",
+        "beneficio": "Movimiento forzado del enemigo.",
+        "accion": "estándar",
+        "provoca_ataque_oportunidad": true,
+        "modificadores": [
+          "+5 pies por cada 5 de exceso",
+          "Estabilidad racial aplica"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Arrollar",
+        "tipo": "Maniobra de combate",
+        "descripcion": "Pasa a través del espacio de un enemigo. Si excedes DMC por 5+, el objetivo queda tumbado. +2 DMC por cada pierna extra más de 2.",
+        "requisitos": "Durante movimiento o carga; ≤ 1 categoría mayor.",
+        "beneficio": "Paso forzado; posible derribo.",
+        "accion": "estándar",
+        "provoca_ataque_oportunidad": true,
+        "modificadores": [
+          "+2 DMC por pierna extra",
+          "Tumbado si +5 exceso"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Derribo",
+        "tipo": "Maniobra de combate",
+        "descripcion": "Derriba al enemigo. Si excedes DMC por 5+, queda aturdido 1 ronda. +2 DMC por pierna extra. Tumbado: -4 ataque, -2 CA.",
+        "requisitos": "≤ 1 categoría mayor.",
+        "beneficio": "Enemigo tumbado y posiblemente aturdido.",
+        "accion": "estándar o parte de ataque",
+        "provoca_ataque_oportunidad": true,
+        "modificadores": [
+          "+2 DMC por pierna extra",
+          "Aturdido si +5 exceso"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Desarme",
+        "tipo": "Maniobra de combate",
+        "descripcion": "Haz caer el arma del enemigo. Puedes recogerla como acción gratuita si está adyacente. Exceso de 5+ permite desarmar múltiples armas.",
+        "requisitos": "Ninguno (cualquier tamaño).",
+        "beneficio": "Enemigo desarmado.",
+        "accion": "estándar o parte de ataque",
+        "provoca_ataque_oportunidad": true,
+        "modificadores": [
+          "Recoger arma: acción gratuita"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Embestida",
+        "tipo": "Maniobra de combate",
+        "descripcion": "Empuja al enemigo hacia atrás 5 pies +5 por cada 5 de exceso. Si +10, queda tumbado.",
+        "requisitos": "≤ 1 categoría mayor.",
+        "beneficio": "Control de posición; posible derribo.",
+        "accion": "estándar",
+        "provoca_ataque_oportunidad": true,
+        "modificadores": [
+          "Tumbado si +10 exceso"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Presa",
+        "tipo": "Maniobra de combate",
+        "descripcion": "Agarras al enemigo. Ambos agarrados. Puedes dañar con mano libre o inmovilizar (maniobra adicional). Escapar requiere maniobra opuesta.",
+        "requisitos": "≤ 1 categoría mayor.",
+        "beneficio": "Inmovilización y control.",
+        "accion": "estándar o parte de ataque",
+        "provoca_ataque_oportunidad": true,
+        "modificadores": [
+          "+2 DMC mientras agarrado"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Romper arma",
+        "tipo": "Maniobra de combate",
+        "descripcion": "Daño directo al arma/escudo. Si PG del objeto ≤ 0, se rompe. Puedes elegir romper en vez de dañar al portador.",
+        "requisitos": "Ninguno.",
+        "beneficio": "Equipo enemigo destruido.",
+        "accion": "estándar o parte de ataque",
+        "provoca_ataque_oportunidad": true,
+        "modificadores": [
+          "Daño a PG del objeto"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Ataque de oportunidad",
+        "tipo": "Reacción",
+        "descripcion": "Ataque cuerpo a cuerpo gratuito cuando un enemigo realiza acción peligrosa en tu área amenazada (moverse, conjuro, levantarse, etc.). Solo uno por provocación.",
+        "requisitos": "Enemigo en área amenazada.",
+        "beneficio": "Ataque gratuito.",
+        "accion": "reacción",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "+4 vs. enemigo tumbado"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Flanqueo",
+        "tipo": "Posicional",
+        "descripcion": "Dos aliados en lados opuestos del enemigo: +2 al ataque para ambos. No aplica a ciegos o sin sentido del tacto.",
+        "requisitos": "Aliados opuestos al enemigo.",
+        "beneficio": "+2 ataque para flanqueadores.",
+        "accion": "pasiva",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "+2 ataque"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Combate cuerpo a cuerpo",
+        "tipo": "Ataque",
+        "descripcion": "BAB + FUE (o DES para armas finas) + tamaño + otros. Ataques múltiples por BAB alto (-5 cada uno).",
+        "requisitos": "Distancia cuerpo a cuerpo.",
+        "beneficio": "Daño físico directo.",
+        "accion": "estándar o asalto completo",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "-5 por ataque adicional"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Combate a distancia",
+        "tipo": "Ataque",
+        "descripcion": "BAB + DES + tamaño. Penalizadores por rango (-2 por cada rango después del primero). No funciona adyacente.",
+        "requisitos": "Distancia de arma.",
+        "beneficio": "Ataque a distancia.",
+        "accion": "estándar",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "-2 por rango, -4 máximo"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Ataque completo",
+        "tipo": "Acción de asalto completo",
+        "descripcion": "Todos los ataques base en un turno. Incluye movimiento completo.",
+        "requisitos": "Turno completo.",
+        "beneficio": "Múltiples ataques.",
+        "accion": "asalto completo",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "-5, -10, -15 por ataque"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Clase de Armadura (CA)",
+        "tipo": "Defensa",
+        "descripcion": "10 + armadura + escudo + DES + tamaño + otros. Toque ignora armadura; desprevenido ignora DES.",
+        "requisitos": "Ninguno.",
+        "beneficio": "Protección contra ataques.",
+        "accion": "pasiva",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "+1 tamaño pequeño",
+          "-2 tamaño grande"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Daño",
+        "tipo": "Resultado",
+        "descripcion": "Dados arma + FUE (1.5 dos manos) + especiales. RD resta. Crítico multiplica dados + bonificador.",
+        "requisitos": "Ataque exitoso.",
+        "beneficio": "Reducción de PG.",
+        "accion": "resultado",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "1.5 FUE dos manos",
+          "RD 5/- resta 5"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Tiradas de salvación",
+        "tipo": "Defensa reactiva",
+        "descripcion": "Base + atributo + otros. Fort (CON), Ref (DES), Vol (SAB). Éxito si ≥ CD.",
+        "requisitos": "Efecto requiere salvación.",
+        "beneficio": "Evita/mitiga efectos.",
+        "accion": "reacción",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "+2 vs miedo si legal"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Estados alterados",
+        "tipo": "Condiciones",
+        "descripcion": "Aturdido (-2 ataque), cegado (-2 ataque, +2 CD), exhausto (-6 FUE/DES), fatigado (-2), inmovilizado, etc. Algunos permiten salvación.",
+        "requisitos": "Aplicación de efecto.",
+        "beneficio": "Alteración táctica.",
+        "accion": "pasiva",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "-4 ataque si aturdido"
+        ],
+        "enlaces_relacionados": [
+          {
+            "nombre": "Lista completa",
+            "url": "https://www.rolroyce.com/rol/DDP/EstadosPF.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Combate montado",
+        "tipo": "Modo especial",
+        "descripcion": "Lucha desde montura. Usa su movimiento. Ataques con penalización si no entrenada. Montura puede atacar.",
+        "requisitos": "Montura.",
+        "beneficio": "Movilidad y ataque elevado.",
+        "accion": "variable",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "-4 ataque si montura no entrenada"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Combate subacuático",
+        "tipo": "Entorno",
+        "descripcion": "Penalizadores (-2 ataque sin libertad), conjuros verbales fallan. Criaturas acuáticas sin penalización.",
+        "requisitos": "Bajo el agua.",
+        "beneficio": "Supervivencia acuática.",
+        "accion": "pasiva",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "-2 ataque sin anfibio"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Combate en oscuridad",
+        "tipo": "Entorno",
+        "descripcion": "Oscuridad total: -4 ataque, -4 Percepción, pierde DES. Visión en oscuridad ignora.",
+        "requisitos": "Sin luz.",
+        "beneficio": "Ventaja nocturna.",
+        "accion": "pasiva",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "-4 ataque en oscuridad total"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Iniciativa",
+        "tipo": "Determinación de turno",
+        "descripcion": "1d20 + DES + modificadores. Mayor actúa primero. Empates por DES o tirada.",
+        "requisitos": "Inicio de combate.",
+        "beneficio": "Actuar antes.",
+        "accion": "inicio",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "+4 con alerta"
+        ],
+        "enlaces_relacionados": []
+      },
+      {
+        "nombre": "Acciones en combate",
+        "tipo": "Gestión de turno",
+        "descripcion": "Estándar + movimiento + rápida. Completa = estándar + movimiento. Gratuita = múltiples. Asalto completo = ataques múltiples.",
+        "requisitos": "Turno del personaje.",
+        "beneficio": "Flexibilidad táctica.",
+        "accion": "variable",
+        "provoca_ataque_oportunidad": false,
+        "modificadores": [
+          "Retirada: -2 CA"
+        ],
+        "enlaces_relacionados": []
+      }
+    ]
+  }
+}
