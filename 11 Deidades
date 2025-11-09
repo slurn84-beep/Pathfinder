@@ -1,0 +1,203 @@
+{
+  "deidades_pathfinder": {
+    "metadata": {
+      "fuente": "https://www.rolroyce.com/rol/DDP/Deidades.php",
+      "version": "Pathfinder 1e",
+      "idioma": "español",
+      "total_deidades": 20,
+      "descripcion": "Panteón principal de Golarion. Dominios, arma predilecta, alineamiento, símbolo y adoradores."
+    },
+    "deidades": [
+      {
+        "nombre": "Abadar",
+        "titulo": "Dios de las Ciudades, Riqueza y Ley",
+        "alineamiento": "Legal Neutral",
+        "dominios": ["Ley", "Tierra", "Nobleza", "Protección", "Viaje"],
+        "subdominios": ["Comercio", "Defensa", "Metal"],
+        "arma_predilecta": "Ballesta ligera",
+        "símbolo": "Llave dorada",
+        "adoradores": "Comerciantes, jueces, nobles"
+      },
+      {
+        "nombre": "Asmodeus",
+        "titulo": "Príncipe de la Oscuridad",
+        "alineamiento": "Legal Malvado",
+        "dominios": ["Fuego", "Ley", "Magia", "Oscuridad", "Engaño"],
+        "subdominios": ["Diablo", "Ceniza", "Arcano"],
+        "arma_predilecta": "Maza",
+        "símbolo": "Pentáculo rojo",
+        "adoradores": "Diablos, tiranos, abogados"
+      },
+      {
+        "nombre": "Calistria",
+        "titulo": "Diosa de la Venganza y el Deseo",
+        "alineamiento": "Caótico Neutral",
+        "dominios": ["Caos", "Encantamiento", "Conocimiento", "Suerte", "Engaño"],
+        "subdominios": ["Lujuria", "Espionaje", "Revelación"],
+        "arma_predilecta": "Látigo",
+        "símbolo": "Tres dagas entrelazadas",
+        "adoradores": "Cortesanas, asesinos, tramposos"
+      },
+      {
+        "nombre": "Cayden Cailean",
+        "titulo": "Dios de la Libertad y el Alcohol",
+        "alineamiento": "Caótico Bueno",
+        "dominios": ["Caos", "Bien", "Fuerza", "Viaje", "Encantamiento"],
+        "subdominios": ["Azata", "Ferocidad", "Exploración"],
+        "arma_predilecta": "Rapier",
+        "símbolo": "Jarron de cerveza",
+        "adoradores": "Taberneros, aventureros, borrachos"
+      },
+      {
+        "nombre": "Desna",
+        "titulo": "Diosa de los Sueños y las Estrellas",
+        "alineamiento": "Caótico Bueno",
+        "dominios": ["Caos", "Bien", "Liberación", "Suerte", "Viaje"],
+        "subdominios": ["Azata", "Revolución", "Exploración"],
+        "arma_predilecta": "Starknife",
+        "símbolo": "Mariposa estelar",
+        "adoradores": "Viajeros, soñadores, astrólogos"
+      },
+      {
+        "nombre": "Erastil",
+        "titulo": "Dios de la Caza y la Familia",
+        "alineamiento": "Legal Bueno",
+        "dominios": ["Bien", "Animal", "Comunidad", "Plantas", "Ley"],
+        "subdominios": ["Agathion", "Crecimiento", "Familia"],
+        "arma_predilecta": "Arco largo",
+        "símbolo": "Ciervo con arco",
+        "adoradores": "Granjeros, cazadores, familias"
+      },
+      {
+        "nombre": "Gorum",
+        "titulo": "Señor de la Batalla",
+        "alineamiento": "Caótico Neutral",
+        "dominios": ["Caos", "Destrucción", "Fuerza", "Gloria", "Guerra"],
+        "subdominios": ["Ferocidad", "Tácticas", "Sangre"],
+        "arma_predilecta": "Espadón",
+        "símbolo": "Espada en armadura rota",
+        "adoradores": "Guerreros, mercenarios"
+      },
+      {
+        "nombre": "Gozreh",
+        "titulo": "Dios de la Naturaleza y el Clima",
+        "alineamiento": "Neutral",
+        "dominios": ["Agua", "Aire", "Animal", "Plantas", "Clima"],
+        "subdominios": ["Océano", "Viento", "Crecimiento"],
+        "arma_predilecta": "Tridente",
+        "símbolo": "Gota y hoja entrelazadas",
+        "adoradores": "Marineros, druidas, ermitaños"
+      },
+      {
+        "nombre": "Iomedae",
+        "titulo": "Diosa de la Justicia y el Valor",
+        "alineamiento": "Legal Bueno",
+        "dominios": ["Bien", "Gloria", "Guerra", "Ley", "Sol"],
+        "subdominios": ["Arcontes", "Honor", "Tácticas"],
+        "arma_predilecta": "Espada larga",
+        "símbolo": "Espada y sol",
+        "adoradores": "Paladines, caballeros, jueces"
+      },
+      {
+        "nombre": "Irori",
+        "titulo": "Maestro de Maestros",
+        "alineamiento": "Legal Neutral",
+        "dominios": ["Curación", "Conocimiento", "Ley", "Fuerza", "Runas"],
+        "subdominios": ["Restauración", "Pensamiento", "Lenguaje"],
+        "arma_predilecta": "Puño desnudo",
+        "símbolo": "Palma azul abierta",
+        "adoradores": "Monjes, eruditos, perfeccionistas"
+      },
+      {
+        "nombre": "Lamashtu",
+        "titulo": "Madre de los Monstruos",
+        "alineamiento": "Caótico Malvado",
+        "dominios": ["Caos", "Mal", "Fuerza", "Locura", "Engaño"],
+        "subdominios": ["Demonio", "Pesadilla", "Lujuria"],
+        "arma_predilecta": "Falx",
+        "símbolo": "Cabeza de chacal de tres ojos",
+        "adoradores": "Monstruos, madres deformes, locos"
+      },
+      {
+        "nombre": "Nethys",
+        "titulo": "Dios de la Magia",
+        "alineamiento": "Neutral",
+        "dominios": ["Conocimiento", "Destrucción", "Magia", "Protección", "Runas"],
+        "subdominios": ["Arcano", "Catástrofe", "Custodias"],
+        "arma_predilecta": "Bastón",
+        "símbolo": "Máscara partida en blanco y negro",
+        "adoradores": "Magos, sabios, destructores"
+      },
+      {
+        "nombre": "Pharasma",
+        "titulo": "Dama de los Destinos",
+        "alineamiento": "Neutral",
+        "dominios": ["Muerte", "Curación", "Conocimiento", "Agua", "Reposo"],
+        "subdominios": ["Almas", "Resurrección", "Inevitabilidad"],
+        "arma_predilecta": "Daga",
+        "símbolo": "Espiral de vida",
+        "adoradores": "Sepultureros, profetas, parteras"
+      },
+      {
+        "nombre": "Rovagug",
+        "titulo": "El Devorador",
+        "alineamiento": "Caótico Malvado",
+        "dominios": ["Caos", "Mal", "Destrucción", "Clima", "Guerra"],
+        "subdominios": ["Catástrofe", "Demonio", "Sangre"],
+        "arma_predilecta": "Gran hacha",
+        "símbolo": "Mandíbula con colmillos",
+        "adoradores": "Cultistas, monstruos, destructores"
+      },
+      {
+        "nombre": "Sarenrae",
+        "titulo": "Diosa del Sol y la Redención",
+        "alineamiento": "Neutral Bueno",
+        "dominios": ["Bien", "Fuego", "Gloria", "Curación", "Sol"],
+        "subdominios": ["Agathion", "Día", "Resurrección"],
+        "arma_predilecta": "Cimitarra",
+        "símbolo": "Ángel con alas de fuego",
+        "adoradores": "Curanderos, redentores, guerreros de la luz"
+      },
+      {
+        "nombre": "Shelyn",
+        "titulo": "Diosa de la Belleza y el Amor",
+        "alineamiento": "Neutral Bueno",
+        "dominios": ["Aire", "Bien", "Encantamiento", "Suerte", "Protección"],
+        "subdominios": ["Amor", "Nube", "Defensa"],
+        "arma_predilecta": "Glaive",
+        "símbolo": "Pájaro multicolor",
+        "adoradores": "Artistas, amantes, poetas"
+      },
+      {
+        "nombre": "Torag",
+        "titulo": "Dios de la Forja y la Estrategia",
+        "alineamiento": "Legal Bueno",
+        "dominios": ["Tierra", "Artificio", "Protección", "Ley", "Guerra"],
+        "subdominios": ["Constructos", "Defensa", "Tácticas"],
+        "arma_predilecta": "Martillo de guerra",
+        "símbolo": "Martillo sobre yunque",
+        "adoradores": "Enanos, herreros, estrategas"
+      },
+      {
+        "nombre": "Urgathoa",
+        "titulo": "Diosa de la Gula y los No Muertos",
+        "alineamiento": "Neutral Malvado",
+        "dominios": ["Muerte", "Mal", "Fuerza", "Guerra", "Magia"],
+        "subdominios": ["Asesinato", "Daimonion", "Sangre"],
+        "arma_predilecta": "Guadaña",
+        "símbolo": "Calavera con colmillos",
+        "adoradores": "No muertos, glotones, nigromantes"
+      },
+      {
+        "nombre": "Zon-Kuthon",
+        "titulo": "Príncipe de la Medianoche",
+        "alineamiento": "Legal Malvado",
+        "dominios": ["Oscuridad", "Muerte", "Destrucción", "Ley", "Locura"],
+        "subdominios": ["Noche", "Asesinato", "Pesadilla"],
+        "arma_predilecta": "Cadena armada",
+        "símbolo": "Círculo negro con púas",
+        "adoradores": "Sádicos, torturadores, asesinos"
+      }
+    ]
+  }
+}
