@@ -1,0 +1,1891 @@
+{
+  "clases_base": [
+    {
+      "id": 1,
+      "nombre": "Adalid",
+      "nombre_normalizado": "Adalid",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/AdalidPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Táctico", "Desafío 1/día", "montura", "orden"],
+        "2": ["Aptitud de la orden"],
+        "3": ["Carga del adalid"],
+        "4": ["Desafío 2/día", "táctico experto"],
+        "5": ["Estandarte"],
+        "6": ["Dote adicional"],
+        "7": ["Desafío 3/día"],
+        "8": ["Aptitud de la orden"],
+        "9": ["Táctico mayor"],
+        "10": ["Desafío 4/día"],
+        "11": ["Carga poderosa"],
+        "12": ["Dote adicional", "desafío imperativo"],
+        "13": ["Desafío 5/día"],
+        "14": ["Estandarte mayor"],
+        "15": ["Aptitud de la orden"],
+        "16": ["Desafío 6/día"],
+        "17": ["Táctico maestro"],
+        "18": ["Dote adicional"],
+        "19": ["Desafío 7/día"],
+        "20": ["Carga suprema"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera legal"],
+        "competencias": {
+          "armas": ["Todas simples y marciales"],
+          "armaduras": ["Todas las armaduras", "escudos"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "ordenes": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/OrdenesAdalidPF.php",
+          "tipo": "especializacion_unica",
+          "opciones": ["Orden del Escudo", "Orden de la Espada", "Orden del Dragón", "Orden del León"]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Alquimista",
+      "nombre_normalizado": "Alquimista",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/AlquimistaPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Alquimia", "bomba 1d6", "lanzar conjuros", "veneno resistente +2"],
+        "2": ["Descubrimiento"],
+        "3": ["Veneno resistente +4"],
+        "4": ["Bomba 2d6"],
+        "5": ["Descubrimiento"],
+        "6": ["Veneno resistente +6"],
+        "7": ["Bomba 3d6"],
+        "8": ["Descubrimiento"],
+        "9": ["Veneno resistente +8"],
+        "10": ["Bomba 4d6"],
+        "11": ["Descubrimiento"],
+        "12": ["Veneno resistente +10"],
+        "13": ["Bomba 5d6"],
+        "14": ["Descubrimiento"],
+        "15": ["Veneno resistente +12"],
+        "16": ["Bomba 6d6"],
+        "17": ["Descubrimiento"],
+        "18": ["Veneno resistente +14"],
+        "19": ["Bomba 7d6"],
+        "20": ["Gran descubrimiento"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "ballesta", "bombas"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Kit de alquimista"]
+        }
+      },
+      "subsistemas": {
+        "descubrimientos": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/DescubrimientosAlquimistaPF.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Antipaladín",
+      "nombre_normalizado": "Antipaladin",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/AntipaladinPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Aura de maldad", "toque de corrupción", "causa 1/día"],
+        "2": ["Aura de cobardía", "esquive sobrenatural"],
+        "3": ["Plaga de justicia", "crueldad"],
+        "4": ["Causa 2/día", "aura de venganza"],
+        "5": ["Estandarte de la maldad", "inmunidad al miedo"],
+        "6": ["Aura de desesperación", "dote adicional"],
+        "7": ["Causa 3/día", "plaga mayor"],
+        "8": ["Aura de depravación", "inmunidad a enfermedades"],
+        "9": ["Toque de corrupción mayor", "crueldad mejorada"],
+        "10": ["Causa 4/día", "estandarte mayor"],
+        "11": ["Aura de anarquía", "plaga suprema"],
+        "12": ["Dote adicional", "causa imperativa"],
+        "13": ["Causa 5/día", "inmunidad a venenos"],
+        "14": ["Aura de destrucción", "toque definitivo"],
+        "15": ["Estandarte supremo", "crueldad suprema"],
+        "16": ["Causa 6/día", "aura de perdición"],
+        "17": ["Plaga absoluta", "inmunidad a muerte"],
+        "18": ["Dote adicional", "causa final"],
+        "19": ["Causa 7/día", "aura del anticristo"],
+        "20": ["Apoteosis malvada", "toque de la perdición"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera malvado"],
+        "competencias": {
+          "armas": ["Todas simples y marciales"],
+          "armaduras": ["Todas las armaduras", "escudos"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "causas": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/AntipaladinCausas.php",
+          "tipo": "especializacion_unica"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Arcanista",
+      "nombre_normalizado": "Arcanista",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/ArcanistaPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6/+1","+6/+1","+7/+2","+7/+2","+8/+3","+8/+3","+9/+4","+9/+4","+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Lanzamiento arcanista", "reservas arcana", "exploit arcanista"],
+        "2": ["Exploit arcanista"],
+        "3": ["Punto de magia"],
+        "4": ["Exploit arcanista"],
+        "5": ["Punto de magia"],
+        "6": ["Exploit arcanista"],
+        "7": ["Punto de magia"],
+        "8": ["Exploit arcanista"],
+        "9": ["Punto de magia"],
+        "10": ["Exploit arcanista"],
+        "11": ["Punto de magia"],
+        "12": ["Exploit arcanista"],
+        "13": ["Punto de magia"],
+        "14": ["Exploit arcanista"],
+        "15": ["Punto de magia"],
+        "16": ["Exploit arcanista"],
+        "17": ["Punto de magia"],
+        "18": ["Exploit arcanista"],
+        "19": ["Punto de magia"],
+        "20": ["Exploit supremo", "magia ilimitada"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d6",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Bastón", "cuchillo", "ballesta ligera", "ballesta pesada"],
+          "armaduras": ["Ninguna"],
+          "herramientas": []
+        },
+        "conjuros_por_dia": {
+          "0": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "1": [1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4],
+          "7": [0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4],
+          "8": [0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4],
+          "9": [0,0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "exploits": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/ArcanistaExploits.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Bárbaro",
+      "nombre_normalizado": "Barbaro",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/BarbaroPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Furia 1/día", "movimiento rápido", "salvaje"],
+        "2": ["Poder de furia", "instinto salvaje +1"],
+        "3": ["Furia 2/día", "reducción de daño 1/-"],
+        "4": ["Poder de furia", "instinto salvaje +2"],
+        "5": ["Furia 3/día", "movimiento rápido mejorado"],
+        "6": ["Poder de furia", "instinto salvaje +3"],
+        "7": ["Furia 4/día", "reducción de daño 2/-"],
+        "8": ["Poder de furia", "instinto salvaje +4"],
+        "9": ["Furia 5/día", "movimiento rápido superior"],
+        "10": ["Poder de furia", "instinto salvaje +5"],
+        "11": ["Furia 6/día", "reducción de daño 3/-"],
+        "12": ["Poder de furia", "gran furia 1/día"],
+        "13": ["Furia 7/día", "instinto salvaje +6"],
+        "14": ["Poder de furia", "movimiento rápido supremo"],
+        "15": ["Furia 8/día", "reducción de daño 4/-"],
+        "16": ["Poder de furia", "gran furia 2/día"],
+        "17": ["Furia 9/día", "instinto salvaje +7"],
+        "18": ["Poder de furia", "reducción de daño 5/-"],
+        "19": ["Furia 10/día", "gran furia 3/día"],
+        "20": ["Furia ilimitada", "poder de furia supremo"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d12",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera no legal"],
+        "competencias": {
+          "armas": ["Todas simples y marciales"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "poderes_furia": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/PoderesFuriaPF.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Bardo",
+      "nombre_normalizado": "Bardo",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/BardoPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Inspirar coraje", "cantar", "lanzar conjuros", "bardic knowledge"],
+        "2": ["Versatilidad", "inspiración +1"],
+        "3": ["Inspirar competencia"],
+        "4": ["Susto", "inspiración +2"],
+        "5": ["Inspirar grandeza"],
+        "6": ["Suggestion", "inspiración +3"],
+        "7": ["Inspirar heroísmo"],
+        "8": ["Dirge of doom", "inspiración +4"],
+        "9": ["Inspirar aliados"],
+        "10": ["Mass suggestion", "inspiración +5"],
+        "11": ["Inspirar épica"],
+        "12": ["Frightening tune", "inspiración +6"],
+        "13": ["Inspirar maestría"],
+        "14": ["Deadly performance", "inspiración +7"],
+        "15": ["Inspirar suprema"],
+        "16": ["Mass charm", "inspiración +8"],
+        "17": ["Inspirar perfecta"],
+        "18": ["Dirge of destruction", "inspiración +9"],
+        "19": ["Inspirar absoluta"],
+        "20": ["Maestría musical", "inspiración +10"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 6,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "ballesta", "espada larga", "espada corta"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Instrumento musical"]
+        },
+        "conjuros_por_dia": {
+          "0": [2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+          "1": [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "2": [0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "3": [0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "4": [0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "5": [0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "6": [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        }
+      },
+      "subsistemas": {
+        "maestrias": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/BardoMaestrias.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Bruja",
+      "nombre_normalizado": "Bruja",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/BrujaPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6/+1","+6/+1","+7/+2","+7/+2","+8/+3","+8/+3","+9/+4","+9/+4","+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Conjuros de bruja", "familiar", "embrujos"],
+        "2": ["Embrujo"],
+        "3": ["Hex mayor"],
+        "4": ["Embrujo"],
+        "5": ["Hex mayor"],
+        "6": ["Embrujo"],
+        "7": ["Hex mayor"],
+        "8": ["Embrujo"],
+        "9": ["Hex mayor"],
+        "10": ["Embrujo"],
+        "11": ["Hex mayor"],
+        "12": ["Embrujo"],
+        "13": ["Hex mayor"],
+        "14": ["Embrujo"],
+        "15": ["Hex mayor"],
+        "16": ["Embrujo"],
+        "17": ["Hex mayor"],
+        "18": ["Embrujo"],
+        "19": ["Hex mayor"],
+        "20": ["Gran embrujo", "hex supremo"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d6",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Ninguna"],
+          "herramientas": []
+        },
+        "conjuros_por_dia": {
+          "0": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "1": [1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4],
+          "7": [0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4],
+          "8": [0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4],
+          "9": [0,0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "embrujos": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/EmbrujosPF.php",
+          "tipo": "seleccion_multiple"
+        },
+        "patrones": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/BrujaPatrones.php",
+          "tipo": "especializacion_unica"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Cazador",
+      "nombre_normalizado": "Cazador",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/CazadorPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Estilo de combate", "compañero animal", "rastreo"],
+        "2": ["Táctica de equipo"],
+        "3": ["Aspecto de la naturaleza"],
+        "4": ["Táctica de equipo"],
+        "5": ["Mejora de compañero"],
+        "6": ["Táctica de equipo"],
+        "7": ["Aspecto de la naturaleza"],
+        "8": ["Táctica de equipo"],
+        "9": ["Mejora de compañero"],
+        "10": ["Táctica de equipo"],
+        "11": ["Aspecto de la naturaleza"],
+        "12": ["Táctica de equipo"],
+        "13": ["Mejora de compañero"],
+        "14": ["Táctica de equipo"],
+        "15": ["Aspecto de la naturaleza"],
+        "16": ["Táctica de equipo"],
+        "17": ["Mejora de compañero"],
+        "18": ["Táctica de equipo"],
+        "19": ["Aspecto de la naturaleza"],
+        "20": ["Maestro cazador", "compañero supremo"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 6,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "armas marciales"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "estilos_combate": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/CazadorEstilosCombate.php",
+          "tipo": "especializacion_unica"
+        },
+        "tacticas_equipo": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/CazadorTacticasEquipo.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Chamán",
+      "nombre_normalizado": "Chaman",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/ChamanPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Conjuros de chamán", "espíritu guardián", "hablar con los espíritus"],
+        "2": ["Dote de espíritu"],
+        "3": ["Habilidad de espíritu"],
+        "4": ["Dote de espíritu"],
+        "5": ["Habilidad de espíritu"],
+        "6": ["Dote de espíritu"],
+        "7": ["Habilidad de espíritu"],
+        "8": ["Dote de espíritu"],
+        "9": ["Habilidad de espíritu"],
+        "10": ["Dote de espíritu"],
+        "11": ["Habilidad de espíritu"],
+        "12": ["Dote de espíritu"],
+        "13": ["Habilidad de espíritu"],
+        "14": ["Dote de espíritu"],
+        "15": ["Habilidad de espíritu"],
+        "16": ["Dote de espíritu"],
+        "17": ["Habilidad de espíritu"],
+        "18": ["Dote de espíritu"],
+        "19": ["Habilidad de espíritu"],
+        "20": ["Maestro espiritual", "espíritu supremo"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos"],
+          "herramientas": ["Tótems chamánicos"]
+        },
+        "conjuros_por_dia": {
+          "0": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "1": [1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "espiritus_guardianes": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/ChamanEspiritus.php",
+          "tipo": "especializacion_unica"
+        },
+        "dotes_espiritu": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/ChamanDotesEspiritu.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "nombre": "Clérigo",
+      "nombre_normalizado": "Clerigo",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/ClerigoPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6/+1","+6/+1","+7/+2","+7/+2","+8/+3","+8/+3","+9/+4","+9/+4","+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Conjuros divinos", "dominios", "canalizar energía"],
+        "2": ["Dote de dominio"],
+        "3": ["Habilidad de dominio"],
+        "4": ["Dote de dominio"],
+        "5": ["Habilidad de dominio"],
+        "6": ["Dote de dominio"],
+        "7": ["Habilidad de dominio"],
+        "8": ["Dote de dominio"],
+        "9": ["Habilidad de dominio"],
+        "10": ["Dote de dominio"],
+        "11": ["Habilidad de dominio"],
+        "12": ["Dote de dominio"],
+        "13": ["Habilidad de dominio"],
+        "14": ["Dote de dominio"],
+        "15": ["Habilidad de dominio"],
+        "16": ["Dote de dominio"],
+        "17": ["Habilidad de dominio"],
+        "18": ["Dote de dominio"],
+        "19": ["Habilidad de dominio"],
+        "20": ["Vínculo divino", "dominio supremo"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos"],
+          "herramientas": ["Símbolo sagrado"]
+        },
+        "conjuros_por_dia": {
+          "0": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "1": [1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4],
+          "7": [0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4],
+          "8": [0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4],
+          "9": [0,0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "dominios": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/DominiosPF.php",
+          "tipo": "seleccion_multiple"
+        },
+        "subdominios": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/SubdominiosPF.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "nombre": "Convocador",
+      "nombre_normalizado": "Convocador",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/ConvocadorPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6/+1","+6/+1","+7/+2","+7/+2","+8/+3","+8/+3","+9/+4","+9/+4","+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Conjuros de convocador", "eidolon", "vínculo"],
+        "2": ["Evolución"],
+        "3": ["Habilidad de eidolon"],
+        "4": ["Evolución"],
+        "5": ["Habilidad de eidolon"],
+        "6": ["Evolución"],
+        "7": ["Habilidad de eidolon"],
+        "8": ["Evolución"],
+        "9": ["Habilidad de eidolon"],
+        "10": ["Evolución"],
+        "11": ["Habilidad de eidolon"],
+        "12": ["Evolución"],
+        "13": ["Habilidad de eidolon"],
+        "14": ["Evolución"],
+        "15": ["Habilidad de eidolon"],
+        "16": ["Evolución"],
+        "17": ["Habilidad de eidolon"],
+        "18": ["Evolución"],
+        "19": ["Habilidad de eidolon"],
+        "20": ["Maestro convocador", "eidolon supremo"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": []
+        },
+        "conjuros_por_dia": {
+          "0": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "1": [1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "eidolon": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/EidolonPF.php",
+          "tipo": "personalizacion_compleja"
+        },
+        "evoluciones": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/ConvocadorEvoluciones.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "nombre": "Druida",
+      "nombre_normalizado": "Druida",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/DruidaPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6/+1","+6/+1","+7/+2","+7/+2","+8/+3","+8/+3","+9/+4","+9/+4","+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Conjuros de druida", "compañero animal", "dominio natural"],
+        "2": ["Forma salvaje I"],
+        "3": ["Habilidad de dominio"],
+        "4": ["Resistencia a elementos"],
+        "5": ["Forma salvaje II"],
+        "6": ["Habilidad de dominio"],
+        "7": ["Forma salvaje III"],
+        "8": ["Resistencia a elementos mejorada"],
+        "9": ["Forma salvaje IV"],
+        "10": ["Habilidad de dominio"],
+        "11": ["Forma salvaje V"],
+        "12": ["Inmunidad a elementos"],
+        "13": ["Forma salvaje VI"],
+        "14": ["Habilidad de dominio"],
+        "15": ["Forma salvaje VII"],
+        "16": ["Inmunidad a elementos mejorada"],
+        "17": ["Forma salvaje VIII"],
+        "18": ["Habilidad de dominio"],
+        "19": ["Forma salvaje IX"],
+        "20": ["Forma salvaje ilimitada", "dominio supremo"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera neutral"],
+        "competencias": {
+          "armas": ["Báculo", "cuchillo", "honda", "lanza"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos de madera"],
+          "herramientas": ["Herramientas de herboristería"]
+        },
+        "conjuros_por_dia": {
+          "0": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "1": [1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4],
+          "7": [0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4],
+          "8": [0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4],
+          "9": [0,0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "dominios_naturales": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/DruidaDominios.php",
+          "tipo": "especializacion_unica"
+        },
+        "formas_salvajes": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/DruidaFormasSalvajes.php",
+          "tipo": "transformacion_progresiva"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "nombre": "Escaldo",
+      "nombre_normalizado": "Escaldo",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/EscaldoPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Inspirar coraje", "conocimiento histórico", "rage song"],
+        "2": ["Versatilidad", "inspiración +1"],
+        "3": ["Rage power"],
+        "4": ["Susto", "inspiración +2"],
+        "5": ["Rage power"],
+        "6": ["Suggestion", "inspiración +3"],
+        "7": ["Rage power"],
+        "8": ["Dirge of doom", "inspiración +4"],
+        "9": ["Rage power"],
+        "10": ["Mass suggestion", "inspiración +5"],
+        "11": ["Rage power"],
+        "12": ["Frightening tune", "inspiración +6"],
+        "13": ["Rage power"],
+        "14": ["Deadly performance", "inspiración +7"],
+        "15": ["Rage power"],
+        "16": ["Mass charm", "inspiración +8"],
+        "17": ["Rage power"],
+        "18": ["Dirge of destruction", "inspiración +9"],
+        "19": ["Rage power"],
+        "20": ["Maestría nórdica", "inspiración +10"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "hacha de batalla", "espada larga"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos"],
+          "herramientas": ["Instrumento musical"]
+        }
+      },
+      "subsistemas": {
+        "rage_powers": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/EscaldoRagePowers.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "nombre": "Espadachín",
+      "nombre_normalizado": "Espadachin",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/EspadachinPF.php",
+      "tipo": "arquetipos",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Esgrima", "panache", "precisión"],
+        "2": ["Estocada elegante"],
+        "3": ["Esquiva +1"],
+        "4": ["Contraataque"],
+        "5": ["Esquiva +2"],
+        "6": ["Estocada precisa"],
+        "7": ["Esquiva +3"],
+        "8": ["Contraataque mejorado"],
+        "9": ["Esquiva +4"],
+        "10": ["Estocada magistral"],
+        "11": ["Esquiva +5"],
+        "12": ["Contraataque supremo"],
+        "13": ["Esquiva +6"],
+        "14": ["Estocada perfecta"],
+        "15": ["Esquiva +7"],
+        "16": ["Contraataque definitivo"],
+        "17": ["Esquiva +8"],
+        "18": ["Estocada final"],
+        "19": ["Esquiva +9"],
+        "20": ["Maestro de la esgrima", "esquiva +10"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas de duelo", "espada corta", "espada larga", "estoque"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "tecnicas_esgrima": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/EspadachinTecnicas.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "nombre": "Explorador",
+      "nombre_normalizado": "Explorador",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/ExploradorPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Estilo de combate", "rastreo", "supervivencia"],
+        "2": ["Talentos de explorador"],
+        "3": ["Estilo de combate mejorado"],
+        "4": ["Talentos de explorador"],
+        "5": ["Movimiento rápido"],
+        "6": ["Talentos de explorador"],
+        "7": ["Estilo de combate superior"],
+        "8": ["Talentos de explorador"],
+        "9": ["Evasion"],
+        "10": ["Talentos de explorador"],
+        "11": ["Estilo de combate maestro"],
+        "12": ["Talentos de explorador"],
+        "13": ["Movimiento rápido mejorado"],
+        "14": ["Talentos de explorador"],
+        "15": ["Estilo de combate supremo"],
+        "16": ["Talentos de explorador"],
+        "17": ["Evasion mejorada"],
+        "18": ["Talentos de explorador"],
+        "19": ["Movimiento rápido superior"],
+        "20": ["Maestro explorador", "talento supremo"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 6,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "armas marciales"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "estilos_combate": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/ExploradorEstilosCombate.php",
+          "tipo": "especializacion_unica"
+        },
+        "talentos_explorador": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/ExploradorTalentos.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 16,
+      "nombre": "Exterminador",
+      "nombre_normalizado": "Exterminador",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/ExterminadorPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Estudio del objetivo", "rastreo implacable", "técnicas de exterminio"],
+        "2": ["Talentos de exterminador"],
+        "3": ["Estudio mejorado"],
+        "4": ["Talentos de exterminador"],
+        "5": ["Ataque preciso"],
+        "6": ["Talentos de exterminador"],
+        "7": ["Estudio superior"],
+        "8": ["Talentos de exterminador"],
+        "9": ["Ataque mortal"],
+        "10": ["Talentos de exterminador"],
+        "11": ["Estudio maestro"],
+        "12": ["Talentos de exterminador"],
+        "13": ["Ataque definitivo"],
+        "14": ["Talentos de exterminador"],
+        "15": ["Estudio supremo"],
+        "16": ["Talentos de exterminador"],
+        "17": ["Ataque perfecto"],
+        "18": ["Talentos de exterminador"],
+        "19": ["Estudio absoluto"],
+        "20": ["Maestro exterminador", "talento final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 6,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "armas marciales", "ballestas"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias"],
+          "herramientas": ["Kit de rastreo"]
+        }
+      },
+      "subsistemas": {
+        "tecnicas_exterminio": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/ExterminadorTecnicas.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 17,
+      "nombre": "Guerrero",
+      "nombre_normalizado": "Guerrero",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/GuerreroPF.php",
+      "tipo": "arquetipos",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Dote de combate", "dote de armadura 1"],
+        "2": ["Dote de combate"],
+        "3": ["Dote de armadura 2"],
+        "4": ["Dote de combate"],
+        "5": ["Dote de armadura 3"],
+        "6": ["Dote de combate"],
+        "7": ["Dote de armadura 4"],
+        "8": ["Dote de combate"],
+        "9": ["Dote de armadura 5"],
+        "10": ["Dote de combate"],
+        "11": ["Dote de armadura 6"],
+        "12": ["Dote de combate"],
+        "13": ["Dote de armadura 7"],
+        "14": ["Dote de combate"],
+        "15": ["Dote de armadura 8"],
+        "16": ["Dote de combate"],
+        "17": ["Dote de armadura 9"],
+        "18": ["Dote de combate"],
+        "19": ["Dote de armadura 10"],
+        "20": ["Dote de combate", "gran dote de armadura"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Todas simples y marciales"],
+          "armaduras": ["Todas las armaduras", "escudos"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "dotes_combate": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Dotes/Guerrero.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 18,
+      "nombre": "Hechicero",
+      "nombre_normalizado": "Hechicero",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/HechiceroPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6/+1","+6/+1","+7/+2","+7/+2","+8/+3","+8/+3","+9/+4","+9/+4","+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Línea sanguínea", "conjuros espontáneos", "dote de hechicero"],
+        "2": ["Habilidad de línea sanguínea"],
+        "3": ["Dote de hechicero"],
+        "4": ["Habilidad de línea sanguínea"],
+        "5": ["Dote de hechicero"],
+        "6": ["Habilidad de línea sanguínea"],
+        "7": ["Dote de hechicero"],
+        "8": ["Habilidad de línea sanguínea"],
+        "9": ["Dote de hechicero"],
+        "10": ["Habilidad de línea sanguínea"],
+        "11": ["Dote de hechicero"],
+        "12": ["Habilidad de línea sanguínea"],
+        "13": ["Dote de hechicero"],
+        "14": ["Habilidad de línea sanguínea"],
+        "15": ["Dote de hechicero"],
+        "16": ["Habilidad de línea sanguínea"],
+        "17": ["Dote de hechicero"],
+        "18": ["Habilidad de línea sanguínea"],
+        "19": ["Dote de hechicero"],
+        "20": ["Habilidad suprema de línea", "dote final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d6",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Ninguna"],
+          "herramientas": []
+        },
+        "conjuros_por_dia": {
+          "0": [4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
+          "1": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "7": [0,0,0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "8": [0,0,0,0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4],
+          "9": [0,0,0,0,0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "lineas_sanguineas": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/LineasSanguineasPF.php",
+          "tipo": "especializacion_unica"
+        }
+      }
+    },
+    {
+      "id": 19,
+      "nombre": "Inquisidor",
+      "nombre_normalizado": "Inquisidor",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/InquisidorPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Juicio", "rastreo de herejes", "dominio", "monster lore"],
+        "2": ["Cacería de brujas"],
+        "3": ["Juicio mejorado"],
+        "4": ["Talento de inquisición"],
+        "5": ["Juicio superior"],
+        "6": ["Talento de inquisición"],
+        "7": ["Juicio maestro"],
+        "8": ["Talento de inquisición"],
+        "9": ["Juicio supremo"],
+        "10": ["Talento de inquisición"],
+        "11": ["Bane"],
+        "12": ["Talento de inquisición"],
+        "13": ["Juicio final"],
+        "14": ["Talento de inquisición"],
+        "15": ["Greater bane"],
+        "16": ["Talento de inquisición"],
+        "17": ["Juicio absoluto"],
+        "18": ["Talento de inquisición"],
+        "19": ["True bane"],
+        "20": ["Gran inquisidor", "talento final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "ballesta", "espada corta", "espada larga"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos"],
+          "herramientas": ["Símbolo sagrado"]
+        },
+        "conjuros_por_dia": {
+          "0": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          "1": [1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+          "2": [0,0,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+          "3": [0,0,0,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+          "4": [0,0,0,0,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+          "5": [0,0,0,0,0,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+          "6": [0,0,0,0,0,0,1,2,2,2,2,2,2,2,2,2,2,2,2,2]
+        }
+      },
+      "subsistemas": {
+        "juicios": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/InquisidorJuicios.php",
+          "tipo": "seleccion_multiple"
+        },
+        "talentos_inquisicion": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/InquisidorTalentos.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 20,
+      "nombre": "Investigador",
+      "nombre_normalizado": "Investigador",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/InvestigadorPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Inspiración", "diligencia", "talentos"],
+        "2": ["Talento de investigador"],
+        "3": ["Inspiración mejorada"],
+        "4": ["Talento de investigador"],
+        "5": ["Diligencia superior"],
+        "6": ["Talento de investigador"],
+        "7": ["Inspiración experta"],
+        "8": ["Talento de investigador"],
+        "9": ["Diligencia maestra"],
+        "10": ["Talento de investigador"],
+        "11": ["Inspiración suprema"],
+        "12": ["Talento de investigador"],
+        "13": ["Diligencia perfecta"],
+        "14": ["Talento de investigador"],
+        "15": ["Inspiración ilimitada"],
+        "16": ["Talento de investigador"],
+        "17": ["Diligencia absoluta"],
+        "18": ["Talento de investigador"],
+        "19": ["Inspiración final"],
+        "20": ["Maestro investigador", "talento final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 6,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "ballesta", "espada corta"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Kit de investigación"]
+        }
+      },
+      "subsistemas": {
+        "talentos_investigador": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/InvestigadorTalentos.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 21,
+      "nombre": "Mago",
+      "nombre_normalizado": "Mago",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/MagoPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6/+1","+6/+1","+7/+2","+7/+2","+8/+3","+8/+3","+9/+4","+9/+4","+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Escuela arcana", "libro de conjuros", "dote de mago"],
+        "2": ["Habilidad de escuela"],
+        "3": ["Dote de mago"],
+        "4": ["Habilidad de escuela"],
+        "5": ["Dote de mago"],
+        "6": ["Habilidad de escuela"],
+        "7": ["Dote de mago"],
+        "8": ["Habilidad de escuela"],
+        "9": ["Dote de mago"],
+        "10": ["Habilidad de escuela"],
+        "11": ["Dote de mago"],
+        "12": ["Habilidad de escuela"],
+        "13": ["Dote de mago"],
+        "14": ["Habilidad de escuela"],
+        "15": ["Dote de mago"],
+        "16": ["Habilidad de escuela"],
+        "17": ["Dote de mago"],
+        "18": ["Habilidad de escuela"],
+        "19": ["Dote de mago"],
+        "20": ["Habilidad suprema de escuela", "dote final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d6",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Bastón", "cuchillo", "ballesta ligera", "ballesta pesada"],
+          "armaduras": ["Ninguna"],
+          "herramientas": []
+        },
+        "conjuros_por_dia": {
+          "0": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "1": [1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4],
+          "7": [0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4],
+          "8": [0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4],
+          "9": [0,0,0,0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "escuelas_magia": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/EscuelasMagiaPF.php",
+          "tipo": "especializacion_unica"
+        }
+      }
+    },
+    {
+      "id": 22,
+      "nombre": "Magus",
+      "nombre_normalizado": "Magus",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/MagusPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Conjuros de magus", "arma mágica", "arcana pool"],
+        "2": ["Arcana"],
+        "3": ["Imbuir arma"],
+        "4": ["Arcana"],
+        "5": ["Golpe mágico"],
+        "6": ["Arcana"],
+        "7": ["Imbuir arma mejorado"],
+        "8": ["Arcana"],
+        "9": ["Golpe mágico mejorado"],
+        "10": ["Arcana"],
+        "11": ["Imbuir arma superior"],
+        "12": ["Arcana"],
+        "13": ["Golpe mágico superior"],
+        "14": ["Arcana"],
+        "15": ["Imbuir arma maestro"],
+        "16": ["Arcana"],
+        "17": ["Golpe mágico maestro"],
+        "18": ["Arcana"],
+        "19": ["Imbuir arma perfecto"],
+        "20": ["Maestro magus", "arcana final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "armas marciales"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": []
+        },
+        "conjuros_por_dia": {
+          "0": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "1": [1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "arcanas": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/MagusArcanas.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 23,
+      "nombre": "Monje",
+      "nombre_normalizado": "Monje",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/MonjePF.php",
+      "tipo": "arquetipos",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Armas de monje", "golpe desarmado", "evasión", "estilo"],
+        "2": ["Habilidad de estilo"],
+        "3": ["Movimiento rápido", "ki pool"],
+        "4": ["Habilidad de estilo"],
+        "5": ["Golpe potente"],
+        "6": ["Habilidad de estilo"],
+        "7": ["Movimiento rápido mejorado"],
+        "8": ["Habilidad de estilo"],
+        "9": ["Golpe mejorado"],
+        "10": ["Habilidad de estilo"],
+        "11": ["Movimiento rápido superior"],
+        "12": ["Habilidad de estilo"],
+        "13": ["Golpe superior"],
+        "14": ["Habilidad de estilo"],
+        "15": ["Movimiento rápido supremo"],
+        "16": ["Habilidad de estilo"],
+        "17": ["Golpe maestro"],
+        "18": ["Habilidad de estilo"],
+        "19": ["Movimiento rápido perfecto"],
+        "20": ["Maestro monje", "estilo perfecto"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera legal"],
+        "competencias": {
+          "armas": ["Armas de monje"],
+          "armaduras": ["Ninguna"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "estilos_monje": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/MonjeEstilos.php",
+          "tipo": "especializacion_unica"
+        },
+        "tecnicas_ki": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/MonjeTecnicasKi.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 24,
+      "nombre": "Ninja",
+      "nombre_normalizado": "Ninja",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/NinjaPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Sigilo", "ataque furtivo 1d6", "ki pool", "técnicas ninja"],
+        "2": ["Técnica ninja"],
+        "3": ["Evasion"],
+        "4": ["Técnica ninja"],
+        "5": ["Ataque furtivo 2d6"],
+        "6": ["Técnica ninja"],
+        "7": ["Movimiento rápido"],
+        "8": ["Técnica ninja"],
+        "9": ["Ataque furtivo 3d6"],
+        "10": ["Técnica ninja"],
+        "11": ["Maestría del ki"],
+        "12": ["Técnica ninja"],
+        "13": ["Ataque furtivo 4d6"],
+        "14": ["Técnica ninja"],
+        "15": ["Movimiento rápido mejorado"],
+        "16": ["Técnica ninja"],
+        "17": ["Ataque furtivo 5d6"],
+        "18": ["Técnica ninja"],
+        "19": ["Maestría suprema"],
+        "20": ["Ninja supremo", "técnica final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 8,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "shuriken", "katanas", "armas ninja"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Herramientas de ladrón", "kit de venenos"]
+        }
+      },
+      "subsistemas": {
+        "tecnicas_ninja": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/NinjaTecnicas.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 25,
+      "nombre": "Oráculo",
+      "nombre_normalizado": "Oraculo",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/OraculoPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6/+1","+6/+1","+7/+2","+7/+2","+8/+3","+8/+3","+9/+4","+9/+4","+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Misterio", "maldición", "conjuros espontáneos"],
+        "2": ["Revelación"],
+        "3": ["Habilidad de misterio"],
+        "4": ["Revelación"],
+        "5": ["Habilidad de misterio"],
+        "6": ["Revelación"],
+        "7": ["Habilidad de misterio"],
+        "8": ["Revelación"],
+        "9": ["Habilidad de misterio"],
+        "10": ["Revelación"],
+        "11": ["Habilidad de misterio"],
+        "12": ["Revelación"],
+        "13": ["Habilidad de misterio"],
+        "14": ["Revelación"],
+        "15": ["Habilidad de misterio"],
+        "16": ["Revelación"],
+        "17": ["Habilidad de misterio"],
+        "18": ["Revelación"],
+        "19": ["Habilidad de misterio"],
+        "20": ["Oráculo supremo", "revelación final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos"],
+          "herramientas": []
+        },
+        "conjuros_por_dia": {
+          "0": [4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
+          "1": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "7": [0,0,0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "8": [0,0,0,0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4,4],
+          "9": [0,0,0,0,0,0,0,0,0,3,4,4,4,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "misterios": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/MisteriosPF.php",
+          "tipo": "especializacion_unica"
+        },
+        "maldiciones": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/OraculoMaldiciones.php",
+          "tipo": "especializacion_unica"
+        }
+      }
+    },
+    {
+      "id": 26,
+      "nombre": "Paladín",
+      "nombre_normalizado": "Paladin",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/PaladinPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Detectar mal", "curación por manos", "smite evil 1/día"],
+        "2": ["Aura de coraje"],
+        "3": ["Gracia divina"],
+        "4": ["Smite evil 2/día"],
+        "5": ["Curación divina"],
+        "6": ["Aura de resistencia"],
+        "7": ["Smite evil 3/día"],
+        "8": ["Remover enfermedades"],
+        "9": ["Armas sagradas"],
+        "10": ["Smite evil 4/día"],
+        "11": ["Aura de justicia"],
+        "12": ["Smite evil 5/día"],
+        "13": ["Remover maldiciones"],
+        "14": ["Aura de fe"],
+        "15": ["Smite evil 6/día"],
+        "16": ["Aura de vida"],
+        "17": ["Smite evil 7/día"],
+        "18": ["Aura de pureza"],
+        "19": ["Smite evil 8/día"],
+        "20": ["Santo guerrero", "aura santa"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Legal bueno"],
+        "competencias": {
+          "armas": ["Todas simples y marciales"],
+          "armaduras": ["Todas las armaduras", "escudos"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "ordenes": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/OrdenesPaladinPF.php",
+          "tipo": "especializacion_unica"
+        }
+      }
+    },
+    {
+      "id": 27,
+      "nombre": "Pícaro",
+      "nombre_normalizado": "Picaro",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/PicaroPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+2","+3","+3","+4","+5","+6/+1","+6/+1","+7/+2","+8/+3","+9/+4","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Ataque furtivo 1d6", "trapfinding", "talentos de pícaro"],
+        "2": ["Evasion"],
+        "3": ["Talento de pícaro"],
+        "4": ["Ataque furtivo 2d6"],
+        "5": ["Talento de pícaro"],
+        "6": ["Trap sense +2"],
+        "7": ["Talento de pícaro"],
+        "8": ["Ataque furtivo 3d6"],
+        "9": ["Talento de pícaro"],
+        "10": ["Trap sense +3"],
+        "11": ["Talento de pícaro"],
+        "12": ["Ataque furtivo 4d6"],
+        "13": ["Talento de pícaro"],
+        "14": ["Trap sense +4"],
+        "15": ["Talento de pícaro"],
+        "16": ["Ataque furtivo 5d6"],
+        "17": ["Talento de pícaro"],
+        "18": ["Trap sense +5"],
+        "19": ["Talento de pícaro"],
+        "20": ["Maestro pícaro", "talento final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "puntos_habilidad_nivel": 8,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples", "ballesta", "espada corta", "espada larga"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Herramientas de ladrón"]
+        }
+      },
+      "subsistemas": {
+        "talentos_picaro": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/TalentosPicaroPF.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 28,
+      "nombre": "Pistolero",
+      "nombre_normalizado": "Pistolero",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/PistoleroPF.php",
+      "tipo": "seleccion_multiple",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Tirador", "tiro preciso", "tiros"],
+        "2": ["Tiro"],
+        "3": ["Destreza con pistola"],
+        "4": ["Tiro"],
+        "5": ["Rápido"],
+        "6": ["Tiro"],
+        "7": ["Esquiva"],
+        "8": ["Tiro"],
+        "9": ["Mejorado crítico"],
+        "10": ["Tiro"],
+        "11": ["Tiro mortal"],
+        "12": ["Tiro"],
+        "13": ["Esquiva mejorada"],
+        "14": ["Tiro"],
+        "15": ["Tiro supremo"],
+        "16": ["Tiro"],
+        "17": ["Maestría"],
+        "18": ["Tiro"],
+        "19": ["Tiro perfecto"],
+        "20": ["Pistolero legendario", "tiro final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas de fuego", "armas simples"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Kit de pistolas", "herramientas de gunsmith"]
+        }
+      },
+      "subsistemas": {
+        "tiros": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/PistoleroTiros.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 29,
+      "nombre": "Psiónico",
+      "nombre_normalizado": "Psionico",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/Psionico30.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+0","+1","+1","+2","+2","+3","+3","+4","+4","+5","+5","+6/+1","+6/+1","+7/+2","+7/+2","+8/+3","+8/+3","+9/+4","+9/+4","+10/+5"],
+        "fortaleza": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Disciplina psiónica", "poderes psiónicos", "puntos de poder"],
+        "2": ["Poder psiónico"],
+        "3": ["Habilidad de disciplina"],
+        "4": ["Poder psiónico"],
+        "5": ["Habilidad de disciplina"],
+        "6": ["Poder psiónico"],
+        "7": ["Habilidad de disciplina"],
+        "8": ["Poder psiónico"],
+        "9": ["Habilidad de disciplina"],
+        "10": ["Poder psiónico"],
+        "11": ["Habilidad de disciplina"],
+        "12": ["Poder psiónico"],
+        "13": ["Habilidad de disciplina"],
+        "14": ["Poder psiónico"],
+        "15": ["Habilidad de disciplina"],
+        "16": ["Poder psiónico"],
+        "17": ["Habilidad de disciplina"],
+        "18": ["Poder psiónico"],
+        "19": ["Habilidad de disciplina"],
+        "20": ["Maestro psiónico", "poder final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d6",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Ninguna"],
+          "herramientas": []
+        },
+        "poderes_por_nivel": {
+          "1": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],
+          "2": [0,0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+          "3": [0,0,0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
+          "4": [0,0,0,0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+          "5": [0,0,0,0,0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+          "6": [0,0,0,0,0,0,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+          "7": [0,0,0,0,0,0,0,2,3,4,5,6,7,8,9,10,11,12,13,14],
+          "8": [0,0,0,0,0,0,0,0,2,3,4,5,6,7,8,9,10,11,12,13],
+          "9": [0,0,0,0,0,0,0,0,0,2,3,4,5,6,7,8,9,10,11,12]
+        }
+      },
+      "subsistemas": {
+        "disciplinas_psionicas": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/PsionicoDisciplinas.php",
+          "tipo": "especializacion_unica"
+        },
+        "poderes_psionicos": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/PsionicoPoderes.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 30,
+      "nombre": "Pugilista",
+      "nombre_normalizado": "Pugilista",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/PugilistaPF.php",
+      "tipo": "arquetipos",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Golpe desarmado", "estilo de combate", "aguante"],
+        "2": ["Técnica de boxeo"],
+        "3": ["Esquiva +1"],
+        "4": ["Técnica de boxeo"],
+        "5": ["Golpe potente"],
+        "6": ["Técnica de boxeo"],
+        "7": ["Esquiva +2"],
+        "8": ["Técnica de boxeo"],
+        "9": ["Golpe mejorado"],
+        "10": ["Técnica de boxeo"],
+        "11": ["Esquiva +3"],
+        "12": ["Técnica de boxeo"],
+        "13": ["Golpe superior"],
+        "14": ["Técnica de boxeo"],
+        "15": ["Esquiva +4"],
+        "16": ["Técnica de boxeo"],
+        "17": ["Golpe maestro"],
+        "18": ["Técnica de boxeo"],
+        "19": ["Esquiva +5"],
+        "20": ["Campeón del ring", "técnica final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas de combate cuerpo a cuerpo"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Guantes de boxeo"]
+        }
+      },
+      "subsistemas": {
+        "tecnicas_boxeo": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/PugilistaTecnicas.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 31,
+      "nombre": "Rabioso de sangre",
+      "nombre_normalizado": "RabiosoSangre",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/RabiosoSangrePF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Linaje de sangre", "furia de sangre", "poder de sangre"],
+        "2": ["Poder de sangre"],
+        "3": ["Habilidad de linaje"],
+        "4": ["Poder de sangre"],
+        "5": ["Habilidad de linaje"],
+        "6": ["Poder de sangre"],
+        "7": ["Habilidad de linaje"],
+        "8": ["Poder de sangre"],
+        "9": ["Habilidad de linaje"],
+        "10": ["Poder de sangre"],
+        "11": ["Habilidad de linaje"],
+        "12": ["Poder de sangre"],
+        "13": ["Habilidad de linaje"],
+        "14": ["Poder de sangre"],
+        "15": ["Habilidad de linaje"],
+        "16": ["Poder de sangre"],
+        "17": ["Habilidad de linaje"],
+        "18": ["Poder de sangre"],
+        "19": ["Habilidad de linaje"],
+        "20": ["Rabioso supremo", "poder final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d12",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera no legal"],
+        "competencias": {
+          "armas": ["Todas simples y marciales"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "linajes_sangre": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/LinajesRabioso.php",
+          "tipo": "especializacion_unica"
+        },
+        "poderes_sangre": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/RabiosoPoderes.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 32,
+      "nombre": "Sacerdote de guerra",
+      "nombre_normalizado": "SacerdoteGuerra",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/SacerdoteGuerraPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Conjuros divinos", "dominios de guerra", "bendición de batalla"],
+        "2": ["Dote de guerra"],
+        "3": ["Habilidad de dominio"],
+        "4": ["Dote de guerra"],
+        "5": ["Habilidad de dominio"],
+        "6": ["Dote de guerra"],
+        "7": ["Habilidad de dominio"],
+        "8": ["Dote de guerra"],
+        "9": ["Habilidad de dominio"],
+        "10": ["Dote de guerra"],
+        "11": ["Habilidad de dominio"],
+        "12": ["Dote de guerra"],
+        "13": ["Habilidad de dominio"],
+        "14": ["Dote de guerra"],
+        "15": ["Habilidad de dominio"],
+        "16": ["Dote de guerra"],
+        "17": ["Habilidad de dominio"],
+        "18": ["Dote de guerra"],
+        "19": ["Habilidad de dominio"],
+        "20": ["Gran sacerdote de guerra", "dote final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 2,
+        "alineamiento": ["Cualquiera"],
+        "competencias": {
+          "armas": ["Armas marciales"],
+          "armaduras": ["Todas las armaduras", "escudos"],
+          "herramientas": ["Símbolo sagrado"]
+        },
+        "conjuros_por_dia": {
+          "0": [3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "1": [1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "2": [0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "3": [0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4],
+          "4": [0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4],
+          "5": [0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4,4],
+          "6": [0,0,0,0,0,0,1,2,3,3,4,4,4,4,4,4,4,4,4,4]
+        }
+      },
+      "subsistemas": {
+        "dominios_guerra": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/SacerdoteGuerraDominios.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    },
+    {
+      "id": 33,
+      "nombre": "Samurái",
+      "nombre_normalizado": "Samurai",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/Clases/SamuraiPF.php",
+      "tipo": "especializacion_unica",
+      "progresion_nivel": {
+        "ataque_base": ["+1","+2","+3","+4","+5","+6/+1","+7/+2","+8/+3","+9/+4","+10/+5","+11/+6/+1","+12/+7/+2","+13/+8/+3","+14/+9/+4","+15/+10/+5","+16/+11/+6/+1","+17/+12/+7/+2","+18/+13/+8/+3","+19/+14/+9/+4","+20/+15/+10/+5"],
+        "fortaleza": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"],
+        "reflejos": ["+0","+0","+1","+1","+1","+2","+2","+2","+3","+3","+3","+4","+4","+4","+5","+5","+5","+6","+6","+6"],
+        "voluntad": ["+2","+3","+3","+4","+4","+5","+5","+6","+6","+7","+7","+8","+8","+9","+9","+10","+10","+11","+11","+12"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Resolución", "katana", "código de honor"],
+        "2": ["Dote de samurái"],
+        "3": ["Ataque preciso"],
+        "4": ["Dote de samurái"],
+        "5": ["Honor inquebrantable"],
+        "6": ["Dote de samurái"],
+        "7": ["Ataque potente"],
+        "8": ["Dote de samurái"],
+        "9": ["Resolución mejorada"],
+        "10": ["Dote de samurái"],
+        "11": ["Ataque maestro"],
+        "12": ["Dote de samurái"],
+        "13": ["Honor supremo"],
+        "14": ["Dote de samurái"],
+        "15": ["Ataque definitivo"],
+        "16": ["Dote de samurái"],
+        "17": ["Resolución final"],
+        "18": ["Dote de samurái"],
+        "19": ["Ataque perfecto"],
+        "20": ["Gran samurái", "dote final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "puntos_habilidad_nivel": 4,
+        "alineamiento": ["Cualquiera legal"],
+        "competencias": {
+          "armas": ["Armas marciales", "katanas", "arcos"],
+          "armaduras": ["Armaduras medias", "armaduras pesadas"],
+          "herramientas": []
+        }
+      },
+      "subsistemas": {
+        "resoluciones": {
+          "fuente": "https://www.rolroyce.com/rol/DDP/Clases/SamuraiResoluciones.php",
+          "tipo": "seleccion_multiple"
+        }
+      }
+    }
+  ],
+  "metadatos": {
+    "total_clases_base": 33,
+    "estructura_completa": true,
+    "version": "1.0",
+    "ultima_actualizacion": "2024-01-20"
+  }
+}
