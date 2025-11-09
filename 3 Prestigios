@@ -1,0 +1,857 @@
+{
+  "clases_prestigio": [
+    {
+      "id": 1,
+      "nombre": "Arquero Arcano",
+      "nombre_normalizado": "ArqueroArcano",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/ArqueroArcanoPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 5,
+        "habilidades": {
+          "Puntería": 5,
+          "Conocimiento (arcana)": 3
+        },
+        "dotes": ["Puntería Preciso", "Enfoque en hechizo"],
+        "conjuros": "Poder lanzar conjuros arcanos de 1er nivel",
+        "proezas_especiales": [],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
+        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "reflejos": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
+        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Flecha mágica", "conjuros arcanos"],
+        "2": ["Flecha imbuida"],
+        "3": ["Flecha de toque"],
+        "4": ["Flecha potente"],
+        "5": ["Flecha segura"],
+        "6": ["Flecha penetrante"],
+        "7": ["Flecha de fase"],
+        "8": ["Flecha hábil"],
+        "9": ["Flecha de muerte"],
+        "10": ["Flecha definitiva"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "avance_conjuros": true,
+        "nivel_conjurador_adicional": 1,
+        "puntos_habilidad_nivel": 2,
+        "competencias": {
+          "armas": ["Arcos", "ballestas"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": []
+        }
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Asesino",
+      "nombre_normalizado": "Asesino",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/AsesinoPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 5,
+        "habilidades": {
+          "Sigilo": 5,
+          "Ofuscación": 3
+        },
+        "dotes": ["Ataque furtivo", "Asesinato"],
+        "conjuros": "",
+        "proezas_especiales": ["Ataque furtivo +2d6"],
+        "alineamiento": ["Cualquiera no bueno"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
+        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "voluntad": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Muerte instantánea", "ocultación"],
+        "2": ["Ataque furtivo +1d6", "veneno resistente +2"],
+        "3": ["Sigilo oculto", "trueque mortal"],
+        "4": ["Ataque furtivo +2d6", "veneno resistente +4"],
+        "5": ["Ocultación oculta", "asesinato silencioso"],
+        "6": ["Ataque furtivo +3d6", "veneno resistente +6"],
+        "7": ["Escondite oculto", "golpe oculto"],
+        "8": ["Ataque furtivo +4d6", "veneno resistente +8"],
+        "9": ["Camuflaje oculto", "muerte silenciosa"],
+        "10": ["Ataque furtivo +5d6", "asesinato perfecto"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 4,
+        "competencias": {
+          "armas": ["Armas simples", "armas de duelo"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Kit de venenos"]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Bribón Arcano",
+      "nombre_normalizado": "BribonArcano",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/BribonArcanoPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 7,
+        "habilidades": {
+          "Juego de Manos": 4,
+          "Sigilo": 4,
+          "Conocimiento (arcana)": 4
+        },
+        "dotes": ["Lanzamiento de Conjuros Arcano", "Habilidad Ocultar Conjuros"],
+        "conjuros": "Poder lanzar conjuros arcanos de 2do nivel",
+        "proezas_especiales": ["Habilidad para lanzar sin gestos"],
+        "alineamiento": ["Cualquiera no legal"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
+        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Lanzamiento sigiloso", "sabotaje mágico"],
+        "2": ["Imbuir trampa", "robar conjuro"],
+        "3": ["Esquiva mágica", "trampa arcana"],
+        "4": ["Contramagia sorpresiva", "furtividad arcana"],
+        "5": ["Sabotaje potente", "robar conjuro mayor"],
+        "6": ["Esquiva mágica mejorada", "trampa arcana mayor"],
+        "7": ["Contramagia experta", "furtividad arcana superior"],
+        "8": ["Sabotaje maestro", "robar conjuro supremo"],
+        "9": ["Esquiva mágica suprema", "trampa arcana definitiva"],
+        "10": ["Maestría arcana oculta", "sabotaje perfecto"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d6",
+        "avance_conjuros": true,
+        "nivel_conjurador_adicional": 1,
+        "puntos_habilidad_nivel": 6,
+        "competencias": {
+          "armas": ["Armas simples", "armas de duelo"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Herramientas de ladrón"]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Caminante del Horizonte",
+      "nombre_normalizado": "CaminanteHorizonte",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/CaminanteHorizontePF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 9,
+        "habilidades": {
+          "Supervivencia": 8,
+          "Conocimiento (geografía)": 5,
+          "Conocimiento (naturaleza)": 5
+        },
+        "dotes": ["Pies Ligeros", "Orientación"],
+        "conjuros": "",
+        "proezas_especiales": ["Habilidad para sobrevivir en terrenos extremos"],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
+        "fortaleza": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
+        "reflejos": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
+        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Dominio del terreno", "sentido del terreno"],
+        "2": ["Adaptación ambiental", "movimiento terreno"],
+        "3": ["Maestría de terreno I", "camuflaje natural"],
+        "4": ["Dominio de plano", "sentido planar"],
+        "5": ["Adaptación planar", "movimiento planar"],
+        "6": ["Maestría de terreno II", "camuflaje planar"],
+        "7": ["Dominio de realidad", "sentido dimensional"],
+        "8": ["Adaptación dimensional", "movimiento dimensional"],
+        "9": ["Maestría de terreno III", "camuflaje dimensional"],
+        "10": ["Señor de los horizontes", "maestría dimensional"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 6,
+        "competencias": {
+          "armas": ["Armas simples", "armas marciales"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias"],
+          "herramientas": ["Kit de supervivencia"]
+        }
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Caballero Arcano",
+      "nombre_normalizado": "CaballeroArcano",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/CaballeroArcanoPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 6,
+        "habilidades": {
+          "Conocimiento (arcana)": 5,
+          "Caballerosidad": 3
+        },
+        "dotes": ["Competencia con Armadura Pesada", "Lanzamiento en Armadura"],
+        "conjuros": "Poder lanzar conjuros arcanos de 1er nivel",
+        "proezas_especiales": ["Ataque base +4"],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
+        "fortaleza": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Arma mágica", "armadura arcana"],
+        "2": ["Imbuir arma", "escudo arcano"],
+        "3": ["Golpe mágico", "armadura arcana mejorada"],
+        "4": ["Arma potente", "escudo arcano mejorada"],
+        "5": ["Golpe potente", "armadura arcana superior"],
+        "6": ["Arma definitiva", "escudo arcano superior"],
+        "7": ["Golpe definitivo", "armadura arcana maestra"],
+        "8": ["Fusión arma-arma", "escudo arcano maestro"],
+        "9": ["Golpe maestro", "armadura arcana perfecta"],
+        "10": ["Caballero arcano perfecto", "fusión completa"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "avance_conjuros": true,
+        "nivel_conjurador_adicional": 1,
+        "puntos_habilidad_nivel": 2,
+        "competencias": {
+          "armas": ["Todas simples y marciales"],
+          "armaduras": ["Todas las armaduras", "escudos"],
+          "herramientas": []
+        }
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Cronista Pathfinder",
+      "nombre_normalizado": "CronistaPathfinder",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/CronistaBuscador.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 7,
+        "habilidades": {
+          "Conocimiento (cualquiera)": 8,
+          "Linguistica": 4,
+          "Diplomacia": 4
+        },
+        "dotes": ["Erudito", "Ojo para la Oportunidad"],
+        "conjuros": "",
+        "proezas_especiales": ["Acceso a la Sociedad Pathfinder"],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Sabiduría enciclopédica", "lenguajes adicionales"],
+        "2": ["Investigación rápida", "contactos útiles"],
+        "3": ["Conocimiento experto", "red de informantes"],
+        "4": ["Análisis rápido", "acceso a archivos"],
+        "5": ["Sabiduría maestra", "contactos influyentes"],
+        "6": ["Investigación maestra", "red de espías"],
+        "7": ["Conocimiento supremo", "acceso restringido"],
+        "8": ["Análisis supremo", "contactos poderosos"],
+        "9": ["Sabiduría legendaria", "red global"],
+        "10": ["Cronista maestro", "conocimiento absoluto"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d6",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 8,
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Kit de escriba", "instrumentos de escritura"]
+        }
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Danzarín Sombrío",
+      "nombre_normalizado": "DanzarinSombrio",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/DanzarinSombrioPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 8,
+        "habilidades": {
+          "Acrobacias": 8,
+          "Sigilo": 5,
+          "Baile": 5
+        },
+        "dotes": ["Esquivar", "Movilidad", "Esquiva Sombría"],
+        "conjuros": "",
+        "proezas_especiales": ["Evasión"],
+        "alineamiento": ["Cualquiera no legal"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
+        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Paso sombrío", "danza de evasión"],
+        "2": ["Giro sombrío", "danza de las sombras"],
+        "3": ["Salto sombrío", "danza evasiva"],
+        "4": ["Paso fantasmal", "danza de la muerte"],
+        "5": ["Giro fantasmal", "danza mortal"],
+        "6": ["Salto fantasmal", "danza definitiva"],
+        "7": ["Paso etéreo", "danza etérea"],
+        "8": ["Giro etéreo", "danza de la perdición"],
+        "9": ["Salto etéreo", "danza perfecta"],
+        "10": ["Maestro de la danza sombría", "danza absoluta"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 6,
+        "competencias": {
+          "armas": ["Armas de duelo", "armas arrojadizas"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": []
+        }
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Defensor Firme",
+      "nombre_normalizado": "DefensorFirme",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/DefensorFirmePF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 7,
+        "habilidades": {
+          "Aguante": 5,
+          "Caballerosidad": 3
+        },
+        "dotes": ["Defensa Total", "Escudo Potente", "Especialización en Escudo"],
+        "conjuros": "",
+        "proezas_especiales": ["Ataque base +5"],
+        "alineamiento": ["Cualquiera legal"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
+        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Defensa inquebrantable", "bloqueo potente"],
+        "2": ["Muro viviente", "defensa mejorada"],
+        "3": ["Defensa inquebrantable mejorada", "bloqueo superior"],
+        "4": ["Bastión humano", "defensa superior"],
+        "5": ["Defensa inquebrantable superior", "bloqueo maestro"],
+        "6": ["Fortaleza andante", "defensa maestra"],
+        "7": ["Defensa inquebrantable maestra", "bloqueo perfecto"],
+        "8": ["Muro indestructible", "defensa perfecta"],
+        "9": ["Defensa inquebrantable perfecta", "bloqueo absoluto"],
+        "10": ["Defensor supremo", "defensa absoluta"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d12",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 2,
+        "competencias": {
+          "armas": ["Armas marciales", "escudos"],
+          "armaduras": ["Todas las armaduras", "escudos"],
+          "herramientas": []
+        }
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Discípulo del Dragón",
+      "nombre_normalizado": "DiscipuloDragon",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/DiscipuloDragonPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 7,
+        "habilidades": {
+          "Conocimiento (arcana)": 5,
+          "Diplomacia": 3
+        },
+        "dotes": ["Resistencia escalada"],
+        "conjuros": "Poder lanzar conjuros de 1er nivel sin ayuda",
+        "proezas_especiales": [],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
+        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Resistencia draconiana", "sentidos draconianos"],
+        "2": ["Garras draconianas", "alas draconianas"],
+        "3": ["Aliento draconiano", "armadura draconiana +1"],
+        "4": ["Cambio de forma", "inmunidad a energía"],
+        "5": ["Fuerza draconiana", "armadura draconiana +2"],
+        "6": ["Vuelo draconiano", "terror draconiano"],
+        "7": ["Poder draconiano", "armadura draconiana +3"],
+        "8": ["Forma draconiana", "inmunidad a parálisis/sueño"],
+        "9": ["Majestad draconiana", "armadura draconiana +4"],
+        "10": ["Apoteosis draconiana", "gran poder draconiano"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d12",
+        "avance_conjuros": true,
+        "nivel_conjurador_adicional": 1,
+        "puntos_habilidad_nivel": 4,
+        "competencias": {
+          "armas": ["Garras naturales", "armas simples"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias"],
+          "herramientas": []
+        }
+      }
+    },
+    {
+      "id": 10,
+      "nombre": "Duelista",
+      "nombre_normalizado": "Duelista",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/DuelistaPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 6,
+        "habilidades": {
+          "Acrobacias": 3,
+          "Esgrima": 5
+        },
+        "dotes": ["Esquivar", "Movilidad", "Especialización en arma (arma elegida)"],
+        "conjuros": "",
+        "proezas_especiales": ["Ataque base +6"],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
+        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "voluntad": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Precisión", "esquiva +1"],
+        "2": ["Ataque ágil", "parada con arma"],
+        "3": ["Esquiva +2", "contraataque"],
+        "4": ["Ataque preciso", "defensa elegante"],
+        "5": ["Esquiva +3", "golpe crítico mejorado"],
+        "6": ["Ataque móvil", "defensa móvil"],
+        "7": ["Esquiva +4", "contraataque mejorado"],
+        "8": ["Ataque maestro", "defensa maestra"],
+        "9": ["Esquiva +5", "golpe mortal"],
+        "10": ["Duelo perfecto", "maestría del duelo"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 4,
+        "competencias": {
+          "armas": ["Armas de duelo", "espadas"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": []
+        }
+      }
+    },
+    {
+      "id": 11,
+      "nombre": "Espía Maestro",
+      "nombre_normalizado": "EspiaMaestro",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/EspiaMaestroPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 8,
+        "habilidades": {
+          "Sigilo": 8,
+          "Disfraz": 6,
+          "Persuasión": 6
+        },
+        "dotes": ["Engañar", "Actor Nato", "Maestro del Disfraz"],
+        "conjuros": "",
+        "proezas_especiales": ["Habilidad para imitar voces y manerismos"],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
+        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Identidad secreta", "contactos encubiertos"],
+        "2": ["Infiltración experta", "red de espionaje"],
+        "3": ["Disfraz perfecto", "contraespionaje"],
+        "4": ["Identidad múltiple", "red de informantes"],
+        "5": ["Infiltración maestra", "sabotaje encubierto"],
+        "6": ["Disfraz supremo", "contrainteligencia"],
+        "7": ["Identidad legendaria", "red global"],
+        "8": ["Infiltración suprema", "operaciones encubiertas"],
+        "9": ["Maestro del engaño", "inteligencia avanzada"],
+        "10": ["Espía legendario", "operaciones especiales"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 8,
+        "competencias": {
+          "armas": ["Armas de duelo", "armas arrojadizas"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Kit de disfraz", "herramientas de ladrón"]
+        }
+      }
+    },
+    {
+      "id": 12,
+      "nombre": "Guardián de la Naturaleza",
+      "nombre_normalizado": "GuardianNaturaleza",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/GuardianNaturalezaPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 9,
+        "habilidades": {
+          "Supervivencia": 8,
+          "Conocimiento (naturaleza)": 8,
+          "Saber (naturaleza)": 5
+        },
+        "dotes": ["Pies Ligeros", "Rastreador"],
+        "conjuros": "Poder lanzar conjuros divinos de 3er nivel",
+        "proezas_especiales": ["Vínculo con la naturaleza"],
+        "alineamiento": ["Cualquiera neutral"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
+        "fortaleza": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
+        "reflejos": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
+        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Vínculo con la tierra", "compañero natural"],
+        "2": ["Protección natural", "camuflaje silvestre"],
+        "3": ["Fuerza de la naturaleza", "compañero mejorado"],
+        "4": ["Guardian del bosque", "camuflaje superior"],
+        "5": ["Ira de la naturaleza", "compañero superior"],
+        "6": ["Protector de la vida", "camuflaje perfecto"],
+        "7": ["Poder natural", "compañero maestro"],
+        "8": ["Defensor de la tierra", "unión con la naturaleza"],
+        "9": ["Furia natural", "compañero perfecto"],
+        "10": ["Guardián supremo", "avatar de la naturaleza"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "avance_conjuros": true,
+        "nivel_conjurador_adicional": 1,
+        "puntos_habilidad_nivel": 4,
+        "competencias": {
+          "armas": ["Armas simples", "armas marciales"],
+          "armaduras": ["Armaduras ligeras", "armaduras medias", "escudos de madera"],
+          "herramientas": ["Kit de herboristería"]
+        }
+      }
+    },
+    {
+      "id": 13,
+      "nombre": "Heraldo de Batalla",
+      "nombre_normalizado": "HeraldoBatalla",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/HeraldoBatallaPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 8,
+        "habilidades": {
+          "Diplomacia": 6,
+          "Intimidar": 6,
+          "Interpretación": 4
+        },
+        "dotes": ["Liderazgo", "Inspirar Coraje"],
+        "conjuros": "",
+        "proezas_especiales": ["Habilidad para inspirar aliados"],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
+        "fortaleza": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Grito de batalla", "inspiración marcial"],
+        "2": ["Arenga inspiradora", "táctica de grupo"],
+        "3": ["Grito potente", "inspiración mejorada"],
+        "4": ["Arenga poderosa", "estrategia avanzada"],
+        "5": ["Grito de guerra", "inspiración superior"],
+        "6": ["Arenga épica", "táctica maestra"],
+        "7": ["Grito legendario", "inspiración maestra"],
+        "8": ["Arenga legendaria", "estrategia suprema"],
+        "9": ["Grito divino", "inspiración perfecta"],
+        "10": ["Heraldo supremo", "inspiración absoluta"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 4,
+        "competencias": {
+          "armas": ["Armas marciales"],
+          "armaduras": ["Armaduras medias", "escudos"],
+          "herramientas": ["Instrumento musical"]
+        }
+      }
+    },
+    {
+      "id": 14,
+      "nombre": "Maestro del Saber",
+      "nombre_normalizado": "MaestroSaber",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/MaestroSaberPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 11,
+        "habilidades": {
+          "Conocimiento (todos)": 5,
+          "Linguistica": 8,
+          "Saber (arcana)": 8
+        },
+        "dotes": ["Erudito", "Memoria Eidética"],
+        "conjuros": "Poder lanzar conjuros arcanos de 4to nivel",
+        "proezas_especiales": ["Acceso a bibliotecas prohibidas"],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Sabiduría arcana", "lenguajes arcanos"],
+        "2": ["Investigación arcana", "conocimiento prohibido"],
+        "3": ["Sabiduría antigua", "lenguajes antiguos"],
+        "4": ["Investigación antigua", "secretos olvidados"],
+        "5": ["Sabiduría perdida", "lenguajes perdidos"],
+        "6": ["Investigación perdida", "misterios revelados"],
+        "7": ["Sabiduría suprema", "lenguajes divinos"],
+        "8": ["Investigación suprema", "verdades cósmicas"],
+        "9": ["Sabiduría cósmica", "lenguaje universal"],
+        "10": ["Maestro del conocimiento", "sabiduría absoluta"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d6",
+        "avance_conjuros": true,
+        "nivel_conjurador_adicional": 1,
+        "puntos_habilidad_nivel": 6,
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Ninguna"],
+          "herramientas": ["Kit de escriba", "instrumentos de investigación"]
+        }
+      }
+    },
+    {
+      "id": 15,
+      "nombre": "Profeta de la Furia",
+      "nombre_normalizado": "ProfetaFuria",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/ProfetaFuriaPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 8,
+        "habilidades": {
+          "Intimidar": 8,
+          "Supervivencia": 6,
+          "Concentración": 6
+        },
+        "dotes": ["Furia Salvaje", "Poder de la Furia"],
+        "conjuros": "Poder entrar en estado de furia",
+        "proezas_especiales": ["Furia rabiosa"],
+        "alineamiento": ["Cualquiera no legal"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
+        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Furia profética", "visión de batalla"],
+        "2": ["Ira divina", "presagio de furia"],
+        "3": ["Furia mejorada", "visión mejorada"],
+        "4": ["Ira potente", "presagio potente"],
+        "5": ["Furia superior", "visión superior"],
+        "6": ["Ira épica", "presagio épico"],
+        "7": ["Furia maestra", "visión maestra"],
+        "8": ["Ira legendaria", "presagio legendario"],
+        "9": ["Furia perfecta", "visión perfecta"],
+        "10": ["Profeta supremo", "furia absoluta"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d12",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 4,
+        "competencias": {
+          "armas": ["Armas marciales", "hachas", "martillos"],
+          "armaduras": ["Armaduras medias"],
+          "herramientas": []
+        }
+      }
+    },
+    {
+      "id": 16,
+      "nombre": "Químico Maestro",
+      "nombre_normalizado": "QuimicoMaestro",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/QuimicoMaestroPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 10,
+        "habilidades": {
+          "Artesanía (alquimia)": 10,
+          "Conocimiento (arcana)": 8,
+          "Saber (naturaleza)": 8
+        },
+        "dotes": ["Crear Poción", "Maestro Artesano"],
+        "conjuros": "Poder crear objetos alquímicos",
+        "proezas_especiales": ["Acceso a ingredientes raros"],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Maestría alquímica", "fórmulas secretas"],
+        "2": ["Creación rápida", "ingredientes raros"],
+        "3": ["Alquimia superior", "fórmulas avanzadas"],
+        "4": ["Creación experta", "ingredientes exóticos"],
+        "5": ["Alquimia maestra", "fórmulas maestras"],
+        "6": ["Creación maestra", "ingredientes legendarios"],
+        "7": ["Alquimia suprema", "fórmulas supremas"],
+        "8": ["Creación suprema", "ingredientes cósmicos"],
+        "9": ["Alquimia perfecta", "fórmulas perfectas"],
+        "10": ["Químico legendario", "maestría absoluta"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d8",
+        "avance_conjuros": false,
+        "puntos_habilidad_nivel": 6,
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Kit de alquimista", "laboratorio portátil"]
+        }
+      }
+    },
+    {
+      "id": 17,
+      "nombre": "Teúrgo Místico",
+      "nombre_normalizado": "TeurgoMistico",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/TeurgoMisticoPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 9,
+        "habilidades": {
+          "Conocimiento (arcana)": 8,
+          "Conocimiento (religión)": 8,
+          "Saber (planos)": 5
+        },
+        "dotes": ["Lanzamiento Arcano", "Lanzamiento Divino"],
+        "conjuros": "Poder lanzar conjuros arcanos y divinos de 3er nivel",
+        "proezas_especiales": ["Acceso a ambos tipos de magia"],
+        "alineamiento": ["Cualquiera"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Fusión mágica", "conocimiento dual"],
+        "2": ["Canalización mixta", "hechizos combinados"],
+        "3": ["Fusión mejorada", "conocimiento ampliado"],
+        "4": ["Canalización potente", "hechizos potentes"],
+        "5": ["Fusión superior", "conocimiento superior"],
+        "6": ["Canalización épica", "hechizos épicos"],
+        "7": ["Fusión maestra", "conocimiento maestro"],
+        "8": ["Canalización legendaria", "hechizos legendarios"],
+        "9": ["Fusión perfecta", "conocimiento perfecto"],
+        "10": ["Teúrgo supremo", "fusión absoluta"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d6",
+        "avance_conjuros": true,
+        "nivel_conjurador_adicional": 2,
+        "puntos_habilidad_nivel": 4,
+        "competencias": {
+          "armas": ["Armas simples"],
+          "armaduras": ["Armaduras ligeras"],
+          "herramientas": ["Símbolos sagrados", "libros de conjuros"]
+        }
+      }
+    },
+    {
+      "id": 18,
+      "nombre": "Vindicador Sagrado",
+      "nombre_normalizado": "VindicadorSagrado",
+      "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/VindicadorSagradoPF.php",
+      "requisitos_entrada": {
+        "nivel_minimo": 8,
+        "habilidades": {
+          "Conocimiento (religión)": 5,
+          "Diplomacia": 3
+        },
+        "dotes": ["Templo de la fe", "Fuerza divina"],
+        "conjuros": "Poder lanzar conjuros divinos de 2do nivel",
+        "proezas_especiales": ["Canalizar energía"],
+        "alineamiento": ["Cualquiera bueno"]
+      },
+      "progresion_nivel": {
+        "niveles_prestigio": 10,
+        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
+        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
+        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
+        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+      },
+      "habilidades_por_nivel": {
+        "1": ["Vindicación sagrada", "aura de coraje"],
+        "2": ["Golpe divino", "resistencia divina"],
+        "3": ["Curación divina", "aura de fe"],
+        "4": ["Justicia divina", "inmunidad a enfermedades"],
+        "5": ["Venganza divina", "aura de vida"],
+        "6": ["Castigo divino", "inmunidad a venenos"],
+        "7": ["Redención divina", "aura de pureza"],
+        "8": ["Juicio divino", "inmunidad a muerte"],
+        "9": ["Absolución divina", "aura de santidad"],
+        "10": ["Apoteosis divina", "vindicación final"]
+      },
+      "datos_automatizables": {
+        "dado_golpe": "d10",
+        "avance_conjuros": true,
+        "nivel_conjurador_adicional": 1,
+        "puntos_habilidad_nivel": 2,
+        "competencias": {
+          "armas": ["Armas marciales"],
+          "armaduras": ["Todas las armaduras", "escudos"],
+          "herramientas": ["Símbolo sagrado"]
+        }
+      }
+    }
+  ],
+  "metadatos": {
+    "total_prestigios": 18,
+    "estructura_completa": true,
+    "version": "1.0",
+    "ultima_actualizacion": "2024-01-20"
+  }
+}
