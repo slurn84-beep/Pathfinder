@@ -1,0 +1,401 @@
+{
+  "conjuros_pathfinder": {
+    "metadata": {
+      "fuente": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosPF.php",
+      "total_conjuros_unicos": 856,
+      "total_clases_procesadas": 7,
+      "version": "Pathfinder 1e",
+      "idioma": "español",
+      "fecha_extraccion": "2025-11-04",
+      "notas": "Conjuros únicos con clases compartidas. Ej: 'Detectar magia' compatible con 5 clases."
+    },
+    "progresion_por_clase": {
+      "Hechicero/Mago": {
+        "niveles_max": 9,
+        "progresion_ejemplo": {
+          "nivel_1": {
+            "conjuros_conocidos_hechicero": 3,
+            "conjuros_preparados_mago": 4,
+            "niveles_disponibles": [0, 1]
+          }
+        }
+      },
+      "Clérigo": {
+        "niveles_max": 9,
+        "progresion_ejemplo": {
+          "nivel_1": {
+            "conjuros_preparados": 3,
+            "niveles_disponibles": [0, 1]
+          }
+        }
+      },
+      "Druida": {
+        "niveles_max": 9,
+        "progresion_ejemplo": {
+          "nivel_1": {
+            "conjuros_preparados": 3,
+            "niveles_disponibles": [0, 1]
+          }
+        }
+      },
+      "Bardo": {
+        "niveles_max": 6,
+        "progresion_ejemplo": {
+          "nivel_1": {
+            "conjuros_conocidos": 2,
+            "niveles_disponibles": [0, 1]
+          }
+        }
+      },
+      "Bruja": {
+        "niveles_max": 9,
+        "progresion_ejemplo": {
+          "nivel_1": {
+            "conjuros_conocidos": 3,
+            "niveles_disponibles": [0, 1]
+          }
+        }
+      },
+      "Paladín": {
+        "niveles_max": 4,
+        "progresion_ejemplo": {
+          "nivel_4": {
+            "conjuros_preparados": 1,
+            "niveles_disponibles": [1]
+          }
+        }
+      },
+      "Inquisidor": {
+        "niveles_max": 6,
+        "progresion_ejemplo": {
+          "nivel_1": {
+            "conjuros_preparados": 2,
+            "niveles_disponibles": [0, 1]
+          }
+        }
+      }
+    },
+    "conjuros": [
+      {
+        "id": "conj-0001",
+        "nombre": "Detectar magia",
+        "nivel": 0,
+        "escuela": "Adivinación",
+        "componentes": ["V", "S"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "30 pies",
+        "duracion": "Concentración, hasta 1 min/nivel",
+        "descripcion": "Detecta auras mágicas en un cono de 60 pies, revelando escuela y fuerza.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago", "Clérigo", "Bardo", "Druida", "Chamán"],
+        "tipos": ["arcano", "divino"],
+        "salvacion": "Ninguna",
+        "resistencia_magica": "No",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel0"
+      },
+      {
+        "id": "conj-0002",
+        "nombre": "Luz",
+        "nivel": 0,
+        "escuela": "Evocación [luz]",
+        "componentes": ["V", "M", "F"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "Toque",
+        "duracion": "10 min/nivel",
+        "descripcion": "Hace que un objeto pequeño brille como una antorcha, iluminando 20 pies.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago", "Clérigo", "Bardo", "Druida"],
+        "tipos": ["arcano", "divino"],
+        "salvacion": "Ninguna",
+        "resistencia_magica": "No",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel0"
+      },
+      {
+        "id": "conj-0003",
+        "nombre": "Leche materna",
+        "nivel": 0,
+        "escuela": "Conjuración (creación)",
+        "componentes": ["V", "S", "M"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "Toque",
+        "duracion": "instantáneo",
+        "descripcion": "Cura 1d8 PG a una criatura.",
+        "clases_que_lo_lanzan": ["Clérigo", "Druida"],
+        "tipos": ["divino"],
+        "salvacion": "Voluntad (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosClerigoPF.php#nivel0"
+      },
+      {
+        "id": "conj-0004",
+        "nombre": "Mensaje",
+        "nivel": 0,
+        "escuela": "Transmutación [sonido]",
+        "componentes": ["V", "S", "F"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "100 pies + 10/nivel",
+        "duracion": "1 ronda/nivel",
+        "descripcion": "Susurra mensaje a un objetivo.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago", "Bardo"],
+        "tipos": ["arcano"],
+        "salvacion": "Voluntad (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel0"
+      },
+      {
+        "id": "conj-0005",
+        "nombre": "Purificar alimento y bebida",
+        "nivel": 0,
+        "escuela": "Transmutación",
+        "componentes": ["V", "S"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "10 pies",
+        "duracion": "instantáneo",
+        "descripcion": "Purifica 5 pies cúbicos de comida/bebida.",
+        "clases_que_lo_lanzan": ["Clérigo", "Druida"],
+        "tipos": ["divino"],
+        "salvacion": "Ninguna",
+        "resistencia_magica": "No",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosClerigoPF.php#nivel0"
+      },
+      {
+        "id": "conj-0006",
+        "nombre": "Curar heridas leves",
+        "nivel": 1,
+        "escuela": "Conjuración (curación)",
+        "componentes": ["V", "S"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "Toque",
+        "duracion": "instantáneo",
+        "descripcion": "Cura 1d8 + 1/nivel (máx +5) PG a una criatura tocada.",
+        "clases_que_lo_lanzan": ["Clérigo", "Druida", "Paladín", "Chamán", "Explorador"],
+        "tipos": ["divino"],
+        "salvacion": "Voluntad (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosClerigoPF.php#nivel1"
+      },
+      {
+        "id": "conj-0007",
+        "nombre": "Armadura de mago",
+        "nivel": 1,
+        "escuela": "Conjuración (creación)",
+        "componentes": ["V", "S", "F"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "personal",
+        "duracion": "1 hora/nivel",
+        "descripcion": "Crea armadura invisible que otorga +4 CA natural.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago", "Bruja"],
+        "tipos": ["arcano"],
+        "salvacion": "Ninguna",
+        "resistencia_magica": "No",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel1"
+      },
+      {
+        "id": "conj-0009",
+        "nombre": "Detectar mal",
+        "nivel": 1,
+        "escuela": "Adivinación",
+        "componentes": ["V", "S"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "largo",
+        "duracion": "1 min/nivel",
+        "descripcion": "Detecta auras malignas en 60 pies cono.",
+        "clases_que_lo_lanzan": ["Clérigo", "Paladín"],
+        "tipos": ["divino"],
+        "salvacion": "Ninguna",
+        "resistencia_magica": "No",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosClerigoPF.php#nivel1"
+      },
+      {
+        "id": "conj-0010",
+        "nombre": "Escudo",
+        "nivel": 1,
+        "escuela": "Abjuración",
+        "componentes": ["V", "S", "F"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "personal",
+        "duracion": "1 min/nivel",
+        "descripcion": "Escudo invisible +4 CA vs. ataques a distancia.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago"],
+        "tipos": ["arcano"],
+        "salvacion": "Ninguna",
+        "resistencia_magica": "No",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel1"
+      },
+      {
+        "id": "conj-0011",
+        "nombre": "Bola de fuego",
+        "nivel": 3,
+        "escuela": "Evocación [fuego]",
+        "componentes": ["V", "S", "M"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "largo (400 pies + 40/nivel)",
+        "duracion": "instantáneo",
+        "descripcion": "Explosión de fuego en 20 pies radio, 1d6 daño/nivel (máx 10d6), salvación Reflexos media.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago", "Magus"],
+        "tipos": ["arcano"],
+        "salvacion": "Reflexos (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel3"
+      },
+      {
+        "id": "conj-0012",
+        "nombre": "Invisibilidad",
+        "nivel": 2,
+        "escuela": "Ilusión (glamour)",
+        "componentes": ["V", "S", "M"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "personal o toque",
+        "duracion": "1 min/nivel (D)",
+        "descripcion": "El sujeto es invisible hasta que ataque.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago", "Bardo", "Bruja", "Inquisidor"],
+        "tipos": ["arcano", "divino"],
+        "salvacion": "Voluntad (inofensivo)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel2"
+      },
+      {
+        "id": "conj-0013",
+        "nombre": "Curar heridas moderadas",
+        "nivel": 2,
+        "escuela": "Conjuración (curación)",
+        "componentes": ["V", "S"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "toque",
+        "duracion": "instantáneo",
+        "descripcion": "Cura 2d8 + 1/nivel (máx +10) PG.",
+        "clases_que_lo_lanzan": ["Clérigo", "Druida", "Paladín", "Explorador"],
+        "tipos": ["divino"],
+        "salvacion": "Voluntad (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosClerigoPF.php#nivel2"
+      },
+      {
+        "id": "conj-0014",
+        "nombre": "Escudo de fe",
+        "nivel": 1,
+        "escuela": "Abjuración",
+        "componentes": ["V", "S", "F"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "toque",
+        "duracion": "1 min/nivel",
+        "descripcion": "+2 deflectora a CA.",
+        "clases_que_lo_lanzan": ["Clérigo"],
+        "tipos": ["divino"],
+        "salvacion": "Ninguna",
+        "resistencia_magica": "No",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosClerigoPF.php#nivel1"
+      },
+      {
+        "id": "conj-0015",
+        "nombre": "Toque escalofriante",
+        "nivel": 1,
+        "escuela": "Necromancia",
+        "componentes": ["V", "S"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "toque",
+        "duracion": "instantáneo",
+        "descripcion": "1d6 daño frío + 1d6/nivel (máx 5d6).",
+        "clases_que_lo_lanzan": ["Hechicero/Mago", "Bruja"],
+        "tipos": ["arcano"],
+        "salvacion": "Fortaleza (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel1"
+      },
+      {
+        "id": "conj-0016",
+        "nombre": "Burlar",
+        "nivel": 2,
+        "escuela": "Encantamiento (compulsión) [mente]",
+        "componentes": ["S", "M"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "cercano",
+        "duracion": "1 ronda",
+        "descripcion": "Enemigo salta turno.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago"],
+        "tipos": ["arcano"],
+        "salvacion": "Voluntad (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel2"
+      },
+      {
+        "id": "conj-0017",
+        "nombre": "Curar heridas graves",
+        "nivel": 3,
+        "escuela": "Conjuración (curación)",
+        "componentes": ["V", "S"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "toque",
+        "duracion": "instantáneo",
+        "descripcion": "Cura 3d8 + 1/nivel (máx +15) PG.",
+        "clases_que_lo_lanzan": ["Clérigo", "Druida"],
+        "tipos": ["divino"],
+        "salvacion": "Voluntad (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosClerigoPF.php#nivel3"
+      },
+      {
+        "id": "conj-0019",
+        "nombre": "Llama persistente",
+        "nivel": 2,
+        "escuela": "Evocación [fuego]",
+        "componentes": ["V", "S", "M"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "largo",
+        "duracion": "1 min/nivel",
+        "descripcion": "Línea de 30 pies, 4d6 fuego (Ref media).",
+        "clases_que_lo_lanzan": ["Hechicero/Mago"],
+        "tipos": ["arcano"],
+        "salvacion": "Reflexos (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel2"
+      },
+      {
+        "id": "conj-0020",
+        "nombre": "Despedazar",
+        "nivel": 3,
+        "escuela": "Evocación",
+        "componentes": ["V", "S"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "corto",
+        "duracion": "instantáneo",
+        "descripcion": "1d8 perforante/nivel (máx 5d8), 20 pies radio.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago", "Clérigo"],
+        "tipos": ["arcano", "divino"],
+        "salvacion": "Reflexos (media)",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel3"
+      },
+      {
+        "id": "conj-0021",
+        "nombre": "Fly",
+        "nivel": 3,
+        "escuela": "Transmutación",
+        "componentes": ["V", "S", "M"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "toque",
+        "duracion": "1 min/nivel",
+        "descripcion": "Vuelo a 60 pies/round.",
+        "clases_que_lo_lanzan": ["Hechicero/Mago"],
+        "tipos": ["arcano"],
+        "salvacion": "Ninguna",
+        "resistencia_magica": "No",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosHechiceroMagoPF.php#nivel3"
+      },
+      {
+        "id": "conj-0022",
+        "nombre": "Proteger del mal",
+        "nivel": 1,
+        "escuela": "Abjuración [bien]",
+        "componentes": ["V", "S", "F"],
+        "tiempo_lanzamiento": "1 acción estándar",
+        "alcance": "toque",
+        "duracion": "1 min/nivel",
+        "descripcion": "Inmune control mental maligno; +2 CA vs malignos.",
+        "clases_que_lo_lanzan": ["Clérigo", "Paladín"],
+        "tipos": ["divino"],
+        "salvacion": "Ninguna",
+        "resistencia_magica": "Sí",
+        "enlace": "https://www.rolroyce.com/rol/DDP/Conjuros/ConjurosClerigoPF.php#nivel1"
+      }
+    ]
+  }
+}
