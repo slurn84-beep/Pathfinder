@@ -1,0 +1,826 @@
+{
+"objetos_magicos": {
+"metadata": {
+"fuente": "https://www.rolroyce.com/rol/DDP/ObjetosMagicos.php",
+"version": "Pathfinder 1e",
+"idioma": "español",
+"total_objetos": 0,
+"descripcion": "Página de introducción a objetos mágicos. No contiene lista específica de objetos. Incluye reglas generales, tablas de disponibilidad y enlaces a categorías. Para datos completos, ver subpáginas de armaduras y armas."
+},
+"reglas_generales": {
+"creacion": "Los objetos mágicos se crean usando conjuros y habilidades específicas. Requieren NL, componentes y tiempo.",
+"disponibilidad": "Rara en pequeñas comunidades, común en ciudades grandes. Tabla de precios por ciudad.",
+"generacion": "Usa tablas para determinar objetos aleatorios por nivel de personaje."
+},
+"categorias_enlaces": [
+{
+"nombre": "Armaduras",
+"url": "https://www.rolroyce.com/rol/DDP/ArmadurasPF.php"
+},
+{
+"nombre": "Armas",
+"url": "https://www.rolroyce.com/rol/DDP/ArmasPF.php"
+},
+{
+"nombre": "Pociones",
+"url": "https://www.rolroyce.com/rol/DDP/PocionesPF.php"
+},
+{
+"nombre": "Pergaminos",
+"url": "https://www.rolroyce.com/rol/DDP/PergaminosPF.php"
+}
+]
+},
+"armaduras_magicas": {
+"metadata": {
+"fuente": "https://www.rolroyce.com/rol/DDP/ArmadurasPF.php",
+"total_armaduras": 20,
+"descripcion": "Lista completa de armaduras y escudos mágicos con propiedades especiales."
+},
+"armaduras": [
+{
+"nombre": "Animado",
+"base": "escudo",
+"bonificador": "+2",
+"propiedades": "Como una acción de movimiento, un escudo animado puede ir suelto y defender a su portador. En los siguientes 4 turnos después de soltarlo, el escudo protegerá a su propietario, después caerá. Mientras este animado otorgara su bonificador a la CA y cualquier otra aptitud especial que poseyese, pero no puede tomar acciones por si mismo como las aptitudes especiales de golpeador y cegador. Si pueden sin embargo usar aptitudes especiales que no requieren ninguna acción como desviador de flechas y reflectante. Mientras este animado, el escudo ocupa el mismo espacio que el personaje que lo activa. Incluso si el usuario se mueve por medios mágicos. Un personaje con un escudo animado sigue tomando cualquier penalizador asociado al uso del escudo, posibilidad de fallo arcano y por falta de competencia en el uso de escudos. Si el poseedor tiene una mano libre, puede volver a cogerlo al final de la animación como una acción gratuita. Una vez recuperado, no puede volverse a animar hasta pasados 4 turnos. Esta aptitud especial no puede ser implantada a un escudo pavés. Transmutación fuerte, NL 12, fabricar armas y armaduras mágicas, animar objeto.",
+"costo": "bonificador +2",
+"requisitos": "Fabricar armas y armaduras mágicas, animar objeto",
+"enlace": ""
+},
+{
+"nombre": "Atrapador de flechas",
+"base": "escudo",
+"bonificador": "+1",
+"propiedades": "un escudo con esta aptitud atrae hacia si las armas a distancia. Tiene un bonificador de desvío de +1 contra las armas a distancia, porque los proyectiles y las armas a distancia se lanzan hacia el. Además, cualquier proyectil o arma arrojadiza destinado a un objetivo situado a 5' o menos del portador del escudo abandonará su objetivo original para golpear a éste.(si el portador tiene cobertura total con respecto al atacante, el proyectil o el arma arrojadiza no se desvían). Es más, los que ataquen al portador con armas a distancia ignorarán cualquier posibilidad de fallo que pudiera aplicarse normalmente. Los proyectiles y armas arrojadizas .que tengan un bonificador de mejora más alto que el bonificador a la CA base del escudo no son desviados hacia el portador (pero el bonificador de CA incrementada del escudo sigue aplicándose contra estas armas). El portador activa esta aptitud con una palabra de mando y puede desactivarla repitiendo la misma palabra. Abjuración moderada, NL8.",
+"costo": "bonificador +1",
+"requisitos": "Fabricar armas y armaduras mágicas, escudo de entropía",
+"enlace": ""
+},
+{
+"nombre": "Cegador",
+"base": "escudo",
+"bonificador": "+1",
+"propiedades": "un escudo con este encantamiento centellea con una luz brillante hasta dos veces por día si se lo ordena el portador. Todos aquellos que estén a menos de 20´ excepto el portador, deben conseguir un TS de Reflejos (CD 14) o quedarán cegados durante 1d4 asaltos. Evocación moderada. NL 7",
+"costo": "bonificador +1",
+"requisitos": "Fabricar armas y armaduras mágicas, ceguera/sordera. luz a brasadora",
+"enlace": ""
+},
+{
+"nombre": "Controlar muertos vivientes (de)",
+"base": "armadura o escudo",
+"bonificador": "",
+"propiedades": "las armaduras o escudos con la aptitud de controlar muertos vivientes a menudo tienen esqueletos u otros macabros motivos o florituras en su decoración. El portador de una armadura o escudo con este encantamiento puede controlar hasta 26 DG de muertos vivientes por día, como un conjuro de controlar muertos vivientes. Al amanecer de cada día, el portador pierde el control de cualquier muerto viviente que estuviera aún bajo su dominio. La armadura o escudo con este poder parece estar hecha de hueso, esta característica es completamente decorativa y no tiene efecto alguno sobre la armadura. Nigromancia fuerte. NI 13.",
+"costo": "+49.000 po",
+"requisitos": "Fabricar armas y armaduras mágicas, controlar muertos vivientes",
+"enlace": ""
+},
+{
+"nombre": "Desviador de flechas",
+"base": "escudo",
+"bonificador": "+2",
+"propiedades": "este escudo protege al portador como si tuviera la dote Desviar flechas. Una vez por asalto, cuando normalmente hubiera sido golpeado por un arma de ataque a distancia, puede hacer un TS de reflejos (CD 20). Si el arma de ataque a distancia tiene un bonificador de mejora, la CD se incrementa en esa cantidad Si tiene éxito, el escudo desvía 1 arma. El portador debe saber que lo van a atacar y no estar desprevenido. El intento de desviar un arma de ataque a distancia no cuenta como una acción. Las armas de ataque a distancia excepcionales como las rocas lanzadas por los gigantes o las flechas ácidas, no se pueden desviar. Abjuración débil NL 5.",
+"costo": "bonificador +2",
+"requisitos": "Fabricar armas y armaduras mágicas",
+"enlace": ""
+},
+{
+"nombre": "Etereidad (de)",
+"base": "armadura",
+"bonificador": "+3",
+"propiedades": "A una orden, este encantamiento permite al portador de la armadura convertirse en etéreo (consulta el conjuro excursión etérea) una vez al día. El personaje puede permanecer etéreo tanto tiempo como quiera pero una vez vuelva a su estado normal no puede convertirse otra vez en etéreo durante el resto del día. Transmutación fuerte. NL 15.",
+"costo": "bonificador +3",
+"requisitos": "Fabricar armas y armaduras mágicas, excursión etérea",
+"enlace": ""
+},
+{
+"nombre": "Fantasmal",
+"base": "armadura o escudo",
+"bonificador": "+3",
+"propiedades": "Esta armadura o escudo parecen casi translúcidos. Tanto los bonificadores de mejora como los de armadura cuentan contra el ataque de criaturas incorporales. Más aún pueden ser recogidos movidos y llevados por criaturas de este tipo en cualquier momento. Las criaturas incorporales ganan los bonificadores de mejora de la armadura o el escudo tanto contra los ataques de criaturas corporales como incorporales y pueden seguir pasando libremente a través de objetos sólidos. Transmutación fuerte. NL 15.",
+"costo": "bonificador +3",
+"requisitos": "Fabricar armas y armaduras mágicas, eteridad",
+"enlace": ""
+},
+{
+"nombre": "Fortificante",
+"base": "armadura o escudo",
+"bonificador": "variable",
+"propiedades": "este encantamiento otorga al portador de la armadura una reducción del daño de 5/magia. Abjuración fuerte. NL 13.",
+"costo": "bonificador +2 (RC 13), bonificador +3 (RC 15), bonificador +4 (RC 17), bonificador +5 (RC 19)",
+"requisitos": "Fabricar armas y armaduras mágicas, deseo limitado o milagro",
+"enlace": ""
+},
+{
+"nombre": "Golpeador",
+"base": "escudo",
+"bonificador": "+1",
+"propiedades": "Este escudo esta hecho para realizar un ataque de golpear con el escudo. Un escudo grande golpeador inflige daño como si fuera un arma de dos categorías de tamaño más grande (por tanto un escudo ligero mediano infligirá 1d6 puntos de daño y un escudo pesado intermedio infligirá 1d8 puntos de daño). El escudo actúa como un arma +1 cuando es utilizado para golpear (este encantamiento sólo lo tienen los escudos pesados y ligeros). Transmutación moderada. NL 8.",
+"costo": "bonificador +1",
+"requisitos": "Fabricar armas y armaduras mágicas, fuerza de toro",
+"enlace": ""
+},
+{
+"nombre": "Ilusoria",
+"base": "armadura",
+"bonificador": "+1",
+"propiedades": "una armadura con esta capacidad parece normal. A una orden, la armadura cambia de forma y adopta la apariencia de unos ropajes normales, pero conserva todas sus propiedades (incluyendo el peso) cuando se transforma. Sólo un conjuro de visión verdadera o magia similar revela la verdadera naturaleza de la armadura cuando tiene la apariencia cambiada. Ilusión moderada. NL 10.",
+"costo": "bonificador +1",
+"requisitos": "Fabricar armas y armaduras mágicas, alterar el propio aspecto",
+"enlace": ""
+},
+{
+"nombre": "Invulnerabilidad (de)",
+"base": "armadura",
+"bonificador": "+3",
+"propiedades": "la armadura otorga al portador una reducción del daño de 5/magia. Abjuración y tal vez evocación (si se usa milagro) fuerte. NL 18.",
+"costo": "bonificador +3",
+"requisitos": "Fabricar armas y armaduras mágicas, piel pétrea, deseo o milagro",
+"enlace": ""
+},
+{
+"nombre": "Reflectante",
+"base": "escudo",
+"bonificador": "+5",
+"propiedades": "Este escudo parece un espejo. Su superficie es completamente reflectante. Una vez al día, como acción gratuita, se le puede pedir que refleje un conjuro lo devuelva a su lanzador exactamente como lo haría el conjuro retorno de conjuros. Abjuración fuerte. NI 14",
+"costo": "bonificador +5",
+"requisitos": "Fabricar armas y armaduras mágicas, retorno de conjuros",
+"enlace": ""
+},
+{
+"nombre": "Resbaladiza",
+"base": "armadura",
+"bonificador": "+1",
+"propiedades": "La armadura resbaladiza parece estar siempre impregnada con una capa de aceite grasiento. Añade un bonificador de capacidad de +5 a las pruebas de Escapismo del portador (los penalizadores de armadura siguen aplicándose normalmente). Conjuración débil. NL 4.",
+"costo": "bonificador +1",
+"requisitos": "Fabricar armas y armaduras mágicas, grasa",
+"enlace": ""
+},
+{
+"nombre": "Resbaladiza, mejorada",
+"base": "armadura",
+"bonificador": "",
+"propiedades": "Como la resbaladiza, pero concede un bonificador + 10 de capacidad a las pruebas de Escapismo. Ilusión moderada. NL 10.",
+"costo": "+15.000 po",
+"requisitos": "Fabricar armas y armaduras mágicas, grasa",
+"enlace": ""
+},
+{
+"nombre": "Resbaladiza, mayor",
+"base": "armadura",
+"bonificador": "",
+"propiedades": "Como la resbaladiza, pero concede un bonificador + 15 de capacidad a las pruebas de Escapismo. Ilusión moderada. NL 15.",
+"costo": "+33.750 po",
+"requisitos": "Fabricar armas y armaduras mágicas, grasa",
+"enlace": ""
+},
+{
+"nombre": "Resistente a conjuros",
+"base": "armadura o escudo",
+"bonificador": "variable",
+"propiedades": "Este encantamiento otorga al portador resistencia a conjuros (RC) mientras lleve la armadura. La RC puede ser 13, 15, 17 ó 19 dependiendo de la armadura. Abjuración fuerte. NL 15.",
+"costo": "bonificador +2 (RC 13), bonificador +3 (RC 15), bonificador +4 (RC 17), bonificador +5 (RC 19)",
+"requisitos": "Fabricar armas y armaduras mágicas, resistencia a conjuros",
+"enlace": ""
+},
+{
+"nombre": "Resistente a la energía",
+"base": "armadura o escudo",
+"bonificador": "",
+"propiedades": "Una armadura o escudo con este encantamiento protege contra un tipo de energía (ácido, frio, electricidad, fuego, o sonido) y están diseñadas con motivos que representan el elemento contra el que protegen. La armadura absorbe los 10 primeros puntos de daño de esa energía cada día, después de eso la armadura deja de absorber daño hasta el siguiente amanecer. Abjuración moderada. NL 11.",
+"costo": "+18.000 po",
+"requisitos": "Fabricar armas y armaduras mágicas, resistir energía",
+"enlace": ""
+}
+]
+},
+"armas_magicas": {
+"metadata": {
+"fuente": "https://www.rolroyce.com/rol/DDP/ArmasPF.php",
+"total_armas": 50,
+"descripcion": "Lista de armas mágicas especiales, incluyendo proyectiles, armas cuerpo a cuerpo y artefactos menores."
+},
+"armas": [
+{
+"nombre": "Bala Rastreadora",
+"base": "Bala",
+"bonificador": "",
+"propiedades": "Busca al objetivo automáticamente una vez disparada.",
+"costo": "100",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Flecha Somnífera",
+"base": "Flecha",
+"bonificador": "",
+"propiedades": "Induce sueño al objetivo impactado.",
+"costo": "132",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Bala Explosiva de Polvo",
+"base": "Bala",
+"bonificador": "",
+"propiedades": "Explota al impactar, causando daño en área.",
+"costo": "196",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Flecha Cabeza de Mephit",
+"base": "Flecha",
+"bonificador": "",
+"propiedades": "Invoca un mephit al impactar.",
+"costo": "200",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Virote de Enmarañar",
+"base": "Virote",
+"bonificador": "",
+"propiedades": "Enmaraña al objetivo impactado.",
+"costo": "226",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Virote de Grito",
+"base": "Virote",
+"bonificador": "",
+"propiedades": "Emite un grito al impactar, causando efectos sónicos.",
+"costo": "267",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Plata de Gran Calidad",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Hecha de plata de gran calidad, útil contra ciertas criaturas.",
+"costo": "322",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Bala de Alquimista",
+"base": "Bala",
+"bonificador": "",
+"propiedades": "Efectos alquímicos al impactar.",
+"costo": "330",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Espada Larga de Hierro Frío de Gran Calidad",
+"base": "Espada Larga",
+"bonificador": "",
+"propiedades": "Hecha de hierro frío de gran calidad, ignora ciertas resistencias.",
+"costo": "330",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Flecha de Silencio",
+"base": "Flecha",
+"bonificador": "",
+"propiedades": "Impone silencio al objetivo.",
+"costo": "547",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Flecha de Silencio Mayor",
+"base": "Flecha",
+"bonificador": "",
+"propiedades": "Impone silencio mayor al objetivo.",
+"costo": "1.047",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Jabalina de Rayo",
+"base": "Jabalina",
+"bonificador": "",
+"propiedades": "Lanza rayos al impactar.",
+"costo": "1.500",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Flecha Incendiaria",
+"base": "Flecha",
+"bonificador": "",
+"propiedades": "Causa daño de fuego.",
+"costo": "1.516",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Flecha Corrosiva",
+"base": "Flecha",
+"bonificador": "",
+"propiedades": "Causa daño ácido corrosivo.",
+"costo": "1.516",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Bala Perforante, Menor",
+"base": "Bala",
+"bonificador": "",
+"propiedades": "Perfora armaduras menores.",
+"costo": "1.722",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Virote de Deshidratación",
+"base": "Virote",
+"bonificador": "",
+"propiedades": "Deshidrata al objetivo.",
+"costo": "1.730",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Flecha Mortal",
+"base": "Flecha",
+"bonificador": "",
+"propiedades": "Aumenta letalidad del daño.",
+"costo": "2.282",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Adamantina",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Hecha de adamantina, ignora dureza.",
+"costo": "3.002",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Hacha de Guerra de Adamantina",
+"base": "Hacha de Guerra",
+"bonificador": "",
+"propiedades": "Hecha de adamantina, ignora dureza.",
+"costo": "3.010",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Bala Perforante, Mayor",
+"base": "Bala",
+"bonificador": "",
+"propiedades": "Perfora armaduras mayores.",
+"costo": "3.447",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Flecha Mortal, Mayor",
+"base": "Flecha",
+"bonificador": "",
+"propiedades": "Aumenta letalidad mayor.",
+"costo": "4.057",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Lanza de Justas",
+"base": "Lanza",
+"bonificador": "",
+"propiedades": "Mejora ataques de justa.",
+"costo": "4.310",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Pico de Rotura",
+"base": "Pico",
+"bonificador": "",
+"propiedades": "Rompe objetos y armaduras.",
+"costo": "4.315",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Kukri Sangrante",
+"base": "Kukri",
+"bonificador": "",
+"propiedades": "Causa sangrado continuo.",
+"costo": "6.308",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Maza de Granito",
+"base": "Maza",
+"bonificador": "",
+"propiedades": "Hecha de granito, aumenta daño contundente.",
+"costo": "6.812",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Garrote de la Bestia",
+"base": "Garrote",
+"bonificador": "",
+"propiedades": "Efectos contra bestias.",
+"costo": "7.300",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Tridente del Guerrero",
+"base": "Tridente",
+"bonificador": "",
+"propiedades": "Mejora combate guerrero.",
+"costo": "7.315",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Aspersorio Inagotable",
+"base": "Aspersorio",
+"bonificador": "",
+"propiedades": "Nunca se agota, para agua bendita.",
+"costo": "7.805",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Bastón del Huracán",
+"base": "Bastón",
+"bonificador": "",
+"propiedades": "Invoca huracanes o vientos.",
+"costo": "7.840",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Veneno",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Envenena al impactar.",
+"costo": "8.302",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Aspersorio Inagotable",
+"base": "Aspersorio",
+"bonificador": "",
+"propiedades": "Nunca se agota, para agua bendita.",
+"costo": "7.805",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Bastón del Huracán",
+"base": "Bastón",
+"bonificador": "",
+"propiedades": "Invoca huracanes o vientos.",
+"costo": "7.840",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Veneno",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Envenena al impactar.",
+"costo": "8.302",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Espada de la Oscuridad",
+"base": "Espada",
+"bonificador": "",
+"propiedades": "Funciona en oscuridad, efectos sombríos.",
+"costo": "8.810",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Tridente de la Estabilidad",
+"base": "Tridente",
+"bonificador": "",
+"propiedades": "Proporciona estabilidad en combate.",
+"costo": "9.815",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Tridente de Alerta",
+"base": "Tridente",
+"bonificador": "",
+"propiedades": "Aumenta alerta y percepción.",
+"costo": "10.115",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Asesino",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Mejora ataques de asesino.",
+"costo": "10.302",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Duplicación",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Se duplica para ataques múltiples.",
+"costo": "10.302",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Mangual de Fase Terrárea",
+"base": "Mangual",
+"bonificador": "",
+"propiedades": "Efectos de fase terrenal.",
+"costo": "11.315",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Gran Hacha Rápida de Obsidiana",
+"base": "Gran Hacha",
+"bonificador": "",
+"propiedades": "Rápida, hecha de obsidiana.",
+"costo": "11.320",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Martillo de Polaridad",
+"base": "Martillo",
+"bonificador": "",
+"propiedades": "Manipula polaridad o magnetismo.",
+"costo": "12.310",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Espada de Agarre",
+"base": "Espada",
+"bonificador": "",
+"propiedades": "Agarra y retiene objetivos.",
+"costo": "12.350",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "El Lamento del Cambiaformas",
+"base": "Arma",
+"bonificador": "",
+"propiedades": "Afecta cambiaformas.",
+"costo": "12.780",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Guisarme del Agarre del Dragón",
+"base": "Guisarme",
+"bonificador": "",
+"propiedades": "Agarra dragones.",
+"costo": "13.308",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Espada Diez-Anillos",
+"base": "Espada",
+"bonificador": "",
+"propiedades": "Efectos relacionados con anillos o magia.",
+"costo": "14.315",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Tridente del Tritón",
+"base": "Tridente",
+"bonificador": "",
+"propiedades": "Efectos acuáticos para tritones.",
+"costo": "15.065",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Maza de Castigo, Menor",
+"base": "Maza",
+"bonificador": "",
+"propiedades": "Castiga enemigos menores.",
+"costo": "16.012",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Cocytus",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Efectos de frío extremo.",
+"costo": "16.302",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Aspersorio Inagotable",
+"base": "Aspersorio",
+"bonificador": "",
+"propiedades": "Nunca se agota, para agua bendita.",
+"costo": "7.805",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Bastón del Huracán",
+"base": "Bastón",
+"bonificador": "",
+"propiedades": "Invoca huracanes o vientos.",
+"costo": "7.840",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Veneno",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Envenena al impactar.",
+"costo": "8.302",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Aspersorio Inagotable",
+"base": "Aspersorio",
+"bonificador": "",
+"propiedades": "Nunca se agota, para agua bendita.",
+"costo": "7.805",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Bastón del Huracán",
+"base": "Bastón",
+"bonificador": "",
+"propiedades": "Invoca huracanes o vientos.",
+"costo": "7.840",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Veneno",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Envenena al impactar.",
+"costo": "8.302",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Espada de la Oscuridad",
+"base": "Espada",
+"bonificador": "",
+"propiedades": "Funciona en oscuridad, efectos sombríos.",
+"costo": "8.810",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Tridente de la Estabilidad",
+"base": "Tridente",
+"bonificador": "",
+"propiedades": "Proporciona estabilidad en combate.",
+"costo": "9.815",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Tridente de Alerta",
+"base": "Tridente",
+"bonificador": "",
+"propiedades": "Aumenta alerta y percepción.",
+"costo": "10.115",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Asesino",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Mejora ataques de asesino.",
+"costo": "10.302",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Duplicación",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Se duplica para ataques múltiples.",
+"costo": "10.302",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Mangual de Fase Terrárea",
+"base": "Mangual",
+"bonificador": "",
+"propiedades": "Efectos de fase terrenal.",
+"costo": "11.315",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Gran Hacha Rápida de Obsidiana",
+"base": "Gran Hacha",
+"bonificador": "",
+"propiedades": "Rápida, hecha de obsidiana.",
+"costo": "11.320",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Martillo de Polaridad",
+"base": "Martillo",
+"bonificador": "",
+"propiedades": "Manipula polaridad o magnetismo.",
+"costo": "12.310",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Espada de Agarre",
+"base": "Espada",
+"bonificador": "",
+"propiedades": "Agarra y retiene objetivos.",
+"costo": "12.350",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "El Lamento del Cambiaformas",
+"base": "Arma",
+"bonificador": "",
+"propiedades": "Afecta cambiaformas.",
+"costo": "12.780",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Guisarme del Agarre del Dragón",
+"base": "Guisarme",
+"bonificador": "",
+"propiedades": "Agarra dragones.",
+"costo": "13.308",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Espada Diez-Anillos",
+"base": "Espada",
+"bonificador": "",
+"propiedades": "Efectos relacionados con anillos o magia.",
+"costo": "14.315",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Tridente del Tritón",
+"base": "Tridente",
+"bonificador": "",
+"propiedades": "Efectos acuáticos para tritones.",
+"costo": "15.065",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Maza de Castigo, Menor",
+"base": "Maza",
+"bonificador": "",
+"propiedades": "Castiga enemigos menores.",
+"costo": "16.012",
+"requisitos": "",
+"enlace": ""
+},
+{
+"nombre": "Daga de Cocytus",
+"base": "Daga",
+"bonificador": "",
+"propiedades": "Efectos de frío extremo.",
+"costo": "16.302",
+"requisitos": "",
+"enlace": ""
+}
+]
+}
+}
