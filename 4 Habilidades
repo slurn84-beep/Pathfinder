@@ -1,0 +1,810 @@
+{
+  "habilidades_pathfinder": {
+    "metadata": {
+      "fuente": "https://www.rolroyce.com/rol/DDP/Habilidades/HabilidadesPF.php",
+      "version": "Pathfinder 1e",
+      "idioma": "español",
+      "ultima_actualizacion": "2025-11-04",
+      "total_habilidades": 36,
+      "autor": "RolRoyce.com"
+    },
+    "habilidades": [
+      {
+        "nombre": "Acrobacias",
+        "clave": "ACR",
+        "atributo": "DES",
+        "descripcion": "Permite mantener el equilibrio en superficies estrechas o resbaladizas, saltar grandes distancias y realizar maniobras ágiles en combate.",
+        "uso_en_combate": true,
+        "accion": "movimiento",
+        "ejemplos": [
+          "Caminar por una cuerda floja",
+          "Saltar sobre un obstáculo",
+          "Evitar ataques de oportunidad con volteretas"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "-1 por cada 10 kg de carga",
+          "-5 en superficies resbaladizas",
+          "+2 con equipo de acróbata"
+        ],
+        "dificultades_ejemplo": {
+          "10": "Caminar por una superficie inclinada",
+          "15": "Saltar 10 pies horizontalmente",
+          "20": "Caminar por una cuerda tensa"
+        },
+        "enlaces": [
+          {
+            "nombre": "Detalles completos",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabAcrobacias.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Artesanía",
+        "clave": "ART",
+        "atributo": "INT",
+        "descripcion": "Representa la habilidad para crear objetos físicos de un tipo específico. Cada especialidad es una habilidad separada.",
+        "uso_en_combate": false,
+        "accion": "completa (semanas)",
+        "especialidades": [
+          "Alquimia",
+          "Armaduras",
+          "Armas",
+          "Arcos",
+          "Caligrafía",
+          "Carpintería",
+          "Cerámica",
+          "Escultura",
+          "Joyería",
+          "Pintura",
+          "Zapatería"
+        ],
+        "ejemplos": [
+          "Crear una espada maestra",
+          "Reparar una armadura rota",
+          "Fabricar veneno"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 con herramientas maestras",
+          "-5 sin herramientas",
+          "+1 por cada 100 po de materiales extras"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Reglas de creación",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabArtesania.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Averiguar intenciones",
+        "clave": "AVI",
+        "atributo": "SAB",
+        "descripcion": "Detecta mentiras, engaños y verdaderas intenciones. Permite leer el lenguaje corporal y tono de voz.",
+        "uso_en_combate": false,
+        "accion": "1 minuto",
+        "ejemplos": [
+          "Saber si alguien miente",
+          "Detectar intenciones hostiles",
+          "Evaluar la sinceridad de una oferta"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 si el objetivo está borracho o drogado",
+          "-4 si el objetivo está distraído",
+          "-10 si no hay contacto visual"
+        ],
+        "opuesto": "Engañar",
+        "enlaces": [
+          {
+            "nombre": "Detección de mentiras",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabAveriguarIntenciones.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (arcano)",
+        "clave": "CON (ARC)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre magia, conjuros, objetos mágicos y criaturas arcanas.",
+        "uso_en_combate": true,
+        "accion": "libre (identificación)",
+        "temas": [
+          "Conjuros",
+          "Objetos mágicos",
+          "Tradiciones arcanas",
+          "Magos legendarios"
+        ],
+        "ejemplos": [
+          "Identificar un pergamino",
+          "Recordar debilidades de un golem",
+          "Conocer la escuela de un conjuro"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+5 con biblioteca arcana",
+          "-5 para conocimiento esotérico"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Magia arcana",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoArcano.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (dungeons)",
+        "clave": "CON (DUN)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre mazmorras, trampas, construcciones subterráneas y criaturas de las profundidades.",
+        "uso_en_combate": true,
+        "accion": "libre",
+        "temas": [
+          "Trampas mecánicas",
+          "Criaturas subterráneas",
+          "Construcciones antiguas"
+        ],
+        "ejemplos": [
+          "Identificar una trampa de foso",
+          "Conocer debilidades de un cubo gelatinoso",
+          "Detectar paredes falsas"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 en mazmorras conocidas"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Exploración de mazmorras",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoDungeons.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (geografía)",
+        "clave": "CON (GEO)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre terrenos, climas, plantas, animales y navegación.",
+        "uso_en_combate": false,
+        "accion": "libre",
+        "temas": [
+          "Mapas",
+          "Climas regionales",
+          "Rutas comerciales"
+        ],
+        "ejemplos": [
+          "Encontrar el camino más rápido entre ciudades",
+          "Predecir una tormenta",
+          "Identificar plantas comestibles"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 con mapas detallados"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Navegación",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoGeografia.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (historia)",
+        "clave": "CON (HIS)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre eventos históricos, guerras, reyes y civilizaciones antiguas.",
+        "uso_en_combate": false,
+        "accion": "libre",
+        "temas": [
+          "Guerras",
+          "Dinastías",
+          "Artefactos históricos"
+        ],
+        "ejemplos": [
+          "Recordar una batalla famosa",
+          "Identificar un sello real antiguo",
+          "Conocer la caída de un imperio"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+5 con acceso a archivos"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Cronología histórica",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoHistoria.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (ingeniería)",
+        "clave": "CON (ING)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre construcción, máquinas, fortalezas y mecanismos.",
+        "uso_en_combate": true,
+        "accion": "libre",
+        "temas": [
+          "Arquitectura",
+          "Máquinas de asedio",
+          "Puentes"
+        ],
+        "ejemplos": [
+          "Diseñar una catapulta",
+          "Encontrar el punto débil de una muralla",
+          "Reparar un puente"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 con planos"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Construcción",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoIngenieria.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (local)",
+        "clave": "CON (LOC)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre personas, lugares, leyes y costumbres de una región específica.",
+        "uso_en_combate": false,
+        "accion": "libre",
+        "temas": [
+          "Leyes locales",
+          "Figuras de poder",
+          "Rumores"
+        ],
+        "ejemplos": [
+          "Saber quién manda en la ciudad",
+          "Conocer tabernas seguras",
+          "Evitar guardias corruptos"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "-5 en regiones desconocidas"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Sociedad local",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoLocal.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (naturaleza)",
+        "clave": "CON (NAT)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre animales, plantas, estaciones y ciclos naturales.",
+        "uso_en_combate": true,
+        "accion": "libre",
+        "temas": [
+          "Animales",
+          "Plantas",
+          "Clima"
+        ],
+        "ejemplos": [
+          "Identificar un lobo terrible",
+          "Saber qué plantas son venenosas",
+          "Predecir una avalancha"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 en entornos naturales"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Flora y fauna",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoNaturaleza.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (nobleza)",
+        "clave": "CON (NOB)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre linajes, heráldica, etiqueta y política cortesana.",
+        "uso_en_combate": false,
+        "accion": "libre",
+        "temas": [
+          "Genealogía",
+          "Heráldica",
+          "Etiqueta"
+        ],
+        "ejemplos": [
+          "Reconocer un escudo noble",
+          "Saber cómo dirigirse a un duque",
+          "Entender alianzas matrimoniales"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 en cortes conocidas"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Cortes y nobleza",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoNobleza.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (planos)",
+        "clave": "CON (PLA)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre otros planos, criaturas extraplanares y portales.",
+        "uso_en_combate": true,
+        "accion": "libre",
+        "temas": [
+          "Planos",
+          "Demonios",
+          "Celestiales",
+          "Elementales"
+        ],
+        "ejemplos": [
+          "Identificar un demonio",
+          "Saber cómo cerrar un portal",
+          "Conocer debilidades de un elemental"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+5 con textos planales"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Planos de existencia",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoPlanos.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Conocimiento (religión)",
+        "clave": "CON (REL)",
+        "atributo": "INT",
+        "descripcion": "Conocimiento sobre dioses, ritos, textos sagrados y no-muertos.",
+        "uso_en_combate": true,
+        "accion": "libre",
+        "temas": [
+          "Deidades",
+          "Ritos",
+          "No-muertos"
+        ],
+        "ejemplos": [
+          "Identificar un símbolo sagrado",
+          "Realizar un exorcismo",
+          "Conocer debilidades de un vampiro"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 en templos"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Panteón y fe",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabConocimientoReligion.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Disfrazarse",
+        "clave": "DIS",
+        "atributo": "CAR",
+        "descripcion": "Permite cambiar apariencia física y actuar como otra persona.",
+        "uso_en_combate": false,
+        "accion": "1 minuto",
+        "ejemplos": [
+          "Imitar a un guardia",
+          "Fingir ser un noble",
+          "Ocultar cicatrices"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+10 con disfraz maestro",
+          "-2 por cada hora sin mantenimiento"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Engaño físico",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabDisfrazarse.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Engañar",
+        "clave": "ENG",
+        "atributo": "CAR",
+        "descripcion": "Mentir, engañar o persuadir a otros con palabras.",
+        "uso_en_combate": false,
+        "accion": "estándar",
+        "ejemplos": [
+          "Convencer a un guardia",
+          "Difundir un rumor",
+          "Negociar un precio"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 si el objetivo está ebrio",
+          "-5 si la mentira es increíble"
+        ],
+        "opuesto": "Averiguar intenciones",
+        "enlaces": [
+          {
+            "nombre": "Mentiras y persuasión",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabEnganar.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Interpretar",
+        "clave": "INT",
+        "atributo": "CAR",
+        "descripcion": "Actuar, cantar, bailar o tocar instrumentos para entretener.",
+        "uso_en_combate": false,
+        "accion": "completa",
+        "tipos": [
+          "Actuación",
+          "Canto",
+          "Danza",
+          "Instrumento de viento",
+          "Percusión",
+          "Cuerda",
+          "Teclado"
+        ],
+        "ejemplos": [
+          "Ganar dinero en una taberna",
+          "Distraer a una multitud",
+          "Imitar voces"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 con instrumento maestro"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Artes escénicas",
+            "url": conglomerate://www.rolroyce.com/rol/DDP/Habilidades/HabInterpretar.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Intimidar",
+        "clave": "INTI",
+        "atributo": "CAR",
+        "descripcion": "Amenazar o intimidar para forzar acciones o información.",
+        "uso_en_combate": true,
+        "accion": "estándar",
+        "ejemplos": [
+          "Forzar una confesión",
+          "Hacer retroceder a un enemigo",
+          "Imponer respeto"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 por tamaño superior",
+          "-4 si el objetivo no entiende el idioma"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Coacción",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabIntimidar.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Montar",
+        "clave": "MON",
+        "atributo": "DES",
+        "descripcion": "Controlar monturas en combate y situaciones difíciles.",
+        "uso_en_combate": true,
+        "accion": "movimiento",
+        "ejemplos": [
+          "Luchar montado",
+          "Saltar obstáculos a caballo",
+          "Guiar montura sin manos"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "-5 sin silla de montar",
+          "+2 con montura entrenada"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Combate montado",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabMontar.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Nadar",
+        "clave": "NAD",
+        "atributo": "FUE",
+        "descripcion": "Moverse en el agua sin ahogarse.",
+        "uso_en_combate": true,
+        "accion": "completa",
+        "ejemplos": [
+          "Cruzar un río",
+          "Luchar bajo el agua",
+          "Bucear"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "-1 por cada 5 kg de armadura",
+          "-10 en aguas turbulentas"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Supervivencia acuática",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabNadar.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Oficio",
+        "clave": "OFI",
+        "atributo": "SAB",
+        "descripcion": "Habilidad profesional para ganar dinero (cocinero, herrero, etc.).",
+        "uso_en_combate": false,
+        "accion": "semanal",
+        "ejemplos": [
+          "Cocinar",
+          "Herrar caballos",
+          "Curar heridas menores"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 con taller"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Profesiones",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabOficio.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Percepción",
+        "clave": "PER",
+        "atributo": "SAB",
+        "descripcion": "Detectar detalles, escuchar sonidos y notar cosas ocultas.",
+        "uso_en_combate": true,
+        "accion": "libre",
+        "ejemplos": [
+          "Oír pasos sigilosos",
+          "Ver una trampa oculta",
+          "Notar un detalle en una pintura"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "-1 por cada 10 pies de distancia",
+          "+5 con linterna"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Sentidos agudos",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabPercepcion.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Sanar",
+        "clave": "SAN",
+        "atributo": "SAB",
+        "descripcion": "Proporcionar primeros auxilios, tratar enfermedades y venenos.",
+        "uso_en_combate": true,
+        "accion": "estándar",
+        "ejemplos": [
+          "Estabilizar un moribundo",
+          "Tratar veneno",
+          "Cuidar heridas a largo plazo"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 con equipo médico",
+          "-5 sin herramientas"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Medicina",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabSanar.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Sigilo",
+        "clave": "SIG",
+        "atributo": "DES",
+        "descripcion": "Moverse sin ser visto ni oído.",
+        "uso_en_combate": true,
+        "accion": "movimiento",
+        "ejemplos": [
+          "Esconderse en sombras",
+          "Moverse silenciosamente",
+          "Emboscada"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "-5 en terreno abierto",
+          "+2 en oscuridad"
+        ],
+        "opuesto": "Percepción",
+        "enlaces": [
+          {
+            "nombre": "Invisibilidad y sigilo",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabSigilo.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Supervivencia",
+        "clave": "SUP",
+        "atributo": "SAB",
+        "descripcion": "Seguir rastros, cazar, orientarse y sobrevivir en la naturaleza.",
+        "uso_en_combate": true,
+        "accion": "variable",
+        "ejemplos": [
+          "Seguir huellas",
+          "Cazar comida",
+          "Construir refugio"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 en terreno favorable",
+          "-5 en terreno urbano"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Rastreo",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabSupervivencia.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Tasación",
+        "clave": "TAS",
+        "atributo": "INT",
+        "descripcion": "Determinar el valor de objetos, detectar falsificaciones y negociar.",
+        "uso_en_combate": false,
+        "accion": "1 minuto",
+        "ejemplos": [
+          "Valorar una gema",
+          "Detectar una falsificación",
+          "Regatear en un mercado"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 con balanza",
+          "-5 para objetos mágicos"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Comercio",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabTasacion.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Trato con animales",
+        "clave": "TRA",
+        "atributo": "CAR",
+        "descripcion": "Manejar, calmar y entrenar animales.",
+        "uso_en_combate": true,
+        "accion": "estándar",
+        "ejemplos": [
+          "Calmar un caballo asustado",
+          "Enseñar un truco a un perro",
+          "Montar una bestia salvaje"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "+2 con comida",
+          "-10 con animales hostiles"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Domar bestias",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabTratoAnimales.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Trepar",
+        "clave": "TRE",
+        "atributo": "FUE",
+        "descripcion": "Escalar superficies verticales.",
+        "uso_en_combate": true,
+        "accion": "movimiento",
+        "ejemplos": [
+          "Subir un muro",
+          "Escalar un acantilado",
+          "Trepar un árbol"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "-5 superficie lisa",
+          "+8 con cuerda y pitones"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Escalada",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabTrepar.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Usar objeto mágico",
+        "clave": "UOM",
+        "atributo": "CAR",
+        "descripcion": "Activar objetos mágicos sin conocer el conjuro.",
+        "uso_en_combate": true,
+        "accion": "estándar",
+        "ejemplos": [
+          "Usar una varita",
+          "Activar un pergamino",
+          "Emplear un cetro"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "CD 20 + nivel del conjuro"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Activación mágica",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabUsarObjetoMagico.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Volar",
+        "clave": "VOL",
+        "atributo": "DES",
+        "descripcion": "Controlar el vuelo con alas, magia o monturas voladoras.",
+        "uso_en_combate": true,
+        "accion": "movimiento",
+        "ejemplos": [
+          "Maniobrar en combate aéreo",
+          "Aterrizar con seguridad",
+          "Evitar caídas"
+        ],
+        "modificadores": [
+          "+3 si es habilidad de clase",
+          "-4 en vientos fuertes"
+        ],
+        "enlaces": [
+          {
+            "nombre": "Combate aéreo",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabVolar.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Saber (arcano)",
+        "clave": "SAB (ARC)",
+        "atributo": "INT",
+        "descripcion": "Variante de Conocimiento (arcano) usada en algunas traducciones. Mismo efecto.",
+        "uso_en_combate": true,
+        "nota": "Equivalente a Conocimiento (arcano)",
+        "enlaces": [
+          {
+            "nombre": "Magia",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabSaberArcano.php"
+          }
+        ]
+      },
+      {
+        "nombre": "Saber (planos)",
+        "clave": "SAB (PLA)",
+        "atributo": "INT",
+        "descripcion": "Variante de Conocimiento (planos).",
+        "uso_en_combate": true,
+        "nota": "Equivalente a Conocimiento (planos)",
+        "enlaces": [
+          {
+            "nombre": "Planos",
+            "url": "https://www.rolroyce.com/rol/DDP/Habilidades/HabSaberPlanos.php"
+          }
+        ]
+      }
+    ]
+  }
+}
