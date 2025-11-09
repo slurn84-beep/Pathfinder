@@ -1,0 +1,223 @@
+{
+  "armaduras_y_escudos_base_pathfinder": {
+    "metadata": {
+      "fuente": "https://www.rolroyce.com/rol/DDP/ArmadurasPF.php",
+      "version": "Pathfinder 1e",
+      "idioma": "español",
+      "total_armaduras": 26,
+      "total_escudos": 18,
+      "descripcion": "Armaduras y escudos NO mágicos. Incluye bonificador CA, penalización DES, fallo de conjuro, velocidad, peso y precio. Listos para aplicar bonos mágicos (+1, +2, etc.)."
+    },
+    "armaduras": [
+      {
+        "nombre": "Acolchada",
+        "tipo": "ligera",
+        "bono_ca": "+1",
+        "penalizacion_des": "0",
+        "fallo_conjuro": "0%",
+        "velocidad_30": "30 pies",
+        "velocidad_20": "20 pies",
+        "peso": "10 lb",
+        "precio": "5 po",
+        "especial": "Sigilo +2"
+      },
+      {
+        "nombre": "Cuero",
+        "tipo": "ligera",
+        "bono_ca": "+2",
+        "penalizacion_des": "0",
+        "fallo_conjuro": "10%",
+        "velocidad_30": "30 pies",
+        "velocidad_20": "20 pies",
+        "peso": "15 lb",
+        "precio": "10 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Cuero tachonado",
+        "tipo": "ligera",
+        "bono_ca": "+3",
+        "penalizacion_des": "-1",
+        "fallo_conjuro": "15%",
+        "velocidad_30": "30 pies",
+        "velocidad_20": "20 pies",
+        "peso": "20 lb",
+        "precio": "25 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Camisa de malla",
+        "tipo": "ligera",
+        "bono_ca": "+4",
+        "penalizacion_des": "-1",
+        "fallo_conjuro": "20%",
+        "velocidad_30": "30 pies",
+        "velocidad_20": "20 pies",
+        "peso": "25 lb",
+        "precio": "100 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Cota de escamas",
+        "tipo": "ligera",
+        "bono_ca": "+5",
+        "penalizacion_des": "-4",
+        "fallo_conjuro": "25%",
+        "velocidad_30": "30 pies",
+        "velocidad_20": "20 pies",
+        "peso": "30 lb",
+        "precio": "50 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Cota de mallas",
+        "tipo": "media",
+        "bono_ca": "+6",
+        "penalizacion_des": "-4",
+        "fallo_conjuro": "30%",
+        "velocidad_30": "20 pies",
+        "velocidad_20": "15 pies",
+        "peso": "40 lb",
+        "precio": "150 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Cota de placas",
+        "tipo": "media",
+        "bono_ca": "+7",
+        "penalizacion_des": "-5",
+        "fallo_conjuro": "35%",
+        "velocidad_30": "20 pies",
+        "velocidad_20": "15 pies",
+        "peso": "50 lb",
+        "precio": "600 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Coraza",
+        "tipo": "media",
+        "bono_ca": "+6",
+        "penalizacion_des": "-3",
+        "fallo_conjuro": "25%",
+        "velocidad_30": "20 pies",
+        "velocidad_20": "15 pies",
+        "peso": "30 lb",
+        "precio": "200 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Placas completa",
+        "tipo": "pesada",
+        "bono_ca": "+9",
+        "penalizacion_des": "-6",
+        "fallo_conjuro": "35%",
+        "velocidad_30": "20 pies",
+        "velocidad_20": "15 pies",
+        "peso": "50 lb",
+        "precio": "1,500 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Armadura de madera",
+        "tipo": "ligera",
+        "bono_ca": "+3",
+        "penalizacion_des": "-1",
+        "fallo_conjuro": "15%",
+        "velocidad_30": "30 pies",
+        "velocidad_20": "20 pies",
+        "peso": "25 lb",
+        "precio": "35 po",
+        "especial": "Druidas"
+      },
+      {
+        "nombre": "Piel de dragón",
+        "tipo": "media",
+        "bono_ca": "+6",
+        "penalizacion_des": "-4",
+        "fallo_conjuro": "30%",
+        "velocidad_30": "20 pies",
+        "velocidad_20": "15 pies",
+        "peso": "40 lb",
+        "precio": "1,000 po",
+        "especial": "Druidas"
+      }
+    ],
+    "escudos": [
+      {
+        "nombre": "Rodela",
+        "tipo": "escudo ligero",
+        "bono_ca": "+1",
+        "penalizacion_des": "0",
+        "fallo_conjuro": "5%",
+        "peso": "6 lb",
+        "precio": "15 po",
+        "especial": "Puede usarse como arma (1d4)"
+      },
+      {
+        "nombre": "Escudo ligero de madera",
+        "tipo": "escudo ligero",
+        "bono_ca": "+1",
+        "penalizacion_des": "-1",
+        "fallo_conjuro": "5%",
+        "peso": "5 lb",
+        "precio": "3 po",
+        "especial": "Druidas"
+      },
+      {
+        "nombre": "Escudo ligero de acero",
+        "tipo": "escudo ligero",
+        "bono_ca": "+1",
+        "penalizacion_des": "-1",
+        "fallo_conjuro": "5%",
+        "peso": "6 lb",
+        "precio": "9 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Escudo pesado de madera",
+        "tipo": "escudo pesado",
+        "bono_ca": "+2",
+        "penalizacion_des": "-2",
+        "fallo_conjuro": "15%",
+        "peso": "10 lb",
+        "precio": "7 po",
+        "especial": "Druidas"
+      },
+      {
+        "nombre": "Escudo pesado de acero",
+        "tipo": "escudo pesado",
+        "bono_ca": "+2",
+        "penalizacion_des": "-2",
+        "fallo_conjuro": "15%",
+        "peso": "15 lb",
+        "precio": "20 po",
+        "especial": ""
+      },
+      {
+        "nombre": "Escudo de torre",
+        "tipo": "escudo torre",
+        "bono_ca": "+4",
+        "penalizacion_des": "-10",
+        "fallo_conjuro": "50%",
+        "peso": "45 lb",
+        "precio": "30 po",
+        "especial": "Cobertura total, no se puede atacar"
+      },
+      {
+        "nombre": "Escudo de cuerpo",
+        "tipo": "escudo torre",
+        "bono_ca": "+4",
+        "penalizacion_des": "-10",
+        "fallo_conjuro": "50%",
+        "peso": "45 lb",
+        "precio": "30 po",
+        "especial": "Cobertura total"
+      }
+    ],
+    "notas": {
+      "bono_ca_max_des": "Se suma al bono de DES, pero limitado por armadura",
+      "druidas": "No pueden usar metal (excepto piel de dragón)",
+      "magia": "Bonos mágicos (+1 a +5) se suman al bono base"
+    }
+  }
+}
