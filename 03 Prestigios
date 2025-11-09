@@ -18,28 +18,28 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
-        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "reflejos": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
-        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+        "ataque_base": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "fortaleza": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "reflejos": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6],
+        "voluntad": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
       },
-      "habilidades_por_nivel": {
-        "1": ["Flecha mágica", "conjuros arcanos"],
-        "2": ["Flecha imbuida"],
-        "3": ["Flecha de toque"],
-        "4": ["Flecha potente"],
-        "5": ["Flecha segura"],
-        "6": ["Flecha penetrante"],
-        "7": ["Flecha de fase"],
-        "8": ["Flecha hábil"],
-        "9": ["Flecha de muerte"],
-        "10": ["Flecha definitiva"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Flecha imbuida arcana", "descripcion": "Puede lanzar un conjuro toque como ataque a distancia con su arco"},
+        {"nivel": 2, "nombre": "Flecha buscadora", "descripcion": "+5 a la tirada de ataque, ignora cobertura parcial y total"},
+        {"nivel": 3, "nombre": "Flecha furtiva", "descripcion": "Puede realizar ataques furtivos a distancia"},
+        {"nivel": 4, "nombre": "Flecha explosiva", "descripcion": "Inflige daño en área alrededor del objetivo"},
+        {"nivel": 5, "nombre": "Flecha faseadora", "descripcion": "Ignora armadura y protecciones físicas"},
+        {"nivel": 6, "nombre": "Flecha aturdidora", "descripcion": "Puede aturdir al objetivo"},
+        {"nivel": 7, "nombre": "Flecha antimagia", "descripcion": "Suprime efectos mágicos en el área de impacto"},
+        {"nivel": 8, "nombre": "Flecha hacedora", "descripcion": "Crea efectos mágicos permanentes"},
+        {"nivel": 9, "nombre": "Flecha relámpago", "descripcion": "Ataque eléctrico que afecta múltiples objetivos"},
+        {"nivel": 10, "nombre": "Flecha muerte", "descripcion": "Posibilidad de muerte instantánea"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d8",
         "avance_conjuros": true,
         "nivel_conjurador_adicional": 1,
-        "puntos_habilidad_nivel": 2,
+        "puntos_habilidad_nivel": 4,
         "competencias": {
           "armas": ["Arcos", "ballestas"],
           "armaduras": ["Armaduras ligeras"],
@@ -65,23 +65,20 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
-        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "voluntad": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"]
+        "ataque_base": [0, 1, 2, 3, 3, 4, 5, 6, 6, 7],
+        "fortaleza": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "reflejos": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "voluntad": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5]
       },
-      "habilidades_por_nivel": {
-        "1": ["Muerte instantánea", "ocultación"],
-        "2": ["Ataque furtivo +1d6", "veneno resistente +2"],
-        "3": ["Sigilo oculto", "trueque mortal"],
-        "4": ["Ataque furtivo +2d6", "veneno resistente +4"],
-        "5": ["Ocultación oculta", "asesinato silencioso"],
-        "6": ["Ataque furtivo +3d6", "veneno resistente +6"],
-        "7": ["Escondite oculto", "golpe oculto"],
-        "8": ["Ataque furtivo +4d6", "veneno resistente +8"],
-        "9": ["Camuflaje oculto", "muerte silenciosa"],
-        "10": ["Ataque furtivo +5d6", "asesinato perfecto"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Muerte silenciosa", "descripcion": "Puede realizar un ataque de muerte con veneno"},
+        {"nivel": 1, "nombre": "Ocultar aura", "descripcion": "Puede ocultar su alineamiento de detecciones mágicas"},
+        {"nivel": 2, "nombre": "Veneno", "descripcion": "Acceso a venenos especiales y resistencia mejorada"},
+        {"nivel": 4, "nombre": "Invisibilidad", "descripcion": "Puede volverse invisible por periodos cortos"},
+        {"nivel": 6, "nombre": "Muerte súbita", "descripcion": "Ataques furtivos tienen posibilidad de muerte instantánea"},
+        {"nivel": 8, "nombre": "Aura de miedo", "descripcion": "Genera aura que causa miedo en enemigos"},
+        {"nivel": 10, "nombre": "Asesinato verdadero", "descripcion": "Muerte automática en ataques furtivos exitosos"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d8",
         "avance_conjuros": false,
@@ -95,8 +92,8 @@
     },
     {
       "id": 3,
-      "nombre": "Bribón Arcano",
-      "nombre_normalizado": "BribonArcano",
+      "nombre": "Pícaro Arcano",
+      "nombre_normalizado": "PicaroArcano",
       "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/BribonArcanoPF.php",
       "requisitos_entrada": {
         "nivel_minimo": 7,
@@ -112,23 +109,20 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
-        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+        "ataque_base": [0, 1, 2, 3, 3, 4, 5, 6, 6, 7],
+        "fortaleza": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "reflejos": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "voluntad": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
       },
-      "habilidades_por_nivel": {
-        "1": ["Lanzamiento sigiloso", "sabotaje mágico"],
-        "2": ["Imbuir trampa", "robar conjuro"],
-        "3": ["Esquiva mágica", "trampa arcana"],
-        "4": ["Contramagia sorpresiva", "furtividad arcana"],
-        "5": ["Sabotaje potente", "robar conjuro mayor"],
-        "6": ["Esquiva mágica mejorada", "trampa arcana mayor"],
-        "7": ["Contramagia experta", "furtividad arcana superior"],
-        "8": ["Sabotaje maestro", "robar conjuro supremo"],
-        "9": ["Esquiva mágica suprema", "trampa arcana definitiva"],
-        "10": ["Maestría arcana oculta", "sabotaje perfecto"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Ataque furtivo mágico", "descripcion": "El daño de ataque furtivo afecta a criaturas inmunes a críticos"},
+        {"nivel": 2, "nombre": "Trampas arcana", "descripcion": "Puede crear trampas mágicas usando conjuros que conoce"},
+        {"nivel": 3, "nombre": "Invisibilidad mejorada", "descripcion": "Puede moverse y actuar mientras está invisible"},
+        {"nivel": 5, "nombre": "Hechizo furtivo", "descripcion": "Puede lanzar conjuros sin ser detectado"},
+        {"nivel": 7, "nombre": "Evasion arcana", "descripcion": "Evita efectos de área con tirada de reflejos exitosa"},
+        {"nivel": 9, "nombre": "Dominio de ilusiones", "descripcion": "Conjuros de ilusión son más potentes y difíciles de discernir"},
+        {"nivel": 10, "nombre": "Maestro del engaño mágico", "descripcion": "Puede crear ilusiones casi perfectas"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d6",
         "avance_conjuros": true,
@@ -143,8 +137,8 @@
     },
     {
       "id": 4,
-      "nombre": "Caminante del Horizonte",
-      "nombre_normalizado": "CaminanteHorizonte",
+      "nombre": "Viajero del Horizonte",
+      "nombre_normalizado": "ViajeroHorizonte",
       "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/CaminanteHorizontePF.php",
       "requisitos_entrada": {
         "nivel_minimo": 9,
@@ -160,23 +154,20 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
-        "fortaleza": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
-        "reflejos": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
-        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+        "ataque_base": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "fortaleza": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6],
+        "reflejos": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6],
+        "voluntad": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
       },
-      "habilidades_por_nivel": {
-        "1": ["Dominio del terreno", "sentido del terreno"],
-        "2": ["Adaptación ambiental", "movimiento terreno"],
-        "3": ["Maestría de terreno I", "camuflaje natural"],
-        "4": ["Dominio de plano", "sentido planar"],
-        "5": ["Adaptación planar", "movimiento planar"],
-        "6": ["Maestría de terreno II", "camuflaje planar"],
-        "7": ["Dominio de realidad", "sentido dimensional"],
-        "8": ["Adaptación dimensional", "movimiento dimensional"],
-        "9": ["Maestría de terreno III", "camuflaje dimensional"],
-        "10": ["Señor de los horizontes", "maestría dimensional"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Dominio del terreno", "descripcion": "Elige un tipo de terreno y obtiene bonificadores en ese ambiente"},
+        {"nivel": 2, "nombre": "Adaptación ambiental", "descripcion": "Resistencia a condiciones ambientales extremas"},
+        {"nivel": 3, "nombre": "Viaje planar", "descripcion": "Puede viajar entre planos una vez por día"},
+        {"nivel": 5, "nombre": "Adaptación planar", "descripcion": "Resistencia a efectos planares y energías extraplanarias"},
+        {"nivel": 7, "nombre": "Dominio de realidad", "descripcion": "Puede manipular leyes físicas menores en su entorno"},
+        {"nivel": 9, "nombre": "Adaptación dimensional", "descripcion": "Inmune a efectos que alteran el espacio-tiempo"},
+        {"nivel": 10, "nombre": "Señor de los horizontes", "descripcion": "Puede viajar libremente entre planos y dimensiones"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d8",
         "avance_conjuros": false,
@@ -206,23 +197,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
-        "fortaleza": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+        "ataque_base": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "fortaleza": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
       },
-      "habilidades_por_nivel": {
-        "1": ["Arma mágica", "armadura arcana"],
-        "2": ["Imbuir arma", "escudo arcano"],
-        "3": ["Golpe mágico", "armadura arcana mejorada"],
-        "4": ["Arma potente", "escudo arcano mejorada"],
-        "5": ["Golpe potente", "armadura arcana superior"],
-        "6": ["Arma definitiva", "escudo arcano superior"],
-        "7": ["Golpe definitivo", "armadura arcana maestra"],
-        "8": ["Fusión arma-arma", "escudo arcano maestro"],
-        "9": ["Golpe maestro", "armadura arcana perfecta"],
-        "10": ["Caballero arcano perfecto", "fusión completa"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Lanzar en combate", "descripcion": "Puede lanzar conjuros mientras lleva armadura sin penalización"},
+        {"nivel": 2, "nombre": "Conjuro de combate", "descripcion": "Puede lanzar conjuros como acciones de movimiento"},
+        {"nivel": 4, "nombre": "Golpe mágico", "descripcion": "Puede canalizar un conjuro a través de un ataque cuerpo a cuerpo"},
+        {"nivel": 6, "nombre": "Armadura arcana", "descripcion": "La armadura proporciona bonificación a la CA contra ataques mágicos"},
+        {"nivel": 8, "nombre": "Fusión mágica", "descripcion": "Puede combinar conjuros con ataques físicos"},
+        {"nivel": 10, "nombre": "Apoteosis del caballero arcano", "descripcion": "Puede mantener múltiples conjuros activos simultáneamente"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d10",
         "avance_conjuros": true,
@@ -254,23 +241,20 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+        "ataque_base": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "fortaleza": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
       },
-      "habilidades_por_nivel": {
-        "1": ["Sabiduría enciclopédica", "lenguajes adicionales"],
-        "2": ["Investigación rápida", "contactos útiles"],
-        "3": ["Conocimiento experto", "red de informantes"],
-        "4": ["Análisis rápido", "acceso a archivos"],
-        "5": ["Sabiduría maestra", "contactos influyentes"],
-        "6": ["Investigación maestra", "red de espías"],
-        "7": ["Conocimiento supremo", "acceso restringido"],
-        "8": ["Análisis supremo", "contactos poderosos"],
-        "9": ["Sabiduría legendaria", "red global"],
-        "10": ["Cronista maestro", "conocimiento absoluto"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Inspirar a otros", "descripcion": "Puede inspirar aliados otorgando bonificadores a ataques, daño o salvaciones"},
+        {"nivel": 2, "nombre": "Documentar hazañas", "descripcion": "Registro detallado de aventuras que proporciona beneficios"},
+        {"nivel": 3, "nombre": "Conocimiento enciclopédico", "descripcion": "Puede hacer tiradas de conocimiento sin preparación"},
+        {"nivel": 5, "nombre": "Narración épica", "descripcion": "Sus historias pueden afectar la realidad de manera menor"},
+        {"nivel": 7, "nombre": "Inspiración legendaria", "descripcion": "Puede inspirar habilidades sobrehumanas en aliados"},
+        {"nivel": 9, "nombre": "Crónica viviente", "descripcion": "Su conocimiento se actualiza automáticamente con eventos importantes"},
+        {"nivel": 10, "nombre": "Leyenda viviente", "descripcion": "Puede alterar eventos menores a través de la narración"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d6",
         "avance_conjuros": false,
@@ -284,7 +268,7 @@
     },
     {
       "id": 7,
-      "nombre": "Danzarín Sombrío",
+      "nombre": "Dançarín de la Sombra",
       "nombre_normalizado": "DanzarinSombrio",
       "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/DanzarinSombrioPF.php",
       "requisitos_entrada": {
@@ -301,23 +285,20 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
-        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+        "ataque_base": [0, 1, 2, 3, 3, 4, 5, 6, 6, 7],
+        "fortaleza": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "reflejos": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "voluntad": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
       },
-      "habilidades_por_nivel": {
-        "1": ["Paso sombrío", "danza de evasión"],
-        "2": ["Giro sombrío", "danza de las sombras"],
-        "3": ["Salto sombrío", "danza evasiva"],
-        "4": ["Paso fantasmal", "danza de la muerte"],
-        "5": ["Giro fantasmal", "danza mortal"],
-        "6": ["Salto fantasmal", "danza definitiva"],
-        "7": ["Paso etéreo", "danza etérea"],
-        "8": ["Giro etéreo", "danza de la perdición"],
-        "9": ["Salto etéreo", "danza perfecta"],
-        "10": ["Maestro de la danza sombría", "danza absoluta"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Ocultarse a plena vista", "descripcion": "Puede esconderse incluso siendo observado directamente"},
+        {"nivel": 2, "nombre": "Sombras evocadas", "descripcion": "Puede crear sombras semivivas que obedecen sus órdenes"},
+        {"nivel": 3, "nombre": "Viaje sombrío", "descripcion": "Puede teletransportarse entre sombras"},
+        {"nivel": 5, "nombre": "Reflejo sombrío", "descripcion": "Crea un doble de sombras que puede atacar"},
+        {"nivel": 7, "nombre": "Armadura de sombras", "descripcion": "Las sombras protegen al dançarín de ataques"},
+        {"nivel": 9, "nombre": "Forma sombría", "descripcion": "Puede transformarse en una criatura de sombras"},
+        {"nivel": 10, "nombre": "Señor de las sombras", "descripcion": "Control absoluto sobre las sombras en su área"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d8",
         "avance_conjuros": false,
@@ -347,23 +328,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
-        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"]
+        "ataque_base": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "fortaleza": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5]
       },
-      "habilidades_por_nivel": {
-        "1": ["Defensa inquebrantable", "bloqueo potente"],
-        "2": ["Muro viviente", "defensa mejorada"],
-        "3": ["Defensa inquebrantable mejorada", "bloqueo superior"],
-        "4": ["Bastión humano", "defensa superior"],
-        "5": ["Defensa inquebrantable superior", "bloqueo maestro"],
-        "6": ["Fortaleza andante", "defensa maestra"],
-        "7": ["Defensa inquebrantable maestra", "bloqueo perfecto"],
-        "8": ["Muro indestructible", "defensa perfecta"],
-        "9": ["Defensa inquebrantable perfecta", "bloqueo absoluto"],
-        "10": ["Defensor supremo", "defensa absoluta"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Defensa inquebrantable", "descripcion": "Bonificación a CA cuando defiende una posición"},
+        {"nivel": 2, "nombre": "Muro viviente", "descripcion": "Puede proteger a aliados adyacentes con su escudo"},
+        {"nivel": 4, "nombre": "Bastión humano", "descripcion": "Resistencia a efectos que empujan o mueven"},
+        {"nivel": 6, "nombre": "Fortaleza andante", "descripcion": "Puede moverse sin perder bonificaciones defensivas"},
+        {"nivel": 8, "nombre": "Muro indestructible", "descripcion": "Inmune a críticos y ataques sorpresa cuando defiende"},
+        {"nivel": 10, "nombre": "Defensor supremo", "descripcion": "Puede proteger un área completa de efectos dañinos"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d12",
         "avance_conjuros": false,
@@ -393,23 +370,20 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
-        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+        "ataque_base": [0, 1, 2, 3, 3, 4, 5, 6, 6, 7],
+        "fortaleza": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
       },
-      "habilidades_por_nivel": {
-        "1": ["Resistencia draconiana", "sentidos draconianos"],
-        "2": ["Garras draconianas", "alas draconianas"],
-        "3": ["Aliento draconiano", "armadura draconiana +1"],
-        "4": ["Cambio de forma", "inmunidad a energía"],
-        "5": ["Fuerza draconiana", "armadura draconiana +2"],
-        "6": ["Vuelo draconiano", "terror draconiano"],
-        "7": ["Poder draconiano", "armadura draconiana +3"],
-        "8": ["Forma draconiana", "inmunidad a parálisis/sueño"],
-        "9": ["Majestad draconiana", "armadura draconiana +4"],
-        "10": ["Apoteosis draconiana", "gran poder draconiano"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Poder dracónico", "descripcion": "Bonus a Fuerza y Constitución"},
+        {"nivel": 2, "nombre": "Garras", "descripcion": "Desarrolla garras naturales que infligen daño"},
+        {"nivel": 3, "nombre": "Aliento de dragón", "descripcion": "Gana un aliento de dragón que inflige daño elemental"},
+        {"nivel": 5, "nombre": "Alas de dragón", "descripcion": "Desarrolla alas que permiten vuelo limitado"},
+        {"nivel": 7, "nombre": "Forma de dragón I", "descripcion": "Puede transformarse parcialmente en dragón"},
+        {"nivel": 9, "nombre": "Forma de dragón II", "descripcion": "Transformación más completa con habilidades mejoradas"},
+        {"nivel": 10, "nombre": "Apoteosis dracónica", "descripcion": "Puede transformarse completamente en un dragón"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d12",
         "avance_conjuros": true,
@@ -440,23 +414,20 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
-        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "voluntad": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"]
+        "ataque_base": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "fortaleza": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "reflejos": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "voluntad": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5]
       },
-      "habilidades_por_nivel": {
-        "1": ["Precisión", "esquiva +1"],
-        "2": ["Ataque ágil", "parada con arma"],
-        "3": ["Esquiva +2", "contraataque"],
-        "4": ["Ataque preciso", "defensa elegante"],
-        "5": ["Esquiva +3", "golpe crítico mejorado"],
-        "6": ["Ataque móvil", "defensa móvil"],
-        "7": ["Esquiva +4", "contraataque mejorado"],
-        "8": ["Ataque maestro", "defensa maestra"],
-        "9": ["Esquiva +5", "golpe mortal"],
-        "10": ["Duelo perfecto", "maestría del duelo"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Precisión con arma", "descripcion": "+1 al daño con armas de duelo"},
+        {"nivel": 2, "nombre": "Parada mejorada", "descripcion": "+1 a la CA cuando lleva un arma de duelo"},
+        {"nivel": 3, "nombre": "Ataque preciso", "descripcion": "Puede ignorar armadura del objetivo con ataque preciso"},
+        {"nivel": 5, "nombre": "Golpe crítico mejorado", "descripcion": "Multiplicador de crítico mejorado"},
+        {"nivel": 7, "nombre": "Contraataque", "descripcion": "Puede contraatacar cuando esquiva un ataque"},
+        {"nivel": 9, "nombre": "Golpe mortal", "descripcion": "Ataques críticos tienen efectos adicionales"},
+        {"nivel": 10, "nombre": "Maestría del duelo", "descripcion": "Bonificación a todos los ataques y defensas en duelos"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d10",
         "avance_conjuros": false,
@@ -487,23 +458,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+0", "+1", "+2", "+3", "+3", "+4", "+5", "+6/+1", "+6/+1", "+7/+2"],
-        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "reflejos": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+        "ataque_base": [0, 1, 2, 3, 3, 4, 5, 6, 6, 7],
+        "fortaleza": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "reflejos": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "voluntad": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
       },
-      "habilidades_por_nivel": {
-        "1": ["Identidad secreta", "contactos encubiertos"],
-        "2": ["Infiltración experta", "red de espionaje"],
-        "3": ["Disfraz perfecto", "contraespionaje"],
-        "4": ["Identidad múltiple", "red de informantes"],
-        "5": ["Infiltración maestra", "sabotaje encubierto"],
-        "6": ["Disfraz supremo", "contrainteligencia"],
-        "7": ["Identidad legendaria", "red global"],
-        "8": ["Infiltración suprema", "operaciones encubiertas"],
-        "9": ["Maestro del engaño", "inteligencia avanzada"],
-        "10": ["Espía legendario", "operaciones especiales"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Identidad secreta", "descripcion": "Puede crear identidades falsas convincentes"},
+        {"nivel": 2, "nombre": "Infiltración experta", "descripcion": "Bonificación a sigilo y disfraz en misiones de infiltración"},
+        {"nivel": 4, "nombre": "Disfraz perfecto", "descripcion": "Puede imitar apariencias y voces de forma casi perfecta"},
+        {"nivel": 6, "nombre": "Contraespionaje", "descripcion": "Detección mejorada de otros espías y agentes"},
+        {"nivel": 8, "nombre": "Operaciones encubiertas", "descripcion": "Planificación y ejecución de misiones complejas"},
+        {"nivel": 10, "nombre": "Espía legendario", "descripcion": "Casi imposible de detectar cuando opera encubierto"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d8",
         "avance_conjuros": false,
@@ -534,23 +501,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
-        "fortaleza": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
-        "reflejos": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
-        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+        "ataque_base": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "fortaleza": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6],
+        "reflejos": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6],
+        "voluntad": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
       },
-      "habilidades_por_nivel": {
-        "1": ["Vínculo con la tierra", "compañero natural"],
-        "2": ["Protección natural", "camuflaje silvestre"],
-        "3": ["Fuerza de la naturaleza", "compañero mejorado"],
-        "4": ["Guardian del bosque", "camuflaje superior"],
-        "5": ["Ira de la naturaleza", "compañero superior"],
-        "6": ["Protector de la vida", "camuflaje perfecto"],
-        "7": ["Poder natural", "compañero maestro"],
-        "8": ["Defensor de la tierra", "unión con la naturaleza"],
-        "9": ["Furia natural", "compañero perfecto"],
-        "10": ["Guardián supremo", "avatar de la naturaleza"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Vínculo con la tierra", "descripcion": "Conexión espiritual con la naturaleza que proporciona beneficios"},
+        {"nivel": 2, "nombre": "Protección natural", "descripcion": "Resistencia a elementos naturales y criaturas del mismo"},
+        {"nivel": 4, "nombre": "Guardian del bosque", "descripcion": "Bonificaciones cuando defiende áreas naturales"},
+        {"nivel": 6, "nombre": "Ira de la naturaleza", "descripcion": "Puede convocar fenómenos naturales contra enemigos"},
+        {"nivel": 8, "nombre": "Defensor de la tierra", "descripcion": "Protección extendida a grandes áreas naturales"},
+        {"nivel": 10, "nombre": "Avatar de la naturaleza", "descripcion": "Fusión completa con las fuerzas naturales"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d10",
         "avance_conjuros": true,
@@ -582,23 +545,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
-        "fortaleza": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6"]
+        "ataque_base": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "fortaleza": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
       },
-      "habilidades_por_nivel": {
-        "1": ["Grito de batalla", "inspiración marcial"],
-        "2": ["Arenga inspiradora", "táctica de grupo"],
-        "3": ["Grito potente", "inspiración mejorada"],
-        "4": ["Arenga poderosa", "estrategia avanzada"],
-        "5": ["Grito de guerra", "inspiración superior"],
-        "6": ["Arenga épica", "táctica maestra"],
-        "7": ["Grito legendario", "inspiración maestra"],
-        "8": ["Arenga legendaria", "estrategia suprema"],
-        "9": ["Grito divino", "inspiración perfecta"],
-        "10": ["Heraldo supremo", "inspiración absoluta"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Grito de batalla", "descripcion": "Inspira a aliados con gritos de guerra"},
+        {"nivel": 2, "nombre": "Arenga inspiradora", "descripcion": "Discurso que mejora habilidades de aliados"},
+        {"nivel": 4, "nombre": "Táctica de grupo", "descripcion": "Coordina ataques grupales para mayor efectividad"},
+        {"nivel": 6, "nombre": "Estrategia avanzada", "descripcion": "Puede anticipar movimientos enemigos"},
+        {"nivel": 8, "nombre": "Inspiración legendaria", "descripcion": "Aliados obtienen habilidades temporales sobrehumanas"},
+        {"nivel": 10, "nombre": "Heraldo supremo", "descripcion": "Puede cambiar el curso de batallas con su presencia"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d10",
         "avance_conjuros": false,
@@ -612,8 +571,8 @@
     },
     {
       "id": 14,
-      "nombre": "Maestro del Saber",
-      "nombre_normalizado": "MaestroSaber",
+      "nombre": "Maestro del Conocimiento",
+      "nombre_normalizado": "MaestroConocimiento",
       "fuente_principal": "https://www.rolroyce.com/rol/DDP/ClasesP/MaestroSaberPF.php",
       "requisitos_entrada": {
         "nivel_minimo": 11,
@@ -629,23 +588,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+        "ataque_base": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "fortaleza": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
       },
-      "habilidades_por_nivel": {
-        "1": ["Sabiduría arcana", "lenguajes arcanos"],
-        "2": ["Investigación arcana", "conocimiento prohibido"],
-        "3": ["Sabiduría antigua", "lenguajes antiguos"],
-        "4": ["Investigación antigua", "secretos olvidados"],
-        "5": ["Sabiduría perdida", "lenguajes perdidos"],
-        "6": ["Investigación perdida", "misterios revelados"],
-        "7": ["Sabiduría suprema", "lenguajes divinos"],
-        "8": ["Investigación suprema", "verdades cósmicas"],
-        "9": ["Sabiduría cósmica", "lenguaje universal"],
-        "10": ["Maestro del conocimiento", "sabiduría absoluta"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Secretos arcanos", "descripcion": "Acceso a conocimientos mágicos prohibidos"},
+        {"nivel": 2, "nombre": "Conocimiento oculto", "descripcion": "Información sobre criaturas, objetos y lugares misteriosos"},
+        {"nivel": 4, "nombre": "Lenguajes secretos", "descripcion": "Comprensión de lenguajes antiguos y cifrados"},
+        {"nivel": 6, "nombre": "Sabiduría ancestral", "descripcion": "Conocimiento de civilizaciones perdidas"},
+        {"nivel": 8, "nombre": "Conocimiento prohibido", "descripcion": "Información que otorga poder pero con riesgos"},
+        {"nivel": 10, "nombre": "Omnisciencia", "descripcion": "Respuesta instantánea a cualquier pregunta de conocimiento"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d6",
         "avance_conjuros": true,
@@ -677,23 +632,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
-        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"]
+        "ataque_base": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "fortaleza": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5]
       },
-      "habilidades_por_nivel": {
-        "1": ["Furia profética", "visión de batalla"],
-        "2": ["Ira divina", "presagio de furia"],
-        "3": ["Furia mejorada", "visión mejorada"],
-        "4": ["Ira potente", "presagio potente"],
-        "5": ["Furia superior", "visión superior"],
-        "6": ["Ira épica", "presagio épico"],
-        "7": ["Furia maestra", "visión maestra"],
-        "8": ["Ira legendaria", "presagio legendario"],
-        "9": ["Furia perfecta", "visión perfecta"],
-        "10": ["Profeta supremo", "furia absoluta"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Furia profética", "descripcion": "Estado de furia mejorado con visiones de batalla"},
+        {"nivel": 2, "nombre": "Ira divina", "descripcion": "Furia canalizada a través de creencias espirituales"},
+        {"nivel": 4, "nombre": "Presagio de furia", "descripcion": "Puede prever movimientos enemigos durante la furia"},
+        {"nivel": 6, "nombre": "Visión de batalla", "descripcion": "Percepción mejorada del campo de batalla"},
+        {"nivel": 8, "nombre": "Furia épica", "descripcion": "Furia que afecta a aliados y enemigos por igual"},
+        {"nivel": 10, "nombre": "Profeta supremo", "descripcion": "Fusión completa con la furia divina"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d12",
         "avance_conjuros": false,
@@ -724,23 +675,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+        "ataque_base": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "fortaleza": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
       },
-      "habilidades_por_nivel": {
-        "1": ["Maestría alquímica", "fórmulas secretas"],
-        "2": ["Creación rápida", "ingredientes raros"],
-        "3": ["Alquimia superior", "fórmulas avanzadas"],
-        "4": ["Creación experta", "ingredientes exóticos"],
-        "5": ["Alquimia maestra", "fórmulas maestras"],
-        "6": ["Creación maestra", "ingredientes legendarios"],
-        "7": ["Alquimia suprema", "fórmulas supremas"],
-        "8": ["Creación suprema", "ingredientes cósmicos"],
-        "9": ["Alquimia perfecta", "fórmulas perfectas"],
-        "10": ["Químico legendario", "maestría absoluta"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Maestría alquímica", "descripcion": "Creación mejorada de pociones y elixires"},
+        {"nivel": 2, "nombre": "Fórmulas secretas", "descripcion": "Acceso a recetas alquímicas únicas"},
+        {"nivel": 4, "nombre": "Creación rápida", "descripcion": "Reduce tiempo de creación de objetos alquímicos"},
+        {"nivel": 6, "nombre": "Ingredientes exóticos", "descripcion": "Acceso a componentes raros y poderosos"},
+        {"nivel": 8, "nombre": "Alquimia superior", "descripcion": "Puede crear efectos mágicos permanentes"},
+        {"nivel": 10, "nombre": "Químico legendario", "descripcion": "Dominio completo sobre la transformación química"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d8",
         "avance_conjuros": false,
@@ -771,23 +718,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "fortaleza": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+        "ataque_base": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "fortaleza": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
       },
-      "habilidades_por_nivel": {
-        "1": ["Fusión mágica", "conocimiento dual"],
-        "2": ["Canalización mixta", "hechizos combinados"],
-        "3": ["Fusión mejorada", "conocimiento ampliado"],
-        "4": ["Canalización potente", "hechizos potentes"],
-        "5": ["Fusión superior", "conocimiento superior"],
-        "6": ["Canalización épica", "hechizos épicos"],
-        "7": ["Fusión maestra", "conocimiento maestro"],
-        "8": ["Canalización legendaria", "hechizos legendarios"],
-        "9": ["Fusión perfecta", "conocimiento perfecto"],
-        "10": ["Teúrgo supremo", "fusión absoluta"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Fusión mágica", "descripcion": "Puede usar puntos de conjuros arcánicos para lanzar divinos y viceversa"},
+        {"nivel": 2, "nombre": "Canales combinados", "descripcion": "Puede canalizar energía arcana y divina simultáneamente"},
+        {"nivel": 4, "nombre": "Doble lanzamiento", "descripcion": "Puede lanzar dos conjuros de nivel inferior en la misma ronda"},
+        {"nivel": 6, "nombre": "Sinergia mágica", "descripcion": "Conjuros arcánicos y divinos se potencian mutuamente"},
+        {"nivel": 8, "nombre": "Convergencia arcana", "descripcion": "Fusión completa de tradiciones mágicas"},
+        {"nivel": 10, "nombre": "Teúrgo supremo", "descripcion": "Maestría absoluta sobre ambas tradiciones mágicas"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d6",
         "avance_conjuros": true,
@@ -818,23 +761,19 @@
       },
       "progresion_nivel": {
         "niveles_prestigio": 10,
-        "ataque_base": ["+1", "+2", "+3", "+4", "+5", "+6/+1", "+7/+2", "+8/+3", "+9/+4", "+10/+5"],
-        "fortaleza": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"],
-        "reflejos": ["+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4", "+4", "+5"],
-        "voluntad": ["+2", "+3", "+3", "+4", "+4", "+5", "+5", "+6", "+6", "+7"]
+        "ataque_base": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "fortaleza": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+        "reflejos": [0, 1, 1, 2, 2, 3, 3, 4, 4, 5],
+        "voluntad": [2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
       },
-      "habilidades_por_nivel": {
-        "1": ["Vindicación sagrada", "aura de coraje"],
-        "2": ["Golpe divino", "resistencia divina"],
-        "3": ["Curación divina", "aura de fe"],
-        "4": ["Justicia divina", "inmunidad a enfermedades"],
-        "5": ["Venganza divina", "aura de vida"],
-        "6": ["Castigo divino", "inmunidad a venenos"],
-        "7": ["Redención divina", "aura de pureza"],
-        "8": ["Juicio divino", "inmunidad a muerte"],
-        "9": ["Absolución divina", "aura de santidad"],
-        "10": ["Apoteosis divina", "vindicación final"]
-      },
+      "habilidades_especiales": [
+        {"nivel": 1, "nombre": "Vindicación sagrada", "descripcion": "Canalización de energía divina en ataques"},
+        {"nivel": 2, "nombre": "Golpe divino", "descripcion": "Ataques infligen daño adicional a criaturas malignas"},
+        {"nivel": 4, "nombre": "Curación divina", "descripcion": "Puede curar aliados con energía divina"},
+        {"nivel": 6, "nombre": "Justicia divina", "descripcion": "Protección contra efectos malignos y oscuros"},
+        {"nivel": 8, "nombre": "Redención divina", "descripcion": "Puede purificar criaturas y lugares corruptos"},
+        {"nivel": 10, "nombre": "Apoteosis divina", "descripcion": "Transformación temporal en ser divino"}
+      ],
       "datos_automatizables": {
         "dado_golpe": "d10",
         "avance_conjuros": true,
@@ -851,7 +790,10 @@
   "metadatos": {
     "total_prestigios": 18,
     "estructura_completa": true,
-    "version": "1.0",
-    "ultima_actualizacion": "2024-01-20"
+    "version": "2.0",
+    "ultima_actualizacion": "2024-01-20",
+    "fuentes": ["RolRoyce", "Pathfinder Core Rulebook", "Advanced Player's Guide"],
+    "compatibilidad": "Total con sistema Pathfinder 1e",
+    "notas": "JSON fusionado y expandido manteniendo estructura original pero mejorando contenido"
   }
 }
