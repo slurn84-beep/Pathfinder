@@ -656,6 +656,315 @@
             margin-bottom: 5px;
         }
         
+        /* NUEVOS ESTILOS PARA SECCIONES MEJORADAS */
+        .sub-tabs {
+            display: flex;
+            background-color: var(--light-color);
+            padding: 0 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .sub-tab {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-color);
+            border-bottom: 2px solid transparent;
+        }
+        
+        .sub-tab.active {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .sub-content {
+            display: none;
+        }
+        
+        .sub-content.active {
+            display: block;
+        }
+        
+        .class-item {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .class-item h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .class-item p {
+            margin-bottom: 5px;
+        }
+        
+        .equipment-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .equipment-item {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+        }
+        
+        .equipment-item h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .bonus-inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .bonus-inputs > div {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .weapons-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .weapons-table th, .weapons-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .weapons-table th {
+            background-color: var(--light-color);
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .weapons-table input {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .skills-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 10px;
+            color: var(--primary-color);
+        }
+        
+        .skill-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 5px;
+            margin-bottom: 5px;
+            align-items: center;
+        }
+        
+        .skill-input {
+            width: 100%;
+            text-align: center;
+            padding: 3px;
+            border: 1px solid var(--accent-color);
+            border-radius: 3px;
+        }
+        
+        .skill-attr {
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        /* NUEVOS ESTILOS PARA MEJORAS ESPECÍFICAS */
+        .special-defenses {
+            margin-top: 15px;
+        }
+        
+        .defense-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .defense-item {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+        }
+        
+        .defense-item label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .defense-item input {
+            width: 100%;
+        }
+        
+        .encumbrance-system {
+            margin-top: 15px;
+        }
+        
+        .load-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .load-category {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+            text-align: center;
+        }
+        
+        .load-category h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .current-load {
+            text-align: center;
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+        }
+        
+        .class-abilities-container, .traits-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .ability-category, .trait-category {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+        }
+        
+        .ability-item, .trait-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .spellcasting-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .spell-stat {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+            text-align: center;
+        }
+        
+        .spells-per-day-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .spells-per-day-table th, .spells-per-day-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid var(--accent-color);
+        }
+        
+        .spells-per-day-table th {
+            background-color: var(--light-color);
+            font-weight: bold;
+        }
+        
+        .spell-levels-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .spell-level {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+        }
+        
+        .spell-level h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .spell-level textarea {
+            width: 100%;
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .special-abilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .ability-card {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-color);
+        }
+        
+        .ability-card h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .ability-card .uses {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        /* Estilos para dotes con bonificadores */
+        .feat-bonus-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .feat-bonus-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .feat-bonus-item label {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
         @media (max-width: 1024px) {
             .container {
                 flex-direction: column;
@@ -693,12 +1002,40 @@
             .skills-summary {
                 grid-template-columns: 1fr;
             }
+            
+            .equipment-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .class-abilities-container, .traits-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .spell-levels-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .special-abilities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .defense-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .load-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .feat-bonus-section {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Panel de Personaje (Izquierda) -->
+        <!-- Panel de Personaje (Izquierda) - SIN CAMBIOS -->
         <div class="character-panel">
             <h2 class="section-title">Personaje</h2>
             
@@ -946,9 +1283,7 @@
                 </div>
             </div>
 
-            <!-- Contenido de Pestañas -->
-            
-            <!-- Pestaña de Datos Básicos -->
+            <!-- Pestaña de Datos Básicos - SIN CAMBIOS -->
             <div id="basic" class="tab-content active">
                 <!-- Sección de Datos Básicos -->
                 <div class="section">
@@ -1252,8 +1587,8 @@
                 </div>
             </div>
 
-            <!-- Pestaña de Clases y Prestigios -->
- <div id="classes" class="tab-content">
+            <!-- Pestaña de Clases y Prestigios - MEJORADA CON HABILIDADES DE CLASE -->
+            <div id="classes" class="tab-content">
                 <div class="sub-tabs">
                     <div class="sub-tab active" data-subtab="classes-detail">Clases</div>
                     <div class="sub-tab" data-subtab="prestiges-detail">Prestigios</div>
@@ -1269,7 +1604,23 @@
                                 <p><strong>Dado de Golpe:</strong> d10</p>
                                 <p><strong>BAB:</strong> Alto (+1 por nivel)</p>
                                 <p><strong>Salvaciones Buenas:</strong> Fortaleza</p>
-                                <textarea placeholder="Habilidades de clase, arquetipos, etc."></textarea>
+                                <p><strong>Puntos de Golpe Máximos:</strong> <input type="number" value="10"></p>
+                                <p><strong>Puntos de Golpe Actuales:</strong> <input type="number" value="10"></p>
+                                <h5>Habilidades de Clase</h5>
+                                <div class="special-abilities-grid">
+                                    <div class="ability-card">
+                                        <h4>Dotes de Guerrero</h4>
+                                        <p>Ganas una dote de combate adicional cada nivel</p>
+                                        <div class="uses">
+                                            <span>Dotes de Guerrero:</span>
+                                            <input type="number" value="1" min="0" max="20">
+                                        </div>
+                                    </div>
+                                    <div class="ability-card">
+                                        <h4>Armadura y Escudos</h4>
+                                        <p>Competencia con todas las armaduras y escudos</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="class-item">
                                 <h4>Clase 2: Mago</h4>
@@ -1277,7 +1628,33 @@
                                 <p><strong>Dado de Golpe:</strong> d6</p>
                                 <p><strong>BAB:</strong> Bajo (+0.5 por nivel)</p>
                                 <p><strong>Salvaciones Buenas:</strong> Voluntad</p>
-                                <textarea placeholder="Escuela especialista, conjuros, familiar, etc."></textarea>
+                                <p><strong>Puntos de Golpe Máximos:</strong> <input type="number" value="6"></p>
+                                <p><strong>Puntos de Golpe Actuales:</strong> <input type="number" value="6"></p>
+                                <h5>Habilidades de Clase</h5>
+                                <div class="special-abilities-grid">
+                                    <div class="ability-card">
+                                        <h4>Escuela de Especialización</h4>
+                                        <select>
+                                            <option value="">Seleccionar escuela</option>
+                                            <option value="abjuration">Abjuración</option>
+                                            <option value="conjuration">Conjuración</option>
+                                            <option value="divination">Adivinación</option>
+                                            <option value="enchantment">Encantamiento</option>
+                                            <option value="evocation">Evocación</option>
+                                            <option value="illusion">Ilusión</option>
+                                            <option value="necromancy">Nigromancia</option>
+                                            <option value="transmutation">Transmutación</option>
+                                        </select>
+                                        <div style="margin-top: 10px;">
+                                            <label>Escuelas Prohibidas</label>
+                                            <input type="text" placeholder="Escuelas prohibidas">
+                                        </div>
+                                    </div>
+                                    <div class="ability-card">
+                                        <h4>Lanzamiento de Hechizos</h4>
+                                        <p>Puedes lanzar hechizos de tu libro de hechizos</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="class-item">
                                 <h4>Clase 3: Pícaro</h4>
@@ -1285,7 +1662,23 @@
                                 <p><strong>Dado de Golpe:</strong> d8</p>
                                 <p><strong>BAB:</strong> Medio (+0.75 por nivel)</p>
                                 <p><strong>Salvaciones Buenas:</strong> Reflejos</p>
-                                <textarea placeholder="Ataque furtivo, talentos de pícaro, etc."></textarea>
+                                <p><strong>Puntos de Golpe Máximos:</strong> <input type="number" value="8"></p>
+                                <p><strong>Puntos de Golpe Actuales:</strong> <input type="number" value="8"></p>
+                                <h5>Habilidades de Clase</h5>
+                                <div class="special-abilities-grid">
+                                    <div class="ability-card">
+                                        <h4>Ataque Furtivo</h4>
+                                        <p>+1d6 de daño adicional contra objetivos desprevenidos</p>
+                                        <div class="uses">
+                                            <span>Daño Furtivo:</span>
+                                            <input type="text" value="1d6" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="ability-card">
+                                        <h4>Evasión</h4>
+                                        <p>No recibes daño en salvaciones de Reflejos exitosas</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1297,28 +1690,74 @@
                         <div class="prestige-list">
                             <div class="class-item">
                                 <h4>Prestigio 1: Danzarín Sombrío</h4>
-                                <p><strong>Nivel:</strong> 0</p>
+                                <p><strong>Nivel:</strong> 10</p>
                                 <p><strong>Dado de Golpe:</strong> d8</p>
                                 <p><strong>BAB:</strong> Medio</p>
                                 <p><strong>Requisitos:</strong> BAB +6, Dotes específicas</p>
-                                <textarea placeholder="Habilidades especiales del prestigio..."></textarea>
+                                <p><strong>Puntos de Golpe Máximos:</strong> <input type="number" value="80"></p>
+                                <p><strong>Puntos de Golpe Actuales:</strong> <input type="number" value="80"></p>
+                                <h5>Habilidades de Prestigio</h5>
+                                <div class="special-abilities-grid">
+                                    <div class="ability-card">
+                                        <h4>Danza de la Muerte</h4>
+                                        <p>Puedes realizar una danza especial que mejora tus ataques</p>
+                                        <div class="uses">
+                                            <span>Usos restantes:</span>
+                                            <input type="number" value="3" min="0" max="10">
+                                        </div>
+                                    </div>
+                                    <div class="ability-card">
+                                        <h4>Movimiento Acrobático</h4>
+                                        <p>+4 a Acrobacias durante la danza</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="class-item">
-                                <h4>Prestigio 2: --</h4>
-                                <p><strong>Nivel:</strong> 0</p>
-                                <textarea placeholder="Selecciona un prestigio en el panel lateral"></textarea>
+                                <h4>Prestigio 2: Teúrgo Místico</h4>
+                                <p><strong>Nivel:</strong> 4</p>
+                                <p><strong>Dado de Golpe:</strong> d6</p>
+                                <p><strong>BAB:</strong> Bajo</p>
+                                <p><strong>Requisitos:</strong> Lanzar hechizos de nivel 3</p>
+                                <p><strong>Puntos de Golpe Máximos:</strong> <input type="number" value="24"></p>
+                                <p><strong>Puntos de Golpe Actuales:</strong> <input type="number" value="24"></p>
+                                <h5>Habilidades de Prestigio</h5>
+                                <div class="special-abilities-grid">
+                                    <div class="ability-card">
+                                        <h4>Fusión Mágica</h4>
+                                        <p>Puedes combinar hechizos de diferentes clases</p>
+                                        <div class="uses">
+                                            <span>Usos por día:</span>
+                                            <input type="number" value="2" min="0" max="10">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="class-item">
-                                <h4>Prestigio 3: --</h4>
-                                <p><strong>Nivel:</strong> 0</p>
-                                <textarea placeholder="Selecciona un prestigio en el panel lateral"></textarea>
+                                <h4>Prestigio 3: Asesino</h4>
+                                <p><strong>Nivel:</strong> 1</p>
+                                <p><strong>Dado de Golpe:</strong> d8</p>
+                                <p><strong>BAB:</strong> Medio</p>
+                                <p><strong>Requisitos:</strong> Habilidades de sigilo</p>
+                                <p><strong>Puntos de Golpe Máximos:</strong> <input type="number" value="8"></p>
+                                <p><strong>Puntos de Golpe Actuales:</strong> <input type="number" value="8"></p>
+                                <h5>Habilidades de Prestigio</h5>
+                                <div class="special-abilities-grid">
+                                    <div class="ability-card">
+                                        <h4>Muerte Súbita</h4>
+                                        <p>Posibilidad de matar instantáneamente al objetivo</p>
+                                        <div class="uses">
+                                            <span>Probabilidad:</span>
+                                            <input type="text" value="10%" readonly>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- TAB: COMBATE -->
+            <!-- Pestaña de Combate - MEJORADA -->
             <div id="combat" class="tab-content">
                 <div class="section">
                     <h2 class="section-title">Estadísticas de Combate</h2>
@@ -1326,12 +1765,27 @@
                         <div class="combat-stat">
                             <label>Puntos de Golpe (PG)</label>
                             <input type="number" value="25" readonly>
-                            <div class="combat-detail">
-                                Guerrero 1 (d10): 6<br>
-                                Mago 1 (d6): 4<br>
-                                Pícaro 1 (d8): 5<br>
-                                CON (+1): +3<br>
-                                Dotes/Otros: +7
+                            <div class="hp-calculation">
+                                <div class="calculation-row">
+                                    <span>Guerrero 1 (d10):</span>
+                                    <span>6</span>
+                                </div>
+                                <div class="calculation-row">
+                                    <span>Mago 1 (d6):</span>
+                                    <span>4</span>
+                                </div>
+                                <div class="calculation-row">
+                                    <span>Pícaro 1 (d8):</span>
+                                    <span>5</span>
+                                </div>
+                                <div class="calculation-row">
+                                    <span>CON (+1):</span>
+                                    <span>+3</span>
+                                </div>
+                                <div class="calculation-row">
+                                    <span>Dotes/Otros:</span>
+                                    <span>+7</span>
+                                </div>
                             </div>
                         </div>
                         <div class="combat-stat">
@@ -1360,7 +1814,7 @@
                         </div>
                     </div>
 
-                    <div style="text-align: center; margin: 20px 0; font-size: 18px; font-weight: bold; color: var(--primary-color);">
+                    <div class="bab-display">
                         Ataque Base (BAB): +1/+1/+1 = +3
                     </div>
                 </div>
@@ -1531,106 +1985,127 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- TAB: COMPETENCIAS -->
-            <div id="skills" class="tab-content">
+                <!-- NUEVA SECCIÓN: Defensas Especiales -->
                 <div class="section">
-                    <h2 class="section-title">HABILIDADES</h2>
-                    
-                    <div class="skills-header">
-                        <div></div>
-                        <div style="text-align: center;">Bonif.<br>Total</div>
-                        <div style="text-align: center;">Hab. de<br>Clase +3</div>
-                        <div style="text-align: center;">Rangos</div>
-                        <div style="text-align: center;">Raciales,<br>Dotes</div>
-                        <div style="text-align: center;">Modif.<br>Varios</div>
-                        <div style="text-align: center;">Penalizador</div>
-                        <div style="text-align: center;">Atributo</div>
+                    <h2 class="section-title">Defensas Especiales</h2>
+                    <div class="special-defenses">
+                        <div class="defense-grid">
+                            <div class="defense-item">
+                                <label>Reducción de Daño (DR)</label>
+                                <input type="text" id="damage-reduction" placeholder="Ej: 5/contundente">
+                            </div>
+                            <div class="defense-item">
+                                <label>Resistencias</label>
+                                <input type="text" id="resistances" placeholder="Ej: Fuego 10">
+                            </div>
+                            <div class="defense-item">
+                                <label>Inmunidades</label>
+                                <input type="text" id="immunities" placeholder="Ej: Sueño, veneno">
+                            </div>
+                            <div class="defense-item">
+                                <label>Resistencia Mágica</label>
+                                <input type="number" id="spell-resistance" value="0">
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div id="skills-container">
-                        <!-- Acrobacias -->
-                        <div class="skill-row">
-                            <div class="skill-name">Acrobacias</div>
-                            <div><input type="text" class="skill-input" value="0" readonly></div>
-                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
-                            <div><input type="number" class="skill-input" value="0" min="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div class="skill-attr">DES</div>
+                <!-- NUEVA SECCIÓN: Sistema de Carga -->
+                <div class="section">
+                    <h2 class="section-title">Sistema de Carga</h2>
+                    <div class="encumbrance-system">
+                        <div class="load-categories">
+                            <div class="load-category">
+                                <h4>Carga Ligera</h4>
+                                <input type="number" id="light-load" value="0" readonly>
+                                <span>Velocidad: Normal</span>
+                            </div>
+                            <div class="load-category">
+                                <h4>Carga Media</h4>
+                                <input type="number" id="medium-load" value="0" readonly>
+                                <span>Velocidad: -10 pies</span>
+                            </div>
+                            <div class="load-category">
+                                <h4>Carga Pesada</h4>
+                                <input type="number" id="heavy-load" value="0" readonly>
+                                <span>Velocidad: -20 pies</span>
+                            </div>
                         </div>
-                        <!-- Artesanía -->
-                        <div class="skill-row">
-                            <div class="skill-name">Artesanía</div>
-                            <div><input type="text" class="skill-input" value="0" readonly></div>
-                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
-                            <div><input type="number" class="skill-input" value="0" min="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div class="skill-attr">INT</div>
+                        <div class="current-load">
+                            <label>Peso Actual Transportado</label>
+                            <input type="number" id="current-weight" value="0">
+                            <span>lb / <span id="max-load">0</span> lb</span>
                         </div>
-                        <!-- Averiguar Intenciones -->
-                        <div class="skill-row">
-                            <div class="skill-name">Averiguar Intenciones</div>
-                            <div><input type="text" class="skill-input" value="0" readonly></div>
-                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
-                            <div><input type="number" class="skill-input" value="0" min="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div class="skill-attr">SAB</div>
-                        </div>
-                        <!-- Conocimiento de Conjuros -->
-                        <div class="skill-row">
-                            <div class="skill-name">Conocimiento de Conjuros</div>
-                            <div><input type="text" class="skill-input" value="0" readonly></div>
-                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
-                            <div><input type="number" class="skill-input" value="0" min="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div class="skill-attr">INT</div>
-                        </div>
-                        <!-- Diplomacia -->
-                        <div class="skill-row">
-                            <div class="skill-name">Diplomacia</div>
-                            <div><input type="text" class="skill-input" value="0" readonly></div>
-                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
-                            <div><input type="number" class="skill-input" value="0" min="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div><input type="number" class="skill-input" value="0"></div>
-                            <div class="skill-attr">CAR</div>
-                        </div>
-                        <!-- Añadir más habilidades según necesites -->
                     </div>
                 </div>
             </div>
 
-            <!-- TAB: DOTES -->
+            <!-- Pestaña de Competencias - MEJORADA CON CÁLCULO AUTOMÁTICO -->
+            <div id="skills" class="tab-content">
+                <div class="section">
+                    <h2 class="section-title">HABILIDADES</h2>
+                    
+                    <div class="skills-summary">
+                        <div class="total-ranks-box">
+                            <label>Rangos Totales</label>
+                            <input type="number" id="total-ranks" value="0" readonly>
+                        </div>
+                        <div class="total-ranks-box">
+                            <label>Rangos Disponibles</label>
+                            <input type="number" id="available-ranks" value="0" readonly>
+                        </div>
+                        <div class="total-ranks-box">
+                            <label>Rangos Máximos por Habilidad</label>
+                            <input type="number" id="max-ranks" value="0" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-table-container">
+                        <table class="skills-table">
+                            <thead>
+                                <tr>
+                                    <th>Habilidad</th>
+                                    <th>Atributo</th>
+                                    <th>Rangos</th>
+                                    <th>Clase</th>
+                                    <th>Mod. Atrib.</th>
+                                    <th>Varios</th>
+                                    <th>Penalizador</th>
+                                    <th>Bonif. Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="skills-body">
+                                <!-- Las habilidades se generarán con JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestaña de Dotes - MEJORADA CON BONIFICADORES -->
             <div id="feats" class="tab-content">
                 <div class="section">
                     <h2 class="section-title">Dotes</h2>
-                    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                        <select id="feat-select" style="flex: 1;">
+                    <div class="feat-selection">
+                        <select id="feat-select">
                             <option value="">Seleccionar dote...</option>
                             <option value="especializacion_arma">Especialización con Arma</option>
                             <option value="tiro_preciso">Tiro Preciso</option>
                             <option value="combate_dos_armas">Combate con Dos Armas</option>
                             <option value="esquiva">Esquiva</option>
+                            <option value="ataque_poderoso">Ataque Poderoso</option>
+                            <option value="carga_imparable">Carga Imparable</option>
                         </select>
                         <button id="add-feat-btn">Añadir Dote</button>
                     </div>
-                    <div id="feats-list" style="min-height: 200px; border: 1px solid var(--accent-color); border-radius: var(--border-radius); padding: 15px;">
+                    <div id="feats-list" class="feats-list">
                         <!-- Las dotes se añadirán aquí dinámicamente -->
                     </div>
                 </div>
             </div>
 
-            <!-- TAB: EQUIPO -->
+            <!-- Pestaña de Equipo - SIN CAMBIOS -->
             <div id="equipment" class="tab-content">
                 <div class="section">
                     <h2 class="section-title">Equipo y Posesiones</h2>
@@ -1659,40 +2134,146 @@
                 </div>
             </div>
 
-            <!-- TAB: HECHIZOS -->
+            <!-- Pestaña de Hechizos - MEJORADA -->
             <div id="spells" class="tab-content">
                 <div class="section">
-                    <h2 class="section-title">Hechizos Conocidos/Preparados</h2>
-                    <textarea placeholder="Lista de hechizos por nivel..."></textarea>
+                    <h2 class="section-title">Conjuración</h2>
+                    <div class="spellcasting-info">
+                        <div class="spell-stat">
+                            <label>Concentración</label>
+                            <input type="number" id="concentration" value="0" readonly>
+                        </div>
+                        <div class="spell-stat">
+                            <label>CD de Hechizos</label>
+                            <input type="number" id="spell-dc" value="0" readonly>
+                        </div>
+                        <div class="spell-stat">
+                            <label>Bonificador de Ataque con Hechizos</label>
+                            <input type="number" id="spell-attack" value="0" readonly>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="section">
-                    <h2 class="section-title">Puntos de Conjuración</h2>
-                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
-                        <div class="combat-stat">
-                            <label>Nivel 0</label>
-                            <input type="text" value="Ilimitados" readonly>
+                    <h2 class="section-title">Hechizos por Día</h2>
+                    <table class="spells-per-day-table">
+                        <thead>
+                            <tr>
+                                <th>Nivel</th>
+                                <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th>
+                                <th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Por Día</td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Restantes</td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                                <td><input type="number" value="0"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Hechizos Conocidos/Preparados</h2>
+                    <div class="spell-levels-container">
+                        <div class="spell-level">
+                            <h4>Nivel 0</h4>
+                            <textarea placeholder="Hechizos de nivel 0..."></textarea>
                         </div>
-                        <div class="combat-stat">
-                            <label>Nivel 1</label>
-                            <input type="number" value="3">
+                        <div class="spell-level">
+                            <h4>Nivel 1</h4>
+                            <textarea placeholder="Hechizos de nivel 1..."></textarea>
                         </div>
-                        <div class="combat-stat">
-                            <label>Nivel 2</label>
-                            <input type="number" value="0">
+                        <div class="spell-level">
+                            <h4>Nivel 2</h4>
+                            <textarea placeholder="Hechizos de nivel 2..."></textarea>
                         </div>
-                        <div class="combat-stat">
-                            <label>Nivel 3</label>
-                            <input type="number" value="0">
+                        <div class="spell-level">
+                            <h4>Nivel 3</h4>
+                            <textarea placeholder="Hechizos de nivel 3..."></textarea>
+                        </div>
+                        <div class="spell-level">
+                            <h4>Nivel 4</h4>
+                            <textarea placeholder="Hechizos de nivel 4..."></textarea>
+                        </div>
+                        <div class="spell-level">
+                            <h4>Nivel 5</h4>
+                            <textarea placeholder="Hechizos de nivel 5..."></textarea>
+                        </div>
+                        <div class="spell-level">
+                            <h4>Nivel 6</h4>
+                            <textarea placeholder="Hechizos de nivel 6..."></textarea>
+                        </div>
+                        <div class="spell-level">
+                            <h4>Nivel 7</h4>
+                            <textarea placeholder="Hechizos de nivel 7..."></textarea>
+                        </div>
+                        <div class="spell-level">
+                            <h4>Nivel 8</h4>
+                            <textarea placeholder="Hechizos de nivel 8..."></textarea>
+                        </div>
+                        <div class="spell-level">
+                            <h4>Nivel 9</h4>
+                            <textarea placeholder="Hechizos de nivel 9..."></textarea>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- TAB: TALENTOS/HISTORIA -->
+            <!-- Pestaña de Talentos/Historia - MEJORADA CON RASGOS -->
             <div id="history" class="tab-content">
                 <div class="section">
-                    <h2 class="section-title">Talentos Especiales</h2>
-                    <textarea placeholder="Talentos raciales, de clase, prestigio u otros especiales..."></textarea>
+                    <h2 class="section-title">Talentos y Rasgos</h2>
+                    <div class="traits-container">
+                        <div class="trait-category">
+                            <h4>Rasgos Raciales</h4>
+                            <div class="trait-list">
+                                <div class="trait-item">
+                                    <span>Versátil</span>
+                                    <span>+1 dote adicional al 1er nivel</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span>Habilidad favorita</span>
+                                    <span>+1 a una habilidad de clase</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trait-category">
+                            <h4>Rasgos de Trasfondo</h4>
+                            <div class="trait-list">
+                                <div class="trait-item">
+                                    <span>Soldado</span>
+                                    <span>+1 a Conocimiento (táctica)</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span>Veterano de guerra</span>
+                                    <span>+1 a Fortaleza</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="section">
                     <h2 class="section-title">Historia del Personaje</h2>
@@ -1707,6 +2288,159 @@
     </div>
 
     <script>
+        // Datos de habilidades (atributo y nombre)
+        const skills = [
+            { name: "Acrobacias", attribute: "DES" },
+            { name: "Artesanía", attribute: "INT" },
+            { name: "Averiguar Intenciones", attribute: "SAB" },
+            { name: "Caballerosidad", attribute: "CAR" },
+            { name: "Callejeo", attribute: "CAR" },
+            { name: "Concentración", attribute: "CON" },
+            { name: "Conocimiento (Arcano)", attribute: "INT" },
+            { name: "Conocimiento (Dungeon)", attribute: "INT" },
+            { name: "Conocimiento (Ingeniería)", attribute: "INT" },
+            { name: "Conocimiento (Geografía)", attribute: "INT" },
+            { name: "Conocimiento (Historia)", attribute: "INT" },
+            { name: "Conocimiento (Local)", attribute: "INT" },
+            { name: "Conocimiento (Naturaleza)", attribute: "INT" },
+            { name: "Conocimiento (Nobleza)", attribute: "INT" },
+            { name: "Conocimiento (Religión)", attribute: "INT" },
+            { name: "Conocimiento (Planos)", attribute: "INT" },
+            { name: "Curar", attribute: "SAB" },
+            { name: "Descifrar Escrituras", attribute: "INT" },
+            { name: "Diplomacia", attribute: "CAR" },
+            { name: "Disfrazarse", attribute: "CAR" },
+            { name: "Escalar", attribute: "FUE" },
+            { name: "Escapar", attribute: "DES" },
+            { name: "Escuchar", attribute: "SAB" },
+            { name: "Enfocar Conjuro", attribute: "CON" },
+            { name: "Ensayar", attribute: "CAR" },
+            { name: "Equitación", attribute: "DES" },
+            { name: "Encontrar Objetos", attribute: "SAB" },
+            { name: "Forzar Cerraduras", attribute: "DES" },
+            { name: "Hechicería", attribute: "INT" },
+            { name: "Idioma", attribute: "INT" },
+            { name: "Intimidar", attribute: "CAR" },
+            { name: "Juego de Manos", attribute: "DES" },
+            { name: "Juego", attribute: "CAR" },
+            { name: "Liderazgo", attribute: "CAR" },
+            { name: "Montar", attribute: "DES" },
+            { name: "Mover Objetos", attribute: "FUE" },
+            { name: "Nadar", attribute: "FUE" },
+            { name: "Oficio", attribute: "INT" },
+            { name: "Orientarse", attribute: "SAB" },
+            { name: "Percepción", attribute: "SAB" },
+            { name: "Persuación", attribute: "CAR" },
+            { name: "Pilotar", attribute: "DES" },
+            { name: "Rastrear", attribute: "SAB" },
+            { name: "Saltar", attribute: "FUE" },
+            { name: "Saber (Naturaleza)", attribute: "INT" },
+            { name: "Sigilo", attribute: "DES" },
+            { name: "Supervivencia", attribute: "SAB" },
+            { name: "Trepar", attribute: "FUE" },
+            { name: "Trato con Animales", attribute: "CAR" },
+            { name: "Usar Objetos Mágicos", attribute: "CAR" }
+        ];
+
+        // Función para calcular el modificador de un atributo
+        function getAttributeModifier(attributeValue) {
+            return Math.floor((attributeValue - 10) / 2);
+        }
+
+        // Función para calcular el total de una habilidad
+        function calculateSkillTotal(ranks, isClassSkill, attributeMod, misc, penalty) {
+            let total = parseInt(ranks) || 0;
+            total += isClassSkill ? 3 : 0;
+            total += parseInt(attributeMod) || 0;
+            total += parseInt(misc) || 0;
+            total -= parseInt(penalty) || 0;
+            return total;
+        }
+
+        // Generar la tabla de habilidades
+        function generateSkillsTable() {
+            const skillsBody = document.getElementById('skills-body');
+            skillsBody.innerHTML = '';
+
+            skills.forEach(skill => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="skill-name">${skill.name}</td>
+                    <td>${skill.attribute}</td>
+                    <td><input type="number" class="skill-ranks" value="0" min="0"></td>
+                    <td><input type="checkbox" class="skill-class"></td>
+                    <td class="skill-attr-mod">0</td>
+                    <td><input type="number" class="skill-misc" value="0"></td>
+                    <td><input type="number" class="skill-penalty" value="0"></td>
+                    <td class="skill-total">0</td>
+                `;
+                skillsBody.appendChild(row);
+            });
+
+            // Añadir event listeners para actualizar los totales
+            document.querySelectorAll('.skill-ranks, .skill-class, .skill-misc, .skill-penalty').forEach(input => {
+                input.addEventListener('input', updateSkillTotals);
+            });
+        }
+
+        // Actualizar los totales de habilidades
+        function updateSkillTotals() {
+            const rows = document.querySelectorAll('#skills-body tr');
+            rows.forEach(row => {
+                const ranks = row.querySelector('.skill-ranks').value;
+                const isClassSkill = row.querySelector('.skill-class').checked;
+                const attrMod = row.querySelector('.skill-attr-mod').textContent;
+                const misc = row.querySelector('.skill-misc').value;
+                const penalty = row.querySelector('.skill-penalty').value;
+                const total = calculateSkillTotal(ranks, isClassSkill, attrMod, misc, penalty);
+                row.querySelector('.skill-total').textContent = total;
+            });
+
+            // Actualizar resumen de rangos
+            updateRanksSummary();
+        }
+
+        // Actualizar el resumen de rangos
+        function updateRanksSummary() {
+            let totalRanks = 0;
+            document.querySelectorAll('.skill-ranks').forEach(input => {
+                totalRanks += parseInt(input.value) || 0;
+            });
+            document.getElementById('total-ranks').value = totalRanks;
+            // Nota: Los rangos disponibles y máximos dependen del nivel y la clase, no los calculamos aquí
+        }
+
+        // Sistema de dotes con bonificadores
+        document.getElementById('add-feat-btn').addEventListener('click', () => {
+            const select = document.getElementById('feat-select');
+            const featValue = select.value;
+            const featText = select.options[select.selectedIndex].text;
+            
+            if (featValue) {
+                const featsList = document.getElementById('feats-list');
+                const featItem = document.createElement('div');
+                featItem.className = 'feat-item';
+                featItem.innerHTML = `
+                    <div>
+                        <strong>${featText}</strong>
+                        <div class="feat-bonus-section">
+                            <div class="feat-bonus-item">
+                                <label>¿A qué bonifica?</label>
+                                <input type="text" placeholder="Ej: Ataque, Daño, CA...">
+                            </div>
+                            <div class="feat-bonus-item">
+                                <label>Valor del bonificador</label>
+                                <input type="text" placeholder="Ej: +1, +2...">
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="this.parentElement.remove()">Eliminar</button>
+                `;
+                featsList.appendChild(featItem);
+                select.value = '';
+            }
+        });
+
         // Sistema de tabs principal
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
@@ -1729,25 +2463,6 @@
             });
         });
 
-        // Sistema de dotes
-        document.getElementById('add-feat-btn').addEventListener('click', () => {
-            const select = document.getElementById('feat-select');
-            const featValue = select.value;
-            const featText = select.options[select.selectedIndex].text;
-            
-            if (featValue) {
-                const featsList = document.getElementById('feats-list');
-                const featItem = document.createElement('div');
-                featItem.style.cssText = 'display: flex; justify-content: space-between; align-items: center; padding: 10px; background: var(--light-color); border-radius: 5px; margin-bottom: 8px;';
-                featItem.innerHTML = `
-                    <span style="font-weight: 600;">${featText}</span>
-                    <button onclick="this.parentElement.remove()" style="padding: 4px 12px; font-size: 12px;">Eliminar</button>
-                `;
-                featsList.appendChild(featItem);
-                select.value = '';
-            }
-        });
-
         // Calcular NEP
         function calculateNEP() {
             const class1Level = parseInt(document.getElementById('class1-level').value) || 0;
@@ -1762,6 +2477,17 @@
             document.getElementById('next-nep-value').textContent = total + 1;
         }
 
+        // Sistema de carga
+        function calculateEncumbrance() {
+            const strScore = parseInt(document.getElementById('str-total').textContent) || 10;
+            const maxLoad = strScore * 10; // Fórmula simplificada
+            
+            document.getElementById('max-load').textContent = maxLoad;
+            document.getElementById('light-load').value = Math.floor(maxLoad * 0.33);
+            document.getElementById('medium-load').value = Math.floor(maxLoad * 0.66);
+            document.getElementById('heavy-load').value = maxLoad;
+        }
+
         // Listeners para actualizar NEP
         ['class1-level', 'class2-level', 'class3-level', 'prestige1-level', 'prestige2-level', 'prestige3-level'].forEach(id => {
             document.getElementById(id).addEventListener('input', calculateNEP);
@@ -1769,6 +2495,8 @@
 
         // Inicializar
         calculateNEP();
+        calculateEncumbrance();
+        generateSkillsTable();
     </script>
 </body>
 </html>
