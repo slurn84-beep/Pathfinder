@@ -933,17 +933,16 @@
         
         <!-- Panel Principal (Derecha) -->
         <div class="main-panel">
-            <!-- Sistema de Pestañas -->
             <div class="tabs-container">
                 <div class="tabs">
                     <div class="tab active" data-tab="basic">Datos Básicos</div>
                     <div class="tab" data-tab="classes">Clases y Prestigios</div>
                     <div class="tab" data-tab="combat">Combate</div>
                     <div class="tab" data-tab="skills">Competencias</div>
-                    <div class="tab" data-tab="feats">Dotes y Talentos</div>
+                    <div class="tab" data-tab="feats">Dotes</div>
                     <div class="tab" data-tab="equipment">Equipo</div>
                     <div class="tab" data-tab="spells">Hechizos</div>
-                    <div class="tab" data-tab="background">Historia</div>
+                    <div class="tab" data-tab="history">Talentos/Historia</div>
                 </div>
             </div>
 
@@ -1254,109 +1253,193 @@
             </div>
 
             <!-- Pestaña de Clases y Prestigios -->
-            <div id="classes" class="tab-content">
-                <div class="section">
-                    <h2 class="section-title">Detalles de Clases</h2>
-                    <div class="basic-data">
-                        <div class="data-row">
-                            <div class="form-group">
-                                <label for="class1-details">Guerrero - Detalles</label>
-                                <textarea id="class1-details" placeholder="Especializaciones, habilidades de clase, etc.">Dotes adicionales: 1 nivel, BAB completo, Fortaleza buena</textarea>
+ <div id="classes" class="tab-content">
+                <div class="sub-tabs">
+                    <div class="sub-tab active" data-subtab="classes-detail">Clases</div>
+                    <div class="sub-tab" data-subtab="prestiges-detail">Prestigios</div>
+                </div>
+
+                <div id="classes-detail" class="sub-content active">
+                    <div class="section">
+                        <h2 class="section-title">Detalle de Clases</h2>
+                        <div class="class-list">
+                            <div class="class-item">
+                                <h4>Clase 1: Guerrero</h4>
+                                <p><strong>Nivel:</strong> 1</p>
+                                <p><strong>Dado de Golpe:</strong> d10</p>
+                                <p><strong>BAB:</strong> Alto (+1 por nivel)</p>
+                                <p><strong>Salvaciones Buenas:</strong> Fortaleza</p>
+                                <textarea placeholder="Habilidades de clase, arquetipos, etc."></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="class2-details">Mago - Detalles</label>
-                                <textarea id="class2-details" placeholder="Especializaciones, habilidades de clase, etc.">Escuela de Conjuración, hechizos nivel 1, Voluntad buena</textarea>
+                            <div class="class-item">
+                                <h4>Clase 2: Mago</h4>
+                                <p><strong>Nivel:</strong> 1</p>
+                                <p><strong>Dado de Golpe:</strong> d6</p>
+                                <p><strong>BAB:</strong> Bajo (+0.5 por nivel)</p>
+                                <p><strong>Salvaciones Buenas:</strong> Voluntad</p>
+                                <textarea placeholder="Escuela especialista, conjuros, familiar, etc."></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="class3-details">Pícaro - Detalles</label>
-                                <textarea id="class3-details" placeholder="Especializaciones, habilidades de clase, etc.">Sneak attack +1d6, trapfinding, Reflejos buena</textarea>
+                            <div class="class-item">
+                                <h4>Clase 3: Pícaro</h4>
+                                <p><strong>Nivel:</strong> 1</p>
+                                <p><strong>Dado de Golpe:</strong> d8</p>
+                                <p><strong>BAB:</strong> Medio (+0.75 por nivel)</p>
+                                <p><strong>Salvaciones Buenas:</strong> Reflejos</p>
+                                <textarea placeholder="Ataque furtivo, talentos de pícaro, etc."></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="section">
-                    <h2 class="section-title">Detalles de Prestigios</h2>
-                    <div class="basic-data">
-                        <div class="data-row">
-                            <div class="form-group">
-                                <label for="prestige1-details">Danzarín Sombrío - Detalles</label>
-                                <textarea id="prestige1-details" placeholder="Requisitos, habilidades especiales, etc.">Combina danza y combate, habilidades de sombra, BAB medio</textarea>
+
+                <div id="prestiges-detail" class="sub-content">
+                    <div class="section">
+                        <h2 class="section-title">Detalle de Prestigios</h2>
+                        <div class="prestige-list">
+                            <div class="class-item">
+                                <h4>Prestigio 1: Danzarín Sombrío</h4>
+                                <p><strong>Nivel:</strong> 0</p>
+                                <p><strong>Dado de Golpe:</strong> d8</p>
+                                <p><strong>BAB:</strong> Medio</p>
+                                <p><strong>Requisitos:</strong> BAB +6, Dotes específicas</p>
+                                <textarea placeholder="Habilidades especiales del prestigio..."></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="prestige2-details">Teúrgo Místico - Detalles</label>
-                                <textarea id="prestige2-details" placeholder="Requisitos, habilidades especiales, etc.">Fusión de magia divina y arcana, BAB bajo</textarea>
+                            <div class="class-item">
+                                <h4>Prestigio 2: --</h4>
+                                <p><strong>Nivel:</strong> 0</p>
+                                <textarea placeholder="Selecciona un prestigio en el panel lateral"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="prestige3-details">Asesino - Detalles</label>
-                                <textarea id="prestige3-details" placeholder="Requisitos, habilidades especiales, etc.">Death attack, poison use, sneak attack +1d6, Reflejos buena</textarea>
+                            <div class="class-item">
+                                <h4>Prestigio 3: --</h4>
+                                <p><strong>Nivel:</strong> 0</p>
+                                <textarea placeholder="Selecciona un prestigio en el panel lateral"></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Pestaña de Combate -->
+            <!-- TAB: COMBATE -->
             <div id="combat" class="tab-content">
                 <div class="section">
                     <h2 class="section-title">Estadísticas de Combate</h2>
                     <div class="combat-stats">
                         <div class="combat-stat">
                             <label>Puntos de Golpe (PG)</label>
-                            <input type="number" id="hp-total" value="95" readonly>
-                            <div class="hp-calculation">
-                                <div class="calculation-row">
-                                    <span>Guerrero 1 (d10):</span>
-                                    <span>6</span>
-                                </div>
-                                <div class="calculation-row">
-                                    <span>Mago 1 (d4):</span>
-                                    <span>3</span>
-                                </div>
-                                <div class="calculation-row">
-                                    <span>Pícaro 1 (d6):</span>
-                                    <span>4</span>
-                                </div>
-                                <div class="calculation-row">
-                                    <span>Danzarín 10 (d8):</span>
-                                    <span>45</span>
-                                </div>
-                                <div class="calculation-row">
-                                    <span>Teúrgo 4 (d6):</span>
-                                    <span>14</span>
-                                </div>
-                                <div class="calculation-row">
-                                    <span>Asesino 1 (d6):</span>
-                                    <span>4</span>
-                                </div>
-                                <div class="calculation-row">
-                                    <span>CON (14):</span>
-                                    <span>+18</span>
-                                </div>
+                            <input type="number" value="25" readonly>
+                            <div class="combat-detail">
+                                Guerrero 1 (d10): 6<br>
+                                Mago 1 (d6): 4<br>
+                                Pícaro 1 (d8): 5<br>
+                                CON (+1): +3<br>
+                                Dotes/Otros: +7
                             </div>
                         </div>
                         <div class="combat-stat">
                             <label>Clase de Armadura (CA)</label>
-                            <input type="number" id="ac-total" value="21" readonly>
+                            <input type="number" value="21" readonly>
+                            <div class="combat-detail">
+                                10 + Armadura + Escudo<br>
+                                + DES + Tamaño<br>
+                                + Varios
+                            </div>
                         </div>
                         <div class="combat-stat">
                             <label>Iniciativa</label>
-                            <input type="number" id="initiative-total" value="3" readonly>
+                            <input type="number" value="3" readonly>
+                            <div class="combat-detail">
+                                DES (+2) + Varios (+1)
+                            </div>
                         </div>
                         <div class="combat-stat">
                             <label>Velocidad</label>
-                            <input type="number" id="speed-total" value="30" readonly>
+                            <input type="number" value="30" readonly>
+                            <div class="combat-detail">
+                                Base: 30 pies<br>
+                                (puede variar por armadura)
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="bab-display">
-                        Ataque Base (BAB): +13/+8/+3
+
+                    <div style="text-align: center; margin: 20px 0; font-size: 18px; font-weight: bold; color: var(--primary-color);">
+                        Ataque Base (BAB): +1/+1/+1 = +3
                     </div>
                 </div>
-                
+
+                <div class="section">
+                    <h2 class="section-title">Defensa</h2>
+                    <div class="equipment-section">
+                        <div class="equipment-item">
+                            <h4>Armadura</h4>
+                            <select id="armor-select">
+                                <option value="">Sin armadura</option>
+                                <option value="cuero">Cuero (+2 CA)</option>
+                                <option value="cuero_tachonado">Cuero Tachonado (+3 CA)</option>
+                                <option value="cota_mallas">Cota de Mallas (+6 CA)</option>
+                                <option value="placas">Placas Completa (+9 CA)</option>
+                            </select>
+                            <div class="bonus-inputs">
+                                <div>
+                                    <label style="font-size: 11px;">Bonif. Mejora</label>
+                                    <input type="number" value="0" min="0" max="5">
+                                </div>
+                                <div>
+                                    <label style="font-size: 11px;">Bonif. Armadura</label>
+                                    <input type="number" value="0">
+                                </div>
+                                <div>
+                                    <label style="font-size: 11px;">Penalizador</label>
+                                    <input type="number" value="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="equipment-item">
+                            <h4>Escudo</h4>
+                            <select id="shield-select">
+                                <option value="">Sin escudo</option>
+                                <option value="ligero">Escudo Ligero (+1 CA)</option>
+                                <option value="pesado">Escudo Pesado (+2 CA)</option>
+                                <option value="torre">Escudo de Torre (+4 CA)</option>
+                            </select>
+                            <div class="bonus-inputs">
+                                <div>
+                                    <label style="font-size: 11px;">Bonif. Mejora</label>
+                                    <input type="number" value="0" min="0" max="5">
+                                </div>
+                                <div>
+                                    <label style="font-size: 11px;">Bonif. Escudo</label>
+                                    <input type="number" value="0">
+                                </div>
+                                <div>
+                                    <label style="font-size: 11px;">Penalizador</label>
+                                    <input type="number" value="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px;">
+                        <div class="equipment-item">
+                            <h4>Otros 1 (Manual)</h4>
+                            <input type="text" placeholder="Nombre del bono">
+                            <input type="number" value="0" placeholder="Valor">
+                        </div>
+                        <div class="equipment-item">
+                            <h4>Otros 2 (Manual)</h4>
+                            <input type="text" placeholder="Nombre del bono">
+                            <input type="number" value="0" placeholder="Valor">
+                        </div>
+                        <div class="equipment-item">
+                            <h4>Otros 3 (Manual)</h4>
+                            <input type="text" placeholder="Nombre del bono">
+                            <input type="number" value="0" placeholder="Valor">
+                        </div>
+                    </div>
+                </div>
+
                 <div class="section">
                     <h2 class="section-title">Ataques</h2>
-                    <table class="attributes-table">
+                    <table class="weapons-table">
                         <thead>
                             <tr>
                                 <th>Arma</th>
@@ -1364,540 +1447,308 @@
                                 <th>Daño</th>
                                 <th>Crítico</th>
                                 <th>Tipo</th>
+                                <th>Bonif. Mejora</th>
+                                <th>Bonif. Varios</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="text" value="Espada Larga" readonly></td>
-                                <td><input type="text" value="+18" readonly></td>
-                                <td><input type="text" value="2d6+7" readonly></td>
+                                <td>
+                                    <select style="width: 120px;">
+                                        <option value="">--</option>
+                                        <option value="espada_larga">Espada Larga</option>
+                                        <option value="daga">Daga</option>
+                                        <option value="arco_largo">Arco Largo</option>
+                                        <option value="hacha">Hacha de Batalla</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" value="+5" readonly></td>
+                                <td><input type="text" value="1d8+2" readonly></td>
                                 <td><input type="text" value="19-20/x2" readonly></td>
-                                <td><input type="text" value="Cortante" readonly></td>
+                                <td><input type="text" value="Cortar" readonly></td>
+                                <td><input type="number" value="0" min="0" max="5"></td>
+                                <td><input type="number" value="0"></td>
                             </tr>
                             <tr>
-                                <td><input type="text" value="Daga" readonly></td>
-                                <td><input type="text" value="+16" readonly></td>
-                                <td><input type="text" value="1d4+5" readonly></td>
+                                <td>
+                                    <select style="width: 120px;">
+                                        <option value="">--</option>
+                                        <option value="espada_larga">Espada Larga</option>
+                                        <option value="daga">Daga</option>
+                                        <option value="arco_largo">Arco Largo</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" value="+3" readonly></td>
+                                <td><input type="text" value="1d4+2" readonly></td>
                                 <td><input type="text" value="19-20/x2" readonly></td>
-                                <td><input type="text" value="Perforante" readonly></td>
+                                <td><input type="text" value="Perforar" readonly></td>
+                                <td><input type="number" value="0" min="0" max="5"></td>
+                                <td><input type="number" value="0"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select style="width: 120px;">
+                                        <option value="">--</option>
+                                        <option value="espada_larga">Espada Larga</option>
+                                        <option value="daga">Daga</option>
+                                        <option value="arco_largo">Arco Largo</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" readonly></td>
+                                <td><input type="text" readonly></td>
+                                <td><input type="text" readonly></td>
+                                <td><input type="text" readonly></td>
+                                <td><input type="number" value="0" min="0" max="5"></td>
+                                <td><input type="number" value="0"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select style="width: 120px;">
+                                        <option value="">--</option>
+                                        <option value="espada_larga">Espada Larga</option>
+                                        <option value="daga">Daga</option>
+                                        <option value="arco_largo">Arco Largo</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" readonly></td>
+                                <td><input type="text" readonly></td>
+                                <td><input type="text" readonly></td>
+                                <td><input type="text" readonly></td>
+                                <td><input type="number" value="0" min="0" max="5"></td>
+                                <td><input type="number" value="0"></td>
                             </tr>
                         </tbody>
                     </table>
+
+                    <div style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">Ataque Manual Personalizable</h4>
+                        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px;">
+                            <input type="text" placeholder="Nombre del ataque">
+                            <input type="text" placeholder="Bonif">
+                            <input type="text" placeholder="Daño">
+                            <input type="text" placeholder="Crítico">
+                            <input type="text" placeholder="Tipo">
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Pestaña de Competencias -->
+            <!-- TAB: COMPETENCIAS -->
             <div id="skills" class="tab-content">
                 <div class="section">
-                    <h2 class="section-title">Competencias</h2>
+                    <h2 class="section-title">HABILIDADES</h2>
                     
-                    <!-- Resumen de Rangos -->
-                    <div class="skills-summary">
-                        <div class="total-ranks-box">
-                            <label>Rangos Totales:</label>
-                            <input type="number" id="total-ranks-earned" value="90" readonly>
-                        </div>
-                        <div class="total-ranks-box">
-                            <label>Rangos Usados:</label>
-                            <input type="number" id="total-ranks-used" value="0" readonly>
-                        </div>
-                        <div class="total-ranks-box">
-                            <label>Rangos Libres:</label>
-                            <input type="number" id="total-ranks-available" value="90" readonly>
-                        </div>
+                    <div class="skills-header">
+                        <div></div>
+                        <div style="text-align: center;">Bonif.<br>Total</div>
+                        <div style="text-align: center;">Hab. de<br>Clase +3</div>
+                        <div style="text-align: center;">Rangos</div>
+                        <div style="text-align: center;">Raciales,<br>Dotes</div>
+                        <div style="text-align: center;">Modif.<br>Varios</div>
+                        <div style="text-align: center;">Penalizador</div>
+                        <div style="text-align: center;">Atributo</div>
                     </div>
 
-                    <div class="skills-table-container">
-                        <table class="skills-table">
-                            <thead>
-                                <tr>
-                                    <th>Habilidad</th>
-                                    <th>Bonif. Total</th>
-                                    <th>Hab. de Clase +3</th>
-                                    <th>Rangos</th>
-                                    <th>Atributo</th>
-                                    <th>Racial/Dotes</th>
-                                    <th>Modif. Varios</th>
-                                    <th>Penalizador Armadura</th>
-                                </tr>
-                            </thead>
-                            <tbody id="skills-container">
-                                <!-- Las habilidades se generarán aquí -->
-                            </tbody>
-                        </table>
+                    <div id="skills-container">
+                        <!-- Acrobacias -->
+                        <div class="skill-row">
+                            <div class="skill-name">Acrobacias</div>
+                            <div><input type="text" class="skill-input" value="0" readonly></div>
+                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
+                            <div><input type="number" class="skill-input" value="0" min="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div class="skill-attr">DES</div>
+                        </div>
+                        <!-- Artesanía -->
+                        <div class="skill-row">
+                            <div class="skill-name">Artesanía</div>
+                            <div><input type="text" class="skill-input" value="0" readonly></div>
+                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
+                            <div><input type="number" class="skill-input" value="0" min="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div class="skill-attr">INT</div>
+                        </div>
+                        <!-- Averiguar Intenciones -->
+                        <div class="skill-row">
+                            <div class="skill-name">Averiguar Intenciones</div>
+                            <div><input type="text" class="skill-input" value="0" readonly></div>
+                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
+                            <div><input type="number" class="skill-input" value="0" min="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div class="skill-attr">SAB</div>
+                        </div>
+                        <!-- Conocimiento de Conjuros -->
+                        <div class="skill-row">
+                            <div class="skill-name">Conocimiento de Conjuros</div>
+                            <div><input type="text" class="skill-input" value="0" readonly></div>
+                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
+                            <div><input type="number" class="skill-input" value="0" min="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div class="skill-attr">INT</div>
+                        </div>
+                        <!-- Diplomacia -->
+                        <div class="skill-row">
+                            <div class="skill-name">Diplomacia</div>
+                            <div><input type="text" class="skill-input" value="0" readonly></div>
+                            <div style="text-align: center;"><input type="checkbox" class="skill-input"></div>
+                            <div><input type="number" class="skill-input" value="0" min="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div><input type="number" class="skill-input" value="0"></div>
+                            <div class="skill-attr">CAR</div>
+                        </div>
+                        <!-- Añadir más habilidades según necesites -->
                     </div>
                 </div>
             </div>
 
-            <!-- Pestaña de Dotes y Talentos -->
+            <!-- TAB: DOTES -->
             <div id="feats" class="tab-content">
                 <div class="section">
                     <h2 class="section-title">Dotes</h2>
-                    
-                    <div class="feat-selection">
-                        <select id="feat-select">
+                    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                        <select id="feat-select" style="flex: 1;">
                             <option value="">Seleccionar dote...</option>
                             <option value="especializacion_arma">Especialización con Arma</option>
                             <option value="tiro_preciso">Tiro Preciso</option>
                             <option value="combate_dos_armas">Combate con Dos Armas</option>
                             <option value="esquiva">Esquiva</option>
-                            <option value="movilidad">Movilidad</option>
-                            <option value="ataque_poderoso">Ataque Poderoso</option>
-                            <option value="vitalidad">Vitalidad</option>
-                            <option value="liderazgo">Liderazgo</option>
                         </select>
                         <button id="add-feat-btn">Añadir Dote</button>
                     </div>
-                    
-                    <div class="feats-list" id="feats-container">
-                        <!-- Las dotes se añadirán aquí -->
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h2 class="section-title">Talentos Especiales</h2>
-                    <div class="feats-list">
-                        <textarea placeholder="Talentos raciales, de clase, prestigio u otros especiales...">Humano: Dote adicional al nivel 1, +2 a un atributo
-Soldado: Athletics (Atletismo), Intimidation (Intimidación), Heavy Armor
-Danzarín Sombrío: Habilidades de danza y sombras
-Teúrgo Místico: Fusión mágica
-Asesino: Death Attack, Poison Use, Sneak Attack +1d6</textarea>
+                    <div id="feats-list" style="min-height: 200px; border: 1px solid var(--accent-color); border-radius: var(--border-radius); padding: 15px;">
+                        <!-- Las dotes se añadirán aquí dinámicamente -->
                     </div>
                 </div>
             </div>
 
-            <!-- Pestaña de Equipo -->
+            <!-- TAB: EQUIPO -->
             <div id="equipment" class="tab-content">
                 <div class="section">
                     <h2 class="section-title">Equipo y Posesiones</h2>
-                    <div class="feats-list">
-                        <textarea placeholder="Armadura, armas, objetos mágicos, equipo de aventurero...">Armadura: Armadura Completa +1 (CA +9, penalización -6)
-Armas: Espada Larga +2, Daga de Plata +1
-Objetos Mágicos: Anillo de Protección +2, Capa de Resistencia +1
-Equipo: Kit de Aventurero, Herramientas de Danzarín, Componentes de Conjuración</textarea>
-                    </div>
+                    <textarea placeholder="Describe tu equipo, objetos mágicos, etc."></textarea>
                 </div>
-                
                 <div class="section">
                     <h2 class="section-title">Riqueza</h2>
-                    <div class="combat-stats">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
                         <div class="combat-stat">
                             <label>Platino (PP)</label>
-                            <input type="number" value="150">
+                            <input type="number" value="0">
                         </div>
                         <div class="combat-stat">
                             <label>Oro (PO)</label>
-                            <input type="number" value="500">
+                            <input type="number" value="0">
                         </div>
                         <div class="combat-stat">
                             <label>Plata (PC)</label>
-                            <input type="number" value="200">
+                            <input type="number" value="0">
                         </div>
                         <div class="combat-stat">
                             <label>Cobre (PB)</label>
-                            <input type="number" value="1000">
+                            <input type="number" value="0">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Pestaña de Hechizos -->
+            <!-- TAB: HECHIZOS -->
             <div id="spells" class="tab-content">
                 <div class="section">
                     <h2 class="section-title">Hechizos Conocidos/Preparados</h2>
-                    <div class="feats-list">
-                        <textarea placeholder="Lista de hechizos del personaje por nivel...">Nivel 0 (a voluntad): Detectar Magia, Luz, Llamarada, Mensaje
-Nivel 1 (4/día): Dormir, Protección vs. Caóticos, Rayo de Escarcha, Identificar
-Nivel 2 (3/día): Invisibilidad, Toque Vampírico, Detectar Pensamientos
-Nivel 3 (2/día): Vuelo, Rayo Ígneo
-Nivel 4 (1/día): Muro de Hielo, Maldecir</textarea>
-                    </div>
+                    <textarea placeholder="Lista de hechizos por nivel..."></textarea>
                 </div>
-                
                 <div class="section">
                     <h2 class="section-title">Puntos de Conjuración</h2>
-                    <div class="combat-stats">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
                         <div class="combat-stat">
                             <label>Nivel 0</label>
-                            <input type="number" value="ilimitados" readonly>
+                            <input type="text" value="Ilimitados" readonly>
                         </div>
                         <div class="combat-stat">
                             <label>Nivel 1</label>
-                            <input type="number" value="6" readonly>
+                            <input type="number" value="3">
                         </div>
                         <div class="combat-stat">
                             <label>Nivel 2</label>
-                            <input type="number" value="5" readonly>
+                            <input type="number" value="0">
                         </div>
                         <div class="combat-stat">
                             <label>Nivel 3</label>
-                            <input type="number" value="4" readonly>
+                            <input type="number" value="0">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Pestaña de Historia -->
-            <div id="background" class="tab-content">
+            <!-- TAB: TALENTOS/HISTORIA -->
+            <div id="history" class="tab-content">
+                <div class="section">
+                    <h2 class="section-title">Talentos Especiales</h2>
+                    <textarea placeholder="Talentos raciales, de clase, prestigio u otros especiales..."></textarea>
+                </div>
                 <div class="section">
                     <h2 class="section-title">Historia del Personaje</h2>
-                    <div class="feats-list">
-                        <textarea placeholder="Escribe la historia de tu personaje aquí...">Este guerrero comenzó su entrenamiento militar desde joven, pero pronto descubrió aptitudes para la magia y el sigilo. Su camino lo llevó a especializarse en prestigiosas organizaciones como el Danzarín Sombrío y el Teúrgo Místico, combinando magistralmente el combate cuerpo a cuerpo con artes arcanas y habilidades sigilosas.</textarea>
-                    </div>
+                    <textarea placeholder="Escribe la historia de tu personaje aquí..."></textarea>
                 </div>
-                
                 <div class="section">
                     <h2 class="section-title">Rasgos de Personalidad</h2>
-                    <div class="feats-list">
-                        <textarea placeholder="Describe la personalidad, motivaciones, miedos, etc...">Valiente y decidido, este personaje combina la disciplina militar con la creatividad del artista. Como devoto de Cayden Cailean, valora la libertad y la valentía. Su experiencia como soldado le ha dado una perspectiva práctica, mientras que su entrenamiento como danzarín y mago le ha aportado gracia y sabiduría.</textarea>
-                    </div>
+                    <textarea placeholder="Describe la personalidad, motivaciones, miedos, etc..."></textarea>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Sistema de pestañas
+        // Sistema de tabs principal
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
-                // Remover clase activa de todos los tabs y contenidos
                 document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
                 document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
                 
-                // Activar la pestaña clickeada
                 tab.classList.add('active');
                 document.getElementById(tab.dataset.tab).classList.add('active');
             });
         });
 
-        // Configuración de habilidades para la tabla
-        const skillsConfig = [
-            { name: "Acrobacias", attribute: "dex", armorPenalty: true },
-            { name: "Artesanía", attribute: "int", armorPenalty: false },
-            { name: "Averiguar Intenciones", attribute: "wis", armorPenalty: false },
-            { name: "Conocimiento de Conjuros", attribute: "int", armorPenalty: false },
-            { name: "Diplomacia", attribute: "cha", armorPenalty: false },
-            { name: "Abrir Cerraduras", attribute: "dex", armorPenalty: true },
-            { name: "Artista", attribute: "cha", armorPenalty: false },
-            { name: "Caballerosidad", attribute: "wis", armorPenalty: false },
-            { name: "Concentración", attribute: "con", armorPenalty: false },
-            { name: "Conocimiento (Arcana)", attribute: "int", armorPenalty: false },
-            { name: "Conocimiento (Naturaleza)", attribute: "int", armorPenalty: false },
-            { name: "Conocimiento (Religión)", attribute: "int", armorPenalty: false },
-            { name: "Conocimiento (Planos)", attribute: "int", armorPenalty: false },
-            { name: "Conocimiento (Nobleza)", attribute: "int", armorPenalty: false },
-            { name: "Conocimiento (Historia)", attribute: "int", armorPenalty: false },
-            { name: "Curar", attribute: "wis", armorPenalty: false },
-            { name: "Descifrar Escrituras", attribute: "int", armorPenalty: false },
-            { name: "Disfrazarse", attribute: "cha", armorPenalty: false },
-            { name: "Equitación", attribute: "dex", armorPenalty: true },
-            { name: "Escamotear", attribute: "dex", armorPenalty: true },
-            { name: "Escuchar", attribute: "wis", armorPenalty: false },
-            { name: "Esconderse", attribute: "dex", armorPenalty: true },
-            { name: "Falsificar", attribute: "int", armorPenalty: false },
-            { name: "Idiomas", attribute: "int", armorPenalty: false },
-            { name: "Intimidar", attribute: "cha", armorPenalty: false },
-            { name: "Interpretar", attribute: "cha", armorPenalty: false },
-            { name: "Juego de Manos", attribute: "dex", armorPenalty: true },
-            { name: "Montar", attribute: "dex", armorPenalty: true },
-            { name: "Moverse Sigilosamente", attribute: "dex", armorPenalty: true },
-            { name: "Nadar", attribute: "str", armorPenalty: true },
-            { name: "Oficio", attribute: "int", armorPenalty: false },
-            { name: "Percepción", attribute: "wis", armorPenalty: false },
-            { name: "Perspicacia", attribute: "wis", armorPenalty: false },
-            { name: "Pilotar", attribute: "dex", armorPenalty: false },
-            { name: "Profesión", attribute: "wis", armorPenalty: false },
-            { name: "Rastrear", attribute: "wis", armorPenalty: false },
-            { name: "Saber Local", attribute: "int", armorPenalty: false },
-            { name: "Saltar", attribute: "str", armorPenalty: true },
-            { name: "Sanar", attribute: "wis", armorPenalty: false },
-            { name: "Seducción", attribute: "cha", armorPenalty: false },
-            { name: "Supervivencia", attribute: "wis", armorPenalty: false },
-            { name: "Trepar", attribute: "str", armorPenalty: true },
-            { name: "Usar Objetos Mágicos", attribute: "cha", armorPenalty: false },
-            { name: "Voluntad", attribute: "wis", armorPenalty: false }
-        ];
-
-        // Función para generar la tabla de habilidades
-        function generateSkillsTable() {
-            const skillsContainer = document.getElementById('skills-container');
-            skillsContainer.innerHTML = '';
-
-            skillsConfig.forEach(skill => {
-                const row = document.createElement('tr');
+        // Sistema de sub-tabs
+        document.querySelectorAll('.sub-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.sub-content').forEach(c => c.classList.remove('active'));
                 
-                // Obtener el modificador de atributo
-                const attrMod = calculateModifier(parseInt(document.getElementById(`${skill.attribute}-total`).textContent));
-                
-                row.innerHTML = `
-                    <td class="skill-name">${skill.name}</td>
-                    <td>
-                        <input type="number" class="skill-total" value="0" readonly>
-                    </td>
-                    <td>
-                        <input type="checkbox" class="class-skill" data-skill="${skill.name.toLowerCase()}">
-                    </td>
-                    <td>
-                        <input type="number" class="skill-ranks" value="0" min="0" max="${calculateNEP()}" 
-                               onchange="updateSkillTotal('${skill.name}'); updateRanksSummary();">
-                    </td>
-                    <td class="attribute-col">${attrMod >= 0 ? `+${attrMod}` : attrMod}</td>
-                    <td>
-                        <input type="number" class="skill-racial" value="0" onchange="updateSkillTotal('${skill.name}')">
-                    </td>
-                    <td>
-                        <input type="number" class="skill-misc" value="0" onchange="updateSkillTotal('${skill.name}')">
-                    </td>
-                    <td>
-                        <input type="number" class="skill-armor" value="0" readonly>
-                    </td>
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.subtab).classList.add('active');
+            });
+        });
+
+        // Sistema de dotes
+        document.getElementById('add-feat-btn').addEventListener('click', () => {
+            const select = document.getElementById('feat-select');
+            const featValue = select.value;
+            const featText = select.options[select.selectedIndex].text;
+            
+            if (featValue) {
+                const featsList = document.getElementById('feats-list');
+                const featItem = document.createElement('div');
+                featItem.style.cssText = 'display: flex; justify-content: space-between; align-items: center; padding: 10px; background: var(--light-color); border-radius: 5px; margin-bottom: 8px;';
+                featItem.innerHTML = `
+                    <span style="font-weight: 600;">${featText}</span>
+                    <button onclick="this.parentElement.remove()" style="padding: 4px 12px; font-size: 12px;">Eliminar</button>
                 `;
-                
-                skillsContainer.appendChild(row);
-            });
-        }
-
-        // Función para calcular rangos totales ganados
-        function calculateTotalRanks() {
-            const nep = calculateNEP();
-            // Base: 2 + modificador de INT por nivel
-            const intMod = calculateModifier(parseInt(document.getElementById('int-total').textContent));
-            const totalRanksEarned = (2 + intMod) * nep;
-            return totalRanksEarned;
-        }
-
-        // Función para actualizar el resumen de rangos
-        function updateRanksSummary() {
-            const totalEarned = calculateTotalRanks();
-            const totalUsed = calculateUsedRanks();
-            
-            document.getElementById('total-ranks-earned').value = totalEarned;
-            document.getElementById('total-ranks-used').value = totalUsed;
-            document.getElementById('total-ranks-available').value = totalEarned - totalUsed;
-        }
-
-        // Función para calcular rangos usados
-        function calculateUsedRanks() {
-            let total = 0;
-            document.querySelectorAll('.skill-ranks').forEach(input => {
-                total += parseInt(input.value) || 0;
-            });
-            return total;
-        }
-
-        // Función para actualizar el total de una habilidad
-        function updateSkillTotal(skillName) {
-            const skillRow = findSkillRow(skillName);
-            if (!skillRow) return;
-
-            const ranks = parseInt(skillRow.querySelector('.skill-ranks').value) || 0;
-            const racial = parseInt(skillRow.querySelector('.skill-racial').value) || 0;
-            const misc = parseInt(skillRow.querySelector('.skill-misc').value) || 0;
-            const armor = parseInt(skillRow.querySelector('.skill-armor').value) || 0;
-            const isClassSkill = skillRow.querySelector('.class-skill').checked;
-            
-            // Obtener modificador de atributo
-            const skillConfig = skillsConfig.find(s => s.name === skillName);
-            const attrMod = calculateModifier(parseInt(document.getElementById(`${skillConfig.attribute}-total`).textContent));
-            
-            // Calcular total
-            let total = ranks + attrMod + racial + misc + armor;
-            if (isClassSkill && ranks > 0) {
-                total += 3;
+                featsList.appendChild(featItem);
+                select.value = '';
             }
-            
-            skillRow.querySelector('.skill-total').value = total;
-        }
+        });
 
-        // Función para encontrar la fila de una habilidad
-        function findSkillRow(skillName) {
-            const rows = document.querySelectorAll('#skills-container tr');
-            for (let row of rows) {
-                if (row.querySelector('.skill-name').textContent === skillName) {
-                    return row;
-                }
-            }
-            return null;
-        }
-
-        // JSON con los datos de trasfondos del PDF
-        const backgrounds = [
-            {
-                "nombre": "Acolito",
-                "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
-                "dote": "Magic Initiate (Cleric)",
-                "competenciaHabilidad": "Insight (Empatía), Religion (Teología)",
-                "herramientas": "Calligrapher's Supplies (Caligrafía)"
-            },
-            {
-                "nombre": "Artesano",
-                "puntuacionCaracteristica": "+1 Fue - +1 Des - +1 Int",
-                "dote": "Crafter",
-                "competenciaHabilidad": "Investigation (Búsqueda), Persuasion (Etiqueta/Comercio)",
-                "herramientas": "Artisan's Tools (Herramientas de artesano específicas)"
-            },
-            {
-                "nombre": "Artista",
-                "puntuacionCaracteristica": "+1 Des - +1 Int - +1 Car",
-                "dote": "Musical",
-                "competenciaHabilidad": "Performance (Interpretación), Persuasion (Etiqueta)",
-                "herramientas": "Musical Instrument (Instrumento musical)"
-            },
-            {
-                "nombre": "Charlatán",
-                "puntuacionCaracteristica": "+1 Des - +1 Int - +1 Car",
-                "dote": "Deceptive",
-                "competenciaHabilidad": "Deception (Engaño), Sleight of Hand (Juego de Manos)",
-                "herramientas": "Disguise Kit (Disfraces), Forgery Kit (Falsificación)"
-            },
-            {
-                "nombre": "Criminal",
-                "puntuacionCaracteristica": "+1 Des - +1 Int - +1 Car",
-                "dote": "Criminal",
-                "competenciaHabilidad": "Deception (Engaño), Stealth (Sigilo)",
-                "herramientas": "Thieves' Tools (Herramientas de ladrón), Gaming Set (Juego de azar)"
-            },
-            {
-                "nombre": "Erudito",
-                "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
-                "dote": "Scholar",
-                "competenciaHabilidad": "Investigation (Búsqueda), Lore (Erudición)",
-                "herramientas": "Calligrapher's Supplies (Caligrafía)"
-            },
-            {
-                "nombre": "Explorador",
-                "puntuacionCaracteristica": "+1 Fue - +1 Des - +1 Sab",
-                "dote": "Alert",
-                "competenciaHabilidad": "Nature (Naturaleza), Survival (Supervivencia)",
-                "herramientas": "Cartographer's Tools (Cartografía)"
-            },
-            {
-                "nombre": "Granjero",
-                "puntuacionCaracteristica": "+1 Fue - +1 Con - +1 Sab",
-                "dote": "Tough",
-                "competenciaHabilidad": "Animal Handling (Trato con Animales), Nature (Naturaleza)",
-                "herramientas": "Herbalism Kit (Herboristería), Land Vehicles (Vehículos terrestres)"
-            },
-            {
-                "nombre": "Guardián",
-                "puntuacionCaracteristica": "+1 Fue - +1 Con - +1 Sab",
-                "dote": "Guardian",
-                "competenciaHabilidad": "Insight (Empatía), Perception (Percepción)",
-                "herramientas": "Heavy Armor (Armadura pesada)"
-            },
-            {
-                "nombre": "Hermitaño",
-                "puntuacionCaracteristica": "+1 Con - +1 Sab - +1 Car",
-                "dote": "Healer",
-                "competenciaHabilidad": "Medicine (Medicina), Religion (Teología)",
-                "herramientas": "Herbalism Kit (Herboristería)"
-            },
-            {
-                "nombre": "Marinero",
-                "puntuacionCaracteristica": "+1 Fue - +1 Des - +1 Con",
-                "dote": "Sailor",
-                "competenciaHabilidad": "Acrobatics (Acrobacias), Perception (Percepción)",
-                "herramientas": "Water Vehicles (Vehículos acuáticos), Navigator's Tools (Navegación)"
-            },
-            {
-                "nombre": "Mercader",
-                "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
-                "dote": "Trader",
-                "competenciaHabilidad": "Persuasion (Etiqueta), Insight (Empatía)",
-                "herramientas": "Merchant's Scales (Básculas comerciales)"
-            },
-            {
-                "nombre": "Noble",
-                "puntuacionCaracteristica": "+1 Int - +1 Sab - +1 Car",
-                "dote": "Leadership",
-                "competenciaHabilidad": "History (Historia), Persuasion (Etiqueta)",
-                "herramientas": "Calligrapher's Supplies (Caligrafía), Gaming Set (Juego de azar)"
-            },
-            {
-                "nombre": "Salvaje",
-                "puntuacionCaracteristica": "+1 Fue - +1 Con - +1 Sab",
-                "dote": "Savage",
-                "competenciaHabilidad": "Athletics (Atletismo), Survival (Supervivencia)",
-                "herramientas": "Primitive Tools (Herramientas primitivas)"
-            },
-            {
-                "nombre": "Soldado",
-                "puntuacionCaracteristica": "+1 Fue - +1 Con - +1 Car",
-                "dote": "Soldier",
-                "competenciaHabilidad": "Athletics (Atletismo), Intimidation (Intimidación)",
-                "herramientas": "Heavy Armor (Armadura pesada), Land Vehicles (Vehículos terrestres)"
-            },
-            {
-                "nombre": "Vagabundo",
-                "puntuacionCaracteristica": "+1 Des - +1 Con - +1 Sab",
-                "dote": "Survivor",
-                "competenciaHabilidad": "Stealth (Sigilo), Survival (Supervivencia)",
-                "herramientas": "Thieves' Tools (Herramientas de ladrón), Herbalism Kit (Herboristería)"
-            }
-        ];
-
-        // JSON con modificadores de tamaño
-        const sizeModifiers = {
-            "diminuto": { ca: "+4", gaco: "+4", fuerza: "-12" },
-            "menudo": { ca: "+2", gaco: "+2", fuerza: "-8" },
-            "pequeño": { ca: "+1", gaco: "+1", fuerza: "-4" },
-            "mediano": { ca: "+0", gaco: "+0", fuerza: "+0" },
-            "grande": { ca: "-1", gaco: "-1", fuerza: "+4" },
-            "enorme": { ca: "-2", gaco: "-2", fuerza: "+8" },
-            "gargantuesco": { ca: "-4", gaco: "-4", fuerza: "+12" },
-            "colosal": { ca: "-8", gaco: "-8", fuerza: "+16" }
-        };
-
-        // Variables para almacenar los bonificadores
-        let racialBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
-        let backgroundBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
-        let levelBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
-        let sizeBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
-
-        // Función para determinar el tamaño según la altura
-        function calculateSizeFromHeight(height) {
-            if (height <= 30) return "diminuto";
-            if (height <= 60) return "menudo";
-            if (height <= 120) return "pequeño";
-            if (height <= 240) return "mediano";
-            if (height <= 480) return "grande";
-            if (height <= 960) return "enorme";
-            if (height <= 1920) return "gargantuesco";
-            return "colosal";
-        }
-
-        // Función para aplicar modificadores de tamaño
-        function applySizeBonuses(size) {
-            // Reiniciar bonificadores de tamaño
-            sizeBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
-            
-            const modifiers = sizeModifiers[size];
-            if (modifiers) {
-                // Convertir el modificador de fuerza de string a número
-                const fuerzaMod = parseInt(modifiers.fuerza);
-                sizeBonus.str = fuerzaMod;
-            }
-            
-            updateAttributes();
-        }
-
-        // Función para verificar y mostrar puntos de característica por nivel
-        function checkAbilityPoints() {
-            const nep = calculateNEP();
-            const abilityLevels = [4, 8, 12, 16, 20, 24, 28, 32, 36, 40];
-            const notification = document.getElementById('ability-point-notification');
-            
-            for (const level of abilityLevels) {
-                if (nep >= level) {
-                    document.getElementById('ability-level').textContent = level;
-                    notification.style.display = 'block';
-                    return;
-                }
-            }
-            notification.style.display = 'none';
-        }
-
-        // Función para calcular el NEP (Nivel Efectivo de Personaje)
+        // Calcular NEP
         function calculateNEP() {
             const class1Level = parseInt(document.getElementById('class1-level').value) || 0;
             const class2Level = parseInt(document.getElementById('class2-level').value) || 0;
@@ -1906,764 +1757,18 @@ Nivel 4 (1/día): Muro de Hielo, Maldecir</textarea>
             const prestige2Level = parseInt(document.getElementById('prestige2-level').value) || 0;
             const prestige3Level = parseInt(document.getElementById('prestige3-level').value) || 0;
             
-            const totalLevels = class1Level + class2Level + class3Level + prestige1Level + prestige2Level + prestige3Level;
-            document.getElementById('nep-value').textContent = totalLevels;
-            document.getElementById('next-nep-value').textContent = totalLevels + 1;
-            
-            // Verificar puntos de característica
-            checkAbilityPoints();
-            
-            // Actualizar cálculos de combate
-            updateCombatStats();
-            
-            // Actualizar experiencia según niveles
-            updateExperienceFromLevels();
-            
-            return totalLevels;
+            const total = class1Level + class2Level + class3Level + prestige1Level + prestige2Level + prestige3Level;
+            document.getElementById('nep-value').textContent = total;
+            document.getElementById('next-nep-value').textContent = total + 1;
         }
 
-        // Función para calcular el modificador de un atributo
-        function calculateModifier(value) {
-            return Math.floor((value - 10) / 2);
-        }
-
-        // Función para formatear el modificador
-        function formatModifier(modifier) {
-            return modifier >= 0 ? `+${modifier}` : `${modifier}`;
-        }
-
-        // Función para actualizar los atributos
-        function updateAttributes() {
-            const attributes = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
-            
-            attributes.forEach(attr => {
-                const baseValue = parseInt(document.getElementById(`${attr}-base`).value) || 0;
-                const total = baseValue + racialBonus[attr] + backgroundBonus[attr] + levelBonus[attr] + sizeBonus[attr];
-                const modifier = calculateModifier(total);
-                
-                document.getElementById(`${attr}-total`).textContent = total;
-                document.getElementById(`${attr}-mod`).textContent = formatModifier(modifier);
-                
-                // Actualizar modificadores en salvamentos
-                if (attr === 'con') {
-                    document.getElementById('fort-attr').textContent = formatModifier(modifier);
-                } else if (attr === 'dex') {
-                    document.getElementById('reflex-attr').textContent = formatModifier(modifier);
-                } else if (attr === 'wis') {
-                    document.getElementById('will-attr').textContent = formatModifier(modifier);
-                }
-            });
-            
-            // Actualizar salvamentos
-            updateSavingThrows();
-            // Actualizar habilidades
-            updateAllSkillAttributes();
-            // Actualizar rangos
-            updateRanksSummary();
-            // Actualizar combate
-            updateCombatStats();
-        }
-
-        // Función para calcular bonificadores de salvamento por clase y prestigio
-        function calculateSavingThrowBonuses() {
-            const class1 = document.getElementById('class1').value;
-            const class1Level = parseInt(document.getElementById('class1-level').value) || 0;
-            const class2 = document.getElementById('class2').value;
-            const class2Level = parseInt(document.getElementById('class2-level').value) || 0;
-            const class3 = document.getElementById('class3').value;
-            const class3Level = parseInt(document.getElementById('class3-level').value) || 0;
-            
-            // Prestigios
-            const prestige1 = document.getElementById('prestige1').value;
-            const prestige1Level = parseInt(document.getElementById('prestige1-level').value) || 0;
-            const prestige2 = document.getElementById('prestige2').value;
-            const prestige2Level = parseInt(document.getElementById('prestige2-level').value) || 0;
-            const prestige3 = document.getElementById('prestige3').value;
-            const prestige3Level = parseInt(document.getElementById('prestige3-level').value) || 0;
-            
-            let fortClass = 0;
-            let reflexClass = 0;
-            let willClass = 0;
-            let fortPrestige = 0;
-            let reflexPrestige = 0;
-            let willPrestige = 0;
-            
-            // Calcular bonificadores para cada clase
-            const classes = [
-                { name: class1, level: class1Level },
-                { name: class2, level: class2Level },
-                { name: class3, level: class3Level }
-            ];
-            
-            // Calcular bonificadores para prestigios
-            const prestigios = [
-                { name: prestige1, level: prestige1Level },
-                { name: prestige2, level: prestige2Level },
-                { name: prestige3, level: prestige3Level }
-            ];
-            
-            // Calcular salvamentos para clases base
-            classes.forEach(cls => {
-                if (cls.level > 0) {
-                    // Guerrero: Fortaleza buena
-                    if (cls.name === 'guerrero') {
-                        fortClass += Math.floor(cls.level / 2) + 2;
-                        reflexClass += Math.floor(cls.level / 3);
-                        willClass += Math.floor(cls.level / 3);
-                    }
-                    // Mago: Voluntad buena
-                    else if (cls.name === 'mago') {
-                        fortClass += Math.floor(cls.level / 3);
-                        reflexClass += Math.floor(cls.level / 3);
-                        willClass += Math.floor(cls.level / 2) + 2;
-                    }
-                    // Pícaro: Reflejos buena
-                    else if (cls.name === 'picaro') {
-                        fortClass += Math.floor(cls.level / 3);
-                        reflexClass += Math.floor(cls.level / 2) + 2;
-                        willClass += Math.floor(cls.level / 3);
-                    }
-                    // Para otras clases, usar valores por defecto
-                    else {
-                        fortClass += Math.floor(cls.level / 3);
-                        reflexClass += Math.floor(cls.level / 3);
-                        willClass += Math.floor(cls.level / 3);
-                    }
-                }
-            });
-            
-            // Calcular salvamentos para prestigios
-            prestigios.forEach(prestige => {
-                if (prestige.level > 0) {
-                    // Danzarín Sombrío: Reflejos buena
-                    if (prestige.name === 'danzarin_sombrio') {
-                        fortPrestige += Math.floor(prestige.level / 3);
-                        reflexPrestige += Math.floor(prestige.level / 2) + 2;
-                        willPrestige += Math.floor(prestige.level / 3);
-                    }
-                    // Teúrgo Místico: Voluntad buena
-                    else if (prestige.name === 'teurgo_mistico') {
-                        fortPrestige += Math.floor(prestige.level / 3);
-                        reflexPrestige += Math.floor(prestige.level / 3);
-                        willPrestige += Math.floor(prestige.level / 2) + 2;
-                    }
-                    // Asesino: Reflejos buena
-                    else if (prestige.name === 'asesino') {
-                        fortPrestige += Math.floor(prestige.level / 3);
-                        reflexPrestige += Math.floor(prestige.level / 2) + 2;
-                        willPrestige += Math.floor(prestige.level / 3);
-                    }
-                    // Para otros prestigios, usar valores por defecto
-                    else {
-                        fortPrestige += Math.floor(prestige.level / 3);
-                        reflexPrestige += Math.floor(prestige.level / 3);
-                        willPrestige += Math.floor(prestige.level / 3);
-                    }
-                }
-            });
-            
-            return {
-                fortClass: fortClass,
-                reflexClass: reflexClass,
-                willClass: willClass,
-                fortPrestige: fortPrestige,
-                reflexPrestige: reflexPrestige,
-                willPrestige: willPrestige
-            };
-        }
-
-        // Función para actualizar los salvamentos
-        function updateSavingThrows() {
-            const savingThrows = ['fort', 'reflex', 'will'];
-            
-            // Obtener bonificadores base por clase y prestigio
-            const bonuses = calculateSavingThrowBonuses();
-            
-            savingThrows.forEach(save => {
-                let classBonus = 0;
-                let prestigeBonus = 0;
-                
-                if (save === 'fort') {
-                    classBonus = bonuses.fortClass;
-                    prestigeBonus = bonuses.fortPrestige;
-                } else if (save === 'reflex') {
-                    classBonus = bonuses.reflexClass;
-                    prestigeBonus = bonuses.reflexPrestige;
-                } else if (save === 'will') {
-                    classBonus = bonuses.willClass;
-                    prestigeBonus = bonuses.willPrestige;
-                }
-                
-                const miscBonus = parseInt(document.getElementById(`${save}-misc`).value) || 0;
-                const manualBonus = parseInt(document.getElementById(`${save}-manual`).value) || 0;
-                
-                // Obtener el modificador de atributo
-                let attrBonus = 0;
-                if (save === 'fort') {
-                    attrBonus = calculateModifier(parseInt(document.getElementById('con-total').textContent));
-                } else if (save === 'reflex') {
-                    attrBonus = calculateModifier(parseInt(document.getElementById('dex-total').textContent));
-                } else if (save === 'will') {
-                    attrBonus = calculateModifier(parseInt(document.getElementById('wis-total').textContent));
-                }
-                
-                const total = classBonus + prestigeBonus + attrBonus + miscBonus + manualBonus;
-                document.getElementById(`${save}-total`).textContent = total;
-                document.getElementById(`${save}-class`).value = classBonus;
-                document.getElementById(`${save}-prestige`).value = prestigeBonus;
-            });
-        }
-
-        // Función para calcular BAB (Ataque Base)
-        function calculateBAB() {
-            const class1 = document.getElementById('class1').value;
-            const class1Level = parseInt(document.getElementById('class1-level').value) || 0;
-            const class2 = document.getElementById('class2').value;
-            const class2Level = parseInt(document.getElementById('class2-level').value) || 0;
-            const class3 = document.getElementById('class3').value;
-            const class3Level = parseInt(document.getElementById('class3-level').value) || 0;
-            
-            // Prestigios
-            const prestige1 = document.getElementById('prestige1').value;
-            const prestige1Level = parseInt(document.getElementById('prestige1-level').value) || 0;
-            const prestige2 = document.getElementById('prestige2').value;
-            const prestige2Level = parseInt(document.getElementById('prestige2-level').value) || 0;
-            const prestige3 = document.getElementById('prestige3').value;
-            const prestige3Level = parseInt(document.getElementById('prestige3-level').value) || 0;
-            
-            let bab = 0;
-            
-            // Calcular BAB para cada clase
-            const classes = [
-                { name: class1, level: class1Level },
-                { name: class2, level: class2Level },
-                { name: class3, level: class3Level }
-            ];
-            
-            // Calcular BAB para prestigios
-            const prestigios = [
-                { name: prestige1, level: prestige1Level },
-                { name: prestige2, level: prestige2Level },
-                { name: prestige3, level: prestige3Level }
-            ];
-            
-            // BAB para clases base
-            classes.forEach(cls => {
-                if (cls.level > 0) {
-                    // BAB completo: guerrero, pícaro
-                    if (cls.name === 'guerrero' || cls.name === 'picaro') {
-                        bab += cls.level;
-                    }
-                    // BAB bajo: mago
-                    else if (cls.name === 'mago') {
-                        bab += Math.floor(cls.level * 0.5);
-                    }
-                    // Para otras clases, usar BAB medio por defecto
-                    else {
-                        bab += Math.floor(cls.level * 0.75);
-                    }
-                }
-            });
-            
-            // BAB para prestigios
-            prestigios.forEach(prestige => {
-                if (prestige.level > 0) {
-                    // BAB medio: danzarín sombrío, teúrgo místico, asesino
-                    if (prestige.name === 'danzarin_sombrio' || prestige.name === 'teurgo_mistico' || prestige.name === 'asesino') {
-                        bab += Math.floor(prestige.level * 0.75);
-                    }
-                    // Para otros prestigios, usar BAB medio por defecto
-                    else {
-                        bab += Math.floor(prestige.level * 0.75);
-                    }
-                }
-            });
-            
-            return bab;
-        }
-
-        // Función para actualizar las estadísticas de combate
-        function updateCombatStats() {
-            // Calcular PG
-            const conMod = calculateModifier(parseInt(document.getElementById('con-total').textContent));
-            const class1Level = parseInt(document.getElementById('class1-level').value) || 0;
-            const class2Level = parseInt(document.getElementById('class2-level').value) || 0;
-            const class3Level = parseInt(document.getElementById('class3-level').value) || 0;
-            const prestige1Level = parseInt(document.getElementById('prestige1-level').value) || 0;
-            const prestige2Level = parseInt(document.getElementById('prestige2-level').value) || 0;
-            const prestige3Level = parseInt(document.getElementById('prestige3-level').value) || 0;
-            
-            // PG por clase (simplificado)
-            const hpGuerrero = class1Level * 6.5; // d10 promedio
-            const hpMago = class2Level * 2.5; // d4 promedio
-            const hpPicaro = class3Level * 3.5; // d6 promedio
-            const hpDanzarin = prestige1Level * 4.5; // d8 promedio
-            const hpTeurgo = prestige2Level * 3.5; // d6 promedio
-            const hpAsesino = prestige3Level * 3.5; // d6 promedio
-            
-            const hpFromClasses = hpGuerrero + hpMago + hpPicaro + hpDanzarin + hpTeurgo + hpAsesino;
-            const hpFromCon = conMod * (class1Level + class2Level + class3Level + prestige1Level + prestige2Level + prestige3Level);
-            
-            const totalHP = Math.floor(hpFromClasses + hpFromCon);
-            document.getElementById('hp-total').value = totalHP;
-            
-            // Calcular CA
-            const dexMod = calculateModifier(parseInt(document.getElementById('dex-total').textContent));
-            const baseAC = 10 + dexMod;
-            // Asumir armadura completa (+9) para un total de 19 + tamaño (-1) = 18
-            const armorBonus = 9;
-            const sizeMod = -1; // Grande
-            const totalAC = baseAC + armorBonus + sizeMod;
-            document.getElementById('ac-total').value = totalAC;
-            
-            // Calcular iniciativa
-            document.getElementById('initiative-total').value = dexMod;
-            
-            // Calcular BAB
-            const bab = calculateBAB();
-            // Mostrar BAB con ataques iterativos
-            let babDisplay = `+${bab}`;
-            if (bab >= 6) babDisplay += `/+${bab-5}`;
-            if (bab >= 11) babDisplay += `/+${bab-10}`;
-            if (bab >= 16) babDisplay += `/+${bab-15}`;
-            
-            document.querySelector('.bab-display').textContent = `Ataque Base (BAB): ${babDisplay}`;
-            
-            // Actualizar ataques de armas
-            updateWeaponAttacks(bab);
-        }
-
-        // Función para actualizar los ataques de armas
-        function updateWeaponAttacks(bab) {
-            const strMod = calculateModifier(parseInt(document.getElementById('str-total').textContent));
-            const sizeMod = -1; // Grande
-            
-            // Espada larga (arma principal)
-            const swordAttack = bab + strMod + 2 + sizeMod; // +2 por arma mágica
-            const swordDamage = `2d6+${strMod + 2}`; // Arma grande
-            
-            // Daga (arma secundaria)
-            const daggerAttack = bab + strMod + 1 + sizeMod; // +1 por arma mágica
-            const daggerDamage = `1d4+${strMod + 1}`;
-            
-            // Actualizar valores en la tabla
-            const weaponRows = document.querySelectorAll('.attributes-table tbody tr');
-            if (weaponRows.length >= 2) {
-                // Espada larga
-                weaponRows[0].cells[1].querySelector('input').value = `+${swordAttack}`;
-                weaponRows[0].cells[2].querySelector('input').value = swordDamage;
-                
-                // Daga
-                weaponRows[1].cells[1].querySelector('input').value = `+${daggerAttack}`;
-                weaponRows[1].cells[2].querySelector('input').value = daggerDamage;
-            }
-        }
-
-        // Función para actualizar la experiencia según los niveles
-        function updateExperienceFromLevels() {
-            const class1Level = parseInt(document.getElementById('class1-level').value) || 0;
-            const class2Level = parseInt(document.getElementById('class2-level').value) || 0;
-            const class3Level = parseInt(document.getElementById('class3-level').value) || 0;
-            const prestige1Level = parseInt(document.getElementById('prestige1-level').value) || 0;
-            const prestige2Level = parseInt(document.getElementById('prestige2-level').value) || 0;
-            const prestige3Level = parseInt(document.getElementById('prestige3-level').value) || 0;
-            
-            // Calcular experiencia necesaria para cada nivel (simplificado)
-            const class1Exp = class1Level * 1000;
-            const class2Exp = class2Level * 1000;
-            const class3Exp = class3Level * 1000;
-            const prestige1Exp = prestige1Level * 10000;
-            const prestige2Exp = prestige2Level * 10000;
-            const prestige3Exp = prestige3Level * 10000;
-            
-            document.getElementById('class1-exp').value = class1Exp;
-            document.getElementById('class2-exp').value = class2Exp;
-            document.getElementById('class3-exp').value = class3Exp;
-            document.getElementById('prestige1-exp').value = prestige1Exp;
-            document.getElementById('prestige2-exp').value = prestige2Exp;
-            document.getElementById('prestige3-exp').value = prestige3Exp;
-            
-            updateExperience();
-        }
-
-        // Función para actualizar la experiencia total
-        function updateExperience() {
-            const class1Exp = parseInt(document.getElementById('class1-exp').value) || 0;
-            const class2Exp = parseInt(document.getElementById('class2-exp').value) || 0;
-            const class3Exp = parseInt(document.getElementById('class3-exp').value) || 0;
-            const prestige1Exp = parseInt(document.getElementById('prestige1-exp').value) || 0;
-            const prestige2Exp = parseInt(document.getElementById('prestige2-exp').value) || 0;
-            const prestige3Exp = parseInt(document.getElementById('prestige3-exp').value) || 0;
-            
-            const totalExp = class1Exp + class2Exp + class3Exp + prestige1Exp + prestige2Exp + prestige3Exp;
-            document.getElementById('total-exp').value = totalExp;
-            
-            // Calcular experiencia acumulada
-            const accumulatedExp = totalExp;
-            document.getElementById('accumulated-exp').value = accumulatedExp;
-            
-            // Calcular siguiente nivel (simplificado)
-            const nep = calculateNEP();
-            const nextLevel = (nep + 1) * 10000;
-            document.getElementById('next-level').value = nextLevel;
-        }
-
-        // Función para aplicar bonificadores raciales
-        function applyRacialBonuses(race) {
-            // Reiniciar bonificadores raciales
-            racialBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
-            
-            // Aplicar bonificadores según la raza
-            switch(race) {
-                case 'aasimar':
-                    racialBonus.cha = 2;
-                    racialBonus.wis = 2;
-                    break;
-                case 'branquial':
-                    racialBonus.con = 2;
-                    racialBonus.dex = 2;
-                    racialBonus.cha = -2;
-                    break;
-                case 'dhampir':
-                    racialBonus.dex = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.con = -2;
-                    break;
-                case 'drow_plebeyo':
-                    racialBonus.dex = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.con = -2;
-                    break;
-                case 'drow_noble':
-                    racialBonus.dex = 2;
-                    racialBonus.int = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.con = -2;
-                    break;
-                case 'efrit':
-                    racialBonus.dex = 2;
-                    racialBonus.int = 2;
-                    racialBonus.con = -2;
-                    break;
-                case 'elfo':
-                    racialBonus.dex = 2;
-                    racialBonus.int = 2;
-                    racialBonus.con = -2;
-                    break;
-                case 'enano':
-                    racialBonus.con = 2;
-                    racialBonus.cha = -2;
-                    break;
-                case 'duergar':
-                    racialBonus.con = 2;
-                    racialBonus.wis = 2;
-                    racialBonus.cha = -4;
-                    break;
-                case 'estricido':
-                    racialBonus.str = 2;
-                    racialBonus.con = 2;
-                    racialBonus.int = -2;
-                    break;
-                case 'felido':
-                    racialBonus.dex = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.wis = -2;
-                    break;
-                case 'gnomo':
-                    racialBonus.con = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.str = -2;
-                    break;
-                case 'svirfneblin':
-                    racialBonus.dex = 2;
-                    racialBonus.wis = 2;
-                    racialBonus.cha = -4;
-                    break;
-                case 'humano':
-                    // Humano: +2 a un atributo a elección (por defecto Fuerza)
-                    racialBonus.str = 2;
-                    break;
-                case 'kitsune':
-                    racialBonus.dex = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.str = -2;
-                    break;
-                case 'mediano':
-                    racialBonus.dex = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.str = -2;
-                    break;
-                case 'orco':
-                    racialBonus.str = 4;
-                    racialBonus.int = -2;
-                    racialBonus.cha = -2;
-                    racialBonus.wis = -2;
-                    break;
-                case 'ratido':
-                    racialBonus.dex = 2;
-                    racialBonus.int = 2;
-                    racialBonus.str = -2;
-                    break;
-                case 'replicante':
-                    racialBonus.con = 2;
-                    racialBonus.int = 2;
-                    racialBonus.cha = -2;
-                    break;
-                case 'semielfo':
-                    racialBonus.dex = 2;
-                    break;
-                case 'semiorco':
-                    racialBonus.str = 2;
-                    break;
-                case 'suli':
-                    racialBonus.str = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.wis = -2;
-                    break;
-                case 'tiflin':
-                    racialBonus.dex = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.int = -2;
-                    break;
-                case 'vanara':
-                    racialBonus.dex = 2;
-                    racialBonus.wis = 2;
-                    racialBonus.cha = -2;
-                    break;
-                case 'vishkanya':
-                    racialBonus.dex = 2;
-                    racialBonus.cha = 2;
-                    racialBonus.con = -2;
-                    break;
-            }
-            
-            // Actualizar resistencia mágica para Drow
-            if (race === 'drow_noble' || race === 'drow_plebeyo') {
-                document.getElementById('magic-resistance').value = 11;
-            } else {
-                document.getElementById('magic-resistance').value = 0;
-            }
-            
-            updateAttributes();
-        }
-
-        // Función para aplicar bonificadores de trasfondo
-        function applyBackgroundBonuses(backgroundName) {
-            // Reiniciar bonificadores de trasfondo
-            backgroundBonus = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
-            
-            const background = backgrounds.find(bg => bg.nombre === backgroundName);
-            if (background) {
-                const scores = background.puntuacionCaracteristica.split(' - ');
-                
-                scores.forEach(score => {
-                    if (score.includes('+1 Fue')) backgroundBonus.str += 1;
-                    if (score.includes('+1 Des')) backgroundBonus.dex += 1;
-                    if (score.includes('+1 Con')) backgroundBonus.con += 1;
-                    if (score.includes('+1 Int')) backgroundBonus.int += 1;
-                    if (score.includes('+1 Sab')) backgroundBonus.wis += 1;
-                    if (score.includes('+1 Car')) backgroundBonus.cha += 1;
-                });
-            }
-            
-            updateAttributes();
-        }
-
-        // Función para actualizar el tamaño según la altura
-        function updateSizeFromHeight() {
-            const height = parseInt(document.getElementById('height').value) || 0;
-            const size = calculateSizeFromHeight(height);
-            document.getElementById('size').value = size.charAt(0).toUpperCase() + size.slice(1);
-            applySizeBonuses(size);
-            updateSizeModifiers();
-        }
-
-        // Función para actualizar la tabla de modificadores de tamaño
-        function updateSizeModifiers() {
-            const sizeModifiersBody = document.getElementById('size-modifiers-body');
-            sizeModifiersBody.innerHTML = '';
-            
-            for (const [size, modifiers] of Object.entries(sizeModifiers)) {
-                const row = document.createElement('tr');
-                
-                // Resaltar la fila del tamaño actual
-                const currentSize = document.getElementById('size').value.toLowerCase();
-                if (size === currentSize) {
-                    row.style.backgroundColor = 'var(--accent-color)';
-                    row.style.fontWeight = 'bold';
-                }
-                
-                row.innerHTML = `
-                    <td>${size.charAt(0).toUpperCase() + size.slice(1)}</td>
-                    <td>${modifiers.ca}</td>
-                    <td>${modifiers.gaco}</td>
-                    <td>${modifiers.fuerza}</td>
-                `;
-                sizeModifiersBody.appendChild(row);
-            }
-        }
-
-        // Función para actualizar todos los modificadores de atributos en habilidades
-        function updateAllSkillAttributes() {
-            skillsConfig.forEach(skill => {
-                const skillRow = findSkillRow(skill.name);
-                if (skillRow) {
-                    const attrMod = calculateModifier(parseInt(document.getElementById(`${skill.attribute}-total`).textContent));
-                    const attrCell = skillRow.querySelector('.attribute-col');
-                    attrCell.textContent = `${attrMod >= 0 ? `+${attrMod}` : attrMod}`;
-                    updateSkillTotal(skill.name);
-                }
-            });
-        }
-
-        // Función para manejar la adición de dotes
-        function setupFeatManagement() {
-            const addFeatBtn = document.getElementById('add-feat-btn');
-            const featSelect = document.getElementById('feat-select');
-            const featsContainer = document.getElementById('feats-container');
-            
-            addFeatBtn.addEventListener('click', function() {
-                const selectedFeat = featSelect.value;
-                const selectedFeatText = featSelect.options[featSelect.selectedIndex].text;
-                
-                if (selectedFeat && selectedFeat !== '') {
-                    const featItem = document.createElement('div');
-                    featItem.className = 'feat-item';
-                    featItem.innerHTML = `
-                        <span>${selectedFeatText}</span>
-                        <button class="remove-feat">Eliminar</button>
-                    `;
-                    
-                    featsContainer.appendChild(featItem);
-                    
-                    // Limpiar selección
-                    featSelect.value = '';
-                    
-                    // Añadir evento para eliminar dote
-                    featItem.querySelector('.remove-feat').addEventListener('click', function() {
-                        featsContainer.removeChild(featItem);
-                    });
-                }
-            });
-        }
-
-        // Llenar el selector de trasfondos
-        const backgroundSelect = document.getElementById('background');
-        backgrounds.forEach(bg => {
-            const option = document.createElement('option');
-            option.value = bg.nombre;
-            option.textContent = bg.nombre;
-            backgroundSelect.appendChild(option);
+        // Listeners para actualizar NEP
+        ['class1-level', 'class2-level', 'class3-level', 'prestige1-level', 'prestige2-level', 'prestige3-level'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateNEP);
         });
-
-        // Mostrar información del trasfondo seleccionado
-        backgroundSelect.addEventListener('change', function() {
-            const selectedBackground = backgrounds.find(bg => bg.nombre === this.value);
-            const backgroundInfo = document.getElementById('background-info');
-            
-            if (selectedBackground) {
-                backgroundInfo.innerHTML = `
-                    <div class="info-row">
-                        <span class="info-label">Puntuación:</span>
-                        <span>${selectedBackground.puntuacionCaracteristica}</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Dote:</span>
-                        <span>${selectedBackground.dote}</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Competencias:</span>
-                        <span>${selectedBackground.competenciaHabilidad}</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Herramientas:</span>
-                        <span>${selectedBackground.herramientas}</span>
-                    </div>
-                `;
-                backgroundInfo.classList.add('active');
-                
-                // Aplicar bonificadores del trasfondo
-                applyBackgroundBonuses(this.value);
-            } else {
-                backgroundInfo.classList.remove('active');
-                applyBackgroundBonuses('');
-            }
-        });
-
-        // Event listeners para atributos base
-        document.querySelectorAll('#str-base, #dex-base, #con-base, #int-base, #wis-base, #cha-base').forEach(input => {
-            input.addEventListener('input', updateAttributes);
-        });
-
-        // Event listeners para salvamentos
-        document.querySelectorAll('#fort-misc, #fort-manual, #reflex-misc, #reflex-manual, #will-misc, #will-manual').forEach(input => {
-            input.addEventListener('input', updateSavingThrows);
-        });
-
-        // Event listeners para experiencia
-        document.querySelectorAll('#class1-exp, #class2-exp, #class3-exp, #prestige1-exp, #prestige2-exp, #prestige3-exp').forEach(input => {
-            input.addEventListener('input', updateExperience);
-        });
-
-        // Event listeners para niveles de clases y prestigios
-        document.querySelectorAll('#class1-level, #class2-level, #class3-level, #prestige1-level, #prestige2-level, #prestige3-level').forEach(input => {
-            input.addEventListener('input', function() {
-                setTimeout(() => {
-                    calculateNEP();
-                    updateRanksSummary();
-                    updateMaxRanks();
-                }, 100);
-            });
-        });
-
-        // Event listener para raza
-        document.getElementById('race').addEventListener('change', function() {
-            applyRacialBonuses(this.value);
-        });
-
-        // Event listener para altura - actualiza tamaño automáticamente
-        document.getElementById('height').addEventListener('input', updateSizeFromHeight);
-
-        // Event listener para añadir experiencia
-        document.getElementById('add-exp-btn').addEventListener('click', function() {
-            const expToAdd = parseInt(document.getElementById('add-exp-input').value) || 0;
-            if (expToAdd > 0) {
-                // Por simplicidad, añadimos la experiencia a la primera clase
-                const currentExp = parseInt(document.getElementById('class1-exp').value) || 0;
-                document.getElementById('class1-exp').value = currentExp + expToAdd;
-                updateExperience();
-                document.getElementById('add-exp-input').value = '';
-            }
-        });
-
-        // Event listener para cargar imagen
-        document.getElementById('character-image').addEventListener('click', function() {
-            alert('Función para cargar imagen del personaje. En una implementación real, esto abriría un selector de archivos.');
-        });
-
-        // Función para actualizar los máximos de rangos según NEP
-        function updateMaxRanks() {
-            const maxRank = calculateNEP();
-            document.querySelectorAll('.skill-ranks').forEach(input => {
-                input.max = maxRank;
-            });
-        }
 
         // Inicializar
-        document.addEventListener('DOMContentLoaded', function() {
-            generateSkillsTable();
-            updateAttributes();
-            updateSavingThrows();
-            updateExperience();
-            calculateNEP();
-            updateSizeFromHeight();
-            updateRanksSummary();
-            setupFeatManagement();
-            
-            // Aplicar valores iniciales para Humano y Soldado
-            applyRacialBonuses('humano');
-            applyBackgroundBonuses('Soldado');
-        });
+        calculateNEP();
     </script>
 </body>
 </html>
